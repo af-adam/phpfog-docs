@@ -1,0 +1,13 @@
+---
+layout: default
+category: blog
+---
+<div class="row">
+<div class="block span8">
+	<div class="blog-title">
+<h2>{{ page.title }}</h2>
+<p><date datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</date><p>
+	</div>
+{{ content | markdownify }}
+</div>
+</div>

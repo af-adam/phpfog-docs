@@ -1,0 +1,44 @@
+---
+title: Twitter
+layout: blog-post
+---
+
+I've been on twitter for a few months now, but I have to admit, I wasn't
+really getting it until I read
+[this](http://bhc3.wordpress.com/2009/03/17/how-to-tweet-your-way-out-of-a-job/).
+I mean, there are clearly many ways to use twitter, including the reason
+that twitter gives you: to broadcast your current status.
+
+But I, like many, don't really feel the need to tell people when I'm
+pooping, and also don't feel the need to know when others are pooping. I
+think this is why many people dismiss twitter, like I did until
+recently.
+
+But, in the exchange linked to above, something really familiar happens:
+someone overhears a public conversation. And that's what I now realize
+is the most useful analogy for twitter: public conversation.
+
+IM is cool, but it's limited by nature; it's a connection between two
+points. Twitter allows similar exchanges, but in public, so anyone can
+join, and anyone can search for what people are saying on any given
+subject.
+
+I think it actually accomplishes a lot of the same stuff as the party
+chat we've been using: it's low-involvement, people can pay as much
+attention to it as they feel like, and not everyone has to be engaged in
+the conversation to follow it.
+
+I feel like a lot of people would be more interested, or at least less
+resistant to it if they marketed it this way and provided an IM
+interface. Apparently there used to be an IM interface, but they took it
+down in October because it was buggy, and they've put it on their
+long-term to do list, with no update since.
+
+There's a bot that uses jabber called [excla.im](http://excla.im/), but
+I couldn't get it to work, and it apparently only allows you to send
+tweets, not get them.
+
+So, that's too bad. Digsby's twitter functionality is pretty good, but
+the interface is not great. I don't see why they don't offer their
+functionality in the form of a contact, with the exact same user
+interaction as any other contact. That would make me happy.
