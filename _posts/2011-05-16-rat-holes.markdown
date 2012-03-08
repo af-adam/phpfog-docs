@@ -1,8 +1,7 @@
 ---
 title: Rat Holes
-layout: blog-post
+layout: post
 ---
-
 
 Rat holes I've fallen into:
 

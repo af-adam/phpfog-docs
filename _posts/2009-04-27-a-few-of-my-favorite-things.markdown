@@ -1,6 +1,6 @@
 ---
 title: A Few of My Favorite Things
-layout: blog-post
+layout: post
 ---
 
 Most of my favorite Firefox add-ons have to do with maximizing browser

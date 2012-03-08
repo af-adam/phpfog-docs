@@ -1,6 +1,6 @@
 ---
 title: Holding the Web in Your Hands
-layout: blog-post
+layout: post
 ---
 
 I'm typing this on a Cr-48, Google's pilot hardware for Chrome OS. On

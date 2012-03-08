@@ -1,8 +1,7 @@
 ---
 title: A Different Kind of GUI
-layout: blog-post
+layout: post
 ---
-
 
 "[In the beginning was the command
 line](http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml)."

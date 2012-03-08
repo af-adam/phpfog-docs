@@ -1,6 +1,6 @@
 ---
 title: Climbing Rocks
-layout: blog-post
+layout: post
 ---
 
 I had been to a climbing gym once or twice, but only started climbing

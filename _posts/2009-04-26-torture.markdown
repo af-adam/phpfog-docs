@@ -1,6 +1,6 @@
 ---
 title: Torture
-layout: blog-post
+layout: post
 ---
 
 I've been following the torture stuff moderately closely. For people who

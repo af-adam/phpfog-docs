@@ -1,6 +1,6 @@
 ---
 title: Persistent Online Identity
-layout: blog-post
+layout: post
 ---
 
 OpenID, OpenSocial, Disqus all seem to point to the inevitability of

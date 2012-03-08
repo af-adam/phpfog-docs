@@ -1,6 +1,6 @@
 ---
 title: Quick App Idea
-layout: blog-post
+layout: post
 ---
 
 Here's an idea for a distributed, peer-to-peer (though not massively

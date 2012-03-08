@@ -1,8 +1,7 @@
 ---
 title: A New Metaphor for Social Networking
-layout: blog-post
+layout: post
 ---
-
 
 Yesterday, Google launched [Google+](https://plus.google.com/), which,
 according to [Steven Levy's Wired

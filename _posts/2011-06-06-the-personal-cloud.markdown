@@ -1,8 +1,7 @@
 ---
 title: The Personal Cloud
-layout: blog-post
+layout: post
 ---
-
 
 Things seem inexorably trending toward cloud models of
 computing.[^1] Which is great, right? You can have access to your

@@ -1,6 +1,6 @@
 ---
 title: "End of Comments II: Browsers and Identity"
-layout: blog-post
+layout: post
 ---
 
 I think it's pertinent to note first that my thoughts on this thread and

@@ -1,8 +1,7 @@
 ---
 title: "Project: Depth"
-layout: blog-post
+layout: post
 ---
-
 
 I don't particularly enjoy traditional social settings like bars or
 parties. Partly this is because I can't hear very well, especially when

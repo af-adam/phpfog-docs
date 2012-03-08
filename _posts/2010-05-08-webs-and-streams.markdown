@@ -1,6 +1,6 @@
 ---
 title: Webs and Streams
-layout: blog-post
+layout: post
 ---
 
 There was a lot of mayhem surrounding the release of Google Buzz that

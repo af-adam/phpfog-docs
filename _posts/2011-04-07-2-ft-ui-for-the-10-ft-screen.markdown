@@ -1,6 +1,6 @@
 ---
 title: The 2-Foot User Interface for the 10-Foot Screen
-layout: blog-post
+layout: post
 ---
 
 

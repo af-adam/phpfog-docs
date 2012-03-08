@@ -1,6 +1,6 @@
 ---
 title: Convergence, or All The Things I've Been Thinking About That Turned Out To Be The Same Thing
-layout: blog-post
+layout: post
 ---
 
 So, I came pretty close to buying an iPhone because I found a deal for a

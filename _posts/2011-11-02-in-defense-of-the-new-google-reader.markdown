@@ -1,8 +1,7 @@
 ---
 title: In Defense of the New Google Reader
-layout: blog-post
+layout: post
 ---
-
 
 Brian Shih, a former PM for Google Reader, wrote [a scathing take-down
 of the recent changes to Google Reader](http://brianshih.com/78073742)

@@ -1,6 +1,6 @@
 ---
 title: Why I trust Google
-layout: blog-post
+layout: post
 ---
 
 From [this

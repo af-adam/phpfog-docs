@@ -1,6 +1,6 @@
 ---
 title: The End of Comments
-layout: blog-post
+layout: post
 ---
 
 It's a truism that medium and message are intrinsically intertwined.

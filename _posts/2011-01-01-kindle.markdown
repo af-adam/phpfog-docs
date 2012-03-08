@@ -1,6 +1,6 @@
 ---
 title: Kindle
-layout: blog-post
+layout: post
 ---
 
 Sounds like a few people got Kindles for Christmas, so I thought I'd

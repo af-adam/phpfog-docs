@@ -1,8 +1,7 @@
 ---
 title: Intimacy and Performance on Facebook
-layout: blog-post
+layout: post
 ---
-
 
 Facebook launched three interesting new features last Thursday:
 Timeline, Ticker, and Open Graph.

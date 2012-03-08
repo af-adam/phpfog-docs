@@ -1,6 +1,6 @@
 ---
 title: David Foster Wallace
-layout: blog-post
+layout: post
 ---
 
 I'm reading through [A Supposedly Fun

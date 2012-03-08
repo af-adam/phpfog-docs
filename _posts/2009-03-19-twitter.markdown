@@ -1,6 +1,6 @@
 ---
 title: Twitter
-layout: blog-post
+layout: post
 ---
 
 I've been on twitter for a few months now, but I have to admit, I wasn't

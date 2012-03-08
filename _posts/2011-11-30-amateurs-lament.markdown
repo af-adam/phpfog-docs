@@ -1,6 +1,6 @@
 ---
 title: An Amateur's Lament
-layout: blog-post 
+layout: post
 ---
 
 Amazon's [advertisement for the Kindle

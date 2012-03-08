@@ -1,8 +1,7 @@
 ---
 title: We Are What We Choose
-layout: blog-post
+layout: post
 ---
-
 
 In [this post on
 Cyborgology](http://thesocietypages.org/cyborgology/2011/11/03/equipment-why-you-cant-convince-a-cyborg-shes-a-cyborg/),

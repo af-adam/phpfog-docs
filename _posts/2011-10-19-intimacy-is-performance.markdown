@@ -1,8 +1,7 @@
 ---
 title: Intimacy is Performance
-layout: blog-post
+layout: post
 ---
-
 
 I was surprised to find a lot of interesting discussion around [my last
 post about Intimacy and Performance on

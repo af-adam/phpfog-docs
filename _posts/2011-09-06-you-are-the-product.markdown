@@ -1,8 +1,7 @@
 ---
 title: "You are the product."
-layout: blog-post
+layout: post
 ---
-
 
 In a talk last Friday at the
 [dConstruct](http://2011.dconstruct.org/conference/don-norman)

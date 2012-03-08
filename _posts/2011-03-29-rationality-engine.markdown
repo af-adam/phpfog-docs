@@ -1,6 +1,6 @@
 ---
 title: Rationality Engine
-layout: blog-post
+layout: post
 ---
 
 

@@ -1,8 +1,7 @@
 ---
 title: Google's Existential Crisis
-layout: blog-post
+layout: post
 ---
-
 
 Google's success was founded on the execution[^1] of two
 innovations: 1. Leveraging the hyperlink to create the best index (i.e.

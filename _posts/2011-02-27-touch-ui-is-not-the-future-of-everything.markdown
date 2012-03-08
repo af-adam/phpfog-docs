@@ -1,6 +1,6 @@
 ---
 title: Touch UI is not the future of everything.
-layout: blog-post
+layout: post
 ---
 
 
