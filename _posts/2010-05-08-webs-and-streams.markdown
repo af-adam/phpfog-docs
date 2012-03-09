@@ -50,11 +50,10 @@ To include:
 -   Shared links
 -   Photos/photo sets
 -   Podcasts (maybe)
--   Comments ([Jeff Jarvis on
-    comments](http://www.buzzmachine.com/2010/03/23/the-problem-with-comments-isnt-them/).)
+-   Comments ([Jeff Jarvis on comments](http://www.buzzmachine.com/2010/03/23/the-problem-with-comments-isnt-them/).)
 -   "Likes"
 -   Email
--   Chats\
+-   Chats
 -   SMS
 
 In the abstract, there are very few true distinctions between these
