@@ -19,7 +19,7 @@ layout: default
 		<ul class="pager">
 			{% if page.previous %}
 			<li class="previous">
-				<a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.title }}">&larr;{{ page.previous.title }}</a>
+				<a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.title | truncatewords: 8 }}">&larr;{{ page.previous.title }}</a>
 			</li>
 			{% endif %}
 			{% if page.next %}
