@@ -1,0 +1,13 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+
+
+# Do not do anything for already existing files and folders
+RewriteCond %{REQUEST_FILENAME} -f 
+RewriteRule .+ - [L]
+
+# add .html file extension (if such file does exist)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^.+$ %{REQUEST_FILENAME}.html [L]

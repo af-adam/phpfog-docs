@@ -111,5 +111,3 @@ via
     good, but Google can aggregate my data with that of others and make
     it hugely useful. That's pure wealth creation as far as I'm
     concerned. 
-
-

@@ -169,7 +169,6 @@ that that part is in the works.
     subscribe to some of the basic content relationships I wrote about
     [here](http://blog.byjoemoon.com/post/582452757/webs-and-streams).
     
-
 [^4]: It's not that hard to imagine an alternate view that collapses all
     the different Place streams together, but gives a clear indication
     of which Place each individual post belongs to.

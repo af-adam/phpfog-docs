@@ -3,7 +3,6 @@ title: Touch UI is not the future of everything.
 layout: post
 ---
 
-
 Apple beat even the most optimistic expectations and sold over 15
 million iPads in the first year of its release, and it looks like the
 second version is just around the corner. The competitors are lining up

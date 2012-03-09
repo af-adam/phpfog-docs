@@ -143,6 +143,3 @@ Adrian Short
     sharing by making you explicitly think about which Circle to share
     to with every item. Which, I submit, is precisely where you want
     friction in a sharing interface that respects your privacy.
-    
-
-

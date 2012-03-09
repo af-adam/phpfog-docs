@@ -89,6 +89,8 @@ Which means the public outcry is good. It tells Google what to fix. I
 just wish the outcry was over stuff that matters instead of what strikes
 me as simple aversion to change.
 
+### Notes
+
 [^1]: There were plenty of browser extensions and user styles that ‘fixed'
     the old Google Reader appearance along many of precisely the ways
     Shih complains about here. 

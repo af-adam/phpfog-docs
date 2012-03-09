@@ -30,7 +30,7 @@ most of my idle cycles on, I guess that's mostly what this blog's about.
 
 There are two separate vectors of depth that I think about:
 
-[^1]: Depth of experience. I refer to the immersive experience, in which
+1. Depth of experience. I refer to the immersive experience, in which
     you are so engrossed in your artifact that when you are interrupted,
     it's as disorienting as waking up in an unfamiliar place from a
     vivid dream. This experience can come in many forms. For me, it's
@@ -38,7 +38,7 @@ There are two separate vectors of depth that I think about:
     often films and sometimes video games
     ([Ico](http://en.wikipedia.org/wiki/Ico) comes to mind).
 
-[^2]: Depth of connection. Conversations can be engrossing, too. They can
+2. Depth of connection. Conversations can be engrossing, too. They can
     also enlighten (sometimes mutually), expand (in the transitive sense
     of the word), and increase intimacy. This is true both off- and
     online. And online, the internet equivalent of idle chatter is
@@ -52,18 +52,18 @@ The problem of the proliferation of shallow communication is more
 fundamental than the implementation of currently popular social
 networks. I'm starting to see it as three parts:
 
-[^1]: Human nature. People have short attention spans and are easily
+1. Human nature. People have short attention spans and are easily
     distracted. They are also incredibly susceptible to Skinnerian
     novelty-seeking behavior. (Also, many or most people genuinely
     prefer shallow breadth, or even just shallows.)
 
-[^2]: The architecture of the web. The web is made of hyperlinks. Any
+2. The architecture of the web. The web is made of hyperlinks. Any
     given page generally points to many other pages. If you imagine that
     the goal of reading a web page is to read it all the way through
     from start to finish, the page itself fights you by giving you many
     orthogonal avenues along the way.[^3]
 
-[^3]: Currently viable online business models. Web pages make money by
+3. Currently viable online business models. Web pages make money by
     distracting you, either by getting you to look at an ad or by
     getting you to click on one. As long as advertising drives the web,
     and advertisers measure success in page views, this isn't going to
@@ -108,10 +108,8 @@ tools to so we don't have to. Can't hurt to try both.
 [^1]: I'm not trying to take all the credit for all of these, just
     explicating my underlying reason for participating.
     
-
 [^2]: I find the concept of "ambient intimacy" to be an interesting one.
     
-
 [^3]: There's a lot more here, like the fact that the internet is
     basically a custom tailored novelty aggregator and interruption
     machine, but others have covered this exhaustively, I think.
@@ -119,11 +117,7 @@ tools to so we don't have to. Can't hurt to try both.
     What the Internet is Doing to Our
     Brains*](http://www.amazon.com/Shallows-What-Internet-Doing-Brains/dp/0393072223).
     
-
 [^4]: Probably not deep on either of the vectors I've enumerated, but
     Stack Exchange was built as a direct response to the shallow
     cesspool of technical knowledge that was available on the internet.
     It maybe represents a third vector: depth of information?
-    
-
-

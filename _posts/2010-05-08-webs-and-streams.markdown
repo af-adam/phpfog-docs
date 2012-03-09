@@ -87,15 +87,15 @@ many.
 Then there are text messages, chats, and e-mails, that (usually) go from
 one point to another, privately.
 
-So five basic types: 1→all, 1→1[public], 1→many[public],
-1→many[private], 1→1[private].
+So five basic types: 1&rarr;all, 1&rarr;1[public], 1&rarr;many[public],
+1&rarr;many[private], 1&rarr;1[private].
 
 Fairly obviously, however, there's no fundamental difference between
-1→1[private] and 1→many[private]; the former is simply a subset of the
+1&rarr;1[private] and 1&rarr;many[private]; the former is simply a subset of the
 latter. Likewise with the [public] counterparts. Which leave us with
-three: 1→all, 1→many[private], and 1→many[public].
+three: 1&rarr;all, 1&rarr;many[private], and 1&rarr;many[public].
 
-The difference between, 1→all and 1→many[public], though, is also
+The difference between, 1&rarr;all and 1&rarr;many[public], though, is also
 somewhat artificial in that it's really an extraneous piece of metadata.
 The public nature of the content renders the fact of any intended
 recipient sort of functionally meaningless.

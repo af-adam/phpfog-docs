@@ -117,7 +117,7 @@ next post.
 Edit: continued
 [here](http://blog.byjoemoon.com/post/3357516295/end-of-comments-ii-browsers-and-identity).
 
-* * * * *
+### Notes
 
 [^1]: The 140-character limit exists because Twitter started as a way to
     propagate SMS to groups easily. My theory is that the founders of

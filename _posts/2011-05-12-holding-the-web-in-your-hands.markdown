@@ -116,6 +116,3 @@ computer. Instead, "it actually IS the web." It's a beautiful dream.
 
 [^7]: I do have misgivings, though, about the "cloud" model, and giving up
     control of our data and identities to corporations.
-    
-
-

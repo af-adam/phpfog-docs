@@ -146,5 +146,3 @@ what happens when the success inevitably slows.
 
 [^4]: More cynically, you could call it a response to growing criticism
     about search quality. 
-
-

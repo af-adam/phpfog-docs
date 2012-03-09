@@ -211,5 +211,3 @@ in placing yourself in and managing your social context.
 
     We are it. We are already the Borg, but we seem to need myth to
     bring us to that knowledge." 
-
-

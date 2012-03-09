@@ -3,7 +3,6 @@ title: Rationality Engine
 layout: post
 ---
 
-
 Paul Graham's [essay on
 disagreement](http://paulgraham.com/disagree.html), the discussion C-Rob
 started

@@ -3,7 +3,6 @@ title: The 2-Foot User Interface for the 10-Foot Screen
 layout: post
 ---
 
-
 Television user interfaces could be so much better. I thought that with
 the introduction of set-top box internet video solutions, user
 interfaces would make menu and playback navigation and content
@@ -74,10 +73,6 @@ navigations that we're used to.
 You could also add more features, like playlists or queues,[^8]
 app integration,[^9] games, and multiple video
 streams.[^10]
-
-Looks like
-[this](http://scobleizer.com/2011/04/13/the-most-important-new-protocol-since-rss-airplay-three-cool-new-apps-that-use-it-to-change-how-we-view-tv/)
-might solve all my complaints. I'll have to try this out.
 
 ### Update
 

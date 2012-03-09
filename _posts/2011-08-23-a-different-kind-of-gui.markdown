@@ -3,41 +3,22 @@ title: A Different Kind of GUI
 layout: post
 ---
 
-"[In the beginning was the command
-line](http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml)."
+"[In the beginning was the command line](http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml)."
 
-But then the command line became graphics and dwelt among us. From its
-earliest days, Apple privileged the lay user over the technical one,
-regarding the need to understand technical details as friction. With the
-Lisa and the Macintosh, Apple picked up where [Xerox Palo Alto Research
-Center](http://en.wikipedia.org/wiki/Xerox_Parc) left off. The guiding
-principles of intuitiveness and discoverability led Apple to replace the
-command line interface (CLI) with the graphical user interface (GUI),
-featuring windows, menus, icons, and a pointing device
-([WIMP](http://en.wikipedia.org/wiki/WIMP_(computing))).
+But then the command line became graphics and dwelt among us. From its earliest days, Apple privileged the lay user over the technical one, regarding the need to understand technical details as friction. With the Lisa and the Macintosh, Apple picked up where [Xerox Palo Alto Research Center](http://en.wikipedia.org/wiki/Xerox_Parc) left off. The guiding principles of intuitiveness and discoverability led Apple to replace the command line interface (CLI) with the graphical user interface (GUI), featuring windows, menus, icons, and a pointing device ([WIMP](http://en.wikipedia.org/wiki/WIMP_(computing))).
 
-For these historical reasons, the GUI has always been pointer-driven, at
-least with respect to computer operating systems. Apple has only
-recently begun the transition to something new: iOS's direct
-manipulation interface; still a GUI, but no longer driven by the same
-windows or menus or a pointing device. With this transition, Apple
-achieved its oldest dream more successfully than anyone anticipated. And
-it now seems to be pulling the rest of its product line into that dream.
-To use Steve Jobs' terminology, they're slowly transitioning out of [the
-"truck"
-business](http://motherjones.com/kevin-drum/2010/06/cars-trucks-and-ipads).
+For these historical reasons, the GUI has always been pointer-driven, at least with respect to computer operating systems. Apple has only recently begun the transition to something new: iOS's direct manipulation interface; still a GUI, but no longer driven by the same windows or menus or a pointing device. With this transition, Apple achieved its oldest dream more successfully than anyone anticipated. And it now seems to be pulling the rest of its product line into that dream. To use Steve Jobs' terminology, they're slowly transitioning out of [the "truck" business](http://motherjones.com/kevin-drum/2010/06/cars-trucks-and-ipads).
 
 ### The Mouse
 
-It's enlightening to consider what made the mouse such an indispensable
-companion to the GUI for so long.
+It's enlightening to consider what made the mouse such an indispensable companion to the GUI for so long.
 
-[^1]: It's intuitive. It's easy to grasp the basic concept that the cursor
+1. It's intuitive. It's easy to grasp the basic concept that the cursor
     is an extension of the hand, that its motion corresponds to the
     motion of the mouse.
-[^2]: All interactions are built on a minimal set of axiomatic actions:
+2. All interactions are built on a minimal set of axiomatic actions:
     move, hover, click, release, and drag.
-[^3]: It provides highly precise and unrestricted motion of the cursor, as
+3. It provides highly precise and unrestricted motion of the cursor, as
     opposed to a joystick, which limits the cursor's direction and
     velocity.
 
@@ -72,27 +53,27 @@ ones.
 But even aside from the unintuitiveness, there are a lot of reasons not
 to like the mouse:
 
-[^1]: The arbitrary motion of a mouse cursor makes the effort analog, as
+1. The arbitrary motion of a mouse cursor makes the effort analog, as
     opposed to the digital motion of keying. Commands, even repetitive
     ones, can't be relegated to muscle memory the way command line
     commands or keyboard navigation can.
-[^2]: Because of this, mousing is a conscious process. Hitting precise
+2. Because of this, mousing is a conscious process. Hitting precise
     targets takes a lot more cognitive effort and close attention than
     keying.
-[^3]: Moving the mouse hand back and forth between mouse and keyboard is
+3. Moving the mouse hand back and forth between mouse and keyboard is
     often an annoying cognitive task-switch and that breaks flow.
-[^4]: The requirement of moving back and forth between mouse and keyboard
+4. The requirement of moving back and forth between mouse and keyboard
     creates friction for typing. And since typing is one of the main
     ways of producing content, this friction is a particular type that
     only applies to production and not to consumption.
-[^5]: It's slower, or feels slower. (According to [Bruce
+5. It's slower, or feels slower. (According to [Bruce
     Tognazzini](http://www.asktog.com/TOI/toi06KeyboardVMouse1.html),
     Apple R&D found that mousing is in fact faster than keyboarding.
     This strikes me as highly dubious today not only for all the reasons
     given above, but also because the article is from 1989 and the
     research is presumably from before that. I believe the research was
     also done on non-expert users.
-[^6]: While the high degree of precision afforded by the mouse is a boon
+6. While the high degree of precision afforded by the mouse is a boon
     to applications that benefit from it, as the dominant mode of
     interaction, it forces that level of precision on every transaction.
     For every dialogue box with two simple choices, for example, the
@@ -146,26 +127,26 @@ interaction bandwidth.
 
 Some starting points:
 
-[^1]: A purposefully high-bandwidth interaction model, i.e. a large but
+1. A purposefully high-bandwidth interaction model, i.e. a large but
     consistent set of initial undiscoverable actions to learn, that, at
     best, isn't meaningfully less ‘intuitive,'[^4] but instead
     simply has a learning curve with a different shape.[^5]
-[^2]: The mouse is too powerful to get rid of entirely. There are many
+2. The mouse is too powerful to get rid of entirely. There are many
     applications for which it is an ideal or at least very appropriate
     input device, such as graphics rendering, photo manipulation, and
     first-person shooters. So, to minimize travel between mouse and
     keyboard, functions of the mouse and the mouse-hand side of the
     keyboard should overlap as much as possible. These probably include:
     motion and selection.
-[^3]: I'll revisit [10/GUI](http://10gui.com/) again, for some of the
+3. I'll revisit [10/GUI](http://10gui.com/) again, for some of the
     fantastic insights therein:
     -   Single axis of windows (Con10uum).
     -   Different levels of interaction.
 
-[^4]: Direct manipulation interfaces suggest that cursors are unnecessary.
+4. Direct manipulation interfaces suggest that cursors are unnecessary.
     In our thought experiment, they would probably exist only in certain
     applications, specifically mouse-based ones.
-[^5]: We can draw inspiration from keyboard-only UIs.
+5. We can draw inspiration from keyboard-only UIs.
     -   [Vim](http://www.vim.org/) is a venerable text editor that I've
         recently converted to. Its interface is modal, and its main mode
         of operation is through a command-based console.
@@ -264,14 +245,14 @@ Illustrations by Chris Klink.
 
 ### Further Reading
 
-[^1]: Christopher Mims. ["Is the Desktop Having an Identity
+1. Christopher Mims. ["Is the Desktop Having an Identity
     Crisis?"](http://www.technologyreview.com/computing/38047/). *MIT
     Technology Review*. July 18, 2011.
-[^2]: Wikipedia. ["History of the
+2. Wikipedia. ["History of the
     GUI"](http://en.wikipedia.org/wiki/History_of_the_graphical_user_interface).
-[^3]: Jeremy Reimer. ["A History of the
+3. Jeremy Reimer. ["A History of the
     GUI"](http://arstechnica.com/old/content/2005/05/gui.ars).
-[^4]: Brad A. Myers. ["A Brief History of Human Computer Interaction
+4. Brad A. Myers. ["A Brief History of Human Computer Interaction
     Technology"](http://www.cs.cmu.edu/~amulet/papers/uihistory.tr.html).
     *ACM interactions.* Vol. 5, no. 2, March, 1998. pp. 44–54.
 

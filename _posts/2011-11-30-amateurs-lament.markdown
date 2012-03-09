@@ -173,4 +173,3 @@ convince enough people that this is worth doing.
     Raymond
 -   Tim Wu on [*The Master
     Switch*](http://bits.blogs.nytimes.com/2010/11/14/one-on-one-tim-wu-author-of-the-master-switch/)
-

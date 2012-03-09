@@ -128,6 +128,3 @@ to poke through the clouds.
     even Microsoft acknowledges the trend with its own web-based
     offerings of Office, and with its announcement that Windows 8
     development will be done in HTML and Javascript.
-    
-
-
