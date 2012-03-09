@@ -49,34 +49,26 @@
 			<h2>A Different Kind of GUI</h2>
 			<p><date datetime="Tue Aug 23 00:00:00 -0700 2011">August 23, 2011</date><p>
 		</div>
-		<p>&ldquo;<a href="http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml">In the beginning was the command
-line</a>.&rdquo;</p>
+		<p>&ldquo;<a href="http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml">In the beginning was the command line</a>.&rdquo;</p>
 
-<p>But then the command line became graphics and dwelt among us. From its
-earliest days, Apple privileged the lay user over the technical one,
-regarding the need to understand technical details as friction. With the
-Lisa and the Macintosh, Apple picked up where <a href="http://en.wikipedia.org/wiki/Xerox_Parc">Xerox Palo Alto Research
-Center</a> left off. The guiding
-principles of intuitiveness and discoverability led Apple to replace the
-command line interface (CLI) with the graphical user interface (GUI),
-featuring windows, menus, icons, and a pointing device
-(<a href="http://en.wikipedia.org/wiki/WIMP_(computing)">WIMP</a>).</p>
+<p>But then the command line became graphics and dwelt among us. From its earliest days, Apple privileged the lay user over the technical one, regarding the need to understand technical details as friction. With the Lisa and the Macintosh, Apple picked up where <a href="http://en.wikipedia.org/wiki/Xerox_Parc">Xerox Palo Alto Research Center</a> left off. The guiding principles of intuitiveness and discoverability led Apple to replace the command line interface (CLI) with the graphical user interface (GUI), featuring windows, menus, icons, and a pointing device (<a href="http://en.wikipedia.org/wiki/WIMP_(computing)">WIMP</a>).</p>
 
-<p>For these historical reasons, the GUI has always been pointer-driven, at
-least with respect to computer operating systems. Apple has only
-recently begun the transition to something new: iOS&rsquo;s direct
-manipulation interface; still a GUI, but no longer driven by the same
-windows or menus or a pointing device. With this transition, Apple
-achieved its oldest dream more successfully than anyone anticipated. And
-it now seems to be pulling the rest of its product line into that dream.
-To use Steve Jobs&rsquo; terminology, they&rsquo;re slowly transitioning out of <a href="http://motherjones.com/kevin-drum/2010/06/cars-trucks-and-ipads">the
-&ldquo;truck&rdquo;
-business</a>.</p>
+<p>For these historical reasons, the GUI has always been pointer-driven, at least with respect to computer operating systems. Apple has only recently begun the transition to something new: iOS&rsquo;s direct manipulation interface; still a GUI, but no longer driven by the same windows or menus or a pointing device. With this transition, Apple achieved its oldest dream more successfully than anyone anticipated. And it now seems to be pulling the rest of its product line into that dream. To use Steve Jobs&rsquo; terminology, they&rsquo;re slowly transitioning out of <a href="http://motherjones.com/kevin-drum/2010/06/cars-trucks-and-ipads">the &ldquo;truck&rdquo; business</a>.</p>
 
 <h3 id="the-mouse">The Mouse</h3>
 
-<p>It&rsquo;s enlightening to consider what made the mouse such an indispensable
-companion to the GUI for so long.</p>
+<p>It&rsquo;s enlightening to consider what made the mouse such an indispensable companion to the GUI for so long.</p>
+
+<ol>
+  <li>It&rsquo;s intuitive. It&rsquo;s easy to grasp the basic concept that the cursor
+ is an extension of the hand, that its motion corresponds to the
+ motion of the mouse.</li>
+  <li>All interactions are built on a minimal set of axiomatic actions:
+ move, hover, click, release, and drag.</li>
+  <li>It provides highly precise and unrestricted motion of the cursor, as
+ opposed to a joystick, which limits the cursor&rsquo;s direction and
+ velocity.</li>
+</ol>
 
 <p>With careful application of the WIMP metaphor, these features made every
 aspect of a GUI accessible to the user. But this was only the minimal
@@ -108,6 +100,39 @@ ones.</p>
 
 <p>But even aside from the unintuitiveness, there are a lot of reasons not
 to like the mouse:</p>
+
+<ol>
+  <li>The arbitrary motion of a mouse cursor makes the effort analog, as
+ opposed to the digital motion of keying. Commands, even repetitive
+ ones, can&rsquo;t be relegated to muscle memory the way command line
+ commands or keyboard navigation can.</li>
+  <li>Because of this, mousing is a conscious process. Hitting precise
+ targets takes a lot more cognitive effort and close attention than
+ keying.</li>
+  <li>Moving the mouse hand back and forth between mouse and keyboard is
+ often an annoying cognitive task-switch and that breaks flow.</li>
+  <li>The requirement of moving back and forth between mouse and keyboard
+ creates friction for typing. And since typing is one of the main
+ ways of producing content, this friction is a particular type that
+ only applies to production and not to consumption.</li>
+  <li>It&rsquo;s slower, or feels slower. (According to <a href="http://www.asktog.com/TOI/toi06KeyboardVMouse1.html">Bruce
+ Tognazzini</a>,
+ Apple R&amp;D found that mousing is in fact faster than keyboarding.
+ This strikes me as highly dubious today not only for all the reasons
+ given above, but also because the article is from 1989 and the
+ research is presumably from before that. I believe the research was
+ also done on non-expert users.</li>
+  <li>While the high degree of precision afforded by the mouse is a boon
+ to applications that benefit from it, as the dominant mode of
+ interaction, it forces that level of precision on every transaction.
+ For every dialogue box with two simple choices, for example, the
+ user still must traverse an arbitrary distance and hit a cursor
+ target that is tiny relative to the rest of the screen, which is,
+ for the transaction, completely unused. So to make an input that&rsquo;s
+ essentially a binary 0 or 1, the user in real terms has to make a
+ huge, well-calibrated, cognitively expensive analog input that&rsquo;s
+ largely wasted.</li>
+</ol>
 
 <p>With OS X 10.7 Lion, Apple presents a clear and well-documented
 iOSification of OS X.<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> A prominent sign to me is the seeming
@@ -151,6 +176,38 @@ the primary motivator or at least stop defining the word as minimal
 interaction bandwidth.</p>
 
 <p>Some starting points:</p>
+
+<ol>
+  <li>A purposefully high-bandwidth interaction model, i.e. a large but
+ consistent set of initial undiscoverable actions to learn, that, at
+ best, isn&rsquo;t meaningfully less ‘intuitive,&rsquo;<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> but instead
+ simply has a learning curve with a different shape.<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup></li>
+  <li>The mouse is too powerful to get rid of entirely. There are many
+ applications for which it is an ideal or at least very appropriate
+ input device, such as graphics rendering, photo manipulation, and
+ first-person shooters. So, to minimize travel between mouse and
+ keyboard, functions of the mouse and the mouse-hand side of the
+ keyboard should overlap as much as possible. These probably include:
+ motion and selection.</li>
+  <li>I&rsquo;ll revisit <a href="http://10gui.com/">10/GUI</a> again, for some of the
+ fantastic insights therein:
+    <ul>
+      <li>Single axis of windows (Con10uum).</li>
+      <li>Different levels of interaction.</li>
+    </ul>
+  </li>
+  <li>Direct manipulation interfaces suggest that cursors are unnecessary.
+ In our thought experiment, they would probably exist only in certain
+ applications, specifically mouse-based ones.</li>
+  <li>We can draw inspiration from keyboard-only UIs.
+    <ul>
+      <li><a href="http://www.vim.org/">Vim</a> is a venerable text editor that I&rsquo;ve
+recently converted to. Its interface is modal, and its main mode
+of operation is through a command-based console.</li>
+      <li>Windows&rsquo; keyboard access of menus, with visual indicators.</li>
+    </ul>
+  </li>
+</ol>
 
 <h3 id="fresh-start">Fresh Start</h3>
 
@@ -245,6 +302,19 @@ substantial production, a generally richer, denser,
 
 <h3 id="further-reading">Further Reading</h3>
 
+<ol>
+  <li>Christopher Mims. <a href="http://www.technologyreview.com/computing/38047/">&ldquo;Is the Desktop Having an Identity
+ Crisis?&rdquo;</a>. <em>MIT
+ Technology Review</em>. July 18, 2011.</li>
+  <li>Wikipedia. <a href="http://en.wikipedia.org/wiki/History_of_the_graphical_user_interface">&ldquo;History of the
+ GUI&rdquo;</a>.</li>
+  <li>Jeremy Reimer. <a href="http://arstechnica.com/old/content/2005/05/gui.ars">&ldquo;A History of the
+ GUI&rdquo;</a>.</li>
+  <li>Brad A. Myers. <a href="http://www.cs.cmu.edu/~amulet/papers/uihistory.tr.html">&ldquo;A Brief History of Human Computer Interaction
+ Technology&rdquo;</a>.
+ <em>ACM interactions.</em> Vol. 5, no. 2, March, 1998. pp. 44–54.</li>
+</ol>
+
 <h3 id="notes">Notes</h3>
 
 <div class="footnotes">
@@ -279,6 +349,18 @@ the touchpad that you&rsquo;re already touching in Lion. And that&rsquo;s not
 even getting into the crazy gestures. I think this actually produces
 a UI &ldquo;<a href="http://en.wikipedia.org/wiki/Uncanny_valley">uncanny valley</a>&rdquo;
 effect. <a href="#fnref:3" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>If you think back to your first experience with a mouse, or watching
+someone&rsquo;s first experience, you might agree that the mouse actually
+isn&rsquo;t particularly intuitive so much as it is familiar.<a href="#fnref:4" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>This observation is probably more broadly applicable. For example,
+languages with simpler grammars are probably easier to learn, but
+less powerful in terms of conveying a lot of subtle information in
+the shortest amount of time. I don&rsquo;t have the knowledge or resources
+to explore this properly, though.<a href="#fnref:5" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
