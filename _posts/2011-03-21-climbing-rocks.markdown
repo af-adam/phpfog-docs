@@ -138,6 +138,7 @@ own struggle with weakness is only now beginning.
     Class four, or "scrambling," is climbing relatively gently sloped
     surfaces with only the occasional need for
     hands.
+
 [^2]: More extreme (read: dangerous) forms of climbing include "free
     soloing," and the recently pioneered "free basing." Free soloing
     refers to climbing routes alone sans protective gear, with a fall
@@ -149,18 +150,21 @@ own struggle with weakness is only now beginning.
     can attempt without any other equipment. Also, he generally jumps
     from the top of a route he's
     climbed.
+
 [^3]: Both on footholds (using toes, edges, and heel-hooks) and in support
-    positions
-    (flagging).
+    positions (flagging).
+
 [^4]: To speak in broad generalities, in my experience, sport (and,
     naturally, trad) climbers tend to think and talk a lot more about
     nature and their relationship to it (adversarial or otherwise) than
     boulderers, emphasize outdoor climbing a lot more, and get bored and
     tired of indoor climbing much more
     easily.
+
 [^5]: Either way, it's an absurd activity, rock-climbing, though I think
     bouldering is more accepting of this inherenet
     absurdity.
+
 [^6]: People have a fairly astounding variety of shapes and sizes. Height
     is an obvious differentiator when it comes to climbing (though,
     somewhat counterintuitively, excessive height is often a liability
@@ -170,12 +174,15 @@ own struggle with weakness is only now beginning.
     density. Two climbers of equal height and strength may have vastly
     different climbing styles due to different limb lengths and
     flexibility.
+
 [^7]: A friend once made the comparison to skateboarding, which I've never
     done, but the comparison definitely seems
     apt.
+
 [^8]: The majority of our Portland friends are either climbers or people
     we met through
     climbers.
+
 [^9]: Not that I'm that old, but I never had a single injury and could
     climb more energetically and for longer intervals with shorter
     recovery times just a couple of years
