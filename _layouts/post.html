@@ -19,12 +19,12 @@ layout: default
 		<ul class="pager">
 			{% if page.previous %}
 			<li class="previous">
-				<a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.title | truncatewords: 8 }}">&larr;{{ page.previous.title }}</a>
+				<a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.title }}">&larr;{{ page.previous.title | truncatewords: 9 }}</a>
 			</li>
 			{% endif %}
 			{% if page.next %}
 			<li class="next">
-				<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title }}&rarr;</a>
+				<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}">{{ page.next.title | truncatewords: 9 }}&rarr;</a>
 			</li>
 			{% endif %}
 		</ul>
