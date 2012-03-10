@@ -1,6 +1,7 @@
 ---
 title: An Amateur's Lament
 layout: post
+alias: /post/13581915694/an-amateurs-lament
 ---
 
 Amazon's [advertisement for the Kindle
