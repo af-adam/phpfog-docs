@@ -6,12 +6,10 @@ title: blog
 <div class="row blog-first">
 		<ul class="posts">
 			{% for post in paginator.posts %}
-			<li class="span4"><a href="{{ post.url | remove: ".html" }}">
+			<li class="{% if !post.title %}span8{% else %}span4{% endif %}"><a href="{{ post.url | remove: ".html" }}">
 			<h3>{{ post.title }}</h3><date datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</date><p class="description">{{ post.description }}</p>
 			<p class="teaser">{{ post.content | strip_html | truncatewords: 100 }}</p>
 			</a></li>
-			{% if forloop.index == 3 %}</ul></div><div class="row"><ul class="posts">{% endif %}
-			{% if forloop.index == 6 %}</ul></div><div class="row"><ul class="posts">{% endif %}
 			{% endfor %}
 		</ul>
 </div>
