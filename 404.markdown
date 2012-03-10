@@ -1,0 +1,8 @@
+---
+layout: default
+title: 404 Not Found
+---
+
+<div class="row blog-first">
+	<h2 class="index-category">Sorry, couldn't find the page you were looking for.</h2>
+</div>

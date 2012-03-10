@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<title>A Different Kind of GUI by Joe Moon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Joe Moon">
+
+    <!-- Le styles -->
+
+    <link href="http://byjoemoon.phpfogapp.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://byjoemoon.phpfogapp.com/css/style.css" rel="stylesheet">
+<!-- <link rel="stylesheet/less" href="/css/less/style.less">
+<script src="/js/less-1.2.1.min.js"></script> -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://byjoemoon.phpfogapp.com/img/byjoemoon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+<body>
+	<div class="container">
+		<div class="row clearfix">
+				<header id="title-header" class="clearfix">
+				<h1><a class="sub-domain" href="/">blog</a><a class="home" href="http://byjoemoon.com"><span id="header-a">by</span><span id="header-b">joe</span><span id="header-c">moon</span></a></h1>
+					<nav id="links">
+						<ul class="nav nav-pills">
+							<li><a href="http://byjoemoon.com/portfolio">portfolio</a></li>
+							<li><a id="contact" href="mailto:mail@byjoemoon.com">email</a></li>
+							<li><a rel="me" href="http://plus.google.com/109995794392976695103">Google+</a></li>
+							<li><a href="http://www.linkedin.com/in/joemoon">LinkedIn</a></li>
+							<li><a href="http://www.flickr.com/photos/badmojo/">flickr</a></li>
+							<li><a href="http://twitter.com/joebadmo">twitter</a></li>
+						</ul>
+					</nav>
+				</header>
+		</div>
+		<div class="row blog-first">
+	<div class="span12">
+		<div class="block">
+		<div class="blog-title">
+			<h2>A Different Kind of GUI</h2>
+			<p><date datetime="Tue Aug 23 00:00:00 -0700 2011">August 23, 2011</date><p>
+		</div>
+		<p>&ldquo;<a href="http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml">In the beginning was the command line</a>.&rdquo;</p>
+
+<p>But then the command line became graphics and dwelt among us. From its earliest days, Apple privileged the lay user over the technical one, regarding the need to understand technical details as friction. With the Lisa and the Macintosh, Apple picked up where <a href="http://en.wikipedia.org/wiki/Xerox_Parc">Xerox Palo Alto Research Center</a> left off. The guiding principles of intuitiveness and discoverability led Apple to replace the command line interface (CLI) with the graphical user interface (GUI), featuring windows, menus, icons, and a pointing device (<a href="http://en.wikipedia.org/wiki/WIMP_(computing)">WIMP</a>).</p>
+
+<p>For these historical reasons, the GUI has always been pointer-driven, at least with respect to computer operating systems. Apple has only recently begun the transition to something new: iOS&rsquo;s direct manipulation interface; still a GUI, but no longer driven by the same windows or menus or a pointing device. With this transition, Apple achieved its oldest dream more successfully than anyone anticipated. And it now seems to be pulling the rest of its product line into that dream. To use Steve Jobs&rsquo; terminology, they&rsquo;re slowly transitioning out of <a href="http://motherjones.com/kevin-drum/2010/06/cars-trucks-and-ipads">the &ldquo;truck&rdquo; business</a>.</p>
+
+<h3 id="the-mouse">The Mouse</h3>
+
+<p>It&rsquo;s enlightening to consider what made the mouse such an indispensable companion to the GUI for so long.</p>
+
+<ol>
+  <li>It&rsquo;s intuitive. It&rsquo;s easy to grasp the basic concept that the cursor
+ is an extension of the hand, that its motion corresponds to the
+ motion of the mouse.</li>
+  <li>All interactions are built on a minimal set of axiomatic actions:
+ move, hover, click, release, and drag.</li>
+  <li>It provides highly precise and unrestricted motion of the cursor, as
+ opposed to a joystick, which limits the cursor&rsquo;s direction and
+ velocity.</li>
+</ol>
+
+<p>With careful application of the WIMP metaphor, these features made every
+aspect of a GUI accessible to the user. But this was only the minimal
+set afforded by the technology that was available at the time. With
+touch screen technology and the direct manipulation paradigm, Apple has
+not just removed an entire layer of abstraction, but also reduced that
+minimal set of actions even further to a more intuitive level: tap,
+swipe, and pinch. The resulting interface is qualitatively more
+intuitive and trivially easy for new users.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<p>But restricting the minimal set of actions that far has implications
+that I think Apple is only starting to realize. With such a limited
+interaction bandwidth, for example, any given complex action has to take
+a correspondingly large number of sequential inputs. Apple&rsquo;s way of
+mitigating this effect in iOS appears to be gestures, some of which,
+like five-finger pinch, are frankly ridiculous. Traditional desktop GUIs
+mitigate this by overloading the basic controls with incrementally added
+extra functionality that breaks metaphor: double-click, right-click, the
+scroll wheel, any number of additional mouse buttons. These are all
+extremely useful additions (because they increase the interaction
+bandwidth), but this phenomenon is actually part of what makes modern
+desktop GUIs inaccessible to novices and is why I imagine Apple has
+traditionally been so resistant to these kinds of innovations. But I
+think the underlying problem isn&rsquo;t simply the tendency for cruft to
+accumulate, but the severely limiting nature of the metaphor to begin
+with. iOS, just a few years old, already contains more undiscoverable,
+out-of-metaphor inputs (gestures) than discoverable strictly in-metaphor
+ones.</p>
+
+<p>But even aside from the unintuitiveness, there are a lot of reasons not
+to like the mouse:</p>
+
+<ol>
+  <li>The arbitrary motion of a mouse cursor makes the effort analog, as
+ opposed to the digital motion of keying. Commands, even repetitive
+ ones, can&rsquo;t be relegated to muscle memory the way command line
+ commands or keyboard navigation can.</li>
+  <li>Because of this, mousing is a conscious process. Hitting precise
+ targets takes a lot more cognitive effort and close attention than
+ keying.</li>
+  <li>Moving the mouse hand back and forth between mouse and keyboard is
+ often an annoying cognitive task-switch and that breaks flow.</li>
+  <li>The requirement of moving back and forth between mouse and keyboard
+ creates friction for typing. And since typing is one of the main
+ ways of producing content, this friction is a particular type that
+ only applies to production and not to consumption.</li>
+  <li>It&rsquo;s slower, or feels slower. (According to <a href="http://www.asktog.com/TOI/toi06KeyboardVMouse1.html">Bruce
+ Tognazzini</a>,
+ Apple R&amp;D found that mousing is in fact faster than keyboarding.
+ This strikes me as highly dubious today not only for all the reasons
+ given above, but also because the article is from 1989 and the
+ research is presumably from before that. I believe the research was
+ also done on non-expert users.</li>
+  <li>While the high degree of precision afforded by the mouse is a boon
+ to applications that benefit from it, as the dominant mode of
+ interaction, it forces that level of precision on every transaction.
+ For every dialogue box with two simple choices, for example, the
+ user still must traverse an arbitrary distance and hit a cursor
+ target that is tiny relative to the rest of the screen, which is,
+ for the transaction, completely unused. So to make an input that&rsquo;s
+ essentially a binary 0 or 1, the user in real terms has to make a
+ huge, well-calibrated, cognitively expensive analog input that&rsquo;s
+ largely wasted.</li>
+</ol>
+
+<p>With OS X 10.7 Lion, Apple presents a clear and well-documented
+iOSification of OS X.<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> A prominent sign to me is the seeming
+move toward deprecating the mouse, replacing and adding functionality
+with touchpad gestures. I empathize with the desire to leave the mouse
+behind. But where some of the iOS gestures are quite silly, the
+decisions Apple has made about Lion&rsquo;s touchpad gestures are strange in a
+different way. I&rsquo;ve discussed
+<a href="http://blog.byjoemoon.com/post/3556631202/touch-ui-is-not-the-future-of-everything">before</a>
+Apple&rsquo;s attempt to render the direct manipulation interface of iOS on
+the fundamentally indirect interface of the desktop. But aside from
+that, these gestures are no more efficient or discoverable than keyboard
+shortcuts and they do make you move your hand off the keyboard. While
+they are arguably a bit more intuitive and reminiscent<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup> of a
+real touch-based direct manipulation input system, it&rsquo;s at heart really
+just a case of trading one set of undiscoverable metaphors for another.
+At least with keyboard shortcuts, it&rsquo;s possible to expose functionality
+because the keys have a conventional labeling system built in. Gestures
+do not. I don&rsquo;t see any real way to reconcile the inherent and
+fundamental difference between the two paradigms (direct and indirect)
+with the <a href="http://procrastineering.blogspot.com/2011/07/myth-of-dying-mouse.html">ergonomic
+constraints</a>
+of different types of computing. Maybe Apple&rsquo;s solution will be to
+further marginalize the needs of the technical user and simply move to a
+touch-only interface, with touch-screen laptops as their physically
+largest products. It&rsquo;ll be interesting to see.</p>
+
+<h3 id="building-blocks">Building Blocks</h3>
+
+<p>But if this does mark the beginning of the end of the pointing
+device-driven model for consumer computing, it seems like a good time to
+rethink the technical user&rsquo;s computing experience, unburdened by the
+need to cater to the novice or non-technical user. While the CLI seems
+to be regaining prominence and popularity among some subset of users, I
+don&rsquo;t think a return to the command line is practical. The GUI has
+introduced some concepts and workflows that are very powerful. As real
+computers with dedicated input devices become more and more relegated to
+technical users, maybe a more robust but less intuitive interface
+becomes more viable. In fact, maybe we can abandon ‘intuitiveness&rsquo; as
+the primary motivator or at least stop defining the word as minimal
+interaction bandwidth.</p>
+
+<p>Some starting points:</p>
+
+<ol>
+  <li>A purposefully high-bandwidth interaction model, i.e. a large but
+ consistent set of initial undiscoverable actions to learn, that, at
+ best, isn&rsquo;t meaningfully less ‘intuitive,&rsquo;<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup> but instead
+ simply has a learning curve with a different shape.<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup></li>
+  <li>The mouse is too powerful to get rid of entirely. There are many
+ applications for which it is an ideal or at least very appropriate
+ input device, such as graphics rendering, photo manipulation, and
+ first-person shooters. So, to minimize travel between mouse and
+ keyboard, functions of the mouse and the mouse-hand side of the
+ keyboard should overlap as much as possible. These probably include:
+ motion and selection.</li>
+  <li>I&rsquo;ll revisit <a href="http://10gui.com/">10/GUI</a> again, for some of the
+ fantastic insights therein:
+    <ul>
+      <li>Single axis of windows (Con10uum).</li>
+      <li>Different levels of interaction.</li>
+    </ul>
+  </li>
+  <li>Direct manipulation interfaces suggest that cursors are unnecessary.
+ In our thought experiment, they would probably exist only in certain
+ applications, specifically mouse-based ones.</li>
+  <li>We can draw inspiration from keyboard-only UIs.
+    <ul>
+      <li><a href="http://www.vim.org/">Vim</a> is a venerable text editor that I&rsquo;ve
+recently converted to. Its interface is modal, and its main mode
+of operation is through a command-based console.</li>
+      <li>Windows&rsquo; keyboard access of menus, with visual indicators.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="fresh-start">Fresh Start</h3>
+
+<p>My initial idea doesn&rsquo;t stray too far from traditional WIMP systems.
+We&rsquo;ll retain the windows, icons, and menus, but relegate the pointing
+device to only when necessary or appropriate. Let&rsquo;s start with windows:</p>
+
+<p>I&rsquo;ll steal Con10uum&rsquo;s single axis for windows with no allowance for
+vertical resizing, since I agree that the extra axis really only adds to
+the clutter and complexity.</p>
+
+<p>Without a cursor, we navigate by using four directional keys on the
+keyboard, which I&rsquo;ll just call [left], [right], [up], and [down], to
+select and highlight whole objects e.g. windows, more like navigating
+console game menus:</p>
+
+<p><img src="http://media.tumblr.com/tumblr_lqf42q0BC81qzvz3x.png" alt="image" /></p>
+
+<p>In this single axis system, z-order is really the same as horizontal
+order. So we&rsquo;ll use z-order in a different way, by adding nested
+elements, and two more directional keys: [in] and [out].</p>
+
+<p><img src="http://media.tumblr.com/tumblr_lqf47kWy801qzvz3x.png" alt="image" /></p>
+
+<p>With any element selected in the UI, we can hit [menu] to invoke a
+consistent menu of possible actions to take on the element, with a
+corresponding key or sequence of keys for each action.</p>
+
+<p><img src="http://media.tumblr.com/tumblr_lqf47yVuVp1qzvz3x.png" alt="image" /></p>
+
+<p>This makes possible command sequences that can become unconscious,
+relegated to muscle memory in the same way typing words can be. It makes
+movement sequences equally unconscious, as any Vim user will tell you.
+The benefits of making these into unconscious processes are many. Not
+only are they potentially faster and less interruptive to cognitive
+flow, but they can accumulate in a way that analog pointer-based UIs
+cannot. Once you learn the sequence for a particular menu command and
+use it enough to internalize it, you no longer have to think about it
+and can then spend that cognition on learning a new sequence. Learning
+to use the interface becomes an almost linguistic exercise.
+Pointer-based UIs can never reach this level because every action, every
+invocation of a menu or icon is a conscious act that demands much more
+attention.</p>
+
+<p>Vim gives us other directions to explore with a primarily
+keyboard-driven interface. The basic principles of fewest number of key
+presses and proximity to the home row keys seem like good ones. Also,
+shortcuts to specific locations, e.g. the [os] key would take you
+directly to the operating system level and the [application] key to the
+application level. We can also take Vim&rsquo;s concept of iteration, so [5],
+[left] would take you left five times. While Vim lives on the far end of
+a brutal learning curve, it&rsquo;s a rich source of insight into how powerful
+a user interface can be when discoverability and intuitiveness are cast
+aside.</p>
+
+<p>Starting with a high-bandwidth interaction model at the OS level has the
+added benefit of leaving fewer UI decisions to applications. A user can
+access more actions through a consistent menu/key sequence throughout
+the system, obviating the need to learn new keyboard shortcuts and
+interactions for each new application.</p>
+
+<h3 id="this-is-just-a-rough-draft-of-an-idea">This is just a rough draft of an idea.</h3>
+
+<p>It&rsquo;s an attempt to start thinking in ways unbound by the conventions
+we&rsquo;ve been living with for decades. I imagine there are many different
+directions one can take, starting from the new assumptions we are
+allowed post-mouse.</p>
+
+<p>The implications of a system like this are probably too big to patch
+onto the systems we have now. There would be a keyboard-driven interface
+analog to <a href="http://en.wikipedia.org/wiki/Fitts's_law">Fitts&rsquo;s Law</a> that
+would have implications for application design as well as operating
+system design. E.g. an application designer would always want to
+minimize the number of key presses it would take to move from any
+location to any other location, which would require a careful balance
+between breadth and depth of element distribution.</p>
+
+<p>Anything in the near future will probably have to look a lot more like
+what we already have, and be filled with the compromises that we see in
+Lion and early demonstrations of Windows 8. But recent advancements
+provide us with a new context in which to fundamentally reconsider human
+computer interaction. There&rsquo;s never been a time when it was more
+possible to try something truly new, or to more significantly change the
+landscape of future computing. My fear is that the trend toward simpler,
+more tightly controlled, narrower user experiences optimized for passive
+consumption will dominate. My hope is that we use the opportunity to
+create user experiences that encourage more active consumption, more
+substantial production, a generally richer, denser,
+<a href="http://blog.byjoemoon.com/post/6542036868/project-depth">deeper</a> world.</p>
+
+<p>Illustrations by Chris Klink.</p>
+
+<h3 id="further-reading">Further Reading</h3>
+
+<ol>
+  <li>Christopher Mims. <a href="http://www.technologyreview.com/computing/38047/">&ldquo;Is the Desktop Having an Identity
+ Crisis?&rdquo;</a>. <em>MIT
+ Technology Review</em>. July 18, 2011.</li>
+  <li>Wikipedia. <a href="http://en.wikipedia.org/wiki/History_of_the_graphical_user_interface">&ldquo;History of the
+ GUI&rdquo;</a>.</li>
+  <li>Jeremy Reimer. <a href="http://arstechnica.com/old/content/2005/05/gui.ars">&ldquo;A History of the
+ GUI&rdquo;</a>.</li>
+  <li>Brad A. Myers. <a href="http://www.cs.cmu.edu/~amulet/papers/uihistory.tr.html">&ldquo;A Brief History of Human Computer Interaction
+ Technology&rdquo;</a>.
+ <em>ACM interactions.</em> Vol. 5, no. 2, March, 1998. pp. 44–54.</li>
+</ol>
+
+<h3 id="notes">Notes</h3>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Arthur C. Clark famously
+<a href="http://en.wikipedia.org/wiki/Clarke's_three_laws">said</a>: &ldquo;Any
+sufficiently advanced technology is indistinguishable from magic.&rdquo;
+An abstract description of how this works is that a new technology
+is initially simple, then accumulates additional functionality. As
+its functionality grows, its operation becomes more complex. It then
+requires a more expert user to take advantage of the added
+functionality. But after a certain point, further advancements
+address this complexity of operation by internalizing it. This makes
+the technology simple to use for lay users, but in an opaque,
+‘magical&rsquo; way. <a href="#fnref:1" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>John Siracusa&rsquo;s <a href="http://arstechnica.com/apple/reviews/2011/07/mac-os-x-10-7.ars">review of
+Lion</a>
+is probably the best starting point, and <a href="http://www.macobserver.com/tmo/article/the_future_of_the_mac_after_lion/">this Mac Observer
+article</a>
+discusses this as well. <a href="#fnref:2" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>The mapping between iOS&rsquo;s direct manipulation and Lion&rsquo;s indirect
+manipulation via touchpad is weird. Nothing in iOS maps to moving
+the cursor around by dragging your finger across the touchpad.
+Scrolling with one finger in iOS, maps to dragging with two fingers
+in Lion. Touching in iOS maps to pressing down harder on the part of
+the touchpad that you&rsquo;re already touching in Lion. And that&rsquo;s not
+even getting into the crazy gestures. I think this actually produces
+a UI &ldquo;<a href="http://en.wikipedia.org/wiki/Uncanny_valley">uncanny valley</a>&rdquo;
+effect. <a href="#fnref:3" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>If you think back to your first experience with a mouse, or watching
+someone&rsquo;s first experience, you might agree that the mouse actually
+isn&rsquo;t particularly intuitive so much as it is familiar.<a href="#fnref:4" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>This observation is probably more broadly applicable. For example,
+languages with simpler grammars are probably easier to learn, but
+less powerful in terms of conveying a lot of subtle information in
+the shortest amount of time. I don&rsquo;t have the knowledge or resources
+to explore this properly, though.<a href="#fnref:5" rel="reference">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+	<div class="block">
+	<div class="pagination pagination-centered">
+		<ul class="pager">
+			
+			<li class="previous">
+				<a href="/2011/google-motorola-and-patents" rel="previous" title="Google, Motorola, and Patents">&larr;Google, Motorola, and Patents</a>
+			</li>
+			
+			
+			<li class="next">
+				<a href="/2011/googles-open-hand-and-closed-fist" rel="next" title="Google's Open Hand and Closed Fist">Google's Open Hand and Closed Fist&rarr;</a>
+			</li>
+			
+		</ul>
+	</div>
+	</div>
+	</div>
+</div>
+
+	</div>
+</body>
+</html>
