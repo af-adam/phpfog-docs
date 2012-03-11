@@ -1,24 +1,23 @@
 ---
 layout: nil
 ---
-<feed xmlns="http://www.w3.org/2005/Atom">
+<rss version="2.0">
+	<channel>
+		<title>blog by Joe Moon</title>
+		<link>http://blog.byjoemoon.com/</link>
+		<description>Joe Moon on tech and other things.</description>
+		<language>en-us</language>
+		<pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+		<webMaster>mail@byjoemoon.com</webMaster>
 
-	<title type="text" xml:lang="en">{{ site.root_desc }}</title>
-	<link type="application/atom+xml" href="http://blog.byjoemoon.com/feed/" rel="self"/>
- 	<link type="text" href="http://blog.byjoemoon.com" rel="alternate"/>
-	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://byjoemoon.com</id>
-	<author>
-		<name>Joe Moon</name>
-	</author>
-
-	{% for post in site.posts %}
-	<entry>
-		<title>{{ post.title }}</title>
-		<link href="http://blog.byjoemoon.com{{ post.url | remove: ".html" }}"/>
-		<updated>{{ post.date | date_to_xmlschema }}</updated>
-		<id>http://blog.byjoemoon.com{{ post.id }}</id>
-		<content type="html">{{ post.content }}</content>
-	</entry>
-	{% endfor %}
-</feed>
+		{% for post in site.posts %}
+		<item>
+			<title>{{ post.title }}</title>
+			<link>http://blog.byjoemoon.com{{ post.url | remove: ".html" }}</link>
+			<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+			<guid>http://blog.byjoemoon.com{{ post.id }}</guid>
+			<content type="html">{{ post.content }}</content>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>
