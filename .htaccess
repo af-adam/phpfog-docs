@@ -1,4 +1,4 @@
-DirectoryIndex index.html
+DirectoryIndex index.html index.xml
 
 RewriteEngine On
 
