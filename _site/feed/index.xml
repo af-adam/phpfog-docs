@@ -4,7 +4,7 @@
 		<link>http://blog.byjoemoon.com/</link>
 		<description>Joe Moon on tech and other things.</description>
 		<language>en-us</language>
-		<pubDate>Sat, 10 Mar 2012 20:48:06 PST</pubDate>
+		<pubDate>Sat, 10 Mar 2012 20:53:37 PST</pubDate>
 		<webMaster>mail@byjoemoon.com</webMaster>
 
 		
@@ -13,7 +13,7 @@
 			<link>http://blog.byjoemoon.com/amateurs-lament</link>
 			<pubDate>Wed, 30 Nov 2011 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/amateurs-lament</guid>
-			<description><p>Amazon’s <a href="http://www.youtube.com/watch?v=jUtmOApIslE">advertisement for the Kindle
+			<description><html><p>Amazon’s <a href="http://www.youtube.com/watch?v=jUtmOApIslE">advertisement for the Kindle
 Fire</a> opens with a Voltaire
 quote:</p>
 
@@ -193,7 +193,7 @@ Raymond</li>
   <li>Tim Wu on <a href="http://bits.blogs.nytimes.com/2010/11/14/one-on-one-tim-wu-author-of-the-master-switch/"><em>The Master
 Switch</em></a></li>
 </ul>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -201,7 +201,7 @@ Switch</em></a></li>
 			<link>http://blog.byjoemoon.com/we-are-what-we-choose</link>
 			<pubDate>Wed, 09 Nov 2011 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/we-are-what-we-choose</guid>
-			<description><p>In <a href="http://thesocietypages.org/cyborgology/2011/11/03/equipment-why-you-cant-convince-a-cyborg-shes-a-cyborg/">this post on
+			<description><html><p>In <a href="http://thesocietypages.org/cyborgology/2011/11/03/equipment-why-you-cant-convince-a-cyborg-shes-a-cyborg/">this post on
 Cyborgology</a>,
 PJ Rey convincingly speaks to the project of dismissing the concept of
 digital dualism. He argues that as technology becomes sufficiently
@@ -344,7 +344,7 @@ the most versatile, plastic, and accessible that we’ve ever had. We
 should be honest and clear about what our tools are doing to us. But we
 should then focus our energy on creating the tools that we want, instead
 of trying to stop the inexorable tide of change.</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -352,7 +352,7 @@ of trying to stop the inexorable tide of change.</p>
 			<link>http://blog.byjoemoon.com/in-defense-of-the-new-google-reader</link>
 			<pubDate>Wed, 02 Nov 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/in-defense-of-the-new-google-reader</guid>
-			<description><p>Brian Shih, a former PM for Google Reader, wrote <a href="http://brianshih.com/78073742">a scathing take-down
+			<description><html><p>Brian Shih, a former PM for Google Reader, wrote <a href="http://brianshih.com/78073742">a scathing take-down
 of the recent changes to Google Reader</a>
 on Monday.</p>
 
@@ -453,7 +453,7 @@ they’ll be added back in soon.<a href="#fnref:2" rel="reference">&#8617;</a></
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -461,7 +461,7 @@ they’ll be added back in soon.<a href="#fnref:2" rel="reference">&#8617;</a></
 			<link>http://blog.byjoemoon.com/intimacy-is-performance</link>
 			<pubDate>Wed, 19 Oct 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/intimacy-is-performance</guid>
-			<description><p>I was surprised to find a lot of interesting discussion around <a href="http://blog.byjoemoon.com/post/10755504272/intimacy-and-performance-on-facebook">my last
+			<description><html><p>I was surprised to find a lot of interesting discussion around <a href="http://blog.byjoemoon.com/post/10755504272/intimacy-and-performance-on-facebook">my last
 post about Intimacy and Performance on
 Facebook</a>.
 Some of it was about the distinction between ‘intimacy’ and
@@ -679,7 +679,7 @@ bring us to that knowledge.” <a href="#fnref:2" rel="reference">&#8617;</a></p
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -687,7 +687,7 @@ bring us to that knowledge.” <a href="#fnref:2" rel="reference">&#8617;</a></p
 			<link>http://blog.byjoemoon.com/intimacy-and-performance-on-facebook</link>
 			<pubDate>Tue, 27 Sep 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/intimacy-and-performance-on-facebook</guid>
-			<description><p>Facebook launched three interesting new features last Thursday:
+			<description><html><p>Facebook launched three interesting new features last Thursday:
 Timeline, Ticker, and Open Graph.</p>
 
 <h3 id="timeline">Timeline</h3>
@@ -833,7 +833,7 @@ friction in a sharing interface that respects your privacy.<a href="#fnref:3" re
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -841,7 +841,7 @@ friction in a sharing interface that respects your privacy.<a href="#fnref:3" re
 			<link>http://blog.byjoemoon.com/you-are-the-product</link>
 			<pubDate>Tue, 06 Sep 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/you-are-the-product</guid>
-			<description><p>In a talk last Friday at the
+			<description><html><p>In a talk last Friday at the
 <a href="http://2011.dconstruct.org/conference/don-norman">dConstruct</a>
 conference, design luminary Don Norman repeated an increasingly popular
 refrain about Google: “[In] fact, the advertisers are the users and you
@@ -955,7 +955,7 @@ concerned. <a href="#fnref:2" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -963,7 +963,7 @@ concerned. <a href="#fnref:2" rel="reference">&#8617;</a></p>
 			<link>http://blog.byjoemoon.com/googles-open-hand-and-closed-fist</link>
 			<pubDate>Mon, 29 Aug 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/googles-open-hand-and-closed-fist</guid>
-			<description><p>Paul Buchheit coined Google’s unofficial motto–“Don’t be evil”–early
+			<description><html><p>Paul Buchheit coined Google’s unofficial motto–“Don’t be evil”–early
 in the company’s existence. But Google has only been pushing the vague
 notion of “open” in the last few years. The notion is vague at least
 partly because it’s so all-encompassing and partly because of Google’s
@@ -1189,7 +1189,7 @@ its use voids the device’s warranty.<a href="#fnref:6" rel="reference">&#8617;
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -1197,7 +1197,7 @@ its use voids the device’s warranty.<a href="#fnref:6" rel="reference">&#8617;
 			<link>http://blog.byjoemoon.com/a-different-kind-of-gui</link>
 			<pubDate>Tue, 23 Aug 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/a-different-kind-of-gui</guid>
-			<description><p>“<a href="http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml">In the beginning was the command line</a>.”</p>
+			<description><html><p>“<a href="http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml">In the beginning was the command line</a>.”</p>
 
 <p>But then the command line became graphics and dwelt among us. From its earliest days, Apple privileged the lay user over the technical one, regarding the need to understand technical details as friction. With the Lisa and the Macintosh, Apple picked up where <a href="http://en.wikipedia.org/wiki/Xerox_Parc">Xerox Palo Alto Research Center</a> left off. The guiding principles of intuitiveness and discoverability led Apple to replace the command line interface (CLI) with the graphical user interface (GUI), featuring windows, menus, icons, and a pointing device (<a href="http://en.wikipedia.org/wiki/WIMP_(computing)">WIMP</a>).</p>
 
@@ -1512,7 +1512,7 @@ to explore this properly, though.<a href="#fnref:5" rel="reference">&#8617;</a><
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -1520,7 +1520,7 @@ to explore this properly, though.<a href="#fnref:5" rel="reference">&#8617;</a><
 			<link>http://blog.byjoemoon.com/google-motorola-and-patents</link>
 			<pubDate>Tue, 16 Aug 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/google-motorola-and-patents</guid>
-			<description><p><a href="http://googleblog.blogspot.com/2011/08/supercharging-android-google-to-acquire.html">Google is buying Motorola Mobility for $12.5
+			<description><html><p><a href="http://googleblog.blogspot.com/2011/08/supercharging-android-google-to-acquire.html">Google is buying Motorola Mobility for $12.5
 billion.</a>
 It’s Google’s largest acquisition ever. And it’s clearly about patents.
 But before I go into the issue of patents more broadly, let’s take a
@@ -1690,7 +1690,7 @@ there’s any information you can really get out of them. <a href="#fnref:2" rel
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -1698,7 +1698,7 @@ there’s any information you can really get out of them. <a href="#fnref:2" rel
 			<link>http://blog.byjoemoon.com/googles-existential-crisis</link>
 			<pubDate>Wed, 13 Jul 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/googles-existential-crisis</guid>
-			<description><p>Google’s success was founded on the execution<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> of two
+			<description><html><p>Google’s success was founded on the execution<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> of two
 innovations: 1. Leveraging the hyperlink to create the best index (i.e.
 crowd-sourcing); and 2. Targeting advertising to search results to
 monetize that index. Apparent diversification into new areas like
@@ -1848,7 +1848,7 @@ about search quality. <a href="#fnref:4" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -1856,7 +1856,7 @@ about search quality. <a href="#fnref:4" rel="reference">&#8617;</a></p>
 			<link>http://blog.byjoemoon.com/a-new-metaphor-for-social-networking</link>
 			<pubDate>Wed, 29 Jun 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/a-new-metaphor-for-social-networking</guid>
-			<description><p>Yesterday, Google launched <a href="https://plus.google.com/">Google+</a>, which,
+			<description><html><p>Yesterday, Google launched <a href="https://plus.google.com/">Google+</a>, which,
 according to <a href="http://www.wired.com/epicenter/2011/06/inside-google-plus-social/all/1">Steven Levy’s Wired
 article</a>,
 is less of a product and more of a new direction for the search company,
@@ -2034,7 +2034,7 @@ of which Place each individual post belongs to.<a href="#fnref:4" rel="reference
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -2042,7 +2042,7 @@ of which Place each individual post belongs to.<a href="#fnref:4" rel="reference
 			<link>http://blog.byjoemoon.com/project-depth</link>
 			<pubDate>Tue, 14 Jun 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/project-depth</guid>
-			<description><p>I don’t particularly enjoy traditional social settings like bars or
+			<description><html><p>I don’t particularly enjoy traditional social settings like bars or
 parties. Partly this is because I can’t hear very well, especially when
 there’s a lot of background noise. But probably a more important reason
 is that I feel like a lot of the conversation that happens in these
@@ -2180,7 +2180,7 @@ It maybe represents a third vector: depth of information?<a href="#fnref:4" rel=
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -2188,7 +2188,7 @@ It maybe represents a third vector: depth of information?<a href="#fnref:4" rel=
 			<link>http://blog.byjoemoon.com/the-personal-cloud</link>
 			<pubDate>Mon, 06 Jun 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/the-personal-cloud</guid>
-			<description><p>Things seem inexorably trending toward cloud models of
+			<description><html><p>Things seem inexorably trending toward cloud models of
 computing.<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> Which is great, right? You can have access to your
 data, apps, accounts, and settings from anywhere. Somebody else does all
 the administration, including security updates, backups, etc. And it all
@@ -2375,7 +2375,7 @@ updates, this is now more true than ever.<a href="#fnref:3" rel="reference">&#86
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -2383,7 +2383,7 @@ updates, this is now more true than ever.<a href="#fnref:3" rel="reference">&#86
 			<link>http://blog.byjoemoon.com/windows-8</link>
 			<pubDate>Sat, 04 Jun 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/windows-8</guid>
-			<description><p>Microsoft unveiled <a href="http://www.youtube.com/watch?v=p92QfWOw88I&amp;feature=player_embedded">a
+			<description><html><p>Microsoft unveiled <a href="http://www.youtube.com/watch?v=p92QfWOw88I&amp;feature=player_embedded">a
 demo</a>
 of their next version of Windows on Wednesday, and it appears that
 they’re doubling down on Windows Phone 7’s “Metro” user interface. Which
@@ -2517,7 +2517,7 @@ development will be done in HTML and Javascript.<a href="#fnref:5" rel="referenc
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -2525,7 +2525,7 @@ development will be done in HTML and Javascript.<a href="#fnref:5" rel="referenc
 			<link>http://blog.byjoemoon.com/rat-holes</link>
 			<pubDate>Mon, 16 May 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/rat-holes</guid>
-			<description><p>Rat holes I’ve fallen into:</p>
+			<description><html><p>Rat holes I’ve fallen into:</p>
 
 <ul>
   <li>Programming Languages.</li>
@@ -2621,7 +2621,7 @@ and don’t worry about what their hardware or software looks like.<a href="#fnr
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -2629,7 +2629,7 @@ and don’t worry about what their hardware or software looks like.<a href="#fnr
 			<link>http://blog.byjoemoon.com/holding-the-web-in-your-hands</link>
 			<pubDate>Thu, 12 May 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/holding-the-web-in-your-hands</guid>
-			<description><p>I’m typing this on a Cr-48, Google’s pilot hardware for Chrome OS. On
+			<description><html><p>I’m typing this on a Cr-48, Google’s pilot hardware for Chrome OS. On
 Wednesday at the second keynote address of Google I/O, their developer
 conference, Google
 <a href="http://thisismynext.com/2011/05/11/google-chromebooks-coming/">announced</a>
@@ -2751,7 +2751,7 @@ control of our data and identities to corporations.<a href="#fnref:7" rel="refer
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -2759,7 +2759,7 @@ control of our data and identities to corporations.<a href="#fnref:7" rel="refer
 			<link>http://blog.byjoemoon.com/2-ft-ui-for-the-10-ft-screen</link>
 			<pubDate>Thu, 07 Apr 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/2-ft-ui-for-the-10-ft-screen</guid>
-			<description><p>Television user interfaces could be so much better. I thought that with
+			<description><html><p>Television user interfaces could be so much better. I thought that with
 the introduction of set-top box internet video solutions, user
 interfaces would make menu and playback navigation and content
 management easier, especially now that we have ways to interact with
@@ -2878,7 +2878,7 @@ first-class medium. <a href="#fnref:8" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -2886,7 +2886,7 @@ first-class medium. <a href="#fnref:8" rel="reference">&#8617;</a></p>
 			<link>http://blog.byjoemoon.com/rationality-engine</link>
 			<pubDate>Tue, 29 Mar 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/rationality-engine</guid>
-			<description><p>Paul Graham’s <a href="http://paulgraham.com/disagree.html">essay on
+			<description><html><p>Paul Graham’s <a href="http://paulgraham.com/disagree.html">essay on
 disagreement</a>, the discussion C-Rob
 started
 <a href="http://cgr.tumblr.com/post/3760719822/notes-toward-a-better-online-discussion-solution">here</a>,
@@ -2992,7 +2992,7 @@ as well as the set of people who like to debate things online.<a href="#fnref:3"
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -3000,7 +3000,7 @@ as well as the set of people who like to debate things online.<a href="#fnref:3"
 			<link>http://blog.byjoemoon.com/climbing-rocks</link>
 			<pubDate>Mon, 21 Mar 2011 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/climbing-rocks</guid>
-			<description><p>I had been to a climbing gym once or twice, but only started climbing
+			<description><html><p>I had been to a climbing gym once or twice, but only started climbing
 seriously while I was stationed in Okinawa in 2005. A friend of mine,
 Jay, took me outdoors and got me on a top-rope. I was hooked instantly.
 It was exhilirating, challenging, and focused my attention both mentally
@@ -3198,7 +3198,7 @@ ago.<a href="#fnref:9" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -3206,7 +3206,7 @@ ago.<a href="#fnref:9" rel="reference">&#8617;</a></p>
 			<link>http://blog.byjoemoon.com/touch-ui-is-not-the-future-of-everything</link>
 			<pubDate>Sun, 27 Feb 2011 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/touch-ui-is-not-the-future-of-everything</guid>
-			<description><p>Apple beat even the most optimistic expectations and sold over 15
+			<description><html><p>Apple beat even the most optimistic expectations and sold over 15
 million iPads in the first year of its release, and it looks like the
 second version is just around the corner. The competitors are lining up
 as well: the Motorola Xoom, running Android 3.0 Honeycomb, the HP
@@ -3315,7 +3315,7 @@ convert to a touch paradigm is widely panned.<a href="#fnref:2" rel="reference">
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -3323,7 +3323,7 @@ convert to a touch paradigm is widely panned.<a href="#fnref:2" rel="reference">
 			<link>http://blog.byjoemoon.com/end-of-comments-ii-browsers-and-identity</link>
 			<pubDate>Thu, 17 Feb 2011 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/end-of-comments-ii-browsers-and-identity</guid>
-			<description><p>I think it’s pertinent to note first that my thoughts on this thread and
+			<description><html><p>I think it’s pertinent to note first that my thoughts on this thread and
 some others comes from a place of deep interest in technology, but basic
 technical laity. I have very little understanding of what’s under the
 floorboards of the internet. I mostly only see the levers and buttons
@@ -3547,7 +3547,7 @@ anywhere. Edit: I forgot about
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -3555,7 +3555,7 @@ anywhere. Edit: I forgot about
 			<link>http://blog.byjoemoon.com/the-end-of-comments</link>
 			<pubDate>Fri, 04 Feb 2011 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/the-end-of-comments</guid>
-			<description><p>It’s a truism that medium and message are intrinsically intertwined.
+			<description><html><p>It’s a truism that medium and message are intrinsically intertwined.
 This is the problem I have with the emerging (or maybe more accurately:
 emerged) social networking platforms like Facebook and Twitter.</p>
 
@@ -3705,7 +3705,7 @@ into the tweet input field. <a href="#fnref:3" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -3713,7 +3713,7 @@ into the tweet input field. <a href="#fnref:3" rel="reference">&#8617;</a></p>
 			<link>http://blog.byjoemoon.com/kindle</link>
 			<pubDate>Sat, 01 Jan 2011 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/kindle</guid>
-			<description><p>Sounds like a few people got Kindles for Christmas, so I thought I’d
+			<description><html><p>Sounds like a few people got Kindles for Christmas, so I thought I’d
 share my last couple months’ experiences:</p>
 
 <p>The hardware is almost flawless, and a big step up from the previous
@@ -3830,7 +3830,7 @@ to physically plug the device into the computer at all. I haven’t looked
 at all the hacks that are available yet, so maybe that functionality is
 out there, but it seems like a pretty obvious thing to have native
 functionality for.</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -3838,7 +3838,7 @@ functionality for.</p>
 			<link>http://blog.byjoemoon.com/quick-app-idea</link>
 			<pubDate>Wed, 22 Dec 2010 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/quick-app-idea</guid>
-			<description><p>Here’s an idea for a distributed, peer-to-peer (though not massively
+			<description><html><p>Here’s an idea for a distributed, peer-to-peer (though not massively
 distributed, probably no more than three nodes in any network) backup
 system that’s sort of a mix between Dropbox and a backup service like
 Carbonite or Backblaze.</p>
@@ -3867,7 +3867,7 @@ an ethernet port and this app on it that you could stick on a friend’s
 home network or your work network.</p>
 
 <p>I’d pay (once) for this.</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -3875,7 +3875,7 @@ home network or your work network.</p>
 			<link>http://blog.byjoemoon.com/webs-and-streams</link>
 			<pubDate>Sat, 08 May 2010 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/webs-and-streams</guid>
-			<description><p>There was a lot of mayhem surrounding the release of Google Buzz that
+			<description><html><p>There was a lot of mayhem surrounding the release of Google Buzz that
 I’ve been thinking about. First, of course, were the many complaints
 about privacy, some of which were entirely reasonable, and others of
 which were not. I think most of the reasonable complaints boil down to
@@ -4082,7 +4082,7 @@ make more sense as more or less static websites. Web applications like
 maps and Wikipedia and countless others make more sense as static web
 pages. But I think a Stream is a better metaphor for a large part of
 current communicative Web activity.</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4090,7 +4090,7 @@ current communicative Web activity.</p>
 			<link>http://blog.byjoemoon.com/why-i-trust-google</link>
 			<pubDate>Wed, 19 Aug 2009 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/why-i-trust-google</guid>
-			<description><p>From <a href="http://www.joelonsoftware.com/articles/StrategyLetterV.html">this article</a>
+			<description><html><p>From <a href="http://www.joelonsoftware.com/articles/StrategyLetterV.html">this article</a>
 that Nick shared a while ago:</p>
 
 <blockquote>
@@ -4143,7 +4143,7 @@ web, where they can see Google ads.</p>
 
 <p>Google wants to make it easier for us to use the web faster and
 everywhere, which is a win for everyone.</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4151,7 +4151,7 @@ everywhere, which is a win for everyone.</p>
 			<link>http://blog.byjoemoon.com/david-foster-wallace</link>
 			<pubDate>Mon, 20 Jul 2009 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/david-foster-wallace</guid>
-			<description><p>I’m reading through <a href="http://asupposedlyfunblog.wordpress.com/">A Supposedly Fun
+			<description><html><p>I’m reading through <a href="http://asupposedlyfunblog.wordpress.com/">A Supposedly Fun
 Blog</a> and ran across <a href="http://asupposedlyfunblog.wordpress.com/2009/07/08/on-beauty/">this
 passage</a>:</p>
 
@@ -4174,7 +4174,7 @@ in the stubborn belief in the good faith of his audience.</p>
 was without fear of being judged. It seems clear from his writing that
 he was actually extraordinarily, excruciatingly self-conscious about it
 all, but he did trek on.</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4182,7 +4182,7 @@ all, but he did trek on.</p>
 			<link>http://blog.byjoemoon.com/more-convergence</link>
 			<pubDate>Thu, 21 May 2009 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/more-convergence</guid>
-			<description><p>I’ve been messing with different Twitter clients. My favorite desktop
+			<description><html><p>I’ve been messing with different Twitter clients. My favorite desktop
 client is still <a href="http://www.twittergadget.com/">TwitterGadget</a>, because
 it’s so lightweight and is fairly keyboard friendly (though it certainly
 has room to improve on this front). It’s actually a Gmail gadget, but I
@@ -4272,7 +4272,7 @@ close, but not all there. <a href="#fnref:1" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4280,7 +4280,7 @@ close, but not all there. <a href="#fnref:1" rel="reference">&#8617;</a></p>
 			<link>http://blog.byjoemoon.com/a-few-of-my-favorite-things</link>
 			<pubDate>Mon, 27 Apr 2009 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/a-few-of-my-favorite-things</guid>
-			<description><p>Most of my favorite Firefox add-ons have to do with maximizing browser
+			<description><html><p>Most of my favorite Firefox add-ons have to do with maximizing browser
 window real estate. Stuff like <a href="https://addons.mozilla.org/en-US/firefox/addon/4762" title="Hide Menubar">Hide
 Menubar</a>
 and <a href="https://addons.mozilla.org/en-US/firefox/addon/1568" title="Full Fullscreen">Full
@@ -4359,7 +4359,7 @@ website. Maybe only really useful for frequent travelers, but it’s easy
 to set up and makes paper itineraries obsolete.</p>
 
 <p>Anyone like to share some of their favorite things?</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4367,7 +4367,7 @@ to set up and makes paper itineraries obsolete.</p>
 			<link>http://blog.byjoemoon.com/torture</link>
 			<pubDate>Sun, 26 Apr 2009 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/torture</guid>
-			<description><p>I’ve been following the torture stuff moderately closely. For people who
+			<description><html><p>I’ve been following the torture stuff moderately closely. For people who
 haven’t been, the main arguments seem to boil down to:</p>
 
 <ol>
@@ -4435,7 +4435,7 @@ is an interesting read. Still not sure what to think.</p>
 Shortcut</a>,”
 “<a href="http://www.nytimes.com/2009/04/23/opinion/23soufan.html">My Tortured
 Decision</a>.”</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4443,7 +4443,7 @@ Decision</a>.”</p>
 			<link>http://blog.byjoemoon.com/twitter</link>
 			<pubDate>Thu, 19 Mar 2009 00:00:00 PDT</pubDate>
 			<guid>http://blog.byjoemoon.com/twitter</guid>
-			<description><p>I’ve been on twitter for a few months now, but I have to admit, I wasn’t
+			<description><html><p>I’ve been on twitter for a few months now, but I have to admit, I wasn’t
 really getting it until I read
 <a href="http://bhc3.wordpress.com/2009/03/17/how-to-tweet-your-way-out-of-a-job/">this</a>.
 I mean, there are clearly many ways to use twitter, including the reason
@@ -4482,7 +4482,7 @@ tweets, not get them.</p>
 the interface is not great. I don’t see why they don’t offer their
 functionality in the form of a contact, with the exact same user
 interaction as any other contact. That would make me happy.</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4490,7 +4490,7 @@ interaction as any other contact. That would make me happy.</p>
 			<link>http://blog.byjoemoon.com/persistent-online-identity</link>
 			<pubDate>Tue, 10 Feb 2009 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/persistent-online-identity</guid>
-			<description><p>OpenID, OpenSocial, Disqus all seem to point to the inevitability of
+			<description><html><p>OpenID, OpenSocial, Disqus all seem to point to the inevitability of
 persistent online identities. I imagine this POLID as something that
 will follow you from site to site, and be easily aggregable into a
 lifestream or personal history of web interactions.</p>
@@ -4528,7 +4528,7 @@ trolls.</p>
 I think OpenID fixes this by associating your ID with a website or
 something (I’ve looked into OpenID several times but still haven’t
 figured out how it works exactly).</p>
-</description>
+</html></description>
 		</item>
 		
 		<item>
@@ -4536,7 +4536,7 @@ figured out how it works exactly).</p>
 			<link>http://blog.byjoemoon.com/convergence</link>
 			<pubDate>Tue, 30 Dec 2008 00:00:00 PST</pubDate>
 			<guid>http://blog.byjoemoon.com/convergence</guid>
-			<description><p>So, I came pretty close to buying an iPhone because I found a deal for a
+			<description><html><p>So, I came pretty close to buying an iPhone because I found a deal for a
 refurbished 8GB 3G for $99. I ultimately decided not to after realizing
 that the cost of the device is really pretty trivial compared to the
 contractual commitment. I’m sure I’ll cave soon or later, but I’m going
@@ -4614,7 +4614,7 @@ oh).</p>
 <p>I’m sure if that even if any of this is at all technically feasible,
 it’s still a long, long way off, but that’s the direction I see it
 going. Any thoughts?</p>
-</description>
+</html></description>
 		</item>
 		
 	</channel>
