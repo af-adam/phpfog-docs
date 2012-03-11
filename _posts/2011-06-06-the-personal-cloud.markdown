@@ -1,6 +1,7 @@
 ---
 title: The Personal Cloud
 layout: post
+alias: /post/6277876911/the-personal-cloud
 ---
 
 Things seem inexorably trending toward cloud models of

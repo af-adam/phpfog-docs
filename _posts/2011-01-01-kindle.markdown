@@ -1,6 +1,7 @@
 ---
 title: Kindle
 layout: post
+alias: /post/2473755193/kindle
 ---
 
 Sounds like a few people got Kindles for Christmas, so I thought I'd

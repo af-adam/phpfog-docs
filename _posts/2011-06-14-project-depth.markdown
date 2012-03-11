@@ -1,6 +1,7 @@
 ---
 title: "Project: Depth"
 layout: post
+alias: /post/6542036868/project-depth
 ---
 
 I don't particularly enjoy traditional social settings like bars or

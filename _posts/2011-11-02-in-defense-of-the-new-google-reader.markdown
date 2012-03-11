@@ -1,6 +1,7 @@
 ---
 title: In Defense of the New Google Reader
 layout: post
+alias: /post/12261287667/in-defense-of-the-new-google-reader
 ---
 
 Brian Shih, a former PM for Google Reader, wrote [a scathing take-down

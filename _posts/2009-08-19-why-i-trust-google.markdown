@@ -1,10 +1,10 @@
 ---
 title: Why I trust Google
 layout: post
+alias: /post/166900257/why-i-trust-google
 ---
 
-From [this
-article](http://www.joelonsoftware.com/articles/StrategyLetterV.html)
+From [this article](http://www.joelonsoftware.com/articles/StrategyLetterV.html)
 that Nick shared a while ago:
 
 > Every product in the marketplace has *substitutes* and *complements*…

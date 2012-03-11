@@ -1,6 +1,7 @@
 ---
 title: Rationality Engine
 layout: post
+alias: /post/4202820512/rationality-engine
 ---
 
 Paul Graham's [essay on

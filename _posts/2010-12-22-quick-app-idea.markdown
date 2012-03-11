@@ -1,6 +1,7 @@
 ---
 title: Quick App Idea
 layout: post
+alias: /post/2421369026/quick-app-idea
 ---
 
 Here's an idea for a distributed, peer-to-peer (though not massively

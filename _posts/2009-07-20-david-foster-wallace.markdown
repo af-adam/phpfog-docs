@@ -1,6 +1,7 @@
 ---
 title: David Foster Wallace
 layout: post
+alias: /post/145891108/david-foster-wallace
 ---
 
 I'm reading through [A Supposedly Fun

@@ -1,6 +1,7 @@
 ---
 title: Climbing Rocks
 layout: post
+alias: /post/4019335443/climbing-rocks
 ---
 
 I had been to a climbing gym once or twice, but only started climbing

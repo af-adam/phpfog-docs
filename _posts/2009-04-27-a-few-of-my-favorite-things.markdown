@@ -1,6 +1,7 @@
 ---
 title: A Few of My Favorite Things
 layout: post
+alias: /post/105574325/a-few-of-my-favorite-things
 ---
 
 Most of my favorite Firefox add-ons have to do with maximizing browser

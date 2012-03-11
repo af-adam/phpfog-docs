@@ -1,6 +1,7 @@
 ---
 title: The End of Comments
 layout: post
+alias: /post/3112676038/the-end-of-comments
 ---
 
 It's a truism that medium and message are intrinsically intertwined.

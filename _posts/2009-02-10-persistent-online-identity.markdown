@@ -1,6 +1,7 @@
 ---
 title: Persistent Online Identity
 layout: post
+alias: /post/100514718/persistent-online-identity
 ---
 
 OpenID, OpenSocial, Disqus all seem to point to the inevitability of

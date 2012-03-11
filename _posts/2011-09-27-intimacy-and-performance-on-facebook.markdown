@@ -1,6 +1,7 @@
 ---
 title: Intimacy and Performance on Facebook
 layout: post
+alias: /post/10755504272/intimacy-and-performance-on-facebook
 ---
 
 Facebook launched three interesting new features last Thursday:

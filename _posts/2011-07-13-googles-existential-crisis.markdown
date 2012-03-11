@@ -1,6 +1,7 @@
 ---
 title: Google's Existential Crisis
 layout: post
+alias: /post/7590977101/googles-existential-crisis
 ---
 
 Google's success was founded on the execution[^1] of two

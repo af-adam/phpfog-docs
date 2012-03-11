@@ -1,6 +1,7 @@
 ---
 title: Google's Open Hand and Closed Fist
 layout: post
+alias: /post/9579550453/googles-open-hand-and-closed-fist
 ---
 
 Paul Buchheit coined Google's unofficial motto--"Don't be evil"--early

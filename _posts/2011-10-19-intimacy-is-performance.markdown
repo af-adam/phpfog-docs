@@ -1,6 +1,7 @@
 ---
 title: Intimacy is Performance
 layout: post
+alias: /post/11670022371/intimacy-is-performance
 ---
 
 I was surprised to find a lot of interesting discussion around [my last

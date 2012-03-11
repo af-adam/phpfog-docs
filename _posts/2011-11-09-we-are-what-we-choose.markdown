@@ -1,6 +1,7 @@
 ---
 title: We Are What We Choose
 layout: post
+alias: /post/12570867047/we-are-what-we-choose
 ---
 
 In [this post on

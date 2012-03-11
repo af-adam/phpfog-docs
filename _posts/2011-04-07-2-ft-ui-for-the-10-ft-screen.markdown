@@ -1,6 +1,7 @@
 ---
 title: The 2-Foot User Interface for the 10-Foot Screen
 layout: post
+alias: /post/4435975627/the-2-foot-user-interface-for-the-10-foot-screen
 ---
 
 Television user interfaces could be so much better. I thought that with

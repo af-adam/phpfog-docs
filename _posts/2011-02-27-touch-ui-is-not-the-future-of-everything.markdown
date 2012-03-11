@@ -1,6 +1,7 @@
 ---
 title: Touch UI is not the future of everything.
 layout: post
+alias: /post/3556631202/touch-ui-is-not-the-future-of-everything
 ---
 
 Apple beat even the most optimistic expectations and sold over 15

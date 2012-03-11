@@ -1,6 +1,7 @@
 ---
 title: "End of Comments II: Browsers and Identity"
 layout: post
+alias: /post/3357516295/end-of-comments-ii-browsers-and-identity
 ---
 
 I think it's pertinent to note first that my thoughts on this thread and

@@ -1,6 +1,7 @@
 ---
 title: Torture
 layout: post
+alias: /post/105575040/torture
 ---
 
 I've been following the torture stuff moderately closely. For people who

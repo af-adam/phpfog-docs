@@ -1,6 +1,7 @@
 ---
 title: Google, Motorola, and Patents
 layout: post
+alias: /post/9026076073/google-motorola-and-patents
 ---
 
 [Google is buying Motorola Mobility for $12.5

@@ -1,6 +1,7 @@
 ---
 title: Windows 8
 layout: post
+alias: /post/6228050657/windows-8
 ---
 
 Microsoft unveiled [a

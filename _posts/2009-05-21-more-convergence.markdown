@@ -1,6 +1,7 @@
 ---
 title: "More Convergence: How Twitter (as an open protocol, ideally) could (and maybe will) replace IM and all web commenting and make them both better"
 layout: post
+alias: /post/111175655/more-convergence-how-twitter-as-an-open-protocol
 ---
 
 I've been messing with different Twitter clients. My favorite desktop

@@ -1,6 +1,7 @@
 ---
 title: Twitter
 layout: post
+alias: /post/105575514/twitter
 ---
 
 I've been on twitter for a few months now, but I have to admit, I wasn't

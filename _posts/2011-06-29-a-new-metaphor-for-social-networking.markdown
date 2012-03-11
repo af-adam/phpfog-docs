@@ -1,6 +1,7 @@
 ---
 title: A New Metaphor for Social Networking
 layout: post
+alias: /post/7072771434/a-new-metaphor-for-social-networking
 ---
 
 Yesterday, Google launched [Google+](https://plus.google.com/), which,

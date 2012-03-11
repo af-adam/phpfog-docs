@@ -1,6 +1,7 @@
 ---
 title: A Different Kind of GUI
 layout: post
+alias: /post/9325300749/a-different-kind-of-gui
 ---
 
 "[In the beginning was the command line](http://artlung.com/smorgasborg/C_R_Y_P_T_O_N_O_M_I_C_O_N.shtml)."

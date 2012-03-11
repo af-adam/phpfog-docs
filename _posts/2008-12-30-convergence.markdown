@@ -1,6 +1,7 @@
 ---
 title: Convergence, or All The Things I've Been Thinking About That Turned Out To Be The Same Thing
 layout: post
+alias: /post/105689837/convergence-or-all-the-things-ive-been-thinking-about
 ---
 
 So, I came pretty close to buying an iPhone because I found a deal for a

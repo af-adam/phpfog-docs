@@ -1,6 +1,7 @@
 ---
 title: Rat Holes
 layout: post
+alias: /post/5567688921/rat-holes
 ---
 
 Rat holes I've fallen into:

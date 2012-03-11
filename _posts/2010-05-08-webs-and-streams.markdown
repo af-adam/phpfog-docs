@@ -1,6 +1,7 @@
 ---
 title: Webs and Streams
 layout: post
+alias: /post/582452757/webs-and-streams
 ---
 
 There was a lot of mayhem surrounding the release of Google Buzz that
