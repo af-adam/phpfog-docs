@@ -16,7 +16,7 @@ layout: nil
 			<link>http://blog.byjoemoon.com{{ post.url | remove: ".html" }}</link>
 			<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
 			<guid>http://blog.byjoemoon.com{{ post.id }}</guid>
-			<content type="html">{{ post.content }}</content>
+			<description>{{ post.content }}</description>
 		</item>
 		{% endfor %}
 	</channel>
