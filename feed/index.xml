@@ -7,14 +7,14 @@ layout: nil
 		<link>http://blog.byjoemoon.com/</link>
 		<description>Joe Moon on tech and other things.</description>
 		<language>en-us</language>
-		<pubDate>{{ site.time | date: "%a, %d %B %Y %H:%M:%S %Z" }}</pubDate>
+		<pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
 		<webMaster>mail@byjoemoon.com</webMaster>
 
 		{% for post in site.posts %}
 		<item>
 			<title>{{ post.title }}</title>
 			<link>http://blog.byjoemoon.com{{ post.url | remove: ".html" }}</link>
-			<pubDate>{{ post.date | date: "%a, %d %B %Y %H:%M:%S %Z" }}</pubDate>
+			<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
 			<guid>http://blog.byjoemoon.com{{ post.id }}</guid>
 			<content type="html">{{ post.content }}</content>
 		</item>
