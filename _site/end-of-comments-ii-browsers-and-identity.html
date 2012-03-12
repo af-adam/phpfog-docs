@@ -29,6 +29,7 @@
   </head>
 <body>
 	<div class="container">
+		<div class="main">
 		<div class="row clearfix">
 				<header id="title-header" class="clearfix">
 				<h1><a class="sub-domain" href="/">blog</a><a class="home" href="http://byjoemoon.com"><span id="header-a">by</span><span id="header-b">joe</span><span id="header-c">moon</span></a></h1>
@@ -50,17 +51,17 @@
 		<div class="block">
 		<div class="blog-title">
 			<h2>End of Comments II: Browsers and Identity</h2>
-			<p><date datetime="Thu Feb 17 00:00:00 -0800 2011">February 17, 2011</date><p>
+			<p><date datetime="2011-02-17 00:00:00 -0800">February 17, 2011</date><p>
 		</div>
-		<p>I think it&rsquo;s pertinent to note first that my thoughts on this thread and
+		<p>I think it’s pertinent to note first that my thoughts on this thread and
 some others comes from a place of deep interest in technology, but basic
-technical laity. I have very little understanding of what&rsquo;s under the
+technical laity. I have very little understanding of what’s under the
 floorboards of the internet. I mostly only see the levers and buttons
 that are exposed to me, and can imagine many lever/button layouts that
 would potentially make my life easier and better without first being
-hobbled by the foreknowledge of the many (I&rsquo;m sure) technical
+hobbled by the foreknowledge of the many (I’m sure) technical
 limitations. I will try to discuss the technical aspects as far as I am
-able, but be aware that that&rsquo;s not very far.</p>
+able, but be aware that that’s not very far.</p>
 
 <p><a href="http://en.wikipedia.org/wiki/Dave_Winer">Dave Winer</a>, father of two of
 my favorite things, RSS and podcasting, as well as huge influence on how
@@ -74,7 +75,7 @@ in my last post is this: when Dave comments on my blog post, the comment
 would also automatically appear on his blog, with a link to my post. Or
 maybe more accurately, Dave would write a blog post (which would
 naturally appear on his blog) with a reference to my blog post and then
-my blog post would aggregate all responses to it (including Dave&rsquo;s) and
+my blog post would aggregate all responses to it (including Dave’s) and
 publish them underneath the text of the my post (with links back to all
 of them).</p>
 
@@ -82,9 +83,9 @@ of them).</p>
 of read-only web vs. read-write web. When you stop making the
 distinction between a user and something-above-a-user (publisher,
 content-creator, aggregator, editor, administrator) you start to realize
-that it&rsquo;s even flatter than we thought. Comments as they are now are
-like a bunch of micro-blogs that everyone creates on everyone else&rsquo;s
-sites. Disqus starts to connect them so that all of a user&rsquo;s comments
+that it’s even flatter than we thought. Comments as they are now are
+like a bunch of micro-blogs that everyone creates on everyone else’s
+sites. Disqus starts to connect them so that all of a user’s comments
 made through Disqus are a more like a single micro-blog. My point is
 that microblogs are just a subset of blogs and all the contributions you
 make to the internet should be connected. It should all be part of your
@@ -92,8 +93,8 @@ blog.</p>
 
 <p>So I intended for this post to be just an elaboration on how I think the
 browser should encourage richer interaction, but the comments on my last
-post got me thinking more and more about how that&rsquo;s really a subset of
-the problem of online identity (or lack thereof). So I&rsquo;ll talk about the
+post got me thinking more and more about how that’s really a subset of
+the problem of online identity (or lack thereof). So I’ll talk about the
 browser thing first and then talk about identity at large afterward.</p>
 
 <p>Browser The thing about the internet is that you can be a producer of
@@ -111,29 +112,29 @@ encourage a richer contribution.</p>
 that aggregates all posts with reference to a post.</li>
   <li>A set of filters for those TrackBacks.</li>
   <li>
-    <p>Alternate views. I&rsquo;ll elaborate on these in order:</p>
+    <p>Alternate views. I’ll elaborate on these in order:</p>
   </li>
   <li>
-    <p>I think it&rsquo;s pretty obvious how the browser fits into the scheme but
-I also think that &ldquo;browser&rdquo; is no longer an adequate term for what
-these applications do now. &ldquo;Browsing&rdquo; is very low on the list of
-things I use my browser for, and already we&rsquo;re linguistically
-confining ourselves to a passive role on the internet. &ldquo;User agent&rdquo;
-is somewhat clunky (plus I don&rsquo;t really know precisely what it
-technically refers to), but I&rsquo;ll go with that (or UA) until I think
+    <p>I think it’s pretty obvious how the browser fits into the scheme but
+I also think that “browser” is no longer an adequate term for what
+these applications do now. “Browsing” is very low on the list of
+things I use my browser for, and already we’re linguistically
+confining ourselves to a passive role on the internet. “User agent”
+is somewhat clunky (plus I don’t really know precisely what it
+technically refers to), but I’ll go with that (or UA) until I think
 of something better.</p>
   </li>
   <li>
-    <p>The UA would also hook directly into a user&rsquo;s personal blog when she
+    <p>The UA would also hook directly into a user’s personal blog when she
 logs into the UA (and ideally would take over most of the use-cases
 for most of other web services we use, especially simple ones like
 micro-blogs). Whenever the user feels the inclination, she may hit a
-button to invoke a horizontal or vertical split in the UA&rsquo;s window
+button to invoke a horizontal or vertical split in the UA’s window
 between whatever content she was viewing and a large, expansive,
 non-modal WYSIWYG rich text field. (Alternatively, it could open a
 new window for the text editor.) Optional title field, optional body
 field. Optional tag field. Any post made from the UA would be
-published on the personal blog. Dave Winer&rsquo;s <a href="http://scripting.com/stories/2011/01/05/upcomingTheMinimalBlogging.html">Minimal Blogging
+published on the personal blog. Dave Winer’s <a href="http://scripting.com/stories/2011/01/05/upcomingTheMinimalBlogging.html">Minimal Blogging
 Tool</a>
 comes from a similar line of thought, I think (the collapse in
 hierarchy between input and output by users).</p>
@@ -150,14 +151,14 @@ the Google toolbar called
 <a href="http://www.google.com/sidewiki/intl/en/index.html">Sidewiki</a>. It
 failed as far as I can tell, and was panned by users and site owners
 alike, probably for good reason. My bet is that this was because of
-execution and lack of filtering, which I&rsquo;ll talk about later. The
+execution and lack of filtering, which I’ll talk about later. The
 bigger problem to me is that I think this used Google infrastructure
 to store and maintain the whole thing (corporate silo). I suppose
 the current TrackBack system or something like it would work, but it
 depends on 1. the original post to be able to receive communication
 from referring posts and maintain a list of them; and 2. the
 referring posts to notify the original post that they exist. I guess
-there&rsquo;s not really any way around it needing some incarnation of
+there’s not really any way around it needing some incarnation of
 both of those parts to work, which would need some sort of
 standarization of implementation of blogging platforms.</p>
   </li>
@@ -170,14 +171,14 @@ a way to filter by community/distributed collaborative filtering.
 This is more or less what Digg, Reddit, Slashdot, and Hacker News
 already are. They share stories, comment on them, then crowd-source
 the ranking of both stories and comments. The model of the Atlantic
-Monthly blogs&rsquo; comment spaces of well-moderated, directed discussion
+Monthly blogs’ comment spaces of well-moderated, directed discussion
 could also pretty easily be converted this way, I think.</p>
   </li>
   <li>The UA should have the ability to look at more than a single page at
 a time. The particular application for this that I have in mind is a
 view of an entire conversation thread. Tweetdeck for Android has a
 neat feature with which you can drill down into an @reply tweet and
-hit &ldquo;conversation&rdquo; and it&rsquo;ll show you, where applicable, the entire
+hit “conversation” and it’ll show you, where applicable, the entire
 conversation as far back as the back and forth @replies go. I like
 this because context is always good and it exposes the
 conversational, derivative, shoulders-of-giants, re-mix nature of
@@ -188,19 +189,19 @@ well as any number of responses.<sup id="fnref:1"><a href="#fn:1" rel="footnote"
 </ol>
 
 <p>This vision is only additive (and barely that). One could still navigate
-every part of this with a regular old web browser, because it&rsquo;s still
+every part of this with a regular old web browser, because it’s still
 really just web pages and hyperlinks. None of the technology is new.
-It&rsquo;s simply a different way of presenting options and artifacts that
+It’s simply a different way of presenting options and artifacts that
 already exist in order to encourage better, more considered contribution
 to the community/communities of ideas.</p>
 
-<p>It&rsquo;s also really just another take on this idea of several posts ago
+<p>It’s also really just another take on this idea of several posts ago
 (all content is the same, everything is streams and filters).<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
 
 <h3 id="identity">Identity</h3>
 
 <p>Let me now apply my lens of elevating the user/collapsing the
-distinction between user and producer to identity on the internet. I&rsquo;ve
+distinction between user and producer to identity on the internet. I’ve
 already spent a bit of time thinking about this, and I still have mostly
 the same position I laid out in this post about persistent online
 identity. The problem I see in all the current projects like OpenID and
@@ -232,8 +233,8 @@ bar</a>
 of different Google services, or in the form of a toolbar.</p>
 
 <p>The only thing really missing is a decentralized/federated way for
-people to host their own implementation and data, which isn&rsquo;t
-necessarily out of the question, either, considering Google&rsquo;s history.</p>
+people to host their own implementation and data, which isn’t
+necessarily out of the question, either, considering Google’s history.</p>
 
 <h3 id="notes">Notes</h3>
 
@@ -243,9 +244,9 @@ necessarily out of the question, either, considering Google&rsquo;s history.</p>
       <p>To take this in a slightly different direction: Currently, looking
 at web pages one at a time is the primary activity afforded by
 browsers. Reading feeds (for me in Google Reader) is sort of a
-secondary, virtualized (because a web-app) activity that&rsquo;s not as
-robust or as fast, presumably because it&rsquo;s not native (and none of
-the native feed readers I&rsquo;ve tried have been particularly
+secondary, virtualized (because a web-app) activity that’s not as
+robust or as fast, presumably because it’s not native (and none of
+the native feed readers I’ve tried have been particularly
 compelling). I kind of wish it were the other way around, because
 feeds are now primarily how I interact with the web.<a href="#fnref:1" rel="reference">&#8617;</a></p>
     </li>
@@ -253,16 +254,16 @@ feeds are now primarily how I interact with the web.<a href="#fnref:1" rel="refe
       <p>A distinction worth noting that I should add to the public-private
 spectrum: Public (or published) vs. Broadcast. There are things that
 I might want to put in front of everyone I know. There are other
-things that I don&rsquo;t feel the need to hide from public view, but I
-don&rsquo;t necessarily want to shove in front of everyone&rsquo;s faces. I.e. I
-may want to have an exchange with someone that I don&rsquo;t care is
-public, but I don&rsquo;t necessarily want to clutter up people&rsquo;s feeds.<a href="#fnref:2" rel="reference">&#8617;</a></p>
+things that I don’t feel the need to hide from public view, but I
+don’t necessarily want to shove in front of everyone’s faces. I.e. I
+may want to have an exchange with someone that I don’t care is
+public, but I don’t necessarily want to clutter up people’s feeds.<a href="#fnref:2" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>There is a tension between people&rsquo;s desire for granular control and
+      <p>There is a tension between people’s desire for granular control and
 their hatred of granular management. This seems like kind of an
 intractable problem to a degree, but hopefully once identity and
-contact management are standardized and portable, you&rsquo;ll only have
+contact management are standardized and portable, you’ll only have
 to create lists once, and then the ongoing new contact sort would
 remain relatively manageable after that.<a href="#fnref:3" rel="reference">&#8617;</a></p>
     </li>
@@ -270,7 +271,7 @@ remain relatively manageable after that.<a href="#fnref:3" rel="reference">&#861
       <p>It looks like <a href="http://www.azarask.in/blog/post/identity-in-the-browser-firefox/">Mozilla was working on making the browser the center
 for
 identity</a>,
-too, but that post is pretty old and it doesn&rsquo;t seem like it&rsquo;s gone
+too, but that post is pretty old and it doesn’t seem like it’s gone
 anywhere. Edit: I forgot about
 <a href="http://hacks.mozilla.org/2010/04/account-manager-coming-to-firefox/">this</a>.<a href="#fnref:4" rel="reference">&#8617;</a></p>
     </li>
@@ -301,6 +302,7 @@ anywhere. Edit: I forgot about
 		</div>
 	</div>
 </div>
+	</div>
 	</div>
 	<footer>
    		<div class="container">
