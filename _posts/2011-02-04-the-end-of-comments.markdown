@@ -128,6 +128,7 @@ Edit: continued
     usage is in the form of a headline plus a link to a larger post,
     which is not very different from things that came before, notably
     RSS. 
+
 [^2]: This is less the case than it used to be. Twitter used to publish
     all @replies into a user's main tweet-stream but changed this
     implementation in May of 2009. Now, you only see someone's @replies
