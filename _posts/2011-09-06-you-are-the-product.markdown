@@ -1,5 +1,5 @@
 ---
-title: "You are the product."
+title: "\"You are the product.\""
 layout: post
 alias: /post/9910020865/you-are-the-product
 ---
