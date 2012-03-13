@@ -8,7 +8,7 @@ title: blog
 			{% for post in paginator.posts %}
 			<li class="{% if post.title.size > 80 %}span8{% else %}span4{% endif %}"><a href="{{ post.url | remove: ".html" }}">
 			<h3>{{ post.title }}</h3><date datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</date><p class="description">{{ post.description }}</p>
-			<p class="teaser">{% if post.title.size > 80 %}{{ post.content | strip_html | truncatewords: 100 }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}<br />[Read More &rarr;]</p>
+			<p class="teaser">{% if post.title.size > 80 %}{{ post.content | strip_html | truncatewords: 100 }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}</p>
 			</a></li>
 			{% endfor %}
 		</ul>
