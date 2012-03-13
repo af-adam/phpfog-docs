@@ -2,7 +2,7 @@ DirectoryIndex index.html index.xml
 
 RewriteEngine On
 
-ErrorDocument 404 http://byjoemoon.com/404.html
+ErrorDocument 404 http://byjoemoon.com/404
 
 # Do not do anything for already existing files and folders
 RewriteCond %{REQUEST_FILENAME} -f 
