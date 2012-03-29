@@ -1,0 +1,46 @@
+---
+title: SSL for Custom Domain Names
+layout: doc-page
+---
+
+Requirements
+1. You have your Certificate, Private Key, and intermediate key if required
+2. You are using subdomain certificates (f.e.: www.example.com), OR, your certificate is a root domain wildcard certificate for subdomains (f.e. *.example.com)
+3. Your private certificate DOES NOT have a passphrase associated with it. This is very important. Please ensure this requirement is completed before proceeding.
+Steps
+Custom SSL on PHP Fog is a simple and straight forward process. To add your SSL certificate to your domain name you will need to follow the below steps. Be very careful; if you paste the wrong information you will need to begin this whole process all over again!
+
+1. From within the App Console of the app, navigate to the "Custom SSL" tab. Within this screen there are two boxes which must be filled in for implementation of Custom SSL. These are "Certificate" and "Private Key".
+2. Open your Certificate with your favorite text editor. Copy the ENTIRE contents of that file and paste that content into the Certificate field.
+3. Open your Private Key with your favorite text editor. Copy the ENTIRE contents of that file and paste that content into the Private Key field.
+If you require an Intermediate Certificate, follow the below steps:
+3a. Check the "intermediate Cerficate" check box. A new field will appear.
+3b. Open your Intermediate Key with your favorite text editor. Copy the ENTIRE contents of that file and paste that content into the Intermediate Key field.
+4. Click "Save". At this point you Elastic Load Balancer is being configured and deployed. Please be patient for this process to complete.
+5. In the next window you will see a CNAME record. Update your DNS from CNAME01.phpfog.com to the new CNAME record displayed.
+6. You now have Custom SSL on your PHP Fog app!
+
+For Root Domains needing SSL
+7. Email support@phpfog.com asking for your SSL's Alias DNS Name.
+8. Login to Route 53 at Amazon (if you do not have an account, create one now).
+NOTE:This next section will be changing your entire domains DNS! Make sure you are prepared to move all domain traffic through Route 53.
+9. in the AWS console under Route 53 click on "create a hosted zone" and fill out the required information. The console will return your Name Servers to fill in at your registrar. By changing those values your allowing Route 53 to dictate your DNS settings.
+10. With your Alias Hosted Zone ID and Alias DNS Name in hand create a "record set" for your root domain. With the default "A record" click the alias radio button to "yes". Paste the Hosted Zone ID and Alias DNS Name in the associated fields. Save those changes.
+11. Congrats! Your root domain site is secured by SSL with PHP Fog!
+FAQ
+Why does it cost $20/month?
+For every custom SSL you upload we create a new Elastic Load Balancer instance with a dedicated elastic IP. As such, not only do you get custom SSL support, but you get your own load balancer too and a dedicated elastic IP. There are cheaper alternatives. You can use the *.phpfogapp.com sub-domain which uses the PHP Fog SSL certificate. You can also use a service like CloudFlare which use a different technic to provide an SSL certificat for your custom domain name but it is also shared with other custom domain names.
+
+Troubleshooting
+My browser says that there is a "domain name mismatch" what does that mean?
+A domain name mismatch happens when your certificate says you domain name is something and your site address is actually something else (IE www.foo.com vs foo.com)
+The Solution: Change your site's name to match the certificate. Alternatively, you can have a new certificate issued to match your site (this includes wildcard certificates i.e. *.foo.com)
+
+My browser says that it "Cannot Verify" the site! What's going on?
+Many things could be wrong. Most commonly, however, your certificate has expired.
+The Solution: Get your Certificate Authority to update your certificate.
+My Certificate authority says I need a CSR, what can I do?
+The Solution: To generate a CSR on your local machine for PHP Fog check out this Document
+
+* sub-domains with wildcards
+* sharing sessions between sub-domains

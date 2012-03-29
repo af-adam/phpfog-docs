@@ -1,0 +1,7 @@
+---
+title: Sending Email
+layout: doc-page
+---
+
+PHP Fog supports sending emails using the mail() method in PHP. Each dedicated instances has a SMTP server so you can send emails like you typically would from a PHP application. Some simple test indicate that the server can send around 35 emails a second. This method is not the best method for sending emails as it doesn't provide the greatest reliability, throughput, and visibility.
+Luckily there are great third party services which provide high throughput, reliability email sending along with greater visibility. Two such services include SendGrid and Amazon Simple Email Service (SES).

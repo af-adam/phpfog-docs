@@ -1,0 +1,14 @@
+---
+title: php\.ini
+layout: doc-page
+---
+
+PHP Fog doesn't support direct access to php.ini; however, the AllowOverride directive in php.ini is set to "All" which enables setting the values of the directives from the .htaccess file or within your PHP file via ini_set().
+
+Setting values using .htaccess
+Setting a value of a directive from within .htaccess is really easy, just use the the line below with the name and value of the directive you wan to change
+php_value name value
+For more information read the How to change configuration settings and this informative discussion Set php.ini Values Using .htaccess.
+
+Setting values using ini_set()
+Read the PHP: ini_set manual for more information about using the ini_set() method.

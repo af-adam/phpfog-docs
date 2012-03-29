@@ -2,4 +2,5 @@
 layout: default
 title: PHP Fog Documentation
 ---
-hello world
+
+# Welcome to the PHP Fog Documentation

@@ -1,0 +1,7 @@
+---
+layout: doc-page
+title: Jumpstarts
+---
+Click the buttons! You're done! Your site should be up and running in just a few minutes!
+
+Ready to dig into code? Read on.

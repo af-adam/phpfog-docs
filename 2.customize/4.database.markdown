@@ -1,0 +1,16 @@
+---
+title: Database
+layout: doc-page
+---
+
+Can I access the MySql Database remotely?
+No, currently access to the database is supported through phpMyAdmin and from within your PHP application. To use phpMyAdmin just click “Access the Database through phpMyAdmin” from the “Database” tab on your App Console.
+
+Do you backup the database?
+Yes, currently we do daily backups and save the data for a week
+
+Can I backup my database to my own systems?
+You can perform manual backups by exporting the database from phpMyAdmin. We do not support automated backup to your own systems yet, that is on the roadmap.
+
+Can I use RDS or other database systems other than the included MySQL?
+Yes, you will need to configure your RDS (or other Amazon services) to allow calls from our EC2 Instances. Please see here or contact support@phpfog.com for details.

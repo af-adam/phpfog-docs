@@ -1,0 +1,61 @@
+---
+title: Custom Domain Names
+layout: doc-page
+---
+
+With PHP Fog you can host custom domain names (e.g. my-web-app.com) or PHP Fog domain names (e.g. my-web-app.phpfogapp.com). If you are using a phpfogapp.com domain name, then you do not have to do anything as we manage the DNS records for you. This guide is to help you setup the DNS to work with PHP Fog if you are using a custom domain name.
+
+Summary for Experts
+If you are familiar with setting up DNS, here are the basic things you need to know. If you have limited experience, skip to the next section which will explain setting up DNS with more detail.
+
+yourdomain.com should redirect to www.yourdomain.com to avoid using A records for reliability.
+www.yourdomain.com should have a CNAME record to cname01.phpfog.com
+If you are using a root domain (yourdomain.com) you will need A records to 50.19.115.173, 184.72.222.30,
+& 107.22.161.126
+Setting up DNS
+Note!
+With Wordpress Apps' you MUST change your domain name in the app before changing it in the PHP Fog App console.
+Before getting started, there are a number of things you must have in hand.
+Getting a domain name
+First, you will need to have a registered domain name. If you do not have a domain name you can register one with a service like Network Solutions.
+Getting a name server
+Secondly, you will also need a name server. Typically the domain name registrant provides access to the DNS manager and name servers; however, if it doesn' there are free options. ZoneEdit is one that has been around for a long time.
+If you are new to DNS completely, skip to the very bottom to "Resources" section to read more about DNS, domain name registration, and name servers.
+Adding DNS records
+Using your DNS provider's management tool, you will need to setup a redirect from "yourdomain.com" to "www.yourdomain.com". This is a fairly standard tool that DNS services provider; however, this isn't part of the standard protocol. Under the hood yourdomain.com just references a website hosted by the DNS service provider which then performs an HTTP redirect to www.yourdomain.com.
+Add a CNAME record for www.yourdomain.com to reference cname01.phpfog.com.
+Below are some guides for popular registrars on setting up DNS
+
+GoDaddy
+Name Cheap
+1&1.co.uk
+Name.com
+Resources
+What is DNS and how does it work?
+Wikipedia: Domain Name Registrar
+CNAME on domain root does work
+
+* sub-domains with wildcards
+* sharing sessions between sub-domains
+
+### Sharing sessions between sub-domains
+
+Thanks [albeik](http://community.phpfog.com/discussion/85/sharing-sessions-between-subdomains) for the tip on the community forums.
+For anyone who enabled wildcard domains for their PHPFog account and want to share their session data between subdomains can set the following in their "entry point" PHP file (e.g. index.php):
+("session.cookie_domain", ".domain.com");
+
+
+### Handling sub-domains with wildcards
+
+If you have wildcards enabled on your application you may want to host different contents depending on the domain name.
+$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
+$subdomain = $url_parts[0];
+if ($subdomain == 'www' || $subdomain == '')
+{
+// show home page
+}
+else if ($subdomain == 'help')
+{
+// show help page
+}
+This assumes you have one level of sub-domains; but you could easily modify this to also support multiple levels of sub-domains.

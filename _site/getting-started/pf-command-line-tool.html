@@ -1,0 +1,92 @@
+<p>This guide will show you how to setup your SSH Keys and Git in order to modify the source code of an application you launched.</p>
+
+<h3 id="install-and-setup-the-pf-client">Install and Setup the PF client</h3>
+
+<p>PHP Fog uses git to enable you to get the code, modify it, and push the changes to the server. Before you can use git you must first setup SSH Keys. This is a more involved process, so we created the PF Command-line tool which makes this a breeze. If you want to do this manually you can follow the &ldquo;Getting Started with git and SSH&rdquo; guide.</p>
+
+<ol>
+<li>
+<p>
+Download and install the PF Command Line Tool from a terminal window.
+</p>
+
+<code>$ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php</code>
+
+</li>
+<li>
+
+<p>
+Setup your credentials in PF.
+</p>
+
+<code>$ pf setup</code>
+
+</li>
+
+### Get Your Source Code
+
+<li>
+3. List all of your apps.
+
+List all of your apps so you can pick the name/id to use to download the app in the next step
+
+<code>$ pf list apps</code>
+
+</li>
+<li>
+4. Download your code.
+
+To get the code we'll use the "pf clone" command. You can use the "ID" or the "Name" of the application from the previous step. 
+
+Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in 'yes'.
+
+<code>$ pf clone 811</code>
+
+### Add a new file and push changes
+
+</li>
+<li>
+5. Change your current working directory.
+
+<code> cd foo.phpfogapp.com/ </code>
+
+</li>
+<li>
+6. Create a new file called helloworld.php.
+
+Create the helloworld.php file and populate it with some text. You can add other files too like images using git.
+<code> 
+<?php
+echo "hello world";
+?>
+</code>
+
+</li>
+<li>
+7. Add the file to change list.
+
+This command will let git know you want to add the file to the repository. At this point this file is still local to your system.
+
+The "." lets git know that you want to add all the files in this directory recursively.
+
+<code>$ git add .</code>
+
+</li>
+<li>
+8. Commit the changes.
+
+This commits the added file to the git repository. It is still local, but now it is ready to be uploaded (i.e. "pushed"). The "." lets git know that you want to commit all the files recursively from this directory. This includes the file that you added in the previous step.
+
+<code>$ git commit -m "my first application update"</code>
+
+</li>
+<li>
+9. Push the changes
+
+This is the step where the committed files will be uploaded to the server.
+
+<code>$ pf push</code>
+</li>
+</ol>
+
+<p>Done!</p>
