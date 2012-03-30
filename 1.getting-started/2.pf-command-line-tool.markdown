@@ -3,70 +3,72 @@ layout: doc-page
 title: PF Command Line Tool
 ---
 
-PHP Fog uses git to give you access to your code, modify it, and push the changes to the server. Git is an extremely powerful and flexible tool for managing code, but it's also pretty complex and can be intimidating for developers who haven't used it before. SSH key management can also be pretty complicated and error-prone. That's why we created the PF Command Line Tool: to allow developers to jump into PHP Fog as quickly and simply as possible.
+PHP Fog uses git to give you access to your code, modify it, and push changes to the server. Git is an extremely powerful and flexible tool for managing code, but it's also pretty complex and can be intimidating for developers who haven't used it before. SSH key management can also be pretty complicated and error-prone. That's why we created the PF Command Line Tool: to allow developers to jump into PHP Fog as quickly and simply as possible.
 
-PF is a command line tool for managing PHP Fog apps from the console. The tool allows you to list, view, and delete apps. It also does more advanced operations for you, like set up your SSH keys for multiple PHP Fog accounts and deploy apps using git sub-modules. 
+PF is a command line tool for managing PHP Fog apps from the terminal. The tool allows you to list, view, and delete apps. It also does more advanced operations for you, like set up your SSH keys for multiple PHP Fog accounts and deploy apps using git sub-modules. 
 
-Note: PF modifies your SSH configuration, so we highly recommend that once you install the PF tool, you let it to clone and deploy apps instead of git. 
+Note: PF modifies your SSH configuration, so we highly recommend that once you install the PF tool, you use it to clone and deploy apps instead of git. 
 
 Prefer to just use git? Comfortable with SSH keys already? PF is completely optional! Feel free to skip ahead to the section on git or SSH keys.
 
 ### 1. Download and install PF.
 
-<code>$ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php</code>
+    $ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php 
 
 ### 2. Set up your credentials in PF.
 
-<code>$ pf setup</code>
+    $ pf setup 
 
 ### 3. List your apps.
 
-This will allow you to pick the name/id to use to download an app in the next step.
+    $ pf list apps 
 
-<code>$ pf list apps</code>
+This will allow you to pick the name/id to use to download an app in the next step.
 
 ### 4. Download your source code.
 
 To get the code we'll use the "pf clone" command. You can use the "ID" or the "Name" of the app list in the previous step. 
 
-Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in 'yes'.
+    $ pf clone 811 
 
-<code>$ pf clone 811</code>
+Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in 'yes'.
 
 ### 5. Add a new file and push the change to the server.
 
-Change your current working directory.
+Change your current working directory to the git repo.
 
-<code> cd foo.phpfogapp.com/ </code>
+     cd foo.phpfogapp.com/  
 
-Create a new file called "helloworld.php" and populate it with some text.
+Create a new file called `helloworld.php` and populate it with some text.
 
-<code> 
-<?php
-echo "hello world";
-?>
-</code>
+     
+	<?php
+	echo "hello world";
+	?>
+ 
 
-### 6. Add the file to change list.
+### 6. Add the file to staging.
+
+    $ git add . 
 
 This command tells git to "stage" the file to get ready to commit to your repository.
-
-<code>$ git add .</code>
 
 Note: The "." adds all the files in this directory recursively.
 
 ### 7. Commit your changes.
 
-This commits the new file to your git repository. It's still local, but now it's ready to be uploaded (i.e. "pushed"). 
+    $ git commit -m "my first update" 
 
-<code>$ git commit -m "my first update"</code>
+This commits the new file to your git repository. It's still local, but now it's ready to be uploaded (i.e. "pushed"). 
 
 ### 8. Push your changes.
 
-This is the step where the committed files will be uploaded to the server.
+    $ pf push 
 
-<code>$ pf push</code>
+This command uploads the committed changes to PHP Fog.
 
 ### Done!
 
-That's it! Wait a couple of minutes and your changes will be live!
+That's it! Wait a couple of minutes for your code to deploy and you should be able to see your changes live!
+
+Ready for more? Continue on to [customize your app]().

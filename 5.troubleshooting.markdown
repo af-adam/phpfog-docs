@@ -50,3 +50,16 @@ WordPress
 
 * permission denied
 * unauthorized access
+
+
+### SSL
+
+My browser says that there is a "domain name mismatch" what does that mean?
+A domain name mismatch happens when your certificate says you domain name is something and your site address is actually something else (IE www.foo.com vs foo.com)
+The Solution: Change your site's name to match the certificate. Alternatively, you can have a new certificate issued to match your site (this includes wildcard certificates i.e. *.foo.com)
+
+My browser says that it "Cannot Verify" the site! What's going on?
+Many things could be wrong. Most commonly, however, your certificate has expired.
+The Solution: Get your Certificate Authority to update your certificate.
+My Certificate authority says I need a CSR, what can I do?
+The Solution: To generate a CSR on your local machine for PHP Fog check out this Document
