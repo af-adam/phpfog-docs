@@ -1,5 +1,11 @@
-<p>All applications by default have only read access to the files and folders in your application.</p>
+<p>By default, all apps have only read access to files and directories. </p>
 
-<p>To make a folder or file writable, use the &ldquo;Permission&rdquo; tab in the App console to specific the paths of the filers/folders which are to be writable.</p>
+<p>To add write permissions to a file or directory:</p>
 
-<p>Note: Git doesn&rsquo;t create folders if they are empty, and therefore changing permissions will not work. First you follow the instructions in &ldquo;How do I create a folder in git?.&rdquo; After you complete this you can use the permissions tool to make it writable as needed.</p>
+<ol>
+  <li>Go to your PHP Fog app console. </li>
+  <li>Click on the &ldquo;Permissions&rdquo; tab on the left. </li>
+  <li>Enter the path to the file or directory.</li>
+</ol>
+
+<p>Note: Git doesn&rsquo;t create empty folders, so setting permissions on an empty folder might not work. If you run into this problem, simply add a dummy file into the directory you&rsquo;re trying to create. </p>

@@ -103,7 +103,7 @@ us@phpfog.com
 
 <p>Sometimes you need to give more than one person SSH access to your PHP Fog git repository. Fortunately, adding more SSH keys to your account is easy. </p>
 
-<p>Just go your PHP Fog account, click on the &ldquo;SSH Keys&rdquo; tab, and hit the &ldquo;Add another SSH key&rdquo; button. </p>
+<p>Just go to your PHP Fog account, click on the &ldquo;SSH Keys&rdquo; tab, and hit the &ldquo;Add another SSH key&rdquo; button. </p>
 
 <p>Give the new key a name, paste in the contents of the public key, hit &ldquo;Save SSH Key&rdquo;, and you&rsquo;re done!</p>
 
@@ -157,7 +157,13 @@ The key's randomart image is:
 <pre><code>$ ssh-add ~/.ssh/id_rsa_1
 </code></pre>
 
-<h3 id="edit-your-ssh-configuration-file">2. Edit your SSH configuration file.</h3>
+<h3 id="add-your-new-ssh-key-to-the-second-account">2. Add your new SSH key to the second account.</h3>
+
+<p>Now go to your PHP Fog account, click on the &ldquo;SSH Keys&rdquo; tab, and hit the &ldquo;Add another SSH key&rdquo; button. </p>
+
+<p>Give the new key a name, paste in the contents of the public key, and hit &ldquo;Save SSH Key&rdquo;.</p>
+
+<h3 id="edit-your-ssh-configuration-file">3. Edit your SSH configuration file.</h3>
 
 <p>Open &ldquo;<code>~/.ssh/config</code>&rdquo; in your favorite text editor.</p>
 
@@ -183,7 +189,7 @@ IdentityFile /Users/&lt;your username&gt;/.ssh/id_rsa_1
 
 <p>Save and quit. </p>
 
-<h3 id="your-new-git-workflow">3. Your new git workflow.</h3>
+<h3 id="your-new-git-workflow">4. Your new git workflow.</h3>
 
 <p>From now on, you&rsquo;ll have to modify the way you interact with PHP Fog git repositories slightly. Because you have multiple hosts, you&rsquo;ll have to specify the host&rsquo;s name when you work with these remote repositories. For example:</p>
 
