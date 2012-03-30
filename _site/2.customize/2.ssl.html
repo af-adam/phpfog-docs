@@ -27,7 +27,7 @@
 
 <h3 id="ssl-for-root-domains">SSL for Root Domains</h3>
 
-<p>In order to enable SSL for root domains on PHP Fog, you&rsquo;ll have to move your DNS to Amazon&rsquo;s Route 53.</p>
+<p>In order to enable SSL for root domains on PHP Fog, you&rsquo;ll have to move your DNS to <a href="">Amazon&rsquo;s Route 53</a>.</p>
 
 <ol>
   <li>Email <a href="mailto:support@appfog.com">support@appfog.com</a> and ask for your SSL&rsquo;s &ldquo;Alias DNS Name&rdquo;.</li>
@@ -44,6 +44,6 @@
 <p>For every custom SSL, we create a new elastic load balancer instance with a dedicated elastic IP. As such, not only do you get custom SSL support, but you get your own load balancer and a dedicated elastic IP. But there are some less expensive alternatives: </p>
 
 <ul>
-  <li>You can use the *.phpfogapp.com subdomain which uses the PHP Fog SSL certificate. </li>
-  <li>You can also use a service like CloudFlare which uses a different method to provide an SSL certificate for your custom domain name, though it&rsquo;s shared with other custom domain names.</li>
+  <li>You can use a *.phpfogapp.com subdomain which falls under the PHP Fog SSL certificate automatically. </li>
+  <li>You can also use a service like <a href="http://cloudflare.com">CloudFlare</a> which uses a different method to provide an SSL certificate for your custom domain name, though it&rsquo;s shared with other custom domain names.</li>
 </ul>
