@@ -1,0 +1,49 @@
+---
+title: SSL for Custom Domain Names
+layout: doc-page
+weight: 6
+---
+
+Before you start, make sure you have the following: 
+
+### Requirements
+
+1. Your certificate, private key, and (if you have one) intermediate key.
+2. You're using subdomain certificates (e.g. www.example.com) *or* your certificate is a root domain wildcard certificate for subdomains (e.g. *.example.com).
+3. Your private certificate *does not* have a passphrase associated with it.
+
+### Instructions
+
+<ol>
+	<li>Go to your app console and click on the "SSL" tab on the left. </li>
+	<li>Open your certificate in your favorite text editor. Copy the *entire* contents of that file and paste it into the "Signed Certificate" field.</li>
+	<li>Open your private key in your text editor. Copy the *entire* contents of that file and paste it into the "RSA or DSA Private Key" field.</li>
+	If you have an intermediate certificate:
+		<ol>
+			<li type="a">Check the "Use intermediate cerficate" check box and a new field will appear.</li>
+			<li type="a">Open your intermediate key in your text editor. Copy the *entire* contents of that file and paste it into the "Intermediate certificate" field.</li>
+		</ol>
+	<li>Click "Save". Grab a cup of coffee while your elastic load balancer configures and deploys your settings.</li>
+	<li>On the next screen, you'll see a CNAME record. Update your DNS from `CNAME01.phpfog.com` to this new record.</li>
+</ol>
+
+You now have SSL for your custom domain name!
+
+### SSL for Root Domains
+
+In order to enable SSL for root domains on PHP Fog, you'll have to move your DNS to [Amazon's Route 53]().
+
+7. Email <a href="mailto:support@appfog.com">support@appfog.com</a> and ask for your SSL's "Alias DNS Name".
+8. Create a Route 53 account, if you don't already have one.
+9. In the AWS console under Route 53, click on "create a hosted zone" and fill out the required information. The console will return name servers to fill in at your registrar. By changing those values you allow Route 53 to take control of your DNS settings.
+10. With your Alias Hosted Zone ID and Alias DNS Name in hand create a "record set" for your root domain. With the default "A record" click the alias radio button to "yes". Paste the Hosted Zone ID and Alias DNS Name in the associated fields. 
+11. Save your changes.
+
+Congratulations, your root domain is now secured by SSL!
+
+### Why does it cost $20/month?
+
+For every custom SSL, we create a new elastic load balancer instance with a dedicated elastic IP. As such, not only do you get custom SSL support, but you get your own load balancer and a dedicated elastic IP. But there are some less expensive alternatives: 
+
+* You can use a *.phpfogapp.com subdomain which falls under the PHP Fog SSL certificate automatically. 
+* You can also use a service like [CloudFlare](http://cloudflare.com) which uses a different method to provide an SSL certificate for your custom domain name, though it's shared with other custom domain names.

@@ -1,0 +1,24 @@
+---
+title: Preventing Data Loss
+layout: doc-page
+weight: 13
+---
+
+Preventing Data Loss
+
+When your application runs on multiple servers each server is a different virtual machine and the load balancer distributes HTTP requests across those servers. Therefore you must assume that any two HTTP requests will go to different servers. Since each server is independent there is no shared hard drive storage.
+
+Use the database or cookies to save sessions
+Use memecached for memory. See the Working around limitations guide.
+For static files use Amazon S3. See the Handling static files guide.
+We are working on providing a distributed file system so you can save files such that they are available across all the servers. We are also working on native memcached support.
+
+
+TO PREVENT LOSE OF DATA PLEASE READ THIS GUIDE!
+PHP Fog is not designed to handle large static assets like images, videos, MP3, etc. Luckily there are third party services that do an excellent job, which you can easily integrate with your application. We recommend Amazon's S3 and using it in the US-East (Virginia) region for lowest latency. There is a great write up from tutsplus.com which talks about scaling your App! See it at: Using Amazon S3 to Store and Manage files
+
+Custom Applications
+Using S3 with your custom PHP Fog app is easy. To upload your assets to your S3 account, you can use a number of tools, including the s3cmd command line tool and Amazon S3 Organizer extension for Firefox. There are countless other clients you can use. Once you have uploaded your assets you can make them publicly available in S3 and reference them from your PHP Fog application.
+
+WordPress
+With WordPress you can use the Amazon S3 plugin-in which comes already installed for your WordPress blog in PHP Fog. First you have to activate the plug-in and then provide your Amazon credentials. This enables WordPress to use Amazon S3 as the store for the static assets.
