@@ -6,39 +6,56 @@ weight: 11
 
 ### Varnish
 
-All applications on PHP Fog are fronted by Varnish, an HTTP caching server. Varnish will cache responses from your PHP application based on cues provided in standard HTTP response headers. These headers instruct Varnish with information on how/if contents should be cached, and for how long. These standard headers are the same headers that your browser uses for caching, so your PHP Fog application gets a double boost when they are used properly.
+All PHP Fog apps are fronted by Varnish, a web application accelerator that runs in front of your app server and caches content according to your HTTP Header information. Varnish can speed up delivery of your content by a factor of 300-1000, depending on your app. For more information, check out [the Varnish site](https://www.varnish-cache.org/). 
 
-While using caching properly can lead to a great performance boost; used incorrectly it can lead to serving stale content and problems in your application. It is important to use these correctly; so this guide will help you setup your applications to take advantage of Varnish caching.
+### Default Caching
 
-Default Caching
-By default, Varnish will cache content for 300s (5 minutes). However, there are two key exceptions. First, if cookies are present in the headers on the request or response, the page will not be cached (more information below). Secondly, only responses to GET requests can be cached.
+Varnish caches content automatically for 300 seconds (5 minutes). For static content, this means you don't you have to do anything to take advantage of Varnish.
 
-Handing cookies in cache
-Requests with cookies are not cached by default. This is done in order to ensure stale cookies don't impact the application behavior as applications are typically designed with the assumption that cookies are not cached.
-In a few cases cookies are used client-side only, that is, the cookies may be produced and consumed by JavaScript but are never processed by the PHP application. One such case is Google Analytics which uses cookies to store information about the page. In order to try to maximize default caching, Varnish will drop these special-case cookies being sent in the HTTP request to the application. If those cookies are dropped and no other cookies are present, the page can follow the default behavior for caching. Currently only the following cookies are dropped:
+There are two key exceptions, though. First, if there are cookies in the HTTP header on the request or response, the page will not be cached. Second, only responses to GET requests can be cached.
 
-Cookies with no values (i.e. empty)
-Cookies from Google Analytics
-Cookies with the name "has_js"
-If you believe other cookies should be dropped, please let us know by emailing support@appfog.com. We can also setup a custom configuration for your application. In the future we will build more controls to manage the caching of your applications.
+### Caching with Cookies
 
-Caching Dynamic Contents
-Caching dynamic contents in Varnish can greatly improve the performance of your application if the contents doesn't have to be processed by the application. You can explicitly instruct Varnish to cache the requests and for how long.
-The simplest way to cache a page is to set a header on output which cues Varnish that this page can be served, unmodified, to everyone visiting that same URL. The Cache-Control header also specifies how long the cached copy should be retained. The following is a PHP example of setting the cache to 10 minutes (600 seconds)
-header("Cache-Control: public, max-age=600");
+Requests that include cookies are not cached by default so that stale cookies don't impact the application behavior.
 
-Preventing Caching
-To prevent caching set the "Cache-Control" header to "no-cache". This is generally required in applications which don't produce/consume cookies, but have contents that is actually dynamic. Here is the PHP example to set the Cache-Control header.
-header("Cache-Control: no-cache");
+In a few cases cookies are used client-side only, i.e. the cookies may be produced and consumed by JavaScript but are never processed by the PHP application. For example, Google Analytics uses cookies to store information about the page. In order to try to maximize default caching, Varnish will drop these special case cookies being sent in the HTTP request to the app. If those cookies are dropped and no other cookies are present, the page can follow the default caching behavior. 
 
-Purging Cache Data
+Currently only the following cookies are dropped:
+
+* Cookies with no values (i.e. empty).
+* Cookies from Google Analytics.
+* Cookies with the name "has_js".
+
+We can also setup a custom configuration for your application. We're also building tools for you to manage caching, so stay tuned!
+
+### Caching Dynamic Content
+
+Caching dynamic content in Varnish can greatly improve the performance of your app. You can explicitly instruct Varnish to cache the requests and for how long.
+
+The simplest way to cache a page is to set a header on output which cues Varnish that this page can be served unmodified to anyone visiting a given URL. The "Cache-Control" header also specifies how long the cached copy should be retained. The following is a PHP example of setting the cache to 10 minutes (600 seconds):
+
+	header("Cache-Control: public, max-age=600");
+
+Note: The longest Varnish will cache any content is 1 day. 
+
+### Preventing Caching
+
+To prevent caching set the "Cache-Control" header to "no-cache". This is generally required in applications that don't produce or consume cookies, but serve dynamic content. This is how to set the "Cache-Control" header in PHP:
+
+	header("Cache-Control: no-cache");
+
+### Purging Cache Data
+
 We are currently working on tools to reset the cache; however, this is not yet functional. In the mean time if you need to purge the cache, please email support@appfog.com.
 
-Caching in WordPress
+### Caching in WordPress
+
 WordPress by default takes little advantage of caching; however, there are plugins that can improve caching by intelligently presenting the appropriate cache headers.
+
 The WP Super Cache Plugin and the WordPress Varnish Plugin are two plug-ins we recommend installing to take advantage of Varnish.
 
-Caching in Drupal
+### Caching in Drupal
+
 Drupal by default takes little advantage of caching. As an alternative we recommend PressFlow, which is a distribution of Drupal optimized for performance. Currently we do not support PressFlow as a default Jump Start; however, we are working on adding support soon. Alternatively you can install PressFlow yourself by starting with a custom application.
 
 ### APC
