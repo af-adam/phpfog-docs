@@ -31,6 +31,8 @@ Run the command in your terminal, and you should see something like this:
 
 Congratulations, you've cloned your git repo!
 
+(Problems with SSH? Check out our guide for [troubleshooting SSH]().)
+
 ### 4. Modify your code. 
 
 Change your current working directory to the repo you just cloned:
