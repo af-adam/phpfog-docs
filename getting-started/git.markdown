@@ -12,7 +12,7 @@ Each application in PHP Fog has its own git repository that you can interact wit
 
 ### 2. Create a new SSH key and add it to PHP Fog.
 
-Before you can interact with PHP Fog's git repository, you have to set up a secure way to do so. Create a new SSH key and add it to your PHP Fog account, under the "SSH Keys" tab. Don't know how? [Follow this guide.]()
+Before you can interact with PHP Fog's git repository, you have to set up a secure way to do so. Create a new SSH key and add it to your PHP Fog account, under the "SSH Keys" tab. Don't know how? [Follow this guide.](/getting-started/ssh)
 
 ### 3. Get your source code.
 
@@ -31,12 +31,11 @@ Run the command in your terminal, and you should see something like this:
 
 Congratulations, you've cloned your git repo!
 
-(Problems with SSH? Check out our guide for [troubleshooting SSH]().)
+(Problems with SSH? Check out our guide for [troubleshooting SSH](/troubleshooting#ssh).)
 
 ### 4. Modify your code. 
 
 Change your current working directory to the repo you just cloned:
-
 
 	$ cd foo.phpfogapp.com/
 
@@ -64,7 +63,7 @@ This command commits the added file to your git repository. It's still local, bu
 
 This command uploads your local repository to the remote server at PHP Fog. And you're done! Give it a few minutes to deploy your changes, then visit your app to see your changes live! 
 
-This should be enough to get your started, but if you want to learn a few advanced git techniques, read on.
+This should be enough to get your started, but if you want to learn a few advanced git techniques, read on. If you want to start customizing your app, head on over to [the next section](/customize).
 
 ## .gitignore
 
@@ -111,7 +110,7 @@ Dependencies that include binaries may not work once deployed. PHP Fog does not 
 
 ### 1. Install Composer locally.
 
-You can run Composer directly from the root project directory or install it using [Homebrew]().
+You can run Composer directly from the root project directory or install it using [Homebrew](http://mxcl.github.com/homebrew/).
 
 Download it to the project directory:
 
@@ -184,15 +183,15 @@ This will download the newest available libraries using the version rules specif
 
 Once the dependencies are installed, tested, and the app is ready for release, commit and push the project (including the vendor directory) to PHP Fog.
 
-<code>
 	$ git add .
 	$ git commit -m "Added Composer and dependencies"
 	$ git push
-</code>
-
 
 Want to learn more about Composer? Check out [the project page](http://getcomposer.org/). 
 
 ## Git Submodules
 
 TK
+
+
+Ready to customize your app? [Read on](/customize).

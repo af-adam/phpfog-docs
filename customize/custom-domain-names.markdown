@@ -55,7 +55,7 @@ If you want to enable wildcards and host content that's dependent on the subdoma
 
 ### Sharing sessions between subdomains
 
-Thanks to [albeik](http://community.phpfog.com/discussion/85/sharing-sessions-between-subdomains) for this tip on our [community forums]!
+Thanks to [albeik](http://community.phpfog.com/discussion/85/sharing-sessions-between-subdomains) for this tip on our [community forums](http://community.phpfog.com)!
 
 If you've enabled wildcard domains and want to share your session data between subdomains, add the following code snippet to your "entry point" PHP file (e.g. index.php):
 

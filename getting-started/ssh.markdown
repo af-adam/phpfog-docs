@@ -14,7 +14,7 @@ If you get "no such file or directory", create the directory:
 
     $ mkdir ~/.ssh
 
-Then, [skip ahead to "3. Generate Your Key"]().
+Then, [skip ahead to "3. Generate Your Key"](#generate).
 
 ### 2. Backup and remove existing SSH keys.
 
@@ -22,14 +22,14 @@ If the directory exists, check to see if you already have a keypair in it:
 
     $ ls
 
-If you don't see any files named "id_rsa" or "id_rsa.pub" [skip ahead to "3. Generate Your Key"](). 
+If you don't see any files named "id_rsa" or "id_rsa.pub" [skip ahead to "3. Generate Your Key"](#generate). 
 
 If they exist, you'll you need to back them up by creating a new directory and moving those files there.
 
 	$ mkdir key_backup
 	$ mv id_rsa* key_backup/
 
-### 3. Generate your key.
+### 3. Generate your key. {#generate}
 
 Run this command: 
 
@@ -43,11 +43,9 @@ Terminal will prompt you for the name of the file in which to save the key.
 
 	Enter file in which to save the key (/Users/PHPFog/.ssh/id_rsa):
 
-When asked about the directory, we recommend using the default name and location (`id_rsa`).
+When asked about the directory, we recommend using the default name and location (`id_rsa`). Just hit 'Enter' to use the default filename.
 
 Note: Git and other tools generally look for keys in the default directory, so using a different directory may have unintended consequences.
-
-Just hit 'Enter' to use the default filename.
 
 ### 4. Enter a passphrase for your new key.
 
@@ -55,7 +53,7 @@ Just hit 'Enter' to use the default filename.
 	Enter same passphrase again:
 	This password is used to protect the private key.
 
-If the passphrases match, you'll generate a keypair.
+If the passphrases match, you'll get a keypair.
 
 	Your identification has been saved in /Users/PHPFog/.ssh/id_rsa.
 	Your public key has been saved in /Users/PHPFog/.ssh/id_rsa.pub.
@@ -94,7 +92,6 @@ A real key will look like:
 Now log in to the PHP Fog App Console and click on the "SSH Keys" tab. Hit the "Add another SSH key" button and paste the public key into the "SSH Public Key" field, give it a name, and hit "Save Changes".
 
 That's it, you've generated a new SSH key and added it to PHP Fog!
-
 
 ## Handling Multiple SSH Keys for a Single Account
 
