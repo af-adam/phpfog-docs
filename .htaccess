@@ -7,7 +7,8 @@ DirectorySlash Off
 ErrorDocument 404 http://byjoemoon.com/404
 
 RewriteEngine on
-RewriteRule ^(.*)$ site/$1 [L]
+
+# RewriteRule ^(.*)$ site/$1 [L]
 
 # Remove .html extension
 RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
