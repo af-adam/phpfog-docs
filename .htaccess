@@ -7,9 +7,9 @@ RewriteBase /
 ErrorDocument 404 http://byjoemoon.com/404
 
 # Remove .html extension
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)\.html$ $1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
 
 # add .html file extension (if such file does exist)
 RewriteCond %{REQUEST_FILENAME} !-f
