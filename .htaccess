@@ -7,6 +7,7 @@ ErrorDocument 404 http://byjoemoon.com/404
 # Remove .html extension
 RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.html
 RewriteRule (.*)\.html$ /$1/ [L,R=301]
+RewriteRule (.*)/$ $1.html [L]
 
 # Do not do anything for already existing files and folders
 RewriteCond %{REQUEST_FILENAME} -f 
