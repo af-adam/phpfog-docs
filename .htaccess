@@ -8,7 +8,7 @@ ErrorDocument 404 http://byjoemoon.com/404
 
 # Append trailing slash to directories
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
+RewriteRule ^+site/(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
 
 # Remove .html extension
 RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
