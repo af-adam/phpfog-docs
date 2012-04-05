@@ -1,6 +1,5 @@
 DirectoryIndex index.html index.xml
 
-Options +FollowSymlinks
 RewriteEngine On
 DirectorySlash Off
 RewriteBase /
