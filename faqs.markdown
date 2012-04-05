@@ -4,177 +4,127 @@ title: Frequently Asked Questions
 weight: 14
 ---
 
-Is SSL supported?
+### Does PHP Fog support SSL?
 
-You can have SSL support on any of the phpfogapp.com subdomains and non-root domains (IE www. or sub-domains). Additional details can be found at this guide.
+We provide SSL for all phpfogapp.com subdomains and support SSL on custom subdomains, including www. Check out [this guide](/customize/ssl) for additional details.
 
-What type of SLA do you have?
-At this point in time, we aren’t offering a Service Level Agreement. However, we have a draft SLA which we will make available when we launch out of beta. If you have any specific SLA requirements please email us at support@appfog.com, we'd be happy to hear your requirements.
+### What type of SLA does PHP Fog offer?
 
-If we're not using git, how would that work?
-You'll be able to access the administrative areas of your application through its own interfaces. If your application allows you to upload through the administrative interfaces, you'll be able to add functionality without accessing the source code.
-We recommend using WordPress if you want to be able to add functionality and media files without accessing the source code.
-If you'd like to jump in a little further and access your source code, check out our guides to adding SSH keys.
+We don't offer a general SLA, but if you have specific SLA requirements, feel free to contact us at [support@appfog.com](mailto:support@appfog.com). 
 
-Do I have to change anything in my app?
-Your app doesn’t need any changes, we’ve pre-set everything for you. However, here are the versions of the AMP (Apache, MySQL, and PHP) stack that we’re running to power PHPFog.
+### Do I have to modify my app to run on PHP Fog?
 
-PHP Version 5.3.2
-Apache Version 2.2.14
-MySQL Version 5.1.41
-Can I get SSH/SFTP access?
-No. In order to maintain security for your site and all of our customers, we don’t provid SSH or SFTP access.
-However, we do offer Git as a way to access your source code. To learn more about Git, visit: What is Git and how to use it?
+Nope. We've set everything up to run without any changes.
 
-Can I access 3rd Party Services?
-Yes, there are no firewalls or other network blocking mechanisms so your application is free to call any external web services.
+### What version of PHP, Apache, and MySQL does PHP Fog use?
 
-What’s my username/password for New Relic?
-The username is the email address for your PHP Fog account, the password is the password you used as the application password for the application being monitored.
+* PHP version 5.3.2
+* Apache version 2.2.14
+* MySQL version 5.1.41
 
-How do I setup email for my domain name?
-PHP Fog doesn't support email as a service directly; however, we setup integration with GMail by default so you can easily use Google Apps (with GMail) to host your email. To get started setting up Gmail for your custom domain name go here. The DNS records for PHP Fog applications are already configured DNS with the MX records.
-In the "Verify ownership" step select "Alternate methods" (instead of "Recommended method") and use one of the three methods specified. The recommended methods require DNS changes while the alternate methods allow for verification by modifying contents on your site.
+### Can I get SSH access?
 
-Are you PCI Compliant?
-We are not yet PCI compliance as a service or as a host. We are in the process of investigating getting PCI compliance certification for our website. The hosting service itself is not PCI compliant either. If there is enough demand we will invest in making our service compliance.
+To maintain security across our service, we don't offer SSH access. 
 
-Can I migrate from Silver to Free
-No. As you can see from the "What are the limits of Free (shared) hosting?" question, the shared environment on which free applications run on is more restricted. This is done to ensure the security of your applications from other users on the system. Since the shared environment is more restricted than the dedicated, as such we can migrate applications from shared (free) to dedicated (paid), but we can't migrate from the dedicated (paid) to shared (free).
-An alternative exists. You can create a free application and use git to move the app from one to the other.
+### Can I get FTP access?
 
-How can I change open_basedir?
-If you changed your application home directory to a sub-path you probably also want to update the open_basedir of the application; however, modifying this directive is disabled in the shared (free) environment for security. This is only a restriction on the shared environment, to modify this you must be on a dedicated environment (Silver plan or higher).
+We have an SFTP feature on our roadmap, but no ETA. Meanwhile, you can access your source code using our [PF Command Line Tool](/getting-started/pf-command-line-tool) or [Git](/getting-started/git).
 
-Is my app still running when PHP Fog is in maintenance?
-Yes, your application should still be running when PHP Fog is in maintenance. When in maintenance mode the main PHP Fog website (phpfog.com) along with the App Console are no longer accessible for the duration of the maintenance period. Your application should continue to run. You should also have access to the git repository, unless otherwise specified.
+### Can my app access third party services?
 
+Yes. PHP Fog apps have no firewalls or other network blocking mechanisms, so your app is free to call external web services.
 
-## Billing
+### How do I log in to New Relic? 
 
-I just upgraded to Silver from Shared. How will I be billed?
-PHP Fog works on a month schedule, so if you upgrade to the silver plan on the 15th (of a 30 day month) you will be billed at a pro-rate of 50% (in the case of silver this means $14.50 dollars) when you upgrade.
+Just use the email address your PHP Fog account is under as your username and your original MySQL password. 
 
-I run 1 server all month and I want to scale to 5 for a day; how will I be billed?
-Assuming you are using Silver, you will be charged $29 prorated for the month to the next billing cycle, and then you will be given credits when you scale back. This mechanism is a bit complicated, but effectively it is the same as paying for those extra servers only for the days they are used (not for the whole month). So if you run one server at $29 for the whole month and then you had 4 more servers running just for one day, then you'll end up paying an additional $3.87 for that month for those 4 servers. When you first scale up you will be charged 4x$29 prorated for the month (remaining days in the month / total days in the month). If the next day you scale back, then you will be credited the remainder and therefore the delta will be the $3.87.
-Currently the increments are on a per-day basis. So if you use a server for only 2 hours in a day, you will be charged for 24 hours of usage.
+### How do I set up email for my domain name? 
 
-My card expired or I haven't provided a payment for a paid service yet, what happens?
-If the payment for a service is invalid, the service will continue to work for 10 days after the bill was due. You will continue to accrue charges for this duration, but will not be able to subscribe to new services and access will be read-only via git. After the 10 day grace period, the account will be terminated and contents deleted. Please be aware these files are NOT recoverable!
-During the 10 day grace period you will be notified daily via our automated system and your app console that your app is in a grace period and is pending deletion. If you see this error message please update your credit card information from within your account at phpfog.com
+PHP Fog doesn't offer email as a service directly, but we set up integration with GMail by default, so you can easily use Google Apps to host your email. [Click here](TK) to get started setting up GMail for your custom domain name. The DNS records for PHP Fog apps are already configured. TKTKTK set up gmail section
 
-I have been a customer for months now, why am I being charged?
-There a number of reasons why you may be being charged, the most common reasons are as follows:
-1. Your account may have had credits which were being consumed by a specific service (such as wildcard sub-domains), and you have run out of credit on your account without a credit card on file. To correct you will need to add a credit card to your account. That card will be billed once you have submitted the card information.
-2. Your card on file was declined. To correct this issue you will need to input a new credit card, which will be billed upon input.
+### Is PHP Fog PCI compliant? 
 
-## Reliability
+We're not PCI compliant as a service or as a host yet. We are in the process of getting PCI compliance certification for our service. We have no current plans for offering PCI compliance on our hosting, but if you'd like to see it, let us know by contacting [support@appfog.com](mailto:support@appfog.com).
 
-Very! We have redundancy and failover in every piece of the PHP Fog stack end-to-end. Lets walk through an HTTP request from the client all the way to the database in the PHP Fog Platform and look at the mechanisms which provide reliability.
+### Can I migrate from a Dedicated Cloud to a Shared Cloud?
 
-DNS lookup
-When a client makes an HTTP request to your application on PHP Fog, the first step is to preform a DNS lookup for the IP Address of your application.
-You may have noticed that you were asked to create a CNAME record if you are using a custom domain name instead of an A Record. This is a mechanism to help with failover. If you use an A Record you are required to reference an IP Address (or multiple addresses), in this case it would be an IP of the Amazon's Elastic Load Balancer.This would create a single point of failure if Amazon's load balancer failed and therefore your sites would go down too. Unfortunately many hosting providers ask you to create A records referencing a static IP Address and they still have this single point of failure. Luckily in the case of PHP Fog, we ask you to use a CNAME record so that if the load balancer fails, we can update our DNS records to reference a different IP Address and a different load balancer hosted on a service other than Amazon's. So we built this failover mechanism even before a request touches any of our components.
-Note that CNAME records only apply to sub-domains, not the top domain name. You are required to use an A record for a top-level name which therefore would require using an IP Address. The best practice in this case is to use a redirect mechnism provided by your DNS provider to redirect the top level domain name to a sub-domain. That is, if you have your-app.com then perform a redirect to www.your-app.com. The www.your-app.com then can use the CNAME record mechanism
-Heroku had an incident which demonstrates why the use of CNAME is important for reliability. See their incident report: "HTTP and Git Connectivity Problems"
+No. Our Shared Cloud is more restricted than our Dedicated Clouds, so seamless and automated migration from Dedicated to Shared isn't possible. An alternative way to do this is to start a new Shared app and migrate your source code using [git](/getting-started/git).
 
-First load balancer
-After the DNS lookup is complete the HTTP request is routed to the Amazon Elastic Load Balancer. Amazon's load balancer is used to distribute the load of the requests across numerous servers; however, it also provides redundancy.
+### Is my app still running when PHP Fog is under maintenance?
 
-Caching server
-Next the load balancer forwards the request to one of the Varnish Cache Servers. There are multiple cache servers to handle the requests and we have placed them in different availability zones. Availability Zones are distinct locations that are engineered to be insulated from failures in other Availability Zones and provide low latency network connectivity to other Availability Zones.
-If properly configured, the Caching Server can actually load static contents from you site when your application server is down.
+Yes. While the PHP Fog website and your app console will be inaccessible during maintenance, your app will continue to run. You'll also continue to have access to your source code. 
 
-Second load balancer
-After the caching server, the requests go to the second load balancer. The load balancer directs requests to the application server best able to handle the requests. If a server is unavailable, it is routed to a new server thus improves the reliability of your application.
+# Billing
 
-Application servers and code repository
-If you have a dedicated server you can run your application on multiple servers. Each of the servers is constantly monitored and if any hiccups occur, the application is migrated to a healthy application server.
-Note, that you must be on a dedicated plan with multiple servers to have redundancy, it is not available for the free shared hosting plans.
+### I just upgraded from Shared to a Dedicated Cloud. How will I be billed? 
 
-Git Server
-The core of your application is stored on a git server and it is distributed to the application servers. This means that even if your application server fails, the code is still available on the git server so it can be re-spawned on a new server. This git server is also backed up.
+We bill on a monthly schedule and prorate your initial bill from the day you upgrade to the end of the month. For example, if you upgrade to a Silver Cloud on the April 15th, we'll charge you $14.50 (50%) when you upgrade.
 
-Databases
-The last step in the request path is the database. All applications get a primary and passive MySQL database. The primary database server is synchronized to a passive database slave which provides an up-to-the-minute snapshot of your MySQL databases. The database slave is used for application fail-over in case the primary server isn’t behaving properly. The secondary database is placed in a separate Availability Zone.
-Your Database calls will always will go to the master when everything is working properly, the slave replaces the master if something goes wrong. You do not have to do anything in your application to take advantage of this.
-If for whatever reason the master fails the slave will replace the master. Then we will add a new database server. The new database server will act as the new slave, and the old slave will act like the new monitor.
+### If I run one server all month and I want to scale up for a day, how will I be billed? 
 
-Monitoring
-In order to ensure the highest reliability, we must have great visibility. We use Pingdom and New Relic to monitor our servers from the outside-in for uptime. We also use Nagios to monitor our infrastructure for health.
-In addition to monitoring our own servers, we also provide monitoring for you. We have partnered with New Relic so you can monitor your application health (e.g. memory, CPU, etc) of your application on the dedicated servers. New Relic can also be used to test uptime of your application from the outside-in.
+We'll charge you the prorated amount for the rest of the month, then credit your account the prorated amount when you scale back.
 
-Can you make it even better?
-Yes, absolutely. We have done great work so far to make this reliable; however, we continue to push to make the service even more resilient. While we have redundancy and failover in the entire stack, we want to make each of the components available not just in different availability zones, but different regions, and even different cloud providers altogether.
+So if you run one server on a Silver Cloud at $29 for the whole month, but add four more servers for just one day, then you'll end up paying an additional $3.87 that month. When you first scale up you'll be charged 4 &times; $29 prorated for the month (remaining days in the month / total days in the month). When you scale back the next day, you'll be credited the remainder using the same calculation, leaving you with an extra charge of $3.87. 
 
+We charge in 24 hour increments, so even if you use a server for only 2 hours in a day, you'll be charged for the full 24 hours.
 
-## Shared vs. Dedicated
+### My card expired or I haven't provided a payment for a paid service yet. What going to happen? 
 
+If the payment for a service is invalid, we'll continue to provide service for 10 days after the billing due date. During this 10 day grace period:
+
+* You'll continue to accrue charges.
+* You won't be able to subscribe to new services.
+* Your access to source code will be restricted to read-only.
+* Your app console will notify you that your bill is overdue.
+* Our automated system will notify you daily by email that your bill is overdue.
+
+After this 10 day grace period, the account will be terminated and the contents deleted. Please be aware that these files are *not* recoverable! If you receive an overdue bill notification, please update your credit card information in your account settings.
+
+TK TK TK I have been a customer for months now, why am I being charged? There a number of reasons why you may be being charged, the most common reasons are as follows: 1. Your account may have had credits which were being consumed by a specific service (such as wildcard sub-domains), and you have run out of credit on your account without a credit card on file. To correct you will need to add a credit card to your account. That card will be billed once you have submitted the card information. 2. Your card on file was declined. To correct this issue you will need to input a new credit card, which will be billed upon input.
+
+# Reliability
+
+### How reliable is PHP Fog?
+
+Very! We have redundancy and failover built into every piece of the PHP Fog stack end-to-end. 
+
+Here's a walkthrough for an HTTP request from the client all the way to the database for a better look at our reliability mechanisms:
+
+#### DNS Lookup 
+
+When a client makes an HTTP request to your PHP Fog app, the first step is to perform a DNS lookup for the IP address of your application. In our guide for [setting up custom domains](/getting-started/custom-domain-names), we recommended using a CNAME record. This is a mechanism to help with failover. While the CNAME record currently points to Amazon's Elastic Load Balancer, in the case of a failure, we can update our DNS records to reference a different service, maintaining service. This particular failover mechanism is built into a point before a request even touches any PHP Fog components. 
+
+On the other hand, an A record references a static IP address, which is a single point of failure. This is why we recommend CNAME over A records.
+
+#### First Load Balancer
+
+After the DNS lookup is complete, the HTTP request is routed to the Amazon Elastic Load Balancer. Amazon's load balancer distributes the load of the requests across numerous servers and provides redundancy.
+
+#### Caching Server 
+
+Next, the load balancer forwards the request to one of our Varnish Cache Servers. We've set up multiple cache servers to handle requests and we've distributed them across different "availability zones". Availability zones are distinct locations that are engineered to be insulated from failures in other availability zones and provide low latency network connectivity to other availability zones. Properly configured, the Caching Servers can actually load static contents from your app, even when your app server is down.
+
+Second load balancer After the caching server, the requests go to the second load balancer. The load balancer directs requests to the application server best able to handle the requests. If a server is unavailable, it is routed to a new server thus improves the reliability of your application.
+
+Application servers and code repository If you have a dedicated server you can run your application on multiple servers. Each of the servers is constantly monitored and if any hiccups occur, the application is migrated to a healthy application server. Note, that you must be on a dedicated plan with multiple servers to have redundancy, it is not available for the free shared hosting plans.
+
+Git Server The core of your application is stored on a git server and it is distributed to the application servers. This means that even if your application server fails, the code is still available on the git server so it can be re-spawned on a new server. This git server is also backed up.
+
+Databases The last step in the request path is the database. All applications get a primary and passive MySQL database. The primary database server is synchronized to a passive database slave which provides an up-to-the-minute snapshot of your MySQL databases. The database slave is used for application fail-over in case the primary server isn’t behaving properly. The secondary database is placed in a separate Availability Zone. Your Database calls will always will go to the master when everything is working properly, the slave replaces the master if something goes wrong. You do not have to do anything in your application to take advantage of this. If for whatever reason the master fails the slave will replace the master. Then we will add a new database server. The new database server will act as the new slave, and the old slave will act like the new monitor.
+
+Monitoring In order to ensure the highest reliability, we must have great visibility. We use Pingdom and New Relic to monitor our servers from the outside-in for uptime. We also use Nagios to monitor our infrastructure for health. In addition to monitoring our own servers, we also provide monitoring for you. We have partnered with New Relic so you can monitor your application health (e.g. memory, CPU, etc) of your application on the dedicated servers. New Relic can also be used to test uptime of your application from the outside-in.
+
+Can you make it even better? Yes, absolutely. We have done great work so far to make this reliable; however, we continue to push to make the service even more resilient. While we have redundancy and failover in the entire stack, we want to make each of the components available not just in different availability zones, but different regions, and even different cloud providers altogether.
+
+Shared vs. Dedicated
 The following are the constraints on the shared hosting environment. These limits are only applicable to shared hosting; on the dedicated (Silver, Gold, Platinum) these limits do not apply. In order to ensure the security of your application in the shared environment we must restrict certain configurations and functions.
 
-Server Resources
-The server on which the free applications run on is a shared server with a number of application, therefore the server resources are also limited. If your application demands little resources, this will not impact your application; however, in some cases you may see errors. For example, if you have faulty code that uses too much memory, it will be terminated by the server.
+Server Resources The server on which the free applications run on is a shared server with a number of application, therefore the server resources are also limited. If your application demands little resources, this will not impact your application; however, in some cases you may see errors. For example, if you have faulty code that uses too much memory, it will be terminated by the server.
 
-Only 100M storage
-Shared resources: shared cpu, shared mem, shared filesystem, etc.
-A number of PHP functions are disabled (see list below).
-Memory Limits on an instance is 48MB on Shared, 128MB on dedicated
-Configuration differences
-APC opcode cache is disabled on shared
-New Relic monitoring is disabled on shared
-Disabled Functions
-The following functions are disabled on the shared environment to ensure the security of your application.
+Only 100M storage Shared resources: shared cpu, shared mem, shared filesystem, etc. A number of PHP functions are disabled (see list below). Memory Limits on an instance is 48MB on Shared, 128MB on dedicated Configuration differences APC opcode cache is disabled on shared New Relic monitoring is disabled on shared Disabled Functions The following functions are disabled on the shared environment to ensure the security of your application.
 
-escapeshellarg
-escapeshellcmd
-exec
-passthru
-pcntl_exec
-proc_close
-proc_get_status
-proc_open
-proc_nice
-proc_terminate
-shell_exec
-system
-ini_restore
-popen
-file_get_contents for remote URLS
-fopen for remote URLS
-pclose
-dl
-disk_free_space
-diskfreespace
-disk_total_space
-set_time_limit
-tmpfile
-openlog
-show_source
-highlight_file
-link
-symlink
-php_uname
-apache_child_terminate
-apache_get_modules
-apache_get_version
-apache_getenv
-apache_note
-apache_setenv
-posix_kill
-posix_mkfifo
-posix_setpgid
-posix_setsid
-posix_setuid
-posix_getpwuid
-posix_uname
+escapeshellarg escapeshellcmd exec passthru pcntl_exec proc_close proc_get_status proc_open proc_nice proc_terminate shell_exec system ini_restore popen file_get_contents for remote URLS fopen for remote URLS pclose dl disk_free_space diskfreespace disk_total_space set_time_limit tmpfile openlog show_source highlight_file link symlink php_uname apache_child_terminate apache_get_modules apache_get_version apache_getenv apache_note apache_setenv posix_kill posix_mkfifo posix_setpgid posix_setsid posix_setuid posix_getpwuid posix_uname
 
+Security
+How your app is secured The entire environment is secured at every layer. When your application runs on one of the paid plans, it runs on a dedicated server. Only your applications run on that dedicated server. At the system level, access is limited to allow only our software agents and staff members. This is strictly enforced by our security and firewall policies. Every app is guaranteed to be on a server tied to your account. Network access is limited by security and firewall policies. Access is strictly monitored. Your code, files, and credentials are only accessible by our software agents and staff members. Regarding your application, you have full control over what you want to make accessible in your public web directory In the shared environment (free apps), we've taken a more cautious approach to security. System functions have been disabled, and functions which allow other types of abuse have also been disabled. Check out the "What are the limits of Free (shared) hosting?" article for more information.
 
-## Security
-
-How your app is secured
-The entire environment is secured at every layer.
-When your application runs on one of the paid plans, it runs on a dedicated server. Only your applications run on that dedicated server.
-At the system level, access is limited to allow only our software agents and staff members. This is strictly enforced by our security and firewall policies. Every app is guaranteed to be on a server tied to your account.
-Network access is limited by security and firewall policies. Access is strictly monitored.
-Your code, files, and credentials are only accessible by our software agents and staff members. Regarding your application, you have full control over what you want to make accessible in your public web directory
-In the shared environment (free apps), we've taken a more cautious approach to security. System functions have been disabled, and functions which allow other types of abuse have also been disabled. Check out the "What are the limits of Free (shared) hosting?" article for more information.
