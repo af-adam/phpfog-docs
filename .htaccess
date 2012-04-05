@@ -5,8 +5,15 @@ RewriteEngine On
 ErrorDocument 404 http://byjoemoon.com/404
 
 # Remove .html extension
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html
+  RewriteCond %{SCRIPT_FILENAME}/ -d
+  RewriteCond %{SCRIPT_FILENAME}.html !-f
+  RewriteRule [^/]$ %{REQUEST_URI}/ [R=301,L]
+
+  RewriteCond %{ENV:REDIRECT_STATUS} ^$
+  RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+
+  RewriteCond %{SCRIPT_FILENAME}.html -f
+  RewriteRule [^/]$ %{REQUEST_URI}.html [QSA,L]
 
 # Do not do anything for already existing files and folders
 RewriteCond %{REQUEST_FILENAME} -f 
