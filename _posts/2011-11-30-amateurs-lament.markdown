@@ -141,8 +141,7 @@ convince enough people that this is worth doing.
 
 -   ["Done with Apple"](http://teleogistic.net/2011/10/done-with-apple/)
     by Boone B Gorges
--   ["Disneyland of
-    computers"](https://freedom-to-tinker.com/blog/felten/ipad-disneyland-computers)
+-   ["ipad: Disneyland of Computers"](https://freedom-to-tinker.com/blog/felten/ipad-disneyland-computers)
     by Ed Felten
 
 ### More Reading on Amazon
