@@ -3,13 +3,14 @@ DirectoryIndex index.html index.xml
 Options +FollowSymlinks
 RewriteEngine On
 DirectorySlash Off
-RewriteBase /_site/
+RewriteBase /
 
 ErrorDocument 404 http://byjoemoon.com/404
 
 # Remove .html extension
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule .*[^/]$ $0/ [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
 
 # add .html file extension (if such file does exist)
 RewriteCond %{REQUEST_FILENAME} !-f
