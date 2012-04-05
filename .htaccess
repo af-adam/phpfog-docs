@@ -11,7 +11,8 @@ ErrorDocument 404 http://byjoemoon.com/404
 Rewritecond %{REQUEST_URI} !-f
 Rewritecond %{REQUEST_URI} !-d
 Rewritecond %{REQUEST_URI} !-l
-RewriteRule ^([\w\d\-]+)$ $1.html [L]
+RewriteRule ^(.*)$ $1.html
+# RewriteRule ^([\w\d\-]+)$ $1.html [L]
 
 # Do not do anything for already existing files and folders
 RewriteCond %{REQUEST_FILENAME} -f 
