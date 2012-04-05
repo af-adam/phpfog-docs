@@ -8,7 +8,7 @@ ErrorDocument 404 http://byjoemoon.com/404
 
 RewriteEngine on
 
-RewriteRule ^/(.*)$ /_site/$1
+RewriteRule ^(.*)$ _site/$1
 
 # Remove .html extension
 RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
