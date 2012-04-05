@@ -1,0 +1,89 @@
+---
+title: Rat Holes
+layout: post
+alias: /post/5567688921/rat-holes
+---
+
+Rat holes I've fallen into:
+
+-   Programming Languages.
+-   Programming books.
+-   Text editors.
+-   [Keyboards.](http://www.overclock.net/keyboards/491752-mechanical-keyboard-guide.html)
+-   Version control systems (Git).
+-   Password management.
+-   Backup.
+
+Rat holes I've got one foot in, but haven't fallen all the way into, but
+might still:
+
+-   Web stuff. (Still sort of have one foot in this one.)[^1]
+-   Linux/Unix.
+
+I eventually settled on Java, so I can work on Android. I eventually
+settled on buying a specific Java book. I eventually settled on Vim. I
+eventually settled on a keyboard (this is a minor one). I eventually
+settled on a version control system (and I don't even have a real use
+for one yet).
+
+Rat holes are things that I think I have to think about before
+continuing my main project (learning to make software). They are
+probably not things that are necessary to continue my project, but I
+fall into them anyway. Some of them take a really long time to decide on
+because they are often in some way religious or philosophical in nature
+and the amount of research to be done is insanely deep and sometimes
+leads in circles.
+
+A positive, and partially true way of thinking about some of these rat
+holes is that I want to use the best tools available to me, and I want
+to learn to use these tools well before I start making something with
+them. Chabo described it to me as depth-first traversal as opposed to
+breadth-first traversal.
+
+I think obsessive-compulsive completionism is one factor. The truth,
+though, is probably that it's easier and more fun to read about and
+learn about this stuff than it is to get about the business of learning
+to program. It's peripherally useful procrastination, which is
+potentially more harmful than plain goofing off because it can feel
+productive because solving these more immediate concerns are more deeply
+satisfying than making relatively small progress on the big project.
+
+There is some value in rat holes. If you spend all day using a keyboard,
+you should have a good one, just like if you spend all day sitting, you
+should have a good chair; the value proposition simply dictates it. The
+hard part is knowing how much value is in a given rat hole, and how much
+work it will take to extract that value. But for someone new to a
+domain, there isn't a really good way to gauge the value proposition,
+because the research necessary is part of the work of extraction and the
+uncertainty of that position and the fear of path dependence can be
+paralyzing.
+
+Some people seem to be more or less immune to rat holes. Maybe the
+distinction is simply between constitutionally pragmatic people and
+constitutionally idealistic people. Or maybe it's a distinction between
+short-term thinking people and long-term thinking people. Either way,
+the immune ones tend also not to worry much about what kind of keyboard
+they have, or which text editor or IDE to use.[^2]
+
+Rat hole avoidance heuristic:
+
+1.  Be aware of the phenomenon.
+2.  Self-monitor. Periodically ask myself if I am entering or have
+    entered a rat hole.
+3.  Determine whether I am in a blocking or non-blocking rat hole. (Can
+    I delay this decision until I know more about the domain?)
+4.  If non-blocking, skip. Else do only enough research to make a quick
+    decision, and only invest enough time to not be blocked and move on.
+    Remind myself that I can change my mind later.
+5.  Periodically ask myself whether and how this rat hole advances the
+    big project.
+
+### Notes
+
+[^1]: I'd like to move my blog to a possibly self-hosted statically served
+    CMS like [Jekyll](https://github.com/mojombo/jekyll/wiki/sites).
+    Why? Good question. 
+
+[^2]: I think this is especially true where it pertains to aesthetics.
+    Generally, I think immune ones value function much higher than form,
+    and don't worry about what their hardware or software looks like.

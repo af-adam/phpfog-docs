@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<div class="row blog-first">
+	<div class="span12">
+		<div class="block">
+		<div class="blog-title">
+			<h2>{{ page.title }}</h2>
+			<p><date datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</date><p>
+		</div>
+		{{ content | markdownify }}
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<div class="block">
+			<ul class="pager">
+				{% if page.previous %}
+				<li class="previous">
+					<a href="{{ page.previous.url | remove: ".html" }}" rel="previous" title="{{ page.previous.title }}">&larr;{{ page.previous.title | truncatewords: 9 }}</a>
+				</li>
+				{% endif %}
+				<li>
+					<a href="/">blogbyjoemoon</a>
+				</li>
+				{% if page.next %}
+				<li class="next">
+					<a href="{{ page.next.url | remove: ".html" }}" rel="next" title="{{ page.next.title }}">{{ page.next.title | truncatewords: 9 }}&rarr;</a>
+				</li>
+				{% endif %}
+			</ul>
+			<div id="disqus_thread"></div>
+			<script type="text/javascript">
+				/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+				var disqus_shortname = 'blogbyjoemoon'; // required: replace example with your forum shortname
+
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
+	</div>
+</div>
+	</div>
+	</div>
+	<footer>
+   		<div class="container">
+			<div class="row">
+				<div class="span6">
+					<div class="block">
+						<h3><a href="http://byjoemoon.com">byjoemoon</a></h3>
+						<p>Joe Moon lives in Portland, Oregon with his lovely wife Bev. He works for <a href="http://www.appfog.com">AppFog</a> and writes about technology and other things on <a href="http://blog.byjoemoon.com">his blog</a>. He occasionally contributes to <a href="http://www.theatlantic.com/technology/">the Atlantic Monthly's Technology Channel</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

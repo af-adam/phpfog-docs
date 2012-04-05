@@ -1,0 +1,68 @@
+---
+title: Torture
+layout: post
+alias: /post/105575040/torture
+---
+
+I've been following the torture stuff moderately closely. For people who
+haven't been, the main arguments seem to boil down to:
+
+1.  Is waterboarding (and other techniques authorized in the recently
+    released legal memos) torture?
+2.  Did it save lives?
+3.  Should the people who conducted it be prosecuted?
+4.  Should the people who authorized it be prosecuted?
+
+On the first question, I feel like Christopher Hitchens' take on it,
+after subjecting himself to the experience, is pretty compelling. So is
+John McCain's:
+
+> Anyone who knows what waterboarding is could not be unsure. It is a
+> horrible torture technique used by Pol Pot and being used on Buddhist
+> monks as we speak.
+
+Also, this argument that it can't be torture because we subject our own
+servicemen to it in SERE school is retarded. It's there in SERE school
+to train our servicemen specifically how to resist torture techniques
+that the enemy might use. If anything, that's an argument for the fact
+that it *is* torture.
+
+On the second question, this sums up my thinking pretty nicely:
+
+> Moreover, even if we were starting from a blank slate and we could
+> simply ignore the fact that techniques like waterboarding are
+> proscribed by numerous laws and treaties, to make a policy case for
+> the use of such techniques, you would have to do much more than
+> establish that they occasionally have produced actionable
+> intelligence. Among other things, you would have to prove that 1) such
+> information could not have been extracted using other means, 2) that
+> the misinformation produced by such methods doesn't overwhelm the
+> accurate information to the point of rending the whole exercise
+> pointless, 3) that the strategic costs of using such techniques
+> (international outrage, increased radicalization of the Muslim world,
+> increased danger to U.S. troops, etc.) don't outweigh the benefits,
+> and 4) the value of the information produced is worth the tradeoff of
+> never being able to use that information (or the fruits thereof) in
+> court and severely jeopardizing any hope of ever convicting that
+> individual in any constitutionally compliant legal proceeding.
+
+The [whole
+post](http://www.anonymousliberal.com/2009/04/who-cares-whether-torture-is-effective.html)
+is worth reading (and not that long).
+
+As far as I can tell, pretty much everyone agrees that the answer to the
+third question is "no." (Though with the specific case of 183
+waterboardings for KSM, I think it's more dubious because that is
+outside the guidelines of even the recently released memos.)
+
+The fourth question is the one I'm still torn about. On one hand, isn't
+that how the system's supposed to work? Trial and verdict? And if we
+don't, what kind of precedent does that set? On the other hand,
+[this](http://politics.theatlantic.com/2009/04/why_obama_doesnt_care_about_yoo.php)
+is an interesting read. Still not sure what to think.
+
+Update: Two more articles on the issue of question 2, both NYT op-eds:
+"[A Dubious C.I.A.
+Shortcut](http://www.nytimes.com/2009/04/24/opinion/24zelikow.html),"
+"[My Tortured
+Decision](http://www.nytimes.com/2009/04/23/opinion/23soufan.html)."
