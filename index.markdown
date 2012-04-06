@@ -3,9 +3,9 @@ layout: default
 title: PHP Fog Documentation
 ---
 
-# Welcome to the PHP Fog Documentation
+## Welcome to the PHP Fog Documentation
 
-### Getting Started
+<h6>Getting Started</h6>
 <ol class="pages">
 	{% for weight in (1..4) %}
 	{% for page in site.pages %}
@@ -16,7 +16,7 @@ title: PHP Fog Documentation
 	{% endfor %}
 </ol>
 
-### Customize Your App
+ <h6>Customize Your App</h6>
 <ol class="pages">
 	{% for weight in (5..10) %}
 	{% for page in site.pages %}
@@ -27,7 +27,7 @@ title: PHP Fog Documentation
 	{% endfor %}
 </ol>
 
-### Best Practices
+ <h6>Best Practices</h6>
 <ol class="pages">
 	{% for weight in (11..13) %}
 	{% for page in site.pages %}
@@ -38,7 +38,7 @@ title: PHP Fog Documentation
 	{% endfor %}
 </ol>
 
-### Other
+ <h6>Other</h6>
 <ol class="pages">
 	{% for weight in (14..16) %}
 	{% for page in site.pages %}
