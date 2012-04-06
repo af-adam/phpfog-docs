@@ -2,8 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation</title>
-
+		<title>PHP Fog &mdash; Documentation</title> 
 		<link href="some.css" rel="stylesheet">
 
 	</head>
@@ -21,7 +20,7 @@
 
 <h3 id="create-a-new-ssh-key-and-add-it-to-php-fog">2. Create a new SSH key and add it to PHP Fog.</h3>
 
-<p>Before you can interact with PHP Fog&rsquo;s git repository, you have to set up a secure way to do so. Create a new SSH key and add it to your PHP Fog account, under the &ldquo;SSH Keys&rdquo; tab. Don&rsquo;t know how? <a href="">Follow this guide.</a></p>
+<p>Before you can interact with PHP Fog&rsquo;s git repository, you have to set up a secure way to do so. Create a new SSH key and add it to your PHP Fog account, under the &ldquo;SSH Keys&rdquo; tab. Don&rsquo;t know how? <a href="/getting-started/ssh">Follow this guide.</a></p>
 
 <h3 id="get-your-source-code">3. Get your source code.</h3>
 
@@ -40,6 +39,8 @@ Receiving objects: 100% (3/3), done.
 </code></pre>
 
 <p>Congratulations, you&rsquo;ve cloned your git repo!</p>
+
+<p>(Problems with SSH? Check out our guide for <a href="/troubleshooting#ssh">troubleshooting SSH</a>.)</p>
 
 <h3 id="modify-your-code">4. Modify your code.</h3>
 
@@ -75,7 +76,7 @@ Receiving objects: 100% (3/3), done.
 
 <p>This command uploads your local repository to the remote server at PHP Fog. And you&rsquo;re done! Give it a few minutes to deploy your changes, then visit your app to see your changes live! </p>
 
-<p>This should be enough to get your started, but if you want to learn a few advanced git techniques, read on.</p>
+<p>This should be enough to get your started, but if you want to learn a few advanced git techniques, read on. If you want to start customizing your app, head on over to <a href="/customize">the next section</a>.</p>
 
 <h2 id="gitignore">.gitignore</h2>
 
@@ -126,7 +127,7 @@ tmp/**/*
 
 <h3 id="install-composer-locally">1. Install Composer locally.</h3>
 
-<p>You can run Composer directly from the root project directory or install it using <a href="">Homebrew</a>.</p>
+<p>You can run Composer directly from the root project directory or install it using <a href="http://mxcl.github.com/homebrew/">Homebrew</a>.</p>
 
 <p>Download it to the project directory:</p>
 
@@ -207,17 +208,18 @@ tmp/**/*
 
 <p>Once the dependencies are installed, tested, and the app is ready for release, commit and push the project (including the vendor directory) to PHP Fog.</p>
 
-<p><code>
-	$ git add .
-	$ git commit -m "Added Composer and dependencies"
-	$ git push
-</code></p>
+<pre><code>$ git add .
+$ git commit -m "Added Composer and dependencies"
+$ git push
+</code></pre>
 
 <p>Want to learn more about Composer? Check out <a href="http://getcomposer.org/">the project page</a>. </p>
 
 <h2 id="git-submodules">Git Submodules</h2>
 
 <p>TK</p>
+
+<p>Ready to customize your app? <a href="/customize">Read on</a>.</p>
 
 
 			</section>

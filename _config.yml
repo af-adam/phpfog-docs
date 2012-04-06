@@ -1,7 +1,2 @@
 markdown: kramdown
-<<<<<<< HEAD
 permalink: /:categories/:title.html
-=======
-permalink: /:title.html
-paginate: 9
->>>>>>> fd902d8d39641fec494908070e63d82b124759dc
