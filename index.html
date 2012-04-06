@@ -1,0 +1,33 @@
+---
+layout: default
+title: PHP Fog Documentation
+---
+
+
+<a href="/getting-started/"><h6>Getting Started</h6></a>
+<ol>
+{% for current in site.categories.getting-started %}
+<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+{% endfor %}
+</ol>
+
+<a href="/customize/"><h6>Customize Your App</h6></a>
+<ol>
+{% for current in site.categories.customize %}
+<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+{% endfor %}
+</ol>
+
+<a href="/best-practices/"><h6>Best Practices</h6></a>
+<ol>
+{% for current in site.categories.best-practices %}
+<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+{% endfor %}
+</ol>
+
+<a href="/other/"><h6>Other</h6></a>
+<ol>
+{% for current in site.categories.other %}
+<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+{% endfor %}
+</ol>
