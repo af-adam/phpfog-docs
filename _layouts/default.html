@@ -51,10 +51,8 @@
 										</ul>
 
 										<ul class="pages">
-											<li><a href="/other/"><h6>Other</h6></a></li>
-											{% for current in site.categories.other %}
-											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
-											{% endfor %}
+											<li><a href="/faqs"><h6>FAQs</h6></a></li>
+											<li><a href="/troubleshooting"><h6>Troubleshooting</h6></a></li>
 										</ul>
 									</nav>
 									<div class="tab-content activated">
