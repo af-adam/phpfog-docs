@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Search</title> 
+		<title>PHP Fog &mdash; Documentation Search Results</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	</head>
@@ -20,7 +20,7 @@
 							<ul>
 								<li><a href="/">Documentation</a></li>
 								<li><a href="/"></a></li>
-								<li>Search</li>
+								<li>Search Results</li>
 							</ul>
 						</nav>
 
@@ -77,7 +77,7 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>Search</h2>
+									<h2>Search Results</h2>
 											<script type="text/javascript" src="/js/icanhaz.min.js"></script>
 
 <script type="text/javascript">
@@ -123,13 +123,12 @@
 <script id="search_result" type="text/html">
     <div class="result">
 		<a href="{{ docid }}">{{ title }}</a>
-		<p>{{{ text }}}</p>
+		<p>{{{ snippet_text }}}</p>
     </div>
 </script>
 
 
 <div id="left">
-	<h2>Search results</h2>
 	<div id="search_results">
   	<noscript>Sorry, search requires JavaScript. Please enable Javascript if you'd like to use the search.</noscript>   	
   	<p id="loading">Loading...</p>

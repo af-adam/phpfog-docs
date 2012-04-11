@@ -1,6 +1,6 @@
 ---
 layout: search
-title: Search
+title: Search Results
 ---
 
 <script type="text/javascript" src="/js/icanhaz.min.js"></script>
@@ -48,13 +48,12 @@ title: Search
 <script id="search_result" type="text/html">
     <div class="result">
 		<a href="{{ site.url }}{{ "{{ docid "}}}}">{{ "{{ title "}}}}</a>
-		<p>{{ "{{{ text "}}}}}</p>
+		<p>{{ "{{{ snippet_text "}}}}}</p>
     </div>
 </script>
 
 
 <div id="left">
-	<h2>Search results</h2>
 	<div id="search_results">
   	<noscript>Sorry, search requires JavaScript. Please enable Javascript if you'd like to use the search.</noscript>   	
   	<p id="loading">Loading...</p>

@@ -77,7 +77,7 @@
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
 									<h2>Custom Domain Names</h2>
-											<p>With PHP Fog you can host custom domain names (e.g. my-web-app.com) or PHP Fog domain names (e.g. my-web-app.phpfogapp.com). If you use a phpfogapp.com domain name, then PHP Fog manages the DNS records for you, so you don&rsquo;t have to do anything. If you want to use a custom domain name, read on.</p>
+											<p>With PHP Fog you can host custom domain names (e.g. my-web-app.com) or PHP Fog domain names (e.g. my-web-app.phpfogapp.com). If you use a phpfogapp.com domain name, then PHP Fog manages the DNS records for you, so you don’t have to do anything. If you want to use a custom domain name, read on.</p>
 
 <h3 id="dns">DNS</h3>
 
@@ -85,14 +85,14 @@
 
 <ol>
   <li>
-    <p>At your domain host, set up a redirect (302) from your root domain <code>yourdomain.com</code> to <code>www.yourdomain.com</code>. This is a fairly standard tool that DNS services provide. If you don&rsquo;t see an option for it at your domain host, contact their support services and they should be able to do that for you.</p>
+    <p>At your domain host, set up a redirect (302) from your root domain <code>yourdomain.com</code> to <code>www.yourdomain.com</code>. This is a fairly standard tool that DNS services provide. If you don’t see an option for it at your domain host, contact their support services and they should be able to do that for you.</p>
   </li>
   <li>
     <p>Create a CNAME record for <code>www.yourdomain.com</code> to <code>cname01.phpfog.com</code>.</p>
   </li>
 </ol>
 
-<p>That&rsquo;s the simplest and most reliable method. But if you want to make your root domain (<code>yourdomain.com</code>) canonical, here&rsquo;s how:</p>
+<p>That’s the simplest and most reliable method. But if you want to make your root domain (<code>yourdomain.com</code>) canonical, here’s how:</p>
 
 <p>Create three A records to: </p>
 
@@ -105,7 +105,7 @@
 
 <h3 id="change-the-domain-name-setting-in-the-php-fog-app-console">Change the domain name setting in the PHP Fog app console.</h3>
 
-<p>Go to your app console at PHP Fog and click on the &ldquo;Domain Name&rdquo; tab on the left. Enter your custom domain name in the field. Use the root domain name (<code>yourdomain.com</code>) whether you&rsquo;re using <code>www</code>. or the root domain.</p>
+<p>Go to your app console at PHP Fog and click on the “Domain Name” tab on the left. Enter your custom domain name in the field. Use the root domain name (<code>yourdomain.com</code>) whether you’re using <code>www</code>. or the root domain.</p>
 
 <p>Note: With WordPress apps, you <em>must</em> change your domain name in the WordPress administration panel before changing it in the PHP Fog app console.</p>
 
@@ -116,12 +116,12 @@
 <h3 id="recommended-dns-providers">Recommended DNS Providers</h3>
 
 <ul>
-  <li>Amazon&rsquo;s Route 53</li>
+  <li>Amazon’s Route 53</li>
 </ul>
 
 <h3 id="handling-subdomains-with-wildcards">Handling Subdomains with Wildcards</h3>
 
-<p>If you want to enable wildcards and host content that&rsquo;s dependent on the subdomain, here&rsquo;s how:</p>
+<p>If you want to enable wildcards and host content that’s dependent on the subdomain, here’s how:</p>
 
 <pre><code>$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
 $subdomain = $url_parts[0];
@@ -139,7 +139,7 @@ else if ($subdomain == 'help')
 
 <p>Thanks to <a href="http://community.phpfog.com/discussion/85/sharing-sessions-between-subdomains">albeik</a> for this tip on our <a href="http://community.phpfog.com">community forums</a>!</p>
 
-<p>If you&rsquo;ve enabled wildcard domains and want to share your session data between subdomains, add the following code snippet to your &ldquo;entry point&rdquo; PHP file (e.g. index.php):</p>
+<p>If you’ve enabled wildcard domains and want to share your session data between subdomains, add the following code snippet to your “entry point” PHP file (e.g. index.php):</p>
 
 <pre><code>("session.cookie_domain", ".domain.com");
 </code></pre>

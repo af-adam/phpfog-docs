@@ -83,7 +83,7 @@
 
 <ol>
   <li>Your certificate, private key, and (if you have one) intermediate key.</li>
-  <li>You&rsquo;re using subdomain certificates (e.g. www.example.com) <em>or</em> your certificate is a root domain wildcard certificate for subdomains (e.g. *.example.com).</li>
+  <li>You’re using subdomain certificates (e.g. www.example.com) <em>or</em> your certificate is a root domain wildcard certificate for subdomains (e.g. *.example.com).</li>
   <li>Your private certificate <em>does not</em> have a passphrase associated with it.</li>
 </ol>
 
@@ -106,13 +106,13 @@
 
 <h3 id="ssl-for-root-domains">SSL for Root Domains</h3>
 
-<p>In order to enable SSL for root domains on PHP Fog, you&rsquo;ll have to move your DNS to <a href="http://aws.amazon.com/route53/">Amazon&rsquo;s Route 53</a>.</p>
+<p>In order to enable SSL for root domains on PHP Fog, you’ll have to move your DNS to <a href="http://aws.amazon.com/route53/">Amazon’s Route 53</a>.</p>
 
 <ol>
-  <li>Email <a href="mailto:support@appfog.com">support@appfog.com</a> and ask for your SSL&rsquo;s &ldquo;Alias DNS Name&rdquo;.</li>
-  <li>Create a Route 53 account, if you don&rsquo;t already have one.</li>
-  <li>In the AWS console under Route 53, click on &ldquo;create a hosted zone&rdquo; and fill out the required information. The console will return name servers to fill in at your registrar. By changing those values you allow Route 53 to take control of your DNS settings.</li>
-  <li>With your Alias Hosted Zone ID and Alias DNS Name in hand create a &ldquo;record set&rdquo; for your root domain. With the default &ldquo;A record&rdquo; click the alias radio button to &ldquo;yes&rdquo;. Paste the Hosted Zone ID and Alias DNS Name in the associated fields. </li>
+  <li>Email <a href="mailto:support@appfog.com">support@appfog.com</a> and ask for your SSL’s “Alias DNS Name”.</li>
+  <li>Create a Route 53 account, if you don’t already have one.</li>
+  <li>In the AWS console under Route 53, click on “create a hosted zone” and fill out the required information. The console will return name servers to fill in at your registrar. By changing those values you allow Route 53 to take control of your DNS settings.</li>
+  <li>With your Alias Hosted Zone ID and Alias DNS Name in hand create a “record set” for your root domain. With the default “A record” click the alias radio button to “yes”. Paste the Hosted Zone ID and Alias DNS Name in the associated fields. </li>
   <li>Save your changes.</li>
 </ol>
 
@@ -124,7 +124,7 @@
 
 <ul>
   <li>You can use a *.phpfogapp.com subdomain which falls under the PHP Fog SSL certificate automatically. </li>
-  <li>You can also use a service like <a href="http://cloudflare.com">CloudFlare</a> which uses a different method to provide an SSL certificate for your custom domain name, though it&rsquo;s shared with other custom domain names.</li>
+  <li>You can also use a service like <a href="http://cloudflare.com">CloudFlare</a> which uses a different method to provide an SSL certificate for your custom domain name, though it’s shared with other custom domain names.</li>
 </ul>
 
 
