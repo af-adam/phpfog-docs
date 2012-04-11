@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<title>PHP Fog &mdash; Documentation PHP Fog Documentation</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
-
 	</head>
 	<body>
 		<div id='root'>
@@ -78,7 +77,12 @@
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
 									<h2>PHP Fog Documentation</h2>
-											<a href="/getting-started/"><h6>Getting Started</h6></a>
+											<form id="search" action="/search.html">
+    <input type="text" id="search" name="q" />
+    <input type="submit" value="Search" />
+</form>
+
+<a href="/getting-started/"><h6>Getting Started</h6></a>
 <ol>
 
 <li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
@@ -121,6 +125,9 @@
 
 <a href="/faqs"><h6>Frequently Asked Questions</h6></a>
 <a href="/troubleshooting"><h6>Troubleshooting</h6></a>
+
+  <div id="results">
+  </div>
 
 										</div>
 									</div>

@@ -2,8 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Getting Started</title> 
+		<title>PHP Fog &mdash; Documentation {{ page.title }}</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id='root'>
@@ -18,8 +19,8 @@
 						<nav class="breadcrumb">
 							<ul>
 								<li><a href="/">Documentation</a></li>
-								<li><a href="/"></a></li>
-								<li>Getting Started</li>
+								<li><a href="/{{ page.categories }}">{% if page.categories[0] == "getting-started" %}Getting Started{% endif %}{% if page.categories[0] == "customize" %}Customize Your App{% endif %}{% if page.categories[0] == "best-practices" %}Best Practices{% endif %}{% if page.categories[0] == "other" %}Other{% endif %}</a></li>
+								<li>{{ page.title }}</li>
 							</ul>
 						</nav>
 
@@ -30,43 +31,23 @@
 								<nav class="tab-container">
 										<ul class="pages">
 											<li><a href="/getting-started/"><h6>Getting Started</h6></a></li>
-											
-											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
-											
-											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
-											
-											<li ><a href="/getting-started/git.html">Git</a></li>
-											
+											{% for current in site.categories.getting-started %}
+											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+											{% endfor %}
 										</ul>
 
 										<ul class="pages">
 											<li><a href="/customize/"><h6>Customize Your App</h6></a></li>
-											
-											<li ><a href="/customize/add-ons.html">Add-ons</a></li>
-											
-											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
-											
-											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
-											
-											<li ><a href="/customize/permissions.html">Permissions</a></li>
-											
-											<li ><a href="/customize/database.html">Database</a></li>
-											
-											<li ><a href="/customize/sending-email.html">Sending Email</a></li>
-											
-											<li ><a href="/customize/php_ini.html">php.ini</a></li>
-											
+											{% for current in site.categories.customize %}
+											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+											{% endfor %}
 										</ul>
 
 										<ul class="pages">
 											<li><a href="/best-practices/"><h6>Best Practices</h6></a></li>
-											
-											<li ><a href="/best-practices/caching.html">Caching</a></li>
-											
-											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
-											
-											<li ><a href="/best-practices/preventing-data-loss.html">Preventing Data Loss</a></li>
-											
+											{% for current in site.categories.best-practices %}
+											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+											{% endfor %}
 										</ul>
 
 										<ul class="pages">
@@ -76,17 +57,8 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>Getting Started</h2>
-											<ol>
-
-<li> <a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
-
-<li> <a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
-
-<li> <a href="/getting-started/git.html">Git</a></li>
-
-</ol>
-
+									<h2>{{ page.title }}</h2>
+											{{ content }}
 										</div>
 									</div>
 							</div>

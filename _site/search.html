@@ -2,8 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Getting Started</title> 
+		<title>PHP Fog &mdash; Documentation Search</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id='root'>
@@ -19,7 +20,7 @@
 							<ul>
 								<li><a href="/">Documentation</a></li>
 								<li><a href="/"></a></li>
-								<li>Getting Started</li>
+								<li>Search</li>
 							</ul>
 						</nav>
 
@@ -76,16 +77,71 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>Getting Started</h2>
-											<ol>
+									<h2>Search</h2>
+											<script type="text/javascript" src="/js/icanhaz.min.js"></script>
 
-<li> <a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+<script type="text/javascript">
+	function params()
+  {
+      var vars = [], hash;
+      var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      for(var i = 0; i < hashes.length; i++)
+      {
+          hash = hashes[i].split('=');
+          vars.push(hash[0]);
+          vars[hash[0]] = hash[1];
+      }
+      return vars;
+	}
 
-<li> <a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+	$(document).ready(function() {
+        if(params()['q'])
+        {
+        	var query = params()['q'];
+      		$('div#search_results p#loading').show();
+          
+         	var result = $.getJSON('http://:uquhenegemab@uzehyv.api.indexden.com/v1/indexes/phpfogdocs/search?q=' + encodeURIComponent(query) + '&fetch=title&snippet=text&callback=?', function(data) {
+            	$('div#search_results div#inner').empty();
+              
+            	$.each(data.results, function(index, result) {
+                    result['domain'] = window.location.hostname;
+                    $('div#search_results div#inner').append(ich.search_result(result));
+                });
 
-<li> <a href="/getting-started/git.html">Git</a></li>
+                if(data.results.length == 0)
+                {
+                    $('div#search_results div#inner').append('<p>Sorry, nothing found.</p>');
+                }
 
-</ol>
+                $('div#search_results p#loading').hide();
+            });
+        }
+	});
+</script>
+
+
+<script id="search_result" type="text/html">
+    <div class="result">
+		<a href="{{ docid }}">{{ title }}</a>
+		<p>{{{ text }}}</p>
+    </div>
+</script>
+
+
+<div id="left">
+	<h2>Search results</h2>
+	<div id="search_results">
+  	<noscript>Sorry, search requires JavaScript. Please enable Javascript if you'd like to use the search.</noscript>   	
+  	<p id="loading">Loading...</p>
+    <div id="inner">
+    </div>
+
+    <div class="separator">
+    		<div class="separator_top"></div>
+    		<div class="separator_bottom"></div>
+		</div>
+  </div>
+</div>
 
 										</div>
 									</div>
