@@ -4,12 +4,18 @@ h1#logo2 {
 	margin: 12px 0 0 0;
 }
 
+#logo2 > a {
+	text-decoration: none;
+	color: white;
+}
+
 #main .ui-box.vertical-tabs > .tab-container {
 	overflow: hidden;
+	min-height: 898px;
 }
 
 .ui-box-content {
-	min-height: 772px;
+	min-height: 860px;
 }
 
 #search-form > input#search {
@@ -96,4 +102,18 @@ div.result b {
 	color: white;
 	font-weight: bold;
 	padding: 0 2px;
+}
+
+.top {
+	padding: 5px 10px;
+	position: absolute;
+	bottom: 5px;
+}
+
+#main .tab-container a.top:hover {
+background: rgba(0, 0, 0, 0);
+}
+
+nav.tab-container a > h6 {
+	margin-bottom: 0;
 }
