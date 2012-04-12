@@ -25,7 +25,7 @@ title: Search Results
         	var query = params()['q'];
       		$('div#search_results p#loading').show();
           
-         	var result = $.getJSON('http://:uquhenegemab@uzehyv.api.indexden.com/v1/indexes/phpfogdocs/search?q=' + encodeURIComponent(query) + '&fetch=title&snippet=text&callback=?', function(data) {
+         	var result = $.getJSON('http://uzehyv.api.indexden.com/v1/indexes/phpfogdocs/search?q=' + encodeURIComponent(query) + '&fetch=title&snippet=text&callback=?', function(data) {
             	$('div#search_results div#inner').empty();
               
             	$.each(data.results, function(index, result) {
@@ -55,7 +55,7 @@ title: Search Results
 
 <div id="left">
 	<div id="search_results">
-  	<noscript>Sorry, search requires JavaScript. Please enable Javascript if you'd like to use the search.</noscript>   	
+  	<noscript>Please enable JavaScript to search.</noscript>   	
   	<p id="loading">Loading...</p>
     <div id="inner">
     </div>

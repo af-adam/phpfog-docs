@@ -40,7 +40,7 @@ Just use the email address your PHP Fog account is under as your username and yo
 
 ### How do I set up email for my domain name? 
 
-PHP Fog doesn't offer email as a service directly, but we set up integration with GMail by default, so you can easily use Google Apps to host your email. [Click here](TK) to get started setting up GMail for your custom domain name. The DNS records for PHP Fog apps are already configured. TKTKTK set up gmail section
+PHP Fog doesn't offer email as a service directly, but we set up integration with GMail by default, so you can easily use Google Apps to host your email. [Click here](TK) to get started setting up GMail for your custom domain name. The DNS records for PHP Fog apps are already configured. TKTKTK set up gmail section.
 
 ### Is PHP Fog PCI compliant? 
 
