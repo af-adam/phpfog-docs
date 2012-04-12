@@ -40,29 +40,29 @@
 								</div>
 								<nav class="tab-container">
 										<ul class="pages">
-											<li><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											<li {% if page.url == "/getting-started/index.html" %}class="on"{% endif %}><a href="/getting-started/"><h6>Getting Started</h6></a></li>
 											{% for current in site.categories.getting-started %}
 											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
 											{% endfor %}
 										</ul>
 
 										<ul class="pages">
-											<li><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li {% if page.url == "/customize/index.html" %}class="on"{% endif %}><a href="/customize/"><h6>Customize Your App</h6></a></li>
 											{% for current in site.categories.customize %}
 											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
 											{% endfor %}
 										</ul>
 
 										<ul class="pages">
-											<li><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											<li {% if page.url == "/best-practices/index.html" %}class="on"{% endif %}><a href="/best-practices/"><h6>Best Practices</h6></a></li>
 											{% for current in site.categories.best-practices %}
 											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
 											{% endfor %}
 										</ul>
 
 										<ul class="pages">
-											<li><a href="/faqs"><h6>FAQs</h6></a></li>
-											<li><a href="/troubleshooting"><h6>Troubleshooting</h6></a></li>
+											<li {% if page.url == "/faqs.html" %}class="on"{% endif %}><a href="/faqs.html"><h6>FAQs</h6></a></li>
+											<li {% if page.url == "/troubleshooting.html" %}class="on"{% endif %}><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
 										</ul>
 										<a class="top" href="#">&uarr; Back to top</a>
 									</nav>
