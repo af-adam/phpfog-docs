@@ -4,13 +4,20 @@
 		<meta charset="utf-8">
 		<title>PHP Fog &mdash; Documentation Search Results</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id='root'>
 			<header>
 				<div class="wrapper">
-					<h1 id='logo'><a href="/">PHPFog</a></h1><h1>Docs</h1>
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'>Docs</h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search.html">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
 				</div>
 			</header>
 			<section id='content'>
@@ -130,7 +137,7 @@
 
 <div id="left">
 	<div id="search_results">
-  	<noscript>Sorry, search requires JavaScript. Please enable Javascript if you'd like to use the search.</noscript>   	
+  	<noscript>Please enable JavaScript to search.</noscript>   	
   	<p id="loading">Loading...</p>
     <div id="inner">
     </div>
