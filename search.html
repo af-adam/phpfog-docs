@@ -25,7 +25,7 @@ title: Search Results
         	var query = params()['q'];
       		$('div#search_results p#loading').show();
           
-         	var result = $.getJSON('http://phpfogdocs.api.houndsleuth.com/v1/indexes/phpfogdocs2/search?q=' + encodeURIComponent(query) + '&fetch=title&snippet=text&callback=?', function(data) {
+         	var result = $.getJSON('http://phpfogdocs.api.houndsleuth.com/v1/indexes/phpfogdocs/search?q=' + encodeURIComponent(query) + '&fetch=title&snippet=text&callback=?', function(data) {
             	$('div#search_results div#inner').empty();
               
             	$.each(data.results, function(index, result) {

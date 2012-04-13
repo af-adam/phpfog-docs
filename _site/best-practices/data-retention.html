@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Customize Your App</title> 
+		<title>PHP Fog &mdash; Documentation Data Retention</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
 	</head>
@@ -26,8 +26,8 @@
 						<nav class="breadcrumb">
 							<ul>
 								<li><a href="/">Documentation</a></li>
-								<li><a href="/"></a></li>
-								<li>Customize Your App</li>
+								<li><a href="/best-practices">Best Practices</a></li>
+								<li>Data Retention</li>
 							</ul>
 						</nav>
 								
@@ -53,7 +53,7 @@
 										</ul>
 
 										<ul class="pages">
-											<li class="on"><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
 											
 											<li ><a href="/customize/add-ons.html">Add-ons</a></li>
 											
@@ -78,7 +78,7 @@
 											
 											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
 											
-											<li ><a href="/best-practices/data-retention.html">Data Retention</a></li>
+											<li class="on"><a href="/best-practices/data-retention.html">Data Retention</a></li>
 											
 										</ul>
 
@@ -90,24 +90,23 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>Customize Your App</h2>
-											<ol>
+									<h2>Data Retention</h2>
+											<p>When your application runs on multiple servers each server is a different virtual machine and the load balancer distributes HTTP requests across those servers. Therefore you must assume that any two HTTP requests will go to different servers. Since each server is independent there is no shared hard drive storage.</p>
 
-<li> <a href="/customize/add-ons.html">Add-ons</a></li>
+<p>Use the database or cookies to save sessions
+Use memecached for memory. See the Working around limitations guide.
+For static files use Amazon S3. See the Handling static files guide.
+We are working on providing a distributed file system so you can save files such that they are available across all the servers. We are also working on native memcached support.</p>
 
-<li> <a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+<p>TO PREVENT LOSE OF DATA PLEASE READ THIS GUIDE!
+PHP Fog is not designed to handle large static assets like images, videos, MP3, etc. Luckily there are third party services that do an excellent job, which you can easily integrate with your application. We recommend Amazon&rsquo;s S3 and using it in the US-East (Virginia) region for lowest latency. There is a great write up from tutsplus.com which talks about scaling your App! See it at: Using Amazon S3 to Store and Manage files</p>
 
-<li> <a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+<p>Custom Applications
+Using S3 with your custom PHP Fog app is easy. To upload your assets to your S3 account, you can use a number of tools, including the s3cmd command line tool and Amazon S3 Organizer extension for Firefox. There are countless other clients you can use. Once you have uploaded your assets you can make them publicly available in S3 and reference them from your PHP Fog application.</p>
 
-<li> <a href="/customize/permissions.html">Permissions</a></li>
+<p>WordPress
+With WordPress you can use the Amazon S3 plugin-in which comes already installed for your WordPress blog in PHP Fog. First you have to activate the plug-in and then provide your Amazon credentials. This enables WordPress to use Amazon S3 as the store for the static assets.</p>
 
-<li> <a href="/customize/database.html">Database</a></li>
-
-<li> <a href="/customize/sending-email.html">Sending Email</a></li>
-
-<li> <a href="/customize/php_ini.html">php.ini</a></li>
-
-</ol>
 
 										</div>
 									</div>
