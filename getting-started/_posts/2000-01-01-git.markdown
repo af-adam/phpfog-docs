@@ -43,10 +43,10 @@ Change your current working directory to the repo you just cloned:
 
 Create a new file called "helloworld.php" and populate it with some code:
 
-   <?php
-   echo "hello world";
-   ?>
-
+	<?php
+	echo "hello world";
+	?>
+   
 ### 5. Add and commit your code to git.
 
     $ git add .
@@ -130,14 +130,8 @@ Or install with Homebrew:
 
 In the root project directory, create a "composer.json" manifest file:
 
-	{
-		"require": {
-		"symfony/yaml": ">=2.0.6",
-		"imagine/Imagine": ">=0.2.8"
-		}
-	}
 
-The above sample manifest file defines YAML and Imagine as dependencies in the required section. The "`>=VERSION`" rule tells Composer to fetch the newest version of the library greater or equal to the specified version number.
+
 
 ### 3. Fetch dependencies.
 
@@ -148,6 +142,7 @@ In the directory you created "composer.json", run the following command:
 Composer will create a `vendor` directory and download the required libraries there. You have to use this `install` command every time you add a new library. Composer records the version numbers of the libraries it fetches in the `composer.lock` file. It does this to maintain project stability by guaranteeing that Composer only uses the library versions you used to develop and test the project.
 
 Below is what a simple project directory might look like after running the install command:
+
 
 	├── composer.json \<- Manifest created above
 	├── composer.lock \<- Generated lock file preserves current dependency versions

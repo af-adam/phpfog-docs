@@ -1,5 +1,5 @@
 markdown: kramdown
 permalink: /:categories/:title.html
-indextank_index: phpfogdocs
-indextank_api_url: http://:uquhenegemab@uzehyv.api.indexden.com
+indextank_index: phpfogdocs2
+indextank_api_url: http://:vYqv9kRfC612oLL@phpfogdocs.api.houndsleuth.com
 indextank_excludes: [index.html, 404.html, Gemfile, Gemfile.lock, README, search.html, icanhaz.min.js]

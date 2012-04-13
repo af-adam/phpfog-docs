@@ -46,6 +46,8 @@
 											
 											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
 											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
 											<li class="on"><a href="/getting-started/git.html">Git</a></li>
 											
 										</ul>
@@ -81,8 +83,8 @@
 										</ul>
 
 										<ul class="pages">
-											<li ><a href="/faqs"><h6>FAQs</h6></a></li>
-											<li ><a href="/troubleshooting"><h6>Troubleshooting</h6></a></li>
+											<li ><a href="/faqs.html"><h6>FAQs</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
 										</ul>
 										<a class="top" href="#">&uarr; Back to top</a>
 									</nav>
@@ -130,9 +132,10 @@ Receiving objects: 100% (3/3), done.
 
 <p>Create a new file called &ldquo;helloworld.php&rdquo; and populate it with some code:</p>
 
-<p><?php
-   echo "hello world";
-   ?></p>
+<pre><code>&lt;?php
+echo "hello world";
+?&gt;
+</code></pre>
 
 <h3 id="add-and-commit-your-code-to-git">5. Add and commit your code to git.</h3>
 
@@ -226,16 +229,6 @@ tmp/**/*
 <h3 id="create-a-composer-manifest">2. Create a Composer manifest.</h3>
 
 <p>In the root project directory, create a &ldquo;composer.json&rdquo; manifest file:</p>
-
-<pre><code>{
-	"require": {
-	"symfony/yaml": "&gt;=2.0.6",
-	"imagine/Imagine": "&gt;=0.2.8"
-	}
-}
-</code></pre>
-
-<p>The above sample manifest file defines YAML and Imagine as dependencies in the required section. The &ldquo;<code>&gt;=VERSION</code>&rdquo; rule tells Composer to fetch the newest version of the library greater or equal to the specified version number.</p>
 
 <h3 id="fetch-dependencies">3. Fetch dependencies.</h3>
 

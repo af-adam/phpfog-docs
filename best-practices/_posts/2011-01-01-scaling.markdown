@@ -33,3 +33,18 @@ Reacting
 Once you receive the alert it is very easy to react and scale out. If you are on a free plan scaling out is not an option. You must be one the Silver or higher plan in order to scale out, luckily this is very easy to switch from Free to Silver (*side note) in the App Console. Once you scale your application you should continue to monitor for 5-30 minutes to make sure that you have added enough capacity. If it is not enough you can continue adding more.
 Usually when traffic increases it is typically in short bursts of traffic. Once you scale your application out, you can come back to the application a few days later (when the traffic comes back to normal levels) and scale back your app to a normal rate. This helps you save money and you'll only pay for what you used.
 Side Note: Once you move from Free to Silver (or higher) you can't move back to Free. The Free is on a shared environment, while the paid plans are on a dedicated environment. The shared environment is more restricted than the dedicated environment for security reasons, as such, we can move from the shared to dedicated easily; however, we can't move applications from dedicated to shared as that can break your applications and it is also a security risk.
+
+With Drupal there are a few plugins which can help make the use of Amazon's S3 simpler.  One is:
+
+http://drupal.org/project/amazons3  (This will place them on the file system, then upload them to S3).
+
+Another alternative is load the images to S3 and then setup AWS Cloudfront to deliver those images on behalf of your application.  Drupal has another good module for this feature:
+http://drupal.org/project/cdn
+
+Either of these modules will be able to offload assets to a scalable solution & have the extra bonus of reducing the overall load on your application as well.  I personally have used Cloudfront a number of times and have had great success using it.
+
+Lastly I highly suggest setting up drupal to use APC to reduce the load on your cloud even further:
+
+http://drupal.org/project/filecache
+
+With all three of these plugins I highly suggest installing them locally on your development environment to integrate them as a part of your app's source code in the git repository (thereby cementing the plugins and their configuration setting in your app & making your app very scalable).
