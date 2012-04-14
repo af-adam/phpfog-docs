@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Custom Domain Names</title> 
+		<title>PHP Fog &mdash; Documentation CloudMailin</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
 	</head>
@@ -26,8 +26,8 @@
 						<nav class="breadcrumb">
 							<ul>
 								<li><a href="/">Documentation</a></li>
-								<li><a href="/customize">Customize Your App</a></li>
-								<li>Custom Domain Names</li>
+								<li><a href="/addons"></a></li>
+								<li>CloudMailin</li>
 							</ul>
 						</nav>
 								
@@ -56,7 +56,7 @@
 											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
 											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 											
-											<li class="on"><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
 											
 											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
 											
@@ -89,73 +89,8 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>Custom Domain Names</h2>
-											<p>With PHP Fog you can host custom domain names (e.g. my-web-app.com) or PHP Fog domain names (e.g. my-web-app.phpfogapp.com). If you use a phpfogapp.com domain name, then PHP Fog manages the DNS records for you, so you don&rsquo;t have to do anything. If you want to use a custom domain name, read on.</p>
-
-<h3 id="dns">DNS</h3>
-
-<p>We recommend using the <code>www.</code> subdomain as your canonical domain.</p>
-
-<ol>
-  <li>
-    <p>At your domain host, set up a redirect (302) from your root domain <code>yourdomain.com</code> to <code>www.yourdomain.com</code>. This is a fairly standard tool that DNS services provide. If you don&rsquo;t see an option for it at your domain host, contact their support services and they should be able to do that for you.</p>
-  </li>
-  <li>
-    <p>Create a CNAME record for <code>www.yourdomain.com</code> to <code>cname01.phpfog.com</code>.</p>
-  </li>
-</ol>
-
-<p>That&rsquo;s the simplest and most reliable method. But if you want to make your root domain (<code>yourdomain.com</code>) canonical, here&rsquo;s how:</p>
-
-<p>Create three A records to: </p>
-
-<pre><code>50.19.115.173
-184.72.222.30
-107.22.161.126
-</code></pre>
-
-<p>Then set up a redirect from <code>www.yourdomain.com</code> to <code>yourdomain.com</code>, either at your domain host or in your .htaccess configuration. Make sure to use all three A records to take full advantage of our load balancers.</p>
-
-<h3 id="change-the-domain-name-setting-in-the-php-fog-app-console">Change the domain name setting in the PHP Fog app console.</h3>
-
-<p>Go to your app console at PHP Fog and click on the &ldquo;Domain Name&rdquo; tab on the left. Enter your custom domain name in the field. Use the root domain name (<code>yourdomain.com</code>) whether you&rsquo;re using <code>www</code>. or the root domain.</p>
-
-<p>Note: With WordPress apps, you <em>must</em> change your domain name in the WordPress administration panel before changing it in the PHP Fog app console.</p>
-
-<h3 id="wait-for-your-dns-settings-to-propagate">Wait for your DNS settings to propagate.</h3>
-
-<p>This can take anywhere from a few minutes to 48 hours, depending on your location. </p>
-
-<h3 id="recommended-dns-providers">Recommended DNS Providers</h3>
-
-<ul>
-  <li>Amazon&rsquo;s Route 53</li>
-</ul>
-
-<h3 id="handling-subdomains-with-wildcards">Handling Subdomains with Wildcards</h3>
-
-<p>If you want to enable wildcards and host content that&rsquo;s dependent on the subdomain, here&rsquo;s how:</p>
-
-<pre><code>$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
-$subdomain = $url_parts[0];
-if ($subdomain == 'www' || $subdomain == '')
-{
-// show home page
-}
-else if ($subdomain == 'help')
-{
-// show help page
-}
-</code></pre>
-
-<h3 id="sharing-sessions-between-subdomains">Sharing sessions between subdomains</h3>
-
-<p>Thanks to <a href="http://community.phpfog.com/discussion/85/sharing-sessions-between-subdomains">albeik</a> for this tip on our <a href="http://community.phpfog.com">community forums</a>!</p>
-
-<p>If you&rsquo;ve enabled wildcard domains and want to share your session data between subdomains, add the following code snippet to your &ldquo;entry point&rdquo; PHP file (e.g. index.php):</p>
-
-<pre><code>("session.cookie_domain", ".domain.com");
-</code></pre>
+									<h2>CloudMailin</h2>
+											
 
 
 										</div>

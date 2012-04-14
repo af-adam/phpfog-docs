@@ -48,6 +48,7 @@
 
 										<ul class="pages">
 											<li {% if page.url == "/customize/index.html" %}class="on"{% endif %}><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 											{% for current in site.categories.customize %}
 											<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
 											{% endfor %}
