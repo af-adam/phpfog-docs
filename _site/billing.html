@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Customize Your App</title> 
+		<title>PHP Fog &mdash; Documentation Billing</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
 	</head>
@@ -27,7 +27,7 @@
 							<ul>
 								<li><a href="/">Documentation</a></li>
 								<li><a href="/"></a></li>
-								<li>Customize Your App</li>
+								<li>Billing</li>
 							</ul>
 						</nav>
 								
@@ -53,7 +53,7 @@
 										</ul>
 
 										<ul class="pages">
-											<li class="on"><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
 											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 											
 											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
@@ -84,7 +84,7 @@
 										<ul class="pages">
 											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
 											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
-											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li class="on"><a href="/billing.html"><h6>Billing</h6></a></li>
 											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
 											<li ><a href="/security.html"><h6>Security</h6></a></li>
 											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
@@ -93,23 +93,37 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>Customize Your App</h2>
-											<ol>
-<li> <a href="http://www.phpfog.com/addons">Add-ons</a></li>
+									<h2>Billing</h2>
+											<p>For details on pricing, see <a href="http://phpfog.com/pricing">our pricing page</a>.</p>
 
-<li> <a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+<p>PHP Fog bills on a monthly schedule and prorates your initial bill from the day you upgrade to the end of the month.</p>
 
-<li> <a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+<h6 id="i-just-upgraded-from-shared-to-a-dedicated-cloud-how-will-i-be-billed">I just upgraded from Shared to a Dedicated Cloud. How will I be billed?</h6>
 
-<li> <a href="/customize/permissions.html">Permissions</a></li>
+<p>If you upgrade to a Silver Cloud on the April 15th, we&rsquo;ll charge you $14.50 (50%) when you upgrade.</p>
 
-<li> <a href="/customize/database.html">Database</a></li>
+<h6 id="if-i-run-one-server-all-month-and-i-want-to-scale-up-for-a-day-how-will-i-be-billed">If I run one server all month and I want to scale up for a day, how will I be billed?</h6>
 
-<li> <a href="/customize/email.html">Email</a></li>
+<p>We&rsquo;ll charge you the prorated amount for the rest of the month, then credit your account the prorated amount when you scale back.</p>
 
-<li> <a href="/customize/php_ini.html">php.ini</a></li>
+<p>So if you run one server on a Silver Cloud at $29 for the whole month, but add four more servers for just one day, then you&rsquo;ll end up paying an additional $3.87 that month. When you first scale up you&rsquo;ll be charged 4 &times; $29 prorated for the month (remaining days in the month / total days in the month). When you scale back the next day, you&rsquo;ll be credited the remainder using the same calculation, leaving you with an extra charge of $3.87. </p>
 
-</ol>
+<p>We charge in 24 hour increments, so even if you use a server for only 2 hours in a day, you&rsquo;ll be charged for the full 24 hours.</p>
+
+<h6 id="my-card-expired-or-i-havent-provided-a-payment-for-a-paid-service-yet-whats-going-to-happen">My card expired or I haven&rsquo;t provided a payment for a paid service yet. What&rsquo;s going to happen?</h6>
+
+<p>If the payment for a service is invalid, we&rsquo;ll continue to provide service for 10 days after the billing due date. During this 10-day grace period:</p>
+
+<ul>
+  <li>You&rsquo;ll continue to accrue charges.</li>
+  <li>You won&rsquo;t be able to subscribe to new services.</li>
+  <li>Your access to source code will be restricted to read-only.</li>
+  <li>Your app console will notify you that your bill is overdue.</li>
+  <li>Our automated system will notify you daily by email that your bill is overdue.</li>
+</ul>
+
+<p>After this 10-day grace period, the account will be terminated and the contents deleted. Please be aware that these files are <em>not</em> recoverable! If you receive an overdue bill notification, please update your credit card information in your account settings as soon as possible.</p>
+
 
 										</div>
 									</div>

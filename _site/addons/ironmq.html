@@ -64,7 +64,7 @@
 											
 											<li ><a href="/customize/database.html">Database</a></li>
 											
-											<li ><a href="/customize/sending-email.html">Sending Email</a></li>
+											<li ><a href="/customize/email.html">Email</a></li>
 											
 											<li ><a href="/customize/php_ini.html">php.ini</a></li>
 											
@@ -82,7 +82,11 @@
 										</ul>
 
 										<ul class="pages">
-											<li ><a href="/faqs.html"><h6>FAQs</h6></a></li>
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
 											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
 										</ul>
 										<a class="top" href="#">&uarr; Back to top</a>
@@ -90,7 +94,50 @@
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
 									<h2>IronMQ</h2>
-											
+											<h3 id="install-ironmq">Install IronMQ</h3>
+
+<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the IronMQ add-on. That&rsquo;s it!</p>
+
+<h3 id="authentication">Authentication</h3>
+
+<p>You need two things to authenticate and tell IronMQ which project to attach your queues to:</p>
+
+<pre><code>Token: IRON_MQ_TOKEN
+
+Project ID: IRON_WORKER_PROJECT_ID
+</code></pre>
+
+<p>You can find these environment variables in the &ldquo;Env. Variables&rdquo; tab in your app console. You can also access these variables in PHP through the <code>getenv()</code> function.</p>
+
+<h3 id="the-basics">The Basics</h3>
+
+<p>There are three basic actions you can perform on a message queue:</p>
+
+<ul>
+  <li>Put a message into a queue.</li>
+  <li>Get a message out of a queue.</li>
+  <li>Delete the message you got out of the queue when you&rsquo;re done with it. (If you don&rsquo;t delete the message, it will go back into the queue after a timeout.) </li>
+</ul>
+
+<p>These three simple actions are the main actions you&rsquo;ll typically use. Here&rsquo;s some sample code using our client that shows how to use these functions.</p>
+
+<pre><code>// Get package here: https://github.com/iron-io/iron_mq_php
+require_once "IronMQ.class.php"
+
+$ironmq = new IronMQ(array(
+'token' =&gt;getenv('IRON_MQ_TOKEN'),
+'project_id' =&gt; getenv('IRON_WORKER_PROJECT_ID')
+));
+
+// Put a message on the queue
+$ironmq-&gt;postMessage("my_queue", "Hello world");
+
+// Get a message
+$msg = $ironmq-&gt;getMessage("my_queue");
+
+// Delete the message
+$ironmq-&gt;deleteMessage("my_queue", $message_id);
+</code></pre>
 
 
 										</div>

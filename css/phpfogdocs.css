@@ -11,11 +11,11 @@ h1#logo2 {
 
 #main .ui-box.vertical-tabs > .tab-container {
 	overflow: hidden;
-	min-height: 898px;
+	min-height: 933px;
 }
 
 .ui-box-content {
-	min-height: 860px;
+	min-height: 895px;
 }
 
 #search-form > input#search {

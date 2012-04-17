@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Customize Your App</title> 
+		<title>PHP Fog &mdash; Documentation Email</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
 	</head>
@@ -26,8 +26,8 @@
 						<nav class="breadcrumb">
 							<ul>
 								<li><a href="/">Documentation</a></li>
-								<li><a href="/"></a></li>
-								<li>Customize Your App</li>
+								<li><a href="/customize">Customize Your App</a></li>
+								<li>Email</li>
 							</ul>
 						</nav>
 								
@@ -53,7 +53,7 @@
 										</ul>
 
 										<ul class="pages">
-											<li class="on"><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
 											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 											
 											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
@@ -64,7 +64,7 @@
 											
 											<li ><a href="/customize/database.html">Database</a></li>
 											
-											<li ><a href="/customize/email.html">Email</a></li>
+											<li class="on"><a href="/customize/email.html">Email</a></li>
 											
 											<li ><a href="/customize/php_ini.html">php.ini</a></li>
 											
@@ -93,23 +93,25 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>Customize Your App</h2>
-											<ol>
-<li> <a href="http://www.phpfog.com/addons">Add-ons</a></li>
+									<h2>Email</h2>
+											<h3 id="client-email">Client Email</h3>
 
-<li> <a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+<p>PHP Fog doesn&rsquo;t offer email as a service directly, but we set up integration with GMail by default, so you can easily use Google Apps to host your email. <a href="https://www.google.com/a/cpanel/domain/new">Click here</a> to get started setting up GMail for your custom domain name. The DNS records for PHP Fog apps are already configured. </p>
 
-<li> <a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+<h3 id="app-email">App Email</h3>
 
-<li> <a href="/customize/permissions.html">Permissions</a></li>
+<p>PHP Fog supports PHP&rsquo;s <code>mail()</code> method. Each dedicated instance has an SMTP server so you can send email just as you would from any PHP application. The server can send around 35 emails per second. </p>
 
-<li> <a href="/customize/database.html">Database</a></li>
+<p>This method is not, however, the best method for sending email because it doesn&rsquo;t provide the greatest reliability, throughput, or visibility.</p>
 
-<li> <a href="/customize/email.html">Email</a></li>
+<p>Fortunately, we have great third-party add-ons and services that are simple to set up and operate, address all of <code>mail()</code>&rsquo;s shortcomings, and provide robust additional functionality:</p>
 
-<li> <a href="/customize/php_ini.html">php.ini</a></li>
+<ul>
+  <li><a href="http://dev.appfog.com/features/article/mailgun">Mailgun</a></li>
+  <li><a href="http://dev.appfog.com/features/article/cloudmailin">CloudMailin</a></li>
+  <li><a href="http://aws.amazon.com/ses/">Amazon Simple Email Service</a></li>
+</ul>
 
-</ol>
 
 										</div>
 									</div>

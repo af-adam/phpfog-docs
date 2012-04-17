@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting
 layout: doc-page
-weight: 15
+weight: 16
 ---
 
 The Load Balancer between the HTTP Client and your application is configured to timeout requests after 60 seconds and result in a "504 Gateway Time-out" error being returned to the HTTP client (i.e. browser). This can be caused by blocking sync calls to other services or because of CPU over-utilization. There are also a number of mitigations to deal with these problems.

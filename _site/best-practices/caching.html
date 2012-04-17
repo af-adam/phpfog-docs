@@ -64,7 +64,7 @@
 											
 											<li ><a href="/customize/database.html">Database</a></li>
 											
-											<li ><a href="/customize/sending-email.html">Sending Email</a></li>
+											<li ><a href="/customize/email.html">Email</a></li>
 											
 											<li ><a href="/customize/php_ini.html">php.ini</a></li>
 											
@@ -82,7 +82,11 @@
 										</ul>
 
 										<ul class="pages">
-											<li ><a href="/faqs.html"><h6>FAQs</h6></a></li>
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
 											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
 										</ul>
 										<a class="top" href="#">&uarr; Back to top</a>
@@ -94,13 +98,13 @@
 
 <p>All PHP Fog apps are fronted by Varnish, a web application accelerator that runs in front of your app server and caches content according to your HTTP Header information. Varnish can speed up delivery of your content by a factor of 300-1000, depending on your app. For more information, check out <a href="https://www.varnish-cache.org/">the Varnish site</a>. </p>
 
-<h3 id="default-caching">Default Caching</h3>
+<h6 id="default-caching">Default Caching</h6>
 
 <p>Varnish caches content automatically for 300 seconds (5 minutes). For static content, this means you don&rsquo;t you have to do anything to take advantage of Varnish.</p>
 
 <p>There are two key exceptions, though. First, if there are cookies in the HTTP header on the request or response, the page will not be cached. Second, only responses to GET requests can be cached.</p>
 
-<h3 id="caching-with-cookies">Caching with Cookies</h3>
+<h6 id="caching-with-cookies">Caching with Cookies</h6>
 
 <p>Requests that include cookies are not cached by default so that stale cookies don&rsquo;t impact the application behavior.</p>
 
@@ -116,7 +120,7 @@
 
 <p>We can also setup a custom configuration for your application. We&rsquo;re also building tools for you to manage caching, so stay tuned!</p>
 
-<h3 id="caching-dynamic-content">Caching Dynamic Content</h3>
+<h6 id="caching-dynamic-content">Caching Dynamic Content</h6>
 
 <p>Caching dynamic content in Varnish can greatly improve the performance of your app. You can explicitly instruct Varnish to cache the requests and for how long.</p>
 
@@ -127,47 +131,42 @@
 
 <p>Note: The longest Varnish will cache any content is 1 day. </p>
 
-<h3 id="preventing-caching">Preventing Caching</h3>
+<h6 id="preventing-caching">Preventing Caching</h6>
 
 <p>To prevent caching set the &ldquo;Cache-Control&rdquo; header to &ldquo;no-cache&rdquo;. This is generally required in applications that don&rsquo;t produce or consume cookies, but serve dynamic content. This is how to set the &ldquo;Cache-Control&rdquo; header in PHP:</p>
 
 <pre><code>header("Cache-Control: no-cache");
 </code></pre>
 
-<h3 id="purging-cache-data">Purging Cache Data</h3>
+<h6 id="purging-cache-data">Purging Cache Data</h6>
 
 <p>We are currently working on tools to reset the cache; however, this is not yet functional. In the mean time if you need to purge the cache, please email support@appfog.com.</p>
 
-<h3 id="caching-in-wordpress">Caching in WordPress</h3>
+<h6 id="caching-in-wordpress">Caching in WordPress</h6>
 
 <p>WordPress by default takes little advantage of caching; however, there are plugins that can improve caching by intelligently presenting the appropriate cache headers.</p>
 
-<p>The WP Super Cache Plugin and the WordPress Varnish Plugin are two plug-ins we recommend installing to take advantage of Varnish.</p>
+<p>The <a href="http://wordpress.org/extend/plugins/wp-super-cache/">WP Super Cache</a> plugin and the <a href="http://wordpress.org/extend/plugins/wordpress-varnish/">WordPress Varnish</a> plugin are two plugins we recommend installing to take advantage of Varnish.</p>
 
-<h3 id="caching-in-drupal">Caching in Drupal</h3>
+<h6 id="caching-in-drupal">Caching in Drupal</h6>
 
-<p>Drupal by default takes little advantage of caching. As an alternative we recommend PressFlow, which is a distribution of Drupal optimized for performance. Currently we do not support PressFlow as a default Jump Start; however, we are working on adding support soon. Alternatively you can install PressFlow yourself by starting with a custom application.</p>
+<p>Drupal by default takes little advantage of caching. We recommend installing Drupal&rsquo;s <a href="http://drupal.org/project/varnish">Varnish HTTP Accelerator Integration module</a> to take advantage of Varnish on your Drupal app. </p>
+
+<p>As another alternative we recommend <a href="http://pressflow.org/">PressFlow</a>, which is a distribution of Drupal optimized for performance. We don&rsquo;t have a Pressflow Jumpstart yet, but we&rsquo;re working on adding that soon. You can easily install PressFlow yourself by starting with a custom application.</p>
 
 <h3 id="apc">APC</h3>
 
-<p>What is APC?
-APC or &ldquo;The Alternative PHP Cache&rdquo; is a free and open opcode cache for PHP. This tool significantly assists with performance in users&rsquo; applications.</p>
+<p>The Alternative PHP Cache, or APC, is a free and open opcode cache for PHP that can significantly boost performance in your app. It&rsquo;s installed by default on all Dedicated Cloud apps.</p>
 
-<p>How do I get it?</p>
+<p>Implementation of APC varies depending on your app. For example, the Cake framework has documentation <a href="http://api.cakephp.org/file/cake/libs/cache/apc.php">here</a>. Most frameworks will have similar documentation on implementation of APC.</p>
 
-<p>APC is setup by default for all Dedicated hosts and is a great addition to your app.</p>
+<h5 id="what-if-all-my-code-is-custom">What if all my code is custom?</h5>
 
-<p>How do I use it?</p>
+<p>Custom code will require a manual implementation of APC. Check out <a href="http://www.php.net/manual/en/apc.configuration.php">this link</a> for more information on how to implement APC in your app.</p>
 
-<p>Implementation of APC varies depending on your application. For example, The Cake framework has documentation here. Other frameworks will have similar documentation on APC&rsquo;s implementation.</p>
+<h5 id="pitfalls">Pitfalls</h5>
 
-<p>What if all my code is custom?</p>
-
-<p>Custom code will require a manual implementation of APC. Check out this link for more information on how to implement APC in your app.</p>
-
-<p>Pitfalls</p>
-
-<p>A common issue is that your apps are using the same cache to complete requests! Daniel Arroyo, CEO of Flaretag wrote a great article on dealing with this issue in CakePHP. You can find it here</p>
+<p>The most common issue is multiple apps using the same cache to complete requests. Daniel Arroyo, CEO of Flaretag, wrote <a href="http://www.danielarroyo.net/2012/01/avoid-problems-when-running-multiple-cake-apps-in-one-server/">a great article</a> on dealing with this issue in Cake.</p>
 
 
 										</div>

@@ -64,7 +64,7 @@
 											
 											<li ><a href="/customize/database.html">Database</a></li>
 											
-											<li ><a href="/customize/sending-email.html">Sending Email</a></li>
+											<li ><a href="/customize/email.html">Email</a></li>
 											
 											<li ><a href="/customize/php_ini.html">php.ini</a></li>
 											
@@ -82,7 +82,11 @@
 										</ul>
 
 										<ul class="pages">
-											<li ><a href="/faqs.html"><h6>FAQs</h6></a></li>
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
 											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
 										</ul>
 										<a class="top" href="#">&uarr; Back to top</a>
@@ -90,7 +94,87 @@
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
 									<h2>IronWorker</h2>
-											
+											<h3 id="install-ironworker">Install IronWorker</h3>
+
+<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the IronWorker add-on. That&rsquo;s it!</p>
+
+<h3 id="integrate-ironworker">Integrate IronWorker</h3>
+
+<p>Just copy <a href="https://github.com/iron-io/iron_worker_php/blob/master/IronWorker.class.php">IronWorker.class.php</a> and include it in your script:</p>
+
+<pre><code>&lt;?php
+require_once "IronWorker.class.php
+</code></pre>
+
+<h3 id="create-a-worker">Create a Worker</h3>
+
+<p>When you install IronWorker, the installer creates two environment variables set with the necessary credentials. Create a worker and pass in those credentials like this:</p>
+
+<pre><code>$worker = new IronWorker(array(
+'token' =&gt; getenv('IRON_WORKER_TOKEN'),
+'project_id' =&gt; getenv('IRON_WORKER_PROJECT_ID')
+));
+</code></pre>
+
+<p>Here&rsquo;s an example worker:</p>
+
+<pre><code>&lt;?php
+echo "Hello PHP World!\n";
+</code></pre>
+
+<p>We&rsquo;ll call this worker &ldquo;HelloWorld.php&rdquo;.</p>
+
+<h3 id="upload-your-worker">Upload Your Worker</h3>
+
+<p>Here&rsquo;s how to take the example above, zip it up, and upload it to IronWorker.</p>
+
+<pre><code>&lt;?php
+# Zip single file:
+IronWorker::createZip(dirname(__FILE__), array('HelloWorld.php'), 'worker.zip', true);
+$res = $iw-&gt;postCode('HelloWorld.php', 'worker.zip', 'HelloWorld');
+</code></pre>
+
+<h3 id="queue-your-worker">Queue Your Worker</h3>
+
+<pre><code>&lt;?php
+$task_id = $iw-&gt;postTask('HelloWorld');
+</code></pre>
+
+<p>Your worker should start in a few seconds.</p>
+
+<h3 id="schedule-your-worker">Schedule Your Worker</h3>
+
+<p>If you want to run your code more than once or run it in regular intervals, you can schedule it:</p>
+
+<pre><code>&lt;?php
+# 3 minutes from now
+$start_at = time() + 3*60;
+
+# Run task every 2 minutes, repeat 10 times
+$iw-&gt;postScheduleAdvanced('HelloWorld', array(), $start_at, 2*60, null, 10);
+</code></pre>
+
+<h3 id="check-the-status-of-your-worker">Check the Status of Your Worker</h3>
+
+<p>Use the <code>getTaskDetails()</code> method.</p>
+
+<pre><code>&lt;?php
+$task_id = $iw-&gt;postTask('HelloWorld');
+$details = $iw-&gt;getTaskDetails($task_id);
+
+echo $details-&gt;status; # prints 'queued', 'complete', 'error' etc.
+</code></pre>
+
+<h3 id="and-more">And More&hellip;</h3>
+
+<p>You can also pass payloads to your tasks, set progress status, logs, etc. For more information, check out some of these resources:</p>
+
+<ul>
+  <li><a href="https://github.com/iron-io/iron_worker_php">IronWorker on GitHub</a></li>
+  <li><a href="http://iron-io.github.com/iron_worker_php/">IronWorker PHP Reference Documentation</a></li>
+  <li><a href="https://github.com/iron-io/iron_worker_php/wiki">IronWorker PHP Wiki</a></li>
+  <li><a href="http://docs.iron.io/">Full Documentation on Iron.io</a></li>
+</ul>
 
 
 										</div>
