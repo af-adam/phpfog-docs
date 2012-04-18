@@ -8,11 +8,11 @@ For details on pricing, see [our pricing page](http://phpfog.com/pricing).
 
 PHP Fog bills on a monthly schedule and prorates your initial bill from the day you upgrade to the end of the month.
 
-###### I just upgraded from Shared to a Dedicated Cloud. How will I be billed? 
+### I just upgraded from Shared to a Dedicated Cloud. How will I be billed? 
 
 If you upgrade to a Silver Cloud on the April 15th, we'll charge you $14.50 (50%) when you upgrade.
 
-###### If I run one server all month and I want to scale up for a day, how will I be billed? 
+### If I run one server all month and I want to scale up for a day, how will I be billed? 
 
 We'll charge you the prorated amount for the rest of the month, then credit your account the prorated amount when you scale back.
 
@@ -20,7 +20,7 @@ So if you run one server on a Silver Cloud at $29 for the whole month, but add f
 
 We charge in 24 hour increments, so even if you use a server for only 2 hours in a day, you'll be charged for the full 24 hours.
 
-###### My card expired or I haven't provided a payment for a paid service yet. What's going to happen? 
+### My card expired or I haven't provided a payment for a paid service yet. What's going to happen? 
 
 If the payment for a service is invalid, we'll continue to provide service for 10 days after the billing due date. During this 10-day grace period:
 
