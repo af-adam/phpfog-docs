@@ -24,9 +24,9 @@ Database capacity beyond the initial 20MB costs $2/GB per month.
 
 ## Backups
 
-PHP Fog backs up your app's database on a daily basis and keeps the data for one week. Need a backup of your database? Just contact <a href="mailto:support@appfog.com">support@appfog.com</a>.
+You can perform manual backups of your app's database by exporting it through phpMyAdmin. We don't support automated backups to users' systems yet, but that feature is on our road map. 
 
-You can also perform manual backups by exporting your app's database through phpMyAdmin. We don't support automated backups to users' systems yet, but that feature is on our road map. 
+PHP Fog also backs up your app's database on a daily basis and keeps the backups for one week. You can contact <a href="mailto:support@appfog.com">support@appfog.com</a> for access to these.
 
 ## Remote Database Access
 

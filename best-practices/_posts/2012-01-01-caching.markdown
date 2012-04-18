@@ -4,6 +4,8 @@ layout: doc-page
 weight: 11
 ---
 
+PHP Fog apps can take advantage of two types of caching: Varnish and APC. Proper configuration of these two types of caching can significantly improve the performance of your app, providing a better experience for your users. 
+
 ### Varnish
 
 All PHP Fog apps are fronted by Varnish, a web application accelerator that runs in front of your app server and caches content according to your HTTP Header information. Varnish can speed up delivery of your content by a factor of 300-1000, depending on your app. For more information, check out [the Varnish site](https://www.varnish-cache.org/). 

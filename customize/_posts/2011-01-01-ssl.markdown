@@ -4,36 +4,40 @@ layout: doc-page
 weight: 6
 ---
 
-### Before You Start
+### 1. Before You Begin
 
 <ol>
-<li>Make sure you have your certificate, private key, and (if you have one) intermediate key.</li>
-<li>Make sure you're using: <br /><br />
+<li type="a">Make sure you have your certificate, private key, and (if you have one) intermediate key.</li>
+<li type="a">Make sure you're using: <br /><br />
 <ol>
-<li type="a">subdomain certificates (e.g. www.example.com) </li>
+<li type="i">subdomain certificates (e.g. www.example.com) </li>
 </ol>
 <em>OR</em> <br /><br />
 <ol>
-<li type="a" value="2">your certificate is a root domain wildcard certificate for subdomains (e.g. \*.example.com).</li>
+<li type="i" value="2">your certificate is a root domain wildcard certificate for subdomains (e.g. \*.example.com).</li>
 </ol>
 </li>
-<li>Make sure your private certificate *does not* have a passphrase associated with it.</li>
+<li type="a">Make sure your private certificate *does not* have a passphrase associated with it.</li>
 </ol>
 
-### Instructions
+### 2. App Console
+
+Go to your app console and click on the "SSL" tab on the left. 
+
+Open your certificate in your favorite text editor. Copy the <em>entire</em> contents of that file and paste it into the "Signed Certificate" field.
+
+Open your private key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the "RSA or DSA Private Key" field.
+
+If you have an intermediate certificate:
 
 <ol>
-	<li>Go to your app console and click on the "SSL" tab on the left. </li>
-	<li>Open your certificate in your favorite text editor. Copy the <em>entire</em> contents of that file and paste it into the "Signed Certificate" field.</li>
-	<li>Open your private key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the "RSA or DSA Private Key" field.</li>
-	If you have an intermediate certificate:
-		<ol>
-			<li type="a">Check the "Use intermediate cerficate" check box and a new field will appear.</li>
-			<li type="a">Open your intermediate key in your text editor. Copy the *entire* contents of that file and paste it into the "Intermediate certificate" field.</li>
-		</ol>
-	<li>Click "Save". Grab a cup of coffee while your elastic load balancer configures and deploys your settings.</li>
-	<li>On the next screen, you'll see a CNAME record. Update your DNS from `CNAME01.phpfog.com` to this new record.</li>
+	<li type="a">Check the "Use intermediate cerficate" check box and a new field will appear.</li>
+	<li type="a">Open your intermediate key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the "Intermediate certificate" field.</li>
 </ol>
+
+Click "Save". Grab a cup of coffee while your elastic load balancer configures and deploys your settings.
+
+On the next screen, you'll see a CNAME record. Update your DNS from `CNAME01.phpfog.com` to this new record.
 
 You now have SSL for your custom domain name!
 
