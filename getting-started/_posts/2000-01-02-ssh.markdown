@@ -101,7 +101,7 @@ Just go to your PHP Fog account, click on the "SSH Keys" tab, and hit the "Add a
 
 Give the new key a name, paste in the contents of the public key, hit "Save SSH Key", and you're done!
 
-## Handling SSH Keys for Multiple Accounts
+## Handling SSH Keys for Multiple Accounts {#multiple}
 
 Sometimes you need SSH access to multiple PHP Fog accounts. Unfortunately, you can't use the same key with multiple accounts, so you'll have to generate a new key for each account you want access to. 
 

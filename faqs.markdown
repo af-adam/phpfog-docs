@@ -20,59 +20,59 @@ weight: 14
 * [How do I log into New Relic? ](#newrelic)
 * [Can I migrate from a Dedicated Cloud to a Shared Cloud?](#migrate)
 
-#### <a id="reliable"></a> How reliable is PHP Fog?
+#### How reliable is PHP Fog? {#reliable}
 
 Very! We have redundancy and failover built into every piece of the PHP Fog stack end-to-end. Click [here](/reliability) for a full walkthrough on all of our reliability components.
 
-#### <a id="sla"></a> What type of SLA does PHP Fog offer?
+#### What type of SLA does PHP Fog offer? {#sla}
 
 We don't offer a general SLA, but if you have specific SLA requirements, feel free to contact us at [support@appfog.com](mailto:support@appfog.com). 
 
-#### <a id="maintenance"></a> Is my app still running when PHP Fog is under maintenance?
+#### Is my app still running when PHP Fog is under maintenance? {#maintenance}
 
 Yes. While the PHP Fog website and your app console will be inaccessible during maintenance, your app will continue to run. You'll also continue to have access to your source code. 
 
-#### <a id="secure"></a> How secure is PHP Fog?
+#### How secure is PHP Fog? {#secure}
 
 We take security very seriously. For a full walkthrough of our security precautions, check out [this page](/security).
 
-#### <a id="ssl"></a> Does PHP Fog support SSL?
+#### Does PHP Fog support SSL? {#ssl}
 
 We provide SSL for all *.phpfogapp.com subdomains and support SSL on custom subdomains, including www. Check out [this guide](/customize/ssl) for additional details.
 
-#### <a id="pci"></a> Is PHP Fog PCI compliant? 
+#### Is PHP Fog PCI compliant? {#pci}
 
 We're not PCI compliant as a service or as a host yet. We are in the process of getting PCI compliance certification for our service. We have no current plans for offering PCI compliance on our hosting, but if you'd like to see it, let us know by contacting [support@appfog.com](mailto:support@appfog.com).
 
-#### <a id="modify"></a> Do I have to modify my app to run on PHP Fog?
+#### Do I have to modify my app to run on PHP Fog? {#modify}
 
 Nope. We've set everything up to run without any changes.
 
-#### <a id="ssh"></a> Can I get SSH access?
+#### Can I get SSH access? {#ssh}
 
 To maintain security across our service, we don't offer SSH access. 
 
-#### <a id="ftp"></a> Can I get FTP access?
+#### Can I get FTP access? {#ftp}
 
 We have an SFTP feature on our roadmap, but no ETA. Meanwhile, you can access your source code using our [PF Command Line Tool](/getting-started/pf-command-line-tool) or [Git](/getting-started/git).
 
-#### <a id="web"></a> I made changes to my app through a web interface and those changes aren't reflected in git. What's going on?
+#### I made changes to my app through a web interface and those changes aren't reflected in git. What's going on? {#web}
 
 Git is a one-way versioning tool. That means any changes you make to your file system through a web interface will not propagate back into git. This is why we recommend setting up a local dev environment and making all code changes there and pushing those changes to your app through git. Read more about that in our [local dev environment guide](/getting-started/local-dev).
 
 For WordPress, you can get a backup of your file system with the [ManageWP plugin](http://managewp.com/).
 
-#### <a id="3rdparty"></a> Can my app access third party services?
+#### Can my app access third party services? {#3rdparty}
 
 Yes. PHP Fog apps have no firewalls or other network blocking mechanisms, so your app is free to call external web services.
 
-#### <a id="version"></a> What version of PHP, Apache, and MySQL does PHP Fog use?
+#### What version of PHP, Apache, and MySQL does PHP Fog use? {#version}
 
 * PHP version 5.3.2
 * Apache version 2.2.14
 * MySQL version 5.1.41
 
-#### <a id="sharedvdedicated"></a>What are the differences between Shared and Dedicated Clouds?
+#### What are the differences between Shared and Dedicated Clouds? {#sharedvdedicated}
 
 In order to ensure the security of your application in the shared environment we restrict certain configurations and functions.
 
@@ -140,10 +140,10 @@ The following functions are disabled on our Shared Cloud to ensure the security 
 
 Check out [this page](http://limits.phpfogapp.com/) for more information on the PHP restrictions of our Shared service. 
 
-#### <a id="newrelic"></a> How do I log into New Relic? 
+#### How do I log into New Relic?  {#newrelic}
 
 Just use the email address your PHP Fog account is under as your username and your original MySQL password. 
 
-#### <a id="migrate"></a> Can I migrate from a Dedicated Cloud to a Shared Cloud?
+#### Can I migrate from a Dedicated Cloud to a Shared Cloud? {#migrate}
 
 No. Our Shared Cloud is more restricted than our Dedicated Clouds, so seamless and automated migration from Dedicated to Shared isn't possible. An alternative way to do this is to start a new Shared app and migrate your source code using [git](/getting-started/git).

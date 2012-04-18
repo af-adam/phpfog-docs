@@ -4,12 +4,58 @@ layout: doc-page
 weight: 16
 ---
 
+* [SSH, Git, and PF Command Line Tool](#ssh)
+* [HTTP 500, 502, 503, and 504 Errors](#500)
+* [SSL](#ssl)
+
+### SSH, Git, and PF Command Line Tool {#ssh}
+
+###### "Permission denied (publickey)"
+
+1. Follow our [guide to generating your SSH key](/getting-started/ssh).
+2. Make sure you're copying your *public* key into the PHP Fog app console, not your private key. 
+3. If you're on a Mac, flush your Keychain Access cache:
+
+<ol>
+<li type="a">Open Keychain Access (Applications &rarr; Utilities &rarr; Keychain Access).</li>
+<li type="a">Unlock and lock your keychain by clicking on the lock icon at the upper left.</li>
+</ol>
+
+###### "Unauthorized access for user"
+
+This error occurs when you try to use the same SSH key for multiple accounts. 
+
+### HTTP 500, 502, 503, and 504 Errors {#500}
+
+###### 500: Internal Server Error
+
+HTTP 500 is a generic "catch-all" that indicates that the web server was unable to fulfill the HTTP/S request. This is usually caused by syntax errors, script run times, or deployment issues. 
+
+You can usually diagnose this issue by turning on PHP error reporting. Just go to your PHP Fog app console, click on the "Settings" tab, and click the "Display Errors" button. Then go back to your app and you should get a stack trace of where your app is hitting an error. 
+
+If you still don't get anything besides an HTTP 500, it's probably an issue with your `.htaccess` file. Check that file for syntax errors. 
+
+###### 502: Bad Gateway
+
+HTTP 502 errors are extremely rare and generally due to an infrastructure failure. If you receive this error, wait a few minutes and try again. If you experience this issue for longer than a few minutes, [email us](mailto:support@appfog.com) and we'll work to resolve the issue as fast as possible.
+
+###### 503: Service Unavailable
+
+HTTP 503 errors are effectively "Closed For Repair" errors and are specified by your app. These errors happen when your app is set to return this error directly. To resolve this error message you will need to check your Apps' settings and code to stop your app from returning this error directly.
+
+###### 504: Gateway Timeout
+
+HTTP 504 Gateway Timeout
+This error is due to your app being unable to service requests. Because this error is returned by Apache, it is highly likely your App being overloaded with requests from visitors. To address this issue read this article talking about 504 errors.
+
 The Load Balancer between the HTTP Client and your application is configured to timeout requests after 60 seconds and result in a "504 Gateway Time-out" error being returned to the HTTP client (i.e. browser). This can be caused by blocking sync calls to other services or because of CPU over-utilization. There are also a number of mitigations to deal with these problems.
 
 Blocking calls to other services
+
 If your application makes calls to third party services (like the examples below) these calls may be blocking. That is, when your applications make a call to a method like file_get_contents() it will not return until the full HTTP transaction is complete. Making numerous calls like this may cause the time to complete all the transactions longer than the timeout period of the HTTP servers.
 
 Sending an email
+
 Calling a remote API (e.g. Twitter, Facebook, etc)
 Web scraping
 CPU over-utilization
@@ -23,22 +69,6 @@ Use asynchronous calls instead of synchronous calls. This only makes sense when 
 Upgrade to a Gold or Platinum plan. The Gold and Platinum plans are not throttle for bursts therefore your application gets consistent processing. This is a very simple implementation; however, it might not suffice. This is only useful if the processing time is fast enough that it can be processed synchronously and returned to the requester.
 Use a dedicated EC2 sever for asynchronous processing. Create a new Amazon EC2 server dedicated to the heavy processing (the "worker"), and use the Amazon SQS to queue jobs. This way the front-end can add jobs to the queue and then the worker can pull and process them as it becomes available. This design enables more efficient utilization of resources and ability to handle
 
-Why They Happen
-HTTP 500 errors occur due to server side error. These generic errors indicate that the web server was unable to fulfill the HTTP/S request by the client. Issues of this nature are usually related to syntax errors, script run times, or deployment issues to name a few. All of these will prevent code from executing on your app.
-
-Resolving HTTP 500 Errors
-HTTP 500 errors occur for a variety of reasons. See below documentation for more information on specific errors and what steps can be taken to resolve them.
-
-HTTP 502 Bad Gateway
-HTTP 502 errors, although very rare, are characteristic of a infrastructure failure in the system. If you receive this error wait a few minutes and try again. If you continue to have this issue please
-email us and we will work to resolve the issue as fast as possible.
-
-HTTP 503 Service Unavailable
-HTTP 503 errors are effectively "Closed For Repair" errors and are specified by your app. These errors happen when your app is set to return this error directly. To resolve this error message you will need to check your Apps' settings and code to stop your app from returning this error directly.
-
-HTTP 504 Gateway Timeout
-This error is due to your app being unable to service requests. Because this error is returned by Apache, it is highly likely your App being overloaded with requests from visitors. To address this issue read this article talking about 504 errors.
-
 More Information
 For more information on 500 errors and how to diagnose them for your specific situation, please check out the following links:
 
@@ -46,22 +76,22 @@ Wikipedia Article
 Drupal
 WordPress
 
+### SSL {#ssl}
 
-### SSH Keys
+###### "Doman name mismatch"
 
-* Mac OS X keychain access
-* permission denied
-* unauthorized access
+My browser says that there is a "domain name mismatch." What does that mean?
 
-
-### SSL
-
-My browser says that there is a "domain name mismatch" what does that mean?
 A domain name mismatch happens when your certificate says you domain name is something and your site address is actually something else (IE www.foo.com vs foo.com)
+
 The Solution: Change your site's name to match the certificate. Alternatively, you can have a new certificate issued to match your site (this includes wildcard certificates i.e. *.foo.com)
+
+###### "Cannot verify"
 
 My browser says that it "Cannot Verify" the site! What's going on?
 Many things could be wrong. Most commonly, however, your certificate has expired.
 The Solution: Get your Certificate Authority to update your certificate.
-My Certificate authority says I need a CSR, what can I do?
+
+###### My Certificate authority says I need a CSR, what can I do?
+
 The Solution: To generate a CSR on your local machine for PHP Fog check out this Document
