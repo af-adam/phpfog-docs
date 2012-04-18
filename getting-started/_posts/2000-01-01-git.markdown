@@ -63,7 +63,7 @@ This command commits the added file to your git repository. It's still local, bu
 
 This command uploads your local repository to the remote server at PHP Fog. And you're done! Give it a few minutes to deploy your changes, then visit your app to see your changes live! 
 
-This should be enough to get your started, but if you want to learn a few advanced git techniques, read on. If you want to start customizing your app, head on over to [the next section](/customize).
+This should be enough to get your started, but if you want to learn a few advanced git techniques, read on. If you want to start developing your app, head on over to [the next section](/getting-started/development).
 
 ## .gitignore
 
@@ -131,7 +131,7 @@ Or install with Homebrew:
 In the root project directory, create a "composer.json" manifest file:
 
 
-
+TKTKTK
 
 ### 3. Fetch dependencies.
 
@@ -143,6 +143,7 @@ Composer will create a `vendor` directory and download the required libraries th
 
 Below is what a simple project directory might look like after running the install command:
 
+TKTKTK
 
 	├── composer.json \<- Manifest created above
 	├── composer.lock \<- Generated lock file preserves current dependency versions
@@ -189,4 +190,4 @@ Want to learn more about Composer? Check out [the project page](http://getcompos
 TK
 
 
-Ready to customize your app? [Read on](/customize).
+Ready to start developing your app? [Read on](/getting-started/development).

@@ -50,6 +50,8 @@
 											
 											<li ><a href="/getting-started/git.html">Git</a></li>
 											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
 										</ul>
 
 										<ul class="pages">
@@ -75,9 +77,9 @@
 											
 											<li ><a href="/best-practices/caching.html">Caching</a></li>
 											
-											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
 											
-											<li ><a href="/best-practices/data-retention.html">Data Retention</a></li>
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
 											
 										</ul>
 
@@ -104,6 +106,7 @@
   <li><a href="#modify">Do I have to modify my app to run on PHP Fog?</a></li>
   <li><a href="#ssh">Can I get SSH access?</a></li>
   <li><a href="#ftp">Can I get FTP access?</a></li>
+  <li><a href="#web">I made changes to my app through a web interface and those changes aren&rsquo;t reflected in git. What&rsquo;s going on?</a></li>
   <li><a href="#3rdparty">Can my app access third party services?</a></li>
   <li><a href="#version">What version of PHP, Apache, and MySQL does PHP Fog use?</a></li>
   <li><a href="#sharedvdedicated">What are the differences between Shared and Dedicated Clouds?</a></li>
@@ -146,6 +149,12 @@
 <h4 id="a-idftpa-can-i-get-ftp-access"><a id="ftp"></a> Can I get FTP access?</h4>
 
 <p>We have an SFTP feature on our roadmap, but no ETA. Meanwhile, you can access your source code using our <a href="/getting-started/pf-command-line-tool">PF Command Line Tool</a> or <a href="/getting-started/git">Git</a>.</p>
+
+<h4 id="a-idweba-i-made-changes-to-my-app-through-a-web-interface-and-those-changes-arent-reflected-in-git-whats-going-on"><a id="web"></a> I made changes to my app through a web interface and those changes aren&rsquo;t reflected in git. What&rsquo;s going on?</h4>
+
+<p>Git is a one-way versioning tool. That means any changes you make to your file system through a web interface will not propagate back into git. This is why we recommend setting up a local dev environment and making all code changes there and pushing those changes to your app through git. Read more about that in our <a href="/getting-started/local-dev">local dev environment guide</a>.</p>
+
+<p>For WordPress, you can get a backup of your file system with the <a href="http://managewp.com/">ManageWP plugin</a>.</p>
 
 <h4 id="a-id3rdpartya-can-my-app-access-third-party-services"><a id="3rdparty"></a> Can my app access third party services?</h4>
 

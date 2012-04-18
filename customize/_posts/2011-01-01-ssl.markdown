@@ -4,20 +4,28 @@ layout: doc-page
 weight: 6
 ---
 
-Before you start, make sure you have the following: 
+### Before You Start
 
-### Requirements
-
-1. Your certificate, private key, and (if you have one) intermediate key.
-2. You're using subdomain certificates (e.g. www.example.com) *or* your certificate is a root domain wildcard certificate for subdomains (e.g. \*.example.com).
-3. Your private certificate *does not* have a passphrase associated with it.
+<ol>
+<li>Make sure you have your certificate, private key, and (if you have one) intermediate key.</li>
+<li>Make sure you're using: <br /><br />
+<ol>
+<li type="a">subdomain certificates (e.g. www.example.com) </li>
+</ol>
+<em>OR</em> <br /><br />
+<ol>
+<li type="a" value="2">your certificate is a root domain wildcard certificate for subdomains (e.g. \*.example.com).</li>
+</ol>
+</li>
+<li>Make sure your private certificate *does not* have a passphrase associated with it.</li>
+</ol>
 
 ### Instructions
 
 <ol>
 	<li>Go to your app console and click on the "SSL" tab on the left. </li>
-	<li>Open your certificate in your favorite text editor. Copy the *entire* contents of that file and paste it into the "Signed Certificate" field.</li>
-	<li>Open your private key in your text editor. Copy the *entire* contents of that file and paste it into the "RSA or DSA Private Key" field.</li>
+	<li>Open your certificate in your favorite text editor. Copy the <em>entire</em> contents of that file and paste it into the "Signed Certificate" field.</li>
+	<li>Open your private key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the "RSA or DSA Private Key" field.</li>
 	If you have an intermediate certificate:
 		<ol>
 			<li type="a">Check the "Use intermediate cerficate" check box and a new field will appear.</li>

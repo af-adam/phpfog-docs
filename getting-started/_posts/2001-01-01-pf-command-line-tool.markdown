@@ -72,4 +72,4 @@ This command uploads the committed changes to PHP Fog.
 
 That's it! Wait a couple of minutes for your code to deploy and you should be able to see your changes live!
 
-Ready for more? Continue on to [customize your app](/customize/).
+Ready for more? Continue on to [development](/getting-started/development).

@@ -6,7 +6,9 @@ weight: 9
 
 ### Client Email
 
-PHP Fog doesn't offer email as a service directly, but we set up integration with GMail by default, so you can easily use Google Apps to host your email. [Click here](https://www.google.com/a/cpanel/domain/new) to get started setting up GMail for your custom domain name. The DNS records for PHP Fog apps are already configured. 
+PHP Fog doesn't offer email as a service directly, but we set up integration with Gmail by default, so you can easily use Google Apps to host your email. 
+
+[Click here](https://www.google.com/a/cpanel/domain/new) to get started setting up Gmail for your custom domain name. The DNS records for PHP Fog apps are already configured. 
 
 ### App Email
 

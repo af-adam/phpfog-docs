@@ -66,7 +66,7 @@ The Alternative PHP Cache, or APC, is a free and open opcode cache for PHP that 
 
 Implementation of APC varies depending on your app. For example, the Cake framework has documentation [here](http://api.cakephp.org/file/cake/libs/cache/apc.php). Most frameworks will have similar documentation on implementation of APC.
 
-##### What if all my code is custom?
+##### What if all of my code is custom?
 
 Custom code will require a manual implementation of APC. Check out [this link](http://www.php.net/manual/en/apc.configuration.php) for more information on how to implement APC in your app.
 

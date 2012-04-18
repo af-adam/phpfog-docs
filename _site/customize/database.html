@@ -50,6 +50,8 @@
 											
 											<li ><a href="/getting-started/git.html">Git</a></li>
 											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
 										</ul>
 
 										<ul class="pages">
@@ -75,9 +77,9 @@
 											
 											<li ><a href="/best-practices/caching.html">Caching</a></li>
 											
-											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
 											
-											<li ><a href="/best-practices/data-retention.html">Data Retention</a></li>
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
 											
 										</ul>
 
@@ -96,6 +98,15 @@
 									<h2>Database</h2>
 											<p>PHP Fog provides each app with a MySQL database of 20MB.</p>
 
+<h2 id="accessing-the-database-through-phpmyadmin">Accessing the Database through phpMyAdmin</h2>
+
+<ol>
+  <li>Go to your PHP Fog app console.</li>
+  <li>Click on the &ldquo;Database&rdquo; tab on the left.</li>
+  <li>Click on the &ldquo;Launch phpMyAdmin&rdquo; button.</li>
+  <li>Log in with your MySQL credentials.</li>
+</ol>
+
 <h2 id="increasing-database-capacity">Increasing Database Capacity</h2>
 
 <p>Database capacity beyond the initial 20MB costs $2/GB per month. </p>
@@ -105,15 +116,6 @@
   <li>Click on the &ldquo;Database&rdquo; tab on the left.</li>
   <li>Use the slider to increase the capacity to suit your needs.</li>
   <li>Click on &ldquo;Save Changes&rdquo;.</li>
-</ol>
-
-<h2 id="accessing-the-database-through-phpmyadmin">Accessing the Database through phpMyAdmin</h2>
-
-<ol>
-  <li>Go to your PHP Fog app console.</li>
-  <li>Click on the &ldquo;Database&rdquo; tab on the left.</li>
-  <li>Click on the &ldquo;Launch phpMyAdmin&rdquo; button.</li>
-  <li>Log in with your MySQL credentials.</li>
 </ol>
 
 <h2 id="backups">Backups</h2>
@@ -126,27 +128,25 @@
 
 <p>Access to an app&rsquo;s database is currently restricted to your PHP app and phpMyAdmin. </p>
 
-<h2 id="third-party-databases">Third Party Databases</h2>
+<h2 id="third-party-databases">Third-Party Databases</h2>
 
-<p>You can configure your app to use a third party database e.g. an Amazon RDS instance. </p>
+<p>You can configure your app to use a third-party database, e.g. an Amazon RDS instance, which is a cloud-based relational database that&rsquo;s easy to set up, operate, and scale. Read more about it <a href="http://aws.amazon.com/rds/">here</a>.</p>
 
-<h3 id="amazon-relational-database-service">Amazon Relational Database Service</h3>
+<p>Let&rsquo;s walk through the configuration of an RDS instance. </p>
 
-<p>Amazon RDS is a cloud-based relational database that&rsquo;s easy to set up, operate, and scale. Read more about it <a href="http://aws.amazon.com/rds/">here</a></p>
+<h6 id="back-up-your-database-through-phpmyadmin">1. Back up your database through phpMyAdmin.</h6>
 
-<h3 id="back-up-your-database-through-phpmyadmin">1. Back up your database through phpMyAdmin.</h3>
-
-<h3 id="create-an-amazon-web-services-account-if-you-dont-already-have-one">2. Create an Amazon Web Services account if you don&rsquo;t already have one.</h3>
+<h6 id="create-an-amazon-web-services-account-if-you-dont-already-have-one">2. Create an Amazon Web Services account if you don&rsquo;t already have one.</h6>
 
 <p>Sign up <a href="http://aws.amazon.com/">here</a>.</p>
 
-<h3 id="set-up-rds">3. Set up RDS.</h3>
+<h6 id="set-up-rds">3. Set up RDS.</h6>
 
 <p>Make sure to note your database&rsquo;s name, user ID, password, and host name.</p>
 
-<h3 id="set-up-your-security-group">4. Set up your Security Group.</h3>
+<h6 id="set-up-your-security-group">4. Set up your Security Group.</h6>
 
-<p>a. In the RDS tab of your AWS Management Console, click on &ldquo;DB Security Groups&rdquo; in the Navigation menu on the left.</p>
+<p>a. In the &ldquo;RDS&rdquo; tab of your AWS Management Console, click on &ldquo;DB Security Groups&rdquo; in the &ldquo;Navigation&rdquo; menu on the left.</p>
 
 <p>b. Click on the &ldquo;Create DB Security Group&rdquo; button, and give your new group a name and description.</p>
 
@@ -154,12 +154,12 @@
 
 <p>d. In the &ldquo;Description&rdquo; tab at the bottom: 
 	Set the drop down to &ldquo;EC2 Security Group&rdquo;. 
-	Change the AWS Account ID to &ldquo;512617943067&rdquo;.
+	Change the &ldquo;AWS Account ID&rdquo; to &ldquo;512617943067&rdquo;.
 	Set the &ldquo;EC2 Security Group&rdquo; field to &ldquo;fog_user&rdquo;.</p>
 
 <p>e. Wait for the status to change to &ldquo;authorized&rdquo;.</p>
 
-<h3 id="change-your-apps-database-configuration">5. Change your app&rsquo;s database configuration.</h3>
+<h6 id="change-your-apps-database-configuration">5. Change your app&rsquo;s database configuration.</h6>
 
 <p>We&rsquo;ll use WordPress as an example.</p>
 
@@ -189,7 +189,7 @@ define('DB_COLLATE', '');
 
 <p>d. Commit your changes to git (but don&rsquo;t push yet).</p>
 
-<h3 id="synchronize-your-databases">6. Synchronize your databases.</h3>
+<h6 id="synchronize-your-databases">6. Synchronize your databases.</h6>
 
 <p>a. Log in to your phpMyAdmin and click on the &ldquo;Synchronize&rdquo; tab at the top.</p>
 
@@ -199,7 +199,7 @@ define('DB_COLLATE', '');
 
 <p>d. Hit the &ldquo;Go&rdquo; button.</p>
 
-<h3 id="push-your-code-to-php-fog">7. Push your code to PHP Fog.</h3>
+<h6 id="push-your-code-to-php-fog">7. Push your code to PHP Fog.</h6>
 
 <p>You&rsquo;re done!</p>
 

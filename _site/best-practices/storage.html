@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation CloudMailin</title> 
+		<title>PHP Fog &mdash; Documentation Storage</title> 
 		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
 	</head>
@@ -26,8 +26,8 @@
 						<nav class="breadcrumb">
 							<ul>
 								<li><a href="/">Documentation</a></li>
-								<li><a href="/addons">Add-ons</a></li>
-								<li>CloudMailin</li>
+								<li><a href="/best-practices">Best Practices</a></li>
+								<li>Storage</li>
 							</ul>
 						</nav>
 								
@@ -77,7 +77,7 @@
 											
 											<li ><a href="/best-practices/caching.html">Caching</a></li>
 											
-											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											<li class="on"><a href="/best-practices/storage.html">Storage</a></li>
 											
 											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
 											
@@ -95,43 +95,28 @@
 									</nav>
 									<div class="tab-content activated">
 										<div class="on ui-box-content">
-									<h2>CloudMailin</h2>
-											<h3 id="install-cloudmailin">Install CloudMailin</h3>
+									<h2>Storage</h2>
+											<p>As a general principle, PHP Fog app servers are designed to your app&rsquo;s executable code. PHP Fog isn&rsquo;t designed to handle large static assets like images, audio, video, etc. Fortunately, there are third-party services that <em>are</em> designed to handle that stuff that you can easily integrate with your app. </p>
 
-<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the CloudMailin add-on. That&rsquo;s it!</p>
+<p>We recommend storing these assets in Amazon&rsquo;s Simple Storage System (in the US-East region for the lowest latency). This will not only make your app easily scalable, but it will also reduce load on your app server(s). </p>
 
-<h3 id="receive-email">Receive Email</h3>
+<p>Nettuts+ has <a href="http://net.tutsplus.com/tutorials/php/how-to-use-amazon-s3-php-to-dynamically-store-and-manage-files-with-ease/">a great writeup</a> on using S3 to store and manage files. </p>
 
-<p>Cloudmailin can receive email and forward them to your app by performing a POST to a specific page.</p>
+<h3 id="custom-applications">Custom Applications</h3>
 
-<p>Log in to the Cloudmailin console by clicking &ldquo;Manage&rdquo; on the add-on in your PHP Fog app console.</p>
+<p>Integrating S3 into your custom PHP Fog app is easy. You can use a number of tools to upload your assets to your S3 bucket including the <a href="https://github.com/s3tools/s3cmd">s3cmd command line tool</a> and <a href="http://aws.amazon.com/developertools/Amazon-S3/771">Amazon S3 Organizer extension for Firefox</a>. Amazon has a whole list of developer tools <a href="http://aws.amazon.com/developertools/Amazon-S3">here</a>. </p>
 
-<p>Go to &ldquo;Edit Target&rdquo; and specify the address in your application that will receive the emails via an HTTP POST (e.g. /mail.php).</p>
+<p>Once you&rsquo;ve uploaded your assets, you can make them publicly available in S3 and reference them from your PHP Fog app.</p>
 
-<p>Here&rsquo;s the code that goes into that page:</p>
+<h3 id="wordpress">WordPress</h3>
 
-<pre><code>&lt;?php
-$from = $_POST['from'];
-$to = $_POST['to'];
-$plain_text = $_POST['plain'];
+<p>If you installed WordPress using our Jumpstart, you already have the <a href="http://wordpress.org/extend/plugins/tantan-s3/">Amazon S3 plugin</a> installed. This plugin transparently integrates with your WordPress app. Just activate the plugin and provide your Amazon S3 credentials and your app will automatically save file uploads into your Amazon S3 bucket. Once saved, Amazon S3 will serve these files instead of your app server. </p>
 
-header("Content-type: text/plain");
+<p>You&rsquo;ll also find an &ldquo;Amazon S3&rdquo; tab next to your regular &ldquo;Upload&rdquo; tab in your WordPress admin panel, which allows you to easily browse and manage files that you uploaded directly to S3.</p>
 
-if ($to == getenv("CLOUDMAILIN_FORWARD_ADDRESS")){
-header("HTTP/1.0 200 OK");
-echo('success');
-}else{
-header("HTTP/1.0 403 OK");
-echo('user not allowed here');
-}
+<h3 id="drupal">Drupal</h3>
 
-exit;
-?&gt;
-</code></pre>
-
-<p>That&rsquo;s it! Now any email sent to your CloudMailin email address will forward to your app. You can always check to see what your CloudMailin email address is by going to the &ldquo;Env. Variables&rdquo; tab in your PHP Fog app console and looking for the &ldquo;<code>CLOUDMAILIN_FORWARD_ADDRESS</code>&rdquo;, or by logging in to CloudMailin directly. </p>
-
-<p>You can set up your custom domain emails to forward, too. You can find information on that <a href="http://docs.cloudmailin.com/receiving_email/forwarding_and_custom_domains/">here</a>.</p>
+<p><a href="http://drupal.org/project/amazons3">Drupal&rsquo;s Amazon S3 module</a> makes integrating S3 with your Drupal app very easy. An alternative is upload your app&rsquo;s static assets to S3 and set up <a href="http://drupal.org/project/cdn">AWS Cloudfront CDN</a>. </p>
 
 
 										</div>
