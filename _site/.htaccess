@@ -1,0 +1,21 @@
+DirectoryIndex index.html index.xml
+
+Options +FollowSymlinks
+RewriteEngine On
+DirectorySlash Off
+
+ErrorDocument 404 http://byjoemoon.com/404
+
+# Append trailing slash to directories
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^_site/(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
+
+# Remove .html extension
+RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
+RewriteRule ^_site/(.+)\.html$ http://%{HTTP_HOST}/$1/ [R=301,L]
+
+# add .html file extension (if such file does exist)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^.+$ %{REQUEST_FILENAME}.html [L]
