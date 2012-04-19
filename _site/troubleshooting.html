@@ -137,60 +137,78 @@
 
 <h6 id="service-unavailable">503: Service Unavailable</h6>
 
-<p>HTTP 503 errors are effectively &ldquo;Closed For Repair&rdquo; errors and are specified by your app. These errors happen when your app is set to return this error directly. To resolve this error message you will need to check your Apps&rsquo; settings and code to stop your app from returning this error directly.</p>
+<p>HTTP 503 errors are specified by your app.</p>
 
 <h6 id="gateway-timeout">504: Gateway Timeout</h6>
 
-<p>HTTP 504 Gateway Timeout
-This error is due to your app being unable to service requests. Because this error is returned by Apache, it is highly likely your App being overloaded with requests from visitors. To address this issue read this article talking about 504 errors.</p>
+<p>HTTP 504 errors mean your app is unable to service requests. The load balancers that sit between your app and its HTTP clients are configured to timeout requests after 60 seconds. So after the load balancer receives the initial request and forwards it to your app server, if the load balancer doesn&rsquo;t receive anything for 60 seconds, it returns a 504 error to the client.</p>
 
-<p>The Load Balancer between the HTTP Client and your application is configured to timeout requests after 60 seconds and result in a &ldquo;504 Gateway Time-out&rdquo; error being returned to the HTTP client (i.e. browser). This can be caused by blocking sync calls to other services or because of CPU over-utilization. There are also a number of mitigations to deal with these problems.</p>
+<p>Timeouts can be caused by a a variety of reasons, but the two most common are: 1. CPU over-utilization, and 2. blocking sync calls to other services. </p>
 
-<p>Blocking calls to other services</p>
+<h6 id="cpu">CPU</h6>
 
-<p>If your application makes calls to third party services (like the examples below) these calls may be blocking. That is, when your applications make a call to a method like file_get_contents() it will not return until the full HTTP transaction is complete. Making numerous calls like this may cause the time to complete all the transactions longer than the timeout period of the HTTP servers.</p>
+<p>If your app is on a Shared or Silver Cloud, the CPU utilization is throttled in &ldquo;Bursts&rdquo;. These plans provide a small amount of consistent CPU resources and allow your application to burst CPU capacity when additional cycles are available. They are well suited for lower throughput applications and web sites that consume significant compute cycles periodically. If the processing takes longer than a burst, the processing gets heavily throttled. This means something that can take just a few seconds on your desktop might take much longer on these plans and therefore cause the HTTP request to timeout.</p>
 
-<p>Sending an email</p>
+<p>Processes that can cause this include: </p>
 
-<p>Calling a remote API (e.g. Twitter, Facebook, etc)
-Web scraping
-CPU over-utilization
-If using the Silver or Free plan the CPU utilization is throttled in &ldquo;Bursts&rdquo;. These plans provide a small amount of consistent CPU resources and allow your application to burst CPU capacity when additional cycles are available. They are well suited for lower throughput applications and web sites that consume significant compute cycles periodically. If the processing takes longer than a burst, the processing gets heavily throttled. This means something that can take just a few seconds on your desktop might take much longer on these plans and therefore cause the HTTP request to timeout.</p>
+<ul>
+  <li>Rendering an image or PDF</li>
+  <li>XML parsing of a large file</li>
+  <li>Heavy calculations (e.g. Fourier transform of an MP3)</li>
+</ul>
 
-<p>Rendering an image or PDF
-XML parsing of a large file
-Heave calculations (e.g. Fourier transform of an MP3)
-Mitigations
-Use asynchronous calls instead of synchronous calls. This only makes sense when your application doesn&rsquo;t need the returned value. Check out the StackOverflow article Asynchronous PHP Calls for more info.
-Upgrade to a Gold or Platinum plan. The Gold and Platinum plans are not throttle for bursts therefore your application gets consistent processing. This is a very simple implementation; however, it might not suffice. This is only useful if the processing time is fast enough that it can be processed synchronously and returned to the requester.
-Use a dedicated EC2 sever for asynchronous processing. Create a new Amazon EC2 server dedicated to the heavy processing (the &ldquo;worker&rdquo;), and use the Amazon SQS to queue jobs. This way the front-end can add jobs to the queue and then the worker can pull and process them as it becomes available. This design enables more efficient utilization of resources and ability to handle</p>
+<h6 id="blocking-calls-to-other-services">Blocking calls to other services</h6>
 
-<p>More Information
-For more information on 500 errors and how to diagnose them for your specific situation, please check out the following links:</p>
+<p>If your application makes calls to third-party services these calls may be blocking. That is, when your applications make a call to a method like file_get_contents() it won&rsquo;t finish until the full HTTP transaction is complete. Making too many calls like this may cause the time to complete all the transactions longer than the timeout period.</p>
 
-<p>Wikipedia Article
-Drupal
-WordPress</p>
+<p>Calls that can cause this include:</p>
+
+<ul>
+  <li>Sending email</li>
+  <li>Calling remote APIs (e.g. Twitter, Facebook, etc)</li>
+  <li>Web-scraping</li>
+</ul>
+
+<h6 id="solutions">Solutions</h6>
+
+<ul>
+  <li>
+    <p>Take full advantage of <a href="/best-practices/caching">caching</a>.</p>
+  </li>
+  <li>
+    <p>Upgrade your Cloud. </p>
+
+    <p>Gold and Platinum Clouds provide consistent processing power. This is a simple answer, but it&rsquo;s not necessarily the right one for every case. If your app&rsquo;s processes consistently take too long, this might not help. </p>
+  </li>
+  <li>
+    <p>Use asynchronous calls instead of synchronous calls. </p>
+
+    <p>This only makes sense when your application doesn&rsquo;t need the returned value. Check out <a href="http://stackoverflow.com/questions/124462/asynchronous-php-calls">this StackOverflow question on asynchronous PHP calls</a> for more information.</p>
+  </li>
+  <li>
+    <p>Off-load heavy processing to an external service. </p>
+
+    <p>Try our <a href="http://phpfog.com/addons">IronWorker</a> add-on to take some of the asynchronous processing load from your app server. Or, you can create a new Amazon EC2 server dedicated to the heavy processing (the &ldquo;worker&rdquo;), and use <a href="http://aws.amazon.com/sqs/">Amazon&rsquo;s Simple Queue Service</a> to queue jobs. This allows your app to add jobs to the queue and then the worker can pull and process them as it becomes available. </p>
+  </li>
+</ul>
 
 <h3 id="ssl">SSL</h3>
 
 <h6 id="doman-name-mismatch">&ldquo;Doman name mismatch&rdquo;</h6>
 
-<p>My browser says that there is a &ldquo;domain name mismatch.&rdquo; What does that mean?</p>
+<p>A domain name mismatch means that the domain name on your certificate doesn&rsquo;t match your app&rsquo;s actual URL. For example, your certificate might say &ldquo;<code>foo.com</code>&rdquo; while your app&rsquo;s domain is actually &ldquo;<code>www.foo.com</code>&rdquo;.</p>
 
-<p>A domain name mismatch happens when your certificate says you domain name is something and your site address is actually something else (IE www.foo.com vs foo.com)</p>
-
-<p>The Solution: Change your site&rsquo;s name to match the certificate. Alternatively, you can have a new certificate issued to match your site (this includes wildcard certificates i.e. *.foo.com)</p>
+<p>Solution: Change your app&rsquo;s domain name to match the certificate. Alternatively, you can have a new certificate issued to match your app&rsquo;s domain name (this includes wildcard certificates, e.g. &ldquo;<code>\*.foo.com</code>&rdquo;).</p>
 
 <h6 id="cannot-verify">&ldquo;Cannot verify&rdquo;</h6>
 
-<p>My browser says that it &ldquo;Cannot Verify&rdquo; the site! What&rsquo;s going on?
-Many things could be wrong. Most commonly, however, your certificate has expired.
-The Solution: Get your Certificate Authority to update your certificate.</p>
+<p>The most common reason your browser cannot verify your app is an expired certificate. </p>
 
-<h6 id="my-certificate-authority-says-i-need-a-csr-what-can-i-do">My Certificate authority says I need a CSR, what can I do?</h6>
+<p>Solution: Have your Certificate Authority update your certificate.</p>
 
-<p>The Solution: To generate a CSR on your local machine for PHP Fog check out this Document</p>
+<h6 id="certificate-authority-says-i-need-a-csr">Certificate Authority says I need a CSR.</h6>
+
+<p>Solution: To generate a CSR on your local machine for PHP Fog check out <a href="http://www.globalsign.com/support/csr/serversign_apache.php">this document</a>.</p>
 
 
 										</div>
