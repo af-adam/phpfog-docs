@@ -62,6 +62,10 @@ Git is a one-way versioning tool. That means any changes you make to your file s
 
 For WordPress, you can get a backup of your file system with the [ManageWP plugin](http://managewp.com/).
 
+#### How do I log into New Relic? {#newrelic}
+
+Just use the email address your PHP Fog account is under as your username and your original MySQL password. 
+
 #### Can my app access third party services? {#3rdparty}
 
 Yes. PHP Fog apps have no firewalls or other network blocking mechanisms, so your app is free to call external web services.
@@ -74,11 +78,11 @@ Yes. PHP Fog apps have no firewalls or other network blocking mechanisms, so you
 
 #### What are the differences between Shared and Dedicated Clouds? {#sharedvdedicated}
 
-In order to ensure the security of your application in the shared environment we restrict certain configurations and functions.
+In order to ensure the security of your Shared Cloud app, we restrict certain configurations and functions.
 
 ###### Server Resources
 
-Shared Cloud apps run on a Shared server alongside many other apps Shared apps. This means your server resources are restricted as follows:
+Shared Cloud apps run on a Shared Cloud server alongside many other Shared apps. This means your server resources are restricted as follows:
 
 * 100M storage
 * Shared CPU, memory, and filesystem
@@ -139,10 +143,6 @@ The following functions are disabled on our Shared Cloud to ensure the security 
 * posix_uname
 
 Check out [this page](http://limits.phpfogapp.com/) for more information on the PHP restrictions of our Shared service. 
-
-#### How do I log into New Relic?  {#newrelic}
-
-Just use the email address your PHP Fog account is under as your username and your original MySQL password. 
 
 #### Can I migrate from a Dedicated Cloud to a Shared Cloud? {#migrate}
 
