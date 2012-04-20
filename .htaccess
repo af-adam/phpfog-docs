@@ -42,6 +42,7 @@ redirect 301 /features/article/mongolab /addons/mongolab
 redirect 301 /features/article/new_relic /addons/newrelic
 redirect 301 /features/article/supported_frameworks http://www.phpfog.com/jumpstarts
 redirect 301 /customize/addons http://www.phpfog.com/addons
+redirect 301 /addons/ http://www.phpfog.com/addons
 
 # redirect 301 /features/article/facebook 
 # redirect 301 /features/article/migrate_your_wordpress_blog_to_php_fog 
