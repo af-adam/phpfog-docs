@@ -130,20 +130,23 @@ Or install with Homebrew:
 
 In the root project directory, create a "composer.json" manifest file:
 
+	{
+		"require": {
+			"symfony/yaml": ">=2.0.6",
+			"imagine/Imagine": ">=0.2.8"
+		}
+	}
 
-TKTKTK
 
 ### 3. Fetch dependencies.
 
 In the directory you created "composer.json", run the following command:
 
-    $ php composer.phar install
+    $ composer.phar install
 
 Composer will create a `vendor` directory and download the required libraries there. You have to use this `install` command every time you add a new library. Composer records the version numbers of the libraries it fetches in the `composer.lock` file. It does this to maintain project stability by guaranteeing that Composer only uses the library versions you used to develop and test the project.
 
 Below is what a simple project directory might look like after running the install command:
-
-TKTKTK
 
 	├── composer.json \<- Manifest created above
 	├── composer.lock \<- Generated lock file preserves current dependency versions

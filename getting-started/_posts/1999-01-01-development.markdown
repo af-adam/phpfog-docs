@@ -18,7 +18,7 @@ Install <a href="/faqs#version">these versions</a> of Apache, MySQL, and PHP.
 
 ###### Windows
 
-Download and install <a href="http://www.wampserver.com/en/">WAMPP</a>.
+Download and install <a href="http://www.wampserver.com/en/">WAMP</a>.
 
 ### 2. Create environment variables.
 

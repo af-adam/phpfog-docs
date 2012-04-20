@@ -235,20 +235,24 @@ tmp/**/*
 
 <p>In the root project directory, create a &ldquo;composer.json&rdquo; manifest file:</p>
 
-<p>TKTKTK</p>
+<pre><code>{
+	"require": {
+		"symfony/yaml": "&gt;=2.0.6",
+		"imagine/Imagine": "&gt;=0.2.8"
+	}
+}
+</code></pre>
 
 <h3 id="fetch-dependencies">3. Fetch dependencies.</h3>
 
 <p>In the directory you created &ldquo;composer.json&rdquo;, run the following command:</p>
 
-<pre><code>$ php composer.phar install
+<pre><code>$ composer.phar install
 </code></pre>
 
 <p>Composer will create a <code>vendor</code> directory and download the required libraries there. You have to use this <code>install</code> command every time you add a new library. Composer records the version numbers of the libraries it fetches in the <code>composer.lock</code> file. It does this to maintain project stability by guaranteeing that Composer only uses the library versions you used to develop and test the project.</p>
 
 <p>Below is what a simple project directory might look like after running the install command:</p>
-
-<p>TKTKTK</p>
 
 <pre><code>├── composer.json \&lt;- Manifest created above
 ├── composer.lock \&lt;- Generated lock file preserves current dependency versions
