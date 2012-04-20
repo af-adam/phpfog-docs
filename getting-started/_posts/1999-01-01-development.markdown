@@ -10,25 +10,28 @@ Now that you can push code to and from your app, you'll want to set up a local d
 
 ###### Mac OSX
 
-<ol>
-<li type="a">Download and install [MAMP](http://www.mamp.info/en/index.html).</li>
-<li type="a">TKTKTK</li>
-</ol>
+Download and install <a href="http://www.mamp.info/en/index.html">MAMP</a>.
 
 ###### Linux
 
+Install <a href="/faqs#version">these versions</a> of Apache, MySQL, and PHP.
+
 ###### Windows
 
-<ol>
-<li type="a">Download and install [XAMPP]().</li>
-<li type="a">TKTKTK</li>
-</ol>
+Download and install <a href="http://www.wampserver.com/en/">WAMPP</a>.
 
 ### 2. Create environment variables.
 
-After you have your local environment set up, you'll want to be able to deploy the same code in both your local environment and your live remote server. In order to do this, you'll want to set up many of your configuration in environment variables.
+After you have your local environment set up, you'll want to be able to deploy the same code in both your local environment and your live PHP Fog Cloud. In order to do this, you'll place the necessary configuration elements in environment variables.
 
 <ol>
-<li type="a">Local</li>
-<li type="a">PHP Fog app console</li>
+<li type="a">Make sure your code references relative URLs.</li>
+<li type="a">Create environment variables on your local machine. You'll want these to include database host name, database name, username, and password.</li>
+<li type="a">Go to your PHP Fog app console and create those same environment variables with the PHP Fog values.</li>
+<li type="a">Change those values in your code base to the environment variables.</li>
 </ol>
+
+
+### WordPress Walkthrough
+
+Smashing Magazine has [a great walkthrough](http://wp.smashingmagazine.com/2011/09/28/developing-wordpress-locally-with-mamp/) on setting up a local development environment for WordPress.
