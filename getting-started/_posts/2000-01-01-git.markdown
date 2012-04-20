@@ -187,7 +187,7 @@ Want to learn more about Composer? Check out [the project page](http://getcompos
 
 ## Git Submodules
 
-TK
+Git submodules are supported with our [PF Command Line Tool](/getting-started/pf-command-line-tool/).
 
 
 Ready to start developing your app? [Read on](/getting-started/development).
