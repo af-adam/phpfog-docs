@@ -10,7 +10,13 @@ In the "Add-ons" tab in your app console click "Install" for the Mailgun add-on.
 
 ### Pricing
 
-With the Mailgun add-on for PHP Fog, you get a free plan that includes TK emails per month. 
+With the Mailgun add-on for PHP Fog, you get a free plan that includes: 
+
+* 300 messages per day
+* Real time reports and stats
+* Fully featured account
+* Temporary mailbox storage
+* Premium support
 
 If you need more than that, you can upgrade through Mailgun. Check out their pricing [here](http://mailgun.net/pricing).
 
