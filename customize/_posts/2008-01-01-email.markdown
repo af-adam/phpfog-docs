@@ -2,6 +2,7 @@
 title: Email
 layout: doc-page
 weight: 9
+description: "Sending and receiving email with your PHP Fog app."
 ---
 
 ### Client Email

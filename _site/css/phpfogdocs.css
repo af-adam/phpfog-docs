@@ -117,3 +117,13 @@ background: rgba(0, 0, 0, 0);
 nav.tab-container a > h6 {
 	margin-bottom: 0;
 }
+
+p {
+	margin: 0 0 1em;
+}
+
+div.listing {
+	width: 360px;
+	float: left;
+	margin-top: 24px;
+}

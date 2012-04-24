@@ -2,6 +2,7 @@
 title: SSL for Custom Domain Names
 layout: doc-page
 weight: 6
+description: How to set up your SSL Certificate for HTTPS.
 ---
 
 ### 1. Before You Begin

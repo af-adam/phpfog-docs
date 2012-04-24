@@ -2,6 +2,7 @@
 title: Permissions
 layout: doc-page
 weight: 7
+description: "How to add writable permissions."
 ---
 
 By default, all PHP Fog apps have only read access to files and directories. To add write permissions to a file or directory:

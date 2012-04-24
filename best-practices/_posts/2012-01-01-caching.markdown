@@ -2,6 +2,7 @@
 title: Caching
 layout: doc-page
 weight: 11
+description: "Use caching to get more with less."
 ---
 
 PHP Fog apps can take advantage of two types of caching: Varnish and APC. Proper configuration of these two types of caching can significantly improve the performance of your app, providing a better experience for your users. 

@@ -2,6 +2,7 @@
 title: Git
 layout: doc-page
 weight: 4
+description: "For developers already familiar with Git."
 ---
 
 Git is a free and open source distributed version control system for source code. It allows you to manage your code between your local machine and the remote server. Read more about git [here](http://git-scm.com/). 

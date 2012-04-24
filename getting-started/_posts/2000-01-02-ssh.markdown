@@ -2,9 +2,16 @@
 title: SSH
 layout: doc-page
 weight: 3
+description: "Everything you need to know about SSH."
 ---
 
 In order to access and modify your source code on PHP Fog, you'll need to generate an SSH key and add it to your PHP Fog account. This tutorial will walk you through that process for Mac OS X. 
+
+Looking for a way to handle multiple SSH keys? [Click here](#handling-multiple-ssh-keys-for-a-single-account).
+
+Multiple PHP Fog accounts? [Here](#multiple). 
+
+Running into problems? Try [our Troubleshooting Guide for SSH](/troubleshooting#ssh).
 
 ### 1. First, make sure you don't have a key already.
 
@@ -92,6 +99,8 @@ A real key will look like:
 Now log in to the PHP Fog App Console and click on the "SSH Keys" tab. Hit the "Add another SSH key" button and paste the public key into the "SSH Public Key" field, give it a name, and hit "Save Changes".
 
 That's it, you've generated a new SSH key and added it to PHP Fog!
+
+Running into problems? Check out our guide on [troubleshooting ssh](/troubleshooting#ssh).
 
 ## Handling Multiple SSH Keys for a Single Account
 

@@ -2,6 +2,7 @@
 title: php.ini
 layout: doc-page
 weight: 10
+description: "How to use php.ini with your PHP Fog app."
 ---
 
 PHP Fog does not support direct access to php.ini. However, the `AllowOverride` directive in php.ini is set to "`All`" which enables you to set the values of the directives in your .htaccess or in your PHP file via `ini_set()`.

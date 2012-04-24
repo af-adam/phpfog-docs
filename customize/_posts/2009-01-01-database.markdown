@@ -2,6 +2,7 @@
 title: Database
 layout: doc-page
 weight: 8
+description: "Everything you need to know about your PHP Fog Database."
 ---
 
 PHP Fog provides each app with a MySQL database of 20MB.

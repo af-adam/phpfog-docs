@@ -2,6 +2,7 @@
 title: Custom Domain Names
 layout: doc-page
 weight: 5
+description: Brand your app. 
 ---
 
 With PHP Fog you can host custom domain names (e.g. my-web-app.com) or PHP Fog domain names (e.g. my-web-app.phpfogapp.com). If you use a phpfogapp.com domain name, then PHP Fog manages the DNS records for you, so you don't have to do anything. If you want to use a custom domain name, read on.

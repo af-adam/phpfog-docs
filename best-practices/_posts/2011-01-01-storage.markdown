@@ -2,9 +2,10 @@
 title: Storage
 layout: doc-page
 weight: 13
+description: Where to keep your static content. 
 ---
 
-As a general principle, PHP Fog app servers are designed to your app's executable code. PHP Fog isn't designed to handle large static assets like images, audio, video, etc. Fortunately, there are third-party services that *are* designed to handle that stuff that you can easily integrate with your app. 
+As a general principle, PHP Fog app servers are designed to run your app's executable code. PHP Fog isn't designed to handle large static assets like images, audio, video, etc. Fortunately, there are third-party services that *are* designed to handle that stuff that you can easily integrate with your app. 
 
 We recommend storing these assets in Amazon's Simple Storage System (in the US-East region for the lowest latency). This will not only make your app easily scalable, but it will also reduce load on your app server(s). 
 

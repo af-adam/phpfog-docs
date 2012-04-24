@@ -4,6 +4,10 @@ layout: doc-page
 weight: 16
 ---
 
+Here are some of the most common issues and how to deal with them. 
+
+Don't see your issue here? Try our [community](http://community.phpfog.com/) or [email our support desk](mailto:support@appfog.com).
+
 * [SSH, Git, and PF Command Line Tool](#ssh)
 * [HTTP 500, 502, 503, and 504 Errors](#500)
 * [SSL](#ssl)
@@ -23,7 +27,7 @@ weight: 16
 
 ###### "Unauthorized access for user"
 
-This error occurs when you try to use the same SSH key for multiple accounts. 
+This error occurs when you try to use the same SSH key for multiple accounts. You'll have to generate a new key for each account. Check out [our guide on using SSH keys with multiple account](/getting-started/ssh#multiple).
 
 ### HTTP 500, 502, 503, and 504 Errors {#500}
 
