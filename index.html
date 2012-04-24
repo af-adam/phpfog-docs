@@ -1,0 +1,49 @@
+---
+layout: default
+title: Welcome to PHP Fog Documentation!
+---
+
+<p>PHP Fog is a rock-solid Cloud Platform for PHP. New to PHP Fog? <a href="/getting-started">Get started here.</a></p>
+
+<p>Have a question? Try our <a href="/faqs">FAQs</a>.</p>
+
+<p>Running into a problem? Check out our <a href="/troubleshooting">Troubleshooting Guide</a>.</p>
+
+<p>Can't find the answer you're looking for? Try our <a href="http://community.phpfog.com/">Community</a> or <a href="mailto:support@appfog.com">email our support desk</a>.</p>
+
+<div class="listing">
+<a href="/getting-started/"><h6>Getting Started</h6></a>
+<ol>
+{% for current in site.categories.getting-started %}
+<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+{% endfor %}
+</ol>
+</div>
+
+<div class="listing">
+<a href="/customize/"><h6>Customize Your App</h6></a>
+<ol>
+<li><a href="http://phpfog.com/addons">Add-ons</a>
+{% for current in site.categories.customize %}
+<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+{% endfor %}
+</ol>
+</div>
+
+<div class="listing">
+<a href="/best-practices/"><h6>Best Practices</h6></a>
+<ol>
+{% for current in site.categories.best-practices %}
+<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+{% endfor %}
+</ol>
+</div>
+
+<div class="listing">
+<a href="/faqs"><h6>Frequently Asked Questions</h6></a>
+<a href="http://phpfog.com/pricing"><h6>Pricing</h6></a>
+<a href="/billing"><h6>Billing</h6></a>
+<a href="/reliability"><h6>Reliability</h6></a>
+<a href="/security"><h6>Security</h6></a>
+<a href="/troubleshooting"><h6>Troubleshooting</h6></a>
+</div>

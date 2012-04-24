@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation Database</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/customize">Customize Your App</a></li>
+								<li>Database</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li class="on"><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>Database</h2>
+											<p>PHP Fog provides each app with a MySQL database of 20MB.</p>
+
+<h2 id="accessing-the-database-through-phpmyadmin">Accessing the Database through phpMyAdmin</h2>
+
+<ol>
+  <li>Go to your PHP Fog app console.</li>
+  <li>Click on the &ldquo;Database&rdquo; tab on the left.</li>
+  <li>Click on the &ldquo;Launch phpMyAdmin&rdquo; button.</li>
+  <li>Log in with your MySQL credentials.</li>
+</ol>
+
+<h2 id="increasing-database-capacity">Increasing Database Capacity</h2>
+
+<p>Database capacity beyond the initial 20MB costs $2/GB per month. </p>
+
+<ol>
+  <li>Go to your PHP Fog app console.</li>
+  <li>Click on the &ldquo;Database&rdquo; tab on the left.</li>
+  <li>Use the slider to increase the capacity to suit your needs.</li>
+  <li>Click on &ldquo;Save Changes&rdquo;.</li>
+</ol>
+
+<h2 id="backups">Backups</h2>
+
+<p>You can perform manual backups of your app&rsquo;s database by exporting it through phpMyAdmin. We don&rsquo;t support automated backups to users&rsquo; systems yet, but that feature is on our road map. </p>
+
+<p>PHP Fog also backs up your app&rsquo;s database on a daily basis and keeps the backups for one week. You can contact <a href="mailto:support@appfog.com">support@appfog.com</a> for access to these.</p>
+
+<h2 id="remote-database-access">Remote Database Access</h2>
+
+<p>Access to an app&rsquo;s database is currently restricted to your PHP app and phpMyAdmin. </p>
+
+<h2 id="third-party-databases">Third-Party Databases</h2>
+
+<p>You can configure your app to use a third-party database, e.g. an Amazon RDS instance, which is a cloud-based relational database that&rsquo;s easy to set up, operate, and scale. Read more about it <a href="http://aws.amazon.com/rds/">here</a>.</p>
+
+<p>Let&rsquo;s walk through the configuration of an RDS instance. </p>
+
+<h6 id="back-up-your-database-through-phpmyadmin">1. Back up your database through phpMyAdmin.</h6>
+
+<h6 id="create-an-amazon-web-services-account-if-you-dont-already-have-one">2. Create an Amazon Web Services account if you don&rsquo;t already have one.</h6>
+
+<p>Sign up <a href="http://aws.amazon.com/">here</a>.</p>
+
+<h6 id="set-up-rds">3. Set up RDS.</h6>
+
+<p>Make sure to note your database&rsquo;s name, user ID, password, and host name.</p>
+
+<h6 id="set-up-your-security-group">4. Set up your Security Group.</h6>
+
+<p>a. In the &ldquo;RDS&rdquo; tab of your AWS Management Console, click on &ldquo;DB Security Groups&rdquo; in the &ldquo;Navigation&rdquo; menu on the left.</p>
+
+<p>b. Click on the &ldquo;Create DB Security Group&rdquo; button, and give your new group a name and description.</p>
+
+<p>c. Select the security group you just created. </p>
+
+<p>d. In the &ldquo;Description&rdquo; tab at the bottom: 
+	Set the drop down to &ldquo;EC2 Security Group&rdquo;. 
+	Change the &ldquo;AWS Account ID&rdquo; to &ldquo;512617943067&rdquo;.
+	Set the &ldquo;EC2 Security Group&rdquo; field to &ldquo;fog_user&rdquo;.</p>
+
+<p>e. Wait for the status to change to &ldquo;authorized&rdquo;.</p>
+
+<h6 id="change-your-apps-database-configuration">5. Change your app&rsquo;s database configuration.</h6>
+
+<p>We&rsquo;ll use WordPress as an example.</p>
+
+<p>a. In your WordPress app&rsquo;s git repository, find the file <code>wp-config.php</code> and open it in your favorite text editor.</p>
+
+<p>b. Find the following code and input the information from your RDS database:</p>
+
+<pre><code>define('DB_NAME', '&lt;your RDS database's name&gt;');
+
+/** MySQL database username */
+define('DB_USER', '&lt;your RDS user ID&gt;');
+
+/** MySQL database password */
+define('DB_PASSWORD', '&lt;your RDS password&gt;');
+
+/** MySQL hostname */
+define('DB_HOST', '&lt;your RDS host name&gt;');
+
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
+
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
+</code></pre>
+
+<p>c. Save and quit.</p>
+
+<p>d. Commit your changes to git (but don&rsquo;t push yet).</p>
+
+<h6 id="synchronize-your-databases">6. Synchronize your databases.</h6>
+
+<p>a. Log in to your phpMyAdmin and click on the &ldquo;Synchronize&rdquo; tab at the top.</p>
+
+<p>b. Under &ldquo;Source database&rdquo;, set the drop down menu to &ldquo;Current connection&rdquo;.</p>
+
+<p>c. Under &ldquo;Target database&rdquo;, enter your RDS database information. (Leave the &ldquo;Socket&rdquo; field blank.)</p>
+
+<p>d. Hit the &ldquo;Go&rdquo; button.</p>
+
+<h6 id="push-your-code-to-php-fog">7. Push your code to PHP Fog.</h6>
+
+<p>You&rsquo;re done!</p>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

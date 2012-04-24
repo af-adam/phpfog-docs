@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation Caching</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/best-practices">Best Practices</a></li>
+								<li>Caching</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li class="on"><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>Caching</h2>
+											<p>PHP Fog apps can take advantage of two types of caching: Varnish and APC. Proper configuration of these two types of caching can significantly improve the performance of your app, providing a better experience for your users. </p>
+
+<h3 id="varnish">Varnish</h3>
+
+<p>All PHP Fog apps are fronted by Varnish, a web application accelerator that runs in front of your app server and caches content according to your HTTP Header information. Varnish can speed up delivery of your content by a factor of 300-1000, depending on your app. For more information, check out <a href="https://www.varnish-cache.org/">the Varnish site</a>. </p>
+
+<h6 id="default-caching">Default Caching</h6>
+
+<p>Varnish caches content automatically for 300 seconds (5 minutes). For static content, this means you don&rsquo;t you have to do anything to take advantage of Varnish.</p>
+
+<p>There are two key exceptions, though. First, if there are cookies in the HTTP header on the request or response, the page will not be cached. Second, only responses to GET requests can be cached.</p>
+
+<h6 id="caching-with-cookies">Caching with Cookies</h6>
+
+<p>Requests that include cookies are not cached by default so that stale cookies don&rsquo;t impact the application behavior.</p>
+
+<p>In a few cases cookies are used client-side only, i.e. the cookies may be produced and consumed by JavaScript but are never processed by the PHP application. For example, Google Analytics uses cookies to store information about the page. In order to try to maximize default caching, Varnish will drop these special case cookies being sent in the HTTP request to the app. If those cookies are dropped and no other cookies are present, the page can follow the default caching behavior. </p>
+
+<p>Currently only the following cookies are dropped:</p>
+
+<ul>
+  <li>Cookies with no values (i.e. empty).</li>
+  <li>Cookies from Google Analytics.</li>
+  <li>Cookies with the name &ldquo;has_js&rdquo;.</li>
+</ul>
+
+<p>We can also setup a custom configuration for your application. We&rsquo;re also building tools for you to manage caching, so stay tuned!</p>
+
+<h6 id="caching-dynamic-content">Caching Dynamic Content</h6>
+
+<p>Caching dynamic content in Varnish can greatly improve the performance of your app. You can explicitly instruct Varnish to cache the requests and for how long.</p>
+
+<p>The simplest way to cache a page is to set a header on output which cues Varnish that this page can be served unmodified to anyone visiting a given URL. The &ldquo;Cache-Control&rdquo; header also specifies how long the cached copy should be retained. The following is a PHP example of setting the cache to 10 minutes (600 seconds):</p>
+
+<pre><code>header("Cache-Control: public, max-age=600");
+</code></pre>
+
+<p>Note: The longest Varnish will cache any content is 1 day. </p>
+
+<h6 id="preventing-caching">Preventing Caching</h6>
+
+<p>To prevent caching set the &ldquo;Cache-Control&rdquo; header to &ldquo;no-cache&rdquo;. This is generally required in applications that don&rsquo;t produce or consume cookies, but serve dynamic content. This is how to set the &ldquo;Cache-Control&rdquo; header in PHP:</p>
+
+<pre><code>header("Cache-Control: no-cache");
+</code></pre>
+
+<h6 id="purging-cache-data">Purging Cache Data</h6>
+
+<p>We are currently working on tools to reset the cache; however, this is not yet functional. In the mean time if you need to purge the cache, please email support@appfog.com.</p>
+
+<h6 id="caching-in-wordpress">Caching in WordPress</h6>
+
+<p>WordPress by default takes little advantage of caching; however, there are plugins that can improve caching by intelligently presenting the appropriate cache headers.</p>
+
+<p>The <a href="http://wordpress.org/extend/plugins/wp-super-cache/">WP Super Cache</a> plugin and the <a href="http://wordpress.org/extend/plugins/wordpress-varnish/">WordPress Varnish</a> plugin are two plugins we recommend installing to take advantage of Varnish.</p>
+
+<h6 id="caching-in-drupal">Caching in Drupal</h6>
+
+<p>Drupal by default takes little advantage of caching. We recommend installing Drupal&rsquo;s <a href="http://drupal.org/project/varnish">Varnish HTTP Accelerator Integration module</a> to take advantage of Varnish on your Drupal app. </p>
+
+<p>As another alternative we recommend <a href="http://pressflow.org/">PressFlow</a>, which is a distribution of Drupal optimized for performance. We don&rsquo;t have a Pressflow Jumpstart yet, but we&rsquo;re working on adding that soon. You can easily install PressFlow yourself by starting with a custom application.</p>
+
+<h3 id="apc">APC</h3>
+
+<p>The Alternative PHP Cache, or APC, is a free and open opcode cache for PHP that can significantly boost performance in your app. It&rsquo;s installed by default on all Dedicated Cloud apps.</p>
+
+<p>Implementation of APC varies depending on your app. For example, the Cake framework has documentation <a href="http://api.cakephp.org/file/cake/libs/cache/apc.php">here</a>. Most frameworks will have similar documentation on implementation of APC.</p>
+
+<h5 id="what-if-all-of-my-code-is-custom">What if all of my code is custom?</h5>
+
+<p>Custom code will require a manual implementation of APC. Check out <a href="http://www.php.net/manual/en/apc.configuration.php">this link</a> for more information on how to implement APC in your app.</p>
+
+<h5 id="pitfalls">Pitfalls</h5>
+
+<p>The most common issue is multiple apps using the same cache to complete requests. Daniel Arroyo, CEO of Flaretag, wrote <a href="http://www.danielarroyo.net/2012/01/avoid-problems-when-running-multiple-cake-apps-in-one-server/">a great article</a> on dealing with this issue in Cake.</p>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

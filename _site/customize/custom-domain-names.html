@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation Custom Domain Names</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/customize">Customize Your App</a></li>
+								<li>Custom Domain Names</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li class="on"><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>Custom Domain Names</h2>
+											<p>With PHP Fog you can host custom domain names (e.g. my-web-app.com) or PHP Fog domain names (e.g. my-web-app.phpfogapp.com). If you use a phpfogapp.com domain name, then PHP Fog manages the DNS records for you, so you don&rsquo;t have to do anything. If you want to use a custom domain name, read on.</p>
+
+<h3 id="dns-settings">1. DNS Settings</h3>
+
+<p>We recommend using the <code>www.</code> subdomain as your canonical domain. Here&rsquo;s how to do that:</p>
+
+<h6 id="a-redirect-your-root-domain">a. Redirect your root domain.</h6>
+
+<p>At your domain host, set up a redirect (302) from your root domain (<code>yourdomain.com</code>) to <code>www.yourdomain.com</code>. </p>
+
+<p>This is a fairly standard tool that DNS services provide. If you don&rsquo;t see an option for it at your domain host, contact their support services and they should be able to do that for you.</p>
+
+<h6 id="b-create-a-cname-alias">b. Create a CNAME alias.</h6>
+
+<p>Create a CNAME alias record for <code>www.yourdomain.com</code> to: </p>
+
+<pre><code>cname01.phpfog.com
+</code></pre>
+
+<p>That&rsquo;s the simplest and most reliable method. For more details on why this is is more reliable, check out our <a href="/reliability">reliability doc</a>.</p>
+
+<p>If you need to make your root domain <code>yourdomain.com</code>) canonical instead of the www subdomain, <a href="#rootdomain">check the bottom of this page</a>.</p>
+
+<h3 id="change-the-domain-name-setting-in-the-php-fog-app-console">2. Change the domain name setting in the PHP Fog app console.</h3>
+
+<p>Go to your app console at PHP Fog and click on the &ldquo;Domain Name&rdquo; tab on the left. Enter your custom domain name in the field. Use the root domain name (<code>yourdomain.com</code>) whether you&rsquo;re using <code>www</code>. or the root domain.</p>
+
+<p>Note: With WordPress apps, you <em>must</em> change your domain name in the WordPress administration panel before changing it in the PHP Fog app console.</p>
+
+<h3 id="wait-for-your-dns-settings-to-propagate">3. Wait for your DNS settings to propagate.</h3>
+
+<p>This can take anywhere from a few minutes to 48 hours, depending on your location. That&rsquo;s it!</p>
+
+<h2 id="recommended-dns-providers">Recommended DNS Providers</h2>
+
+<ul>
+  <li>Amazon&rsquo;s Route 53</li>
+</ul>
+
+<h2 id="handling-subdomains-with-wildcards">Handling Subdomains with Wildcards</h2>
+
+<p>If you want to enable wildcards and host content that&rsquo;s dependent on the subdomain, here&rsquo;s how:</p>
+
+<pre><code>$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
+$subdomain = $url_parts[0];
+if ($subdomain == 'www' || $subdomain == '')
+{
+// show home page
+}
+else if ($subdomain == 'help')
+{
+// show help page
+}
+</code></pre>
+
+<h2 id="sharing-sessions-between-subdomains">Sharing sessions between subdomains</h2>
+
+<p>Thanks to <a href="http://community.phpfog.com/discussion/85/sharing-sessions-between-subdomains">albeik</a> for this tip on our <a href="http://community.phpfog.com">community forums</a>!</p>
+
+<p>If you&rsquo;ve enabled wildcard domains and want to share your session data between subdomains, add the following code snippet to your &ldquo;entry point&rdquo; PHP file (e.g. index.php):</p>
+
+<pre><code>("session.cookie_domain", ".domain.com");
+</code></pre>
+
+<h2 id="a-idrootdomaina-root-domain"><a id="rootdomain"></a> Root Domain</h2>
+
+<p>If you need to make your root domain (e.g. <code>yourdomain.com</code>) canonical, here&rsquo;s how:</p>
+
+<h6 id="redirect-your-www-subdomain">1. Redirect your &ldquo;www.&rdquo; subdomain.</h6>
+
+<p>Set up a redirect from <code>www.yourdomain.com</code> to <code>yourdomain.com</code>, either at your domain host or in your .htaccess configuration. </p>
+
+<h6 id="create-a-records">2. Create &ldquo;A&rdquo; records.</h6>
+
+<p>Create three &ldquo;A&rdquo; records to: </p>
+
+<pre><code>50.19.115.173
+184.72.222.30
+107.22.161.126
+</code></pre>
+
+<p>Important: make sure to use all three IP addresses for maximum reliability!</p>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

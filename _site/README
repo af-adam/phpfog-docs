@@ -1,0 +1,11 @@
+### Docs Style Guide
+
+* Capitalization in Titles Like This
+* command line formatting: "$ pf clone"
+* SSH key
+* PHP Fog user console: "app console"
+* local terminal: "terminal"
+* WordPress
+* "log in" and "set up" are verbs
+* "login" and "setup" are nouns
+* "Add-ons" or "add-ons", not "Add-Ons" or "Addons"

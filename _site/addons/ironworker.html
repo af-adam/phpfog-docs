@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation IronWorker</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/addons">Add-ons</a></li>
+								<li>IronWorker</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>IronWorker</h2>
+											<h3 id="install-ironworker">Install IronWorker</h3>
+
+<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the IronWorker add-on. That&rsquo;s it!</p>
+
+<h3 id="integrate-ironworker">Integrate IronWorker</h3>
+
+<p>Just copy <a href="https://github.com/iron-io/iron_worker_php/blob/master/IronWorker.class.php">IronWorker.class.php</a> and include it in your script:</p>
+
+<pre><code>&lt;?php
+require_once "IronWorker.class.php
+</code></pre>
+
+<h3 id="create-a-worker">Create a Worker</h3>
+
+<p>When you install IronWorker, the installer creates two environment variables set with the necessary credentials. Create a worker and pass in those credentials like this:</p>
+
+<pre><code>$worker = new IronWorker(array(
+'token' =&gt; getenv('IRON_WORKER_TOKEN'),
+'project_id' =&gt; getenv('IRON_WORKER_PROJECT_ID')
+));
+</code></pre>
+
+<p>Here&rsquo;s an example worker:</p>
+
+<pre><code>&lt;?php
+echo "Hello PHP World!\n";
+</code></pre>
+
+<p>We&rsquo;ll call this worker &ldquo;HelloWorld.php&rdquo;.</p>
+
+<h3 id="upload-your-worker">Upload Your Worker</h3>
+
+<p>Here&rsquo;s how to take the example above, zip it up, and upload it to IronWorker.</p>
+
+<pre><code>&lt;?php
+# Zip single file:
+IronWorker::createZip(dirname(__FILE__), array('HelloWorld.php'), 'worker.zip', true);
+$res = $iw-&gt;postCode('HelloWorld.php', 'worker.zip', 'HelloWorld');
+</code></pre>
+
+<h3 id="queue-your-worker">Queue Your Worker</h3>
+
+<pre><code>&lt;?php
+$task_id = $iw-&gt;postTask('HelloWorld');
+</code></pre>
+
+<p>Your worker should start in a few seconds.</p>
+
+<h3 id="schedule-your-worker">Schedule Your Worker</h3>
+
+<p>If you want to run your code more than once or run it in regular intervals, you can schedule it:</p>
+
+<pre><code>&lt;?php
+# 3 minutes from now
+$start_at = time() + 3*60;
+
+# Run task every 2 minutes, repeat 10 times
+$iw-&gt;postScheduleAdvanced('HelloWorld', array(), $start_at, 2*60, null, 10);
+</code></pre>
+
+<h3 id="check-the-status-of-your-worker">Check the Status of Your Worker</h3>
+
+<p>Use the <code>getTaskDetails()</code> method.</p>
+
+<pre><code>&lt;?php
+$task_id = $iw-&gt;postTask('HelloWorld');
+$details = $iw-&gt;getTaskDetails($task_id);
+
+echo $details-&gt;status; # prints 'queued', 'complete', 'error' etc.
+</code></pre>
+
+<h3 id="and-more">And More&hellip;</h3>
+
+<p>You can also pass payloads to your tasks, set progress status, logs, etc. For more information, check out some of these resources:</p>
+
+<ul>
+  <li><a href="https://github.com/iron-io/iron_worker_php">IronWorker on GitHub</a></li>
+  <li><a href="http://iron-io.github.com/iron_worker_php/">IronWorker PHP Reference Documentation</a></li>
+  <li><a href="https://github.com/iron-io/iron_worker_php/wiki">IronWorker PHP Wiki</a></li>
+  <li><a href="http://docs.iron.io/">Full Documentation on Iron.io</a></li>
+</ul>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

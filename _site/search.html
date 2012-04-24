@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation Search Results</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/"></a></li>
+								<li>Search Results</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>Search Results</h2>
+											<script type="text/javascript" src="/js/icanhaz.min.js"></script>
+
+<script type="text/javascript">
+	function params()
+  {
+      var vars = [], hash;
+      var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      for(var i = 0; i < hashes.length; i++)
+      {
+          hash = hashes[i].split('=');
+          vars.push(hash[0]);
+          vars[hash[0]] = hash[1];
+      }
+      return vars;
+	}
+
+	$(document).ready(function() {
+        if(params()['q'])
+        {
+        	var query = params()['q'];
+      		$('div#search_results p#loading').show();
+          
+         	var result = $.getJSON('http://uzehyv.api.indexden.com/v1/indexes/phpfogdocs/search?q=' + encodeURIComponent(query) + '&fetch=title&snippet=text&callback=?', function(data) {
+            	$('div#search_results div#inner').empty();
+              
+            	$.each(data.results, function(index, result) {
+                    result['domain'] = window.location.hostname;
+                    $('div#search_results div#inner').append(ich.search_result(result));
+                });
+
+                if(data.results.length == 0)
+                {
+                    $('div#search_results div#inner').append('<p>Sorry, no results for that query.</p>');
+                }
+
+                $('div#search_results p#loading').hide();
+            });
+        }
+	});
+</script>
+
+
+<script id="search_result" type="text/html">
+    <div class="result">
+		<a href="{{ docid }}">{{ title }}</a>
+		<p>{{{ snippet_text }}}</p>
+    </div>
+</script>
+
+
+<div id="left">
+	<div id="search_results">
+  	<noscript>Please enable JavaScript to search.</noscript>   	
+  	<p id="loading">Loading...</p>
+    <div id="inner">
+    </div>
+
+    <div class="separator">
+    		<div class="separator_top"></div>
+    		<div class="separator_bottom"></div>
+		</div>
+  </div>
+</div>
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

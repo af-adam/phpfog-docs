@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation Troubleshooting</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/"></a></li>
+								<li>Troubleshooting</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li class="on"><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>Troubleshooting</h2>
+											<p>Here are some of the most common issues and how to deal with them. </p>
+
+<p>Don&rsquo;t see your issue here? Try our <a href="http://community.phpfog.com/">community</a> or <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#097;&#112;&#112;&#102;&#111;&#103;&#046;&#099;&#111;&#109;">&#101;&#109;&#097;&#105;&#108;&#032;&#111;&#117;&#114;&#032;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#032;&#100;&#101;&#115;&#107;</a>.</p>
+
+<ul>
+  <li><a href="#ssh">SSH, Git, and PF Command Line Tool</a></li>
+  <li><a href="#500">HTTP 500, 502, 503, and 504 Errors</a></li>
+  <li><a href="#ssl">SSL</a></li>
+  <li><a href="#https">Forcing HTTPS</a></li>
+</ul>
+
+<h3 id="ssh">SSH, Git, and PF Command Line Tool</h3>
+
+<h6 id="permission-denied-publickey">&ldquo;Permission denied (publickey)&rdquo;</h6>
+
+<ol>
+  <li>Follow our <a href="/getting-started/ssh">guide to generating your SSH key</a>.</li>
+  <li>Make sure you&rsquo;re copying your <em>public</em> key into the PHP Fog app console, not your private key. </li>
+  <li>If you&rsquo;re on a Mac, flush your Keychain Access cache:</li>
+</ol>
+
+<ol>
+<li type="a">Open Keychain Access (Applications &rarr; Utilities &rarr; Keychain Access).</li>
+<li type="a">Unlock and lock your keychain by clicking on the lock icon at the upper left.</li>
+</ol>
+
+<h6 id="unauthorized-access-for-user">&ldquo;Unauthorized access for user&rdquo;</h6>
+
+<p>This error occurs when you try to use the same SSH key for multiple accounts. You&rsquo;ll have to generate a new key for each account. Check out <a href="/getting-started/ssh#multiple">our guide on using SSH keys with multiple account</a>.</p>
+
+<h3 id="500">HTTP 500, 502, 503, and 504 Errors</h3>
+
+<h6 id="internal-server-error">500: Internal Server Error</h6>
+
+<p>HTTP 500 is a generic &ldquo;catch-all&rdquo; that indicates that the web server was unable to fulfill the HTTP/S request. This is usually caused by syntax errors, script run times, or deployment issues. </p>
+
+<p>You can usually diagnose this issue by turning on PHP error reporting. Just go to your PHP Fog app console, click on the &ldquo;Settings&rdquo; tab, and click the &ldquo;Display Errors&rdquo; button. Then go back to your app and you should get a stack trace of where your app is hitting an error. </p>
+
+<p>If you still don&rsquo;t get anything besides an HTTP 500, it&rsquo;s probably an issue with your <code>.htaccess</code> file. Check that file for syntax errors. </p>
+
+<h6 id="bad-gateway">502: Bad Gateway</h6>
+
+<p>HTTP 502 errors are extremely rare and generally due to an infrastructure failure. If you receive this error, wait a few minutes and try again. If you experience this issue for longer than a few minutes, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#097;&#112;&#112;&#102;&#111;&#103;&#046;&#099;&#111;&#109;">&#101;&#109;&#097;&#105;&#108;&#032;&#117;&#115;</a> and we&rsquo;ll work to resolve the issue as fast as possible.</p>
+
+<h6 id="service-unavailable">503: Service Unavailable</h6>
+
+<p>HTTP 503 errors are specified by your app.</p>
+
+<h6 id="gateway-timeout">504: Gateway Timeout</h6>
+
+<p>HTTP 504 errors mean your app is unable to service requests. The load balancers that sit between your app and its HTTP clients are configured to timeout requests after 60 seconds. So after the load balancer receives the initial request and forwards it to your app server, if the load balancer doesn&rsquo;t receive anything for 60 seconds, it returns a 504 error to the client.</p>
+
+<p>Timeouts can be caused by a a variety of reasons, but the two most common are: 1. CPU over-utilization, and 2. blocking sync calls to other services. </p>
+
+<h6 id="cpu">CPU</h6>
+
+<p>If your app is on a Shared or Silver Cloud, the CPU utilization is throttled in &ldquo;Bursts&rdquo;. These plans provide a small amount of consistent CPU resources and allow your application to burst CPU capacity when additional cycles are available. They are well suited for lower throughput applications and web sites that consume significant compute cycles periodically. If the processing takes longer than a burst, the processing gets heavily throttled. This means something that can take just a few seconds on your desktop might take much longer on these plans and therefore cause the HTTP request to timeout.</p>
+
+<p>Processes that can cause this include: </p>
+
+<ul>
+  <li>Rendering an image or PDF</li>
+  <li>XML parsing of a large file</li>
+  <li>Heavy calculations (e.g. Fourier transform of an MP3)</li>
+</ul>
+
+<h6 id="blocking-calls-to-other-services">Blocking calls to other services</h6>
+
+<p>If your application makes calls to third-party services these calls may be blocking. That is, when your applications make a call to a method like file_get_contents() it won&rsquo;t finish until the full HTTP transaction is complete. Making too many calls like this may cause the time to complete all the transactions longer than the timeout period.</p>
+
+<p>Calls that can cause this include:</p>
+
+<ul>
+  <li>Sending email</li>
+  <li>Calling remote APIs (e.g. Twitter, Facebook, etc)</li>
+  <li>Web-scraping</li>
+</ul>
+
+<h6 id="solutions">Solutions</h6>
+
+<ul>
+  <li>
+    <p>Take full advantage of <a href="/best-practices/caching">caching</a>.</p>
+  </li>
+  <li>
+    <p>Upgrade your Cloud. </p>
+
+    <p>Gold and Platinum Clouds provide consistent processing power. This is a simple answer, but it&rsquo;s not necessarily the right one for every case. If your app&rsquo;s processes consistently take too long, this might not help. </p>
+  </li>
+  <li>
+    <p>Use asynchronous calls instead of synchronous calls. </p>
+
+    <p>This only makes sense when your application doesn&rsquo;t need the returned value. Check out <a href="http://stackoverflow.com/questions/124462/asynchronous-php-calls">this StackOverflow question on asynchronous PHP calls</a> for more information.</p>
+  </li>
+  <li>
+    <p>Off-load heavy processing to an external service. </p>
+
+    <p>Try our <a href="http://phpfog.com/addons">IronWorker</a> add-on to take some of the asynchronous processing load from your app server. Or, you can create a new Amazon EC2 server dedicated to the heavy processing (the &ldquo;worker&rdquo;), and use <a href="http://aws.amazon.com/sqs/">Amazon&rsquo;s Simple Queue Service</a> to queue jobs. This allows your app to add jobs to the queue and then the worker can pull and process them as it becomes available. </p>
+  </li>
+</ul>
+
+<h3 id="ssl">SSL</h3>
+
+<h6 id="doman-name-mismatch">&ldquo;Doman name mismatch&rdquo;</h6>
+
+<p>A domain name mismatch means that the domain name on your certificate doesn&rsquo;t match your app&rsquo;s actual URL. For example, your certificate might say &ldquo;<code>foo.com</code>&rdquo; while your app&rsquo;s domain is actually &ldquo;<code>www.foo.com</code>&rdquo;.</p>
+
+<p>Solution: Change your app&rsquo;s domain name to match the certificate. Alternatively, you can have a new certificate issued to match your app&rsquo;s domain name (this includes wildcard certificates, e.g. &ldquo;<code>\*.foo.com</code>&rdquo;).</p>
+
+<h6 id="cannot-verify">&ldquo;Cannot verify&rdquo;</h6>
+
+<p>The most common reason your browser cannot verify your app is an expired certificate. </p>
+
+<p>Solution: Have your Certificate Authority update your certificate.</p>
+
+<h6 id="certificate-authority-says-i-need-a-csr">Certificate Authority says I need a CSR.</h6>
+
+<p>Solution: To generate a CSR on your local machine for PHP Fog check out <a href="http://www.globalsign.com/support/csr/serversign_apache.php">this document</a>.</p>
+
+<h3 id="https">Forcing HTTPS</h3>
+
+<p>Using <code>.htaccess</code> rules to force HTTPS is complicated by the presence of the load balancers. If you&rsquo;re running into a redirect loop, try forwarding by protocol instead of by port:</p>
+
+<pre><code>RewriteCond %{HTTP:X-Forwarded-Proto} https
+</code></pre>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

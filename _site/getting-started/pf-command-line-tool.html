@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation PF Command Line Tool</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/getting-started">Getting Started</a></li>
+								<li>PF Command Line Tool</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li class="on"><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>PF Command Line Tool</h2>
+											<p>PHP Fog uses git to give you access to your code and push changes to your cloud. Git is an extremely powerful and flexible tool for managing code, but it&rsquo;s also pretty complex and can be intimidating for developers who haven&rsquo;t used it before. SSH key management can also be pretty complicated and error-prone. That&rsquo;s why we created the PF Command Line Tool: to allow developers to jump into PHP Fog as quickly and simply as possible.</p>
+
+<p>PF is a command line tool for managing PHP Fog apps from the terminal. The tool allows you to list, view, and delete apps. It also does more advanced operations for you, like set up your SSH keys for multiple PHP Fog accounts and deploy apps using git submodules. </p>
+
+<p>Note: PF modifies your SSH configuration, so we highly recommend that once you install the PF tool, you use it to clone and deploy apps instead of git. </p>
+
+<p>Prefer to just use git? Comfortable with SSH keys already? PF is completely optional! Feel free to skip ahead to the section on <a href="/getting-started/ssh">SSH keys</a> or <a href="/getting-started/git">git</a>.</p>
+
+<h3 id="download-and-install-pf">1. Download and install PF.</h3>
+
+<pre><code>$ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php 
+</code></pre>
+
+<h3 id="set-up-your-credentials-in-pf">2. Set up your credentials in PF.</h3>
+
+<pre><code>$ pf setup 
+</code></pre>
+
+<h3 id="list-your-apps">3. List your apps.</h3>
+
+<pre><code>$ pf list apps 
+</code></pre>
+
+<p>This will allow you to pick the name/id to use to download an app in the next step.</p>
+
+<h3 id="download-your-source-code">4. Download your source code.</h3>
+
+<p>To get the code we&rsquo;ll use the &ldquo;pf clone&rdquo; command. You can use the &ldquo;ID&rdquo; or the &ldquo;Name&rdquo; of the app list in the previous step. </p>
+
+<pre><code>$ pf clone 811 
+</code></pre>
+
+<p>Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in &lsquo;yes&rsquo;.</p>
+
+<p>Running into problems with this step? Check out our guide on <a href="/troubleshooting#ssh">troubleshooting ssh</a>.</p>
+
+<h3 id="add-a-new-file-and-push-the-change-to-the-server">5. Add a new file and push the change to the server.</h3>
+
+<p>Change your current working directory to the git repo.</p>
+
+<pre><code> cd foo.phpfogapp.com/  
+</code></pre>
+
+<p>Create a new file called <code>helloworld.php</code> and populate it with some text.</p>
+
+<pre><code>&lt;?php
+echo "hello world";
+?&gt;
+</code></pre>
+
+<h3 id="add-the-file-to-staging">6. Add the file to staging.</h3>
+
+<pre><code>$ git add . 
+</code></pre>
+
+<p>This command tells git to &ldquo;stage&rdquo; the file to get ready to commit to your repository. The &ldquo;.&rdquo; adds all the files in this directory recursively.</p>
+
+<h3 id="commit-your-changes">7. Commit your changes.</h3>
+
+<pre><code>$ git commit -m "my first update" 
+</code></pre>
+
+<p>This commits the new file to your git repository. It&rsquo;s still local, but now it&rsquo;s ready to be uploaded (i.e. &ldquo;pushed&rdquo;). </p>
+
+<h3 id="push-your-changes">8. Push your changes.</h3>
+
+<pre><code>$ pf push 
+</code></pre>
+
+<p>This command uploads the committed changes to PHP Fog.</p>
+
+<h3 id="done">Done!</h3>
+
+<p>That&rsquo;s it! Wait a couple of minutes for your code to deploy and you should be able to see your changes live!</p>
+
+<p>Ready for more? Continue on to <a href="/getting-started/development">development</a>.</p>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

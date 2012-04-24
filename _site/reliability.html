@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation Reliability</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/"></a></li>
+								<li>Reliability</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li class="on"><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>Reliability</h2>
+											<p>Here&rsquo;s a walkthrough for an HTTP request from the client all the way to the database for a better look at our reliability mechanisms:</p>
+
+<h6 id="dns-lookup">DNS Lookup</h6>
+
+<p>When a client makes an HTTP request to your PHP Fog app, the first step is to perform a DNS lookup for the IP address of your application. In our guide for <a href="/getting-started/custom-domain-names">setting up custom domains</a>, we recommended using a CNAME record. This is a mechanism to help with failover. While the CNAME record currently points to Amazon&rsquo;s Elastic Load Balancer, in the case of a failure, we can update our DNS records to reference a different service, maintaining service. This particular failover mechanism is built into a point before a request even touches any PHP Fog components. </p>
+
+<p>On the other hand, an A record references a static IP address, which is a single point of failure. This is why we recommend CNAME over A records.</p>
+
+<h6 id="first-load-balancer">First Load Balancer</h6>
+
+<p>After the DNS lookup is complete, the HTTP request is routed to the Amazon Elastic Load Balancer. Amazon&rsquo;s load balancer distributes the load of the requests across numerous servers and provides redundancy.</p>
+
+<h6 id="caching-server">Caching Server</h6>
+
+<p>Next, the load balancer forwards the request to one of our Varnish Cache Servers. We&rsquo;ve set up multiple cache servers to handle requests and we&rsquo;ve distributed them across different &ldquo;availability zones&rdquo;. Availability zones are distinct locations that are engineered to be insulated from failures in other availability zones and provide low latency network connectivity to other availability zones. Properly configured, the Caching Servers can actually load static contents from your app, even when your app server is down.</p>
+
+<h6 id="second-load-balancer">Second Load Balancer</h6>
+
+<p>After the caching server, the requests go to the second load balancer. The load balancer directs requests to the application server best able to handle the requests. If a server is unavailable, it is routed to a new server thus improves the reliability of your application.</p>
+
+<h6 id="app-servers-and-code-repository">App Servers and Code Repository</h6>
+
+<p>If you have a dedicated server you can run your application on multiple servers. Each of the servers is constantly monitored and if any hiccups occur, the application is migrated to a healthy application server. Note, that you must be on a dedicated plan with multiple servers to have redundancy, it is not available for the free shared hosting plans.</p>
+
+<h6 id="git-server">Git Server</h6>
+
+<p>The core of your application is stored on a git server and it is distributed to the application servers. This means that even if your application server fails, the code is still available on the git server so it can be re-spawned on a new server. This git server is also backed up.</p>
+
+<h6 id="databases">Databases</h6>
+
+<p>The last step in the request path is the database. All applications get a primary and passive MySQL database. The primary database server is synchronized to a passive database slave which provides an up-to-the-minute snapshot of your MySQL databases. The database slave is used for application fail-over in case the primary server isn’t behaving properly. The secondary database is placed in a separate Availability Zone. Your Database calls will always will go to the master when everything is working properly, the slave replaces the master if something goes wrong. You do not have to do anything in your application to take advantage of this. If for whatever reason the master fails the slave will replace the master. Then we will add a new database server. The new database server will act as the new slave, and the old slave will act like the new monitor.</p>
+
+<h6 id="monitoring">Monitoring</h6>
+
+<p>In order to ensure the highest reliability, we must have great visibility. We use Pingdom and New Relic to monitor our servers from the outside-in for uptime. We also use Nagios to monitor our infrastructure for health. In addition to monitoring our own servers, we also provide monitoring for you. We have partnered with New Relic so you can monitor your application health (e.g. memory, CPU, etc) of your application on the dedicated servers. New Relic can also be used to test uptime of your application from the outside-in.</p>
+
+<h6 id="improvements">Improvements</h6>
+
+<p>We have done a lot of work so far to make PHP Fog reliable; however, we continue to push to make the service even more resilient. While we have redundancy and failover in the entire stack, we want to make each of the components available not just in different availability zones, but different regions, and even different cloud providers altogether.</p>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>

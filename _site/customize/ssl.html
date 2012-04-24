@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>PHP Fog &mdash; Documentation SSL for Custom Domain Names</title> 
+		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		
+		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
+	</head>
+	<body>
+		<div id='root'>
+			<header>
+				<div class="wrapper">
+					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+					<nav id="page-nav">
+						<form id="search-form" action="/search">
+							<input type="text" id="search" name="q" size="30" />
+							<input class="btn-normal" type="submit" value="Search" />
+						</form>
+					</nav>
+				</div>
+			</header>
+			<section id='content'>
+				<div class="wrapper">
+					<div id="main">
+								
+						<nav class="breadcrumb">
+							<ul>
+								<li><a href="/">Documentation</a></li>
+								<li><a href="/customize">Customize Your App</a></li>
+								<li>SSL for Custom Domain Names</li>
+							</ul>
+						</nav>
+								
+						
+
+
+						<div class="row">
+							<div class="ui-box vertical-tabs">
+								<div class="ui-box-vertical-tabs-header">
+								</div>
+								<nav class="tab-container">
+										<ul class="pages">
+											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+											
+											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+											
+											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+											
+											<li ><a href="/getting-started/ssh.html">SSH</a></li>
+											
+											<li ><a href="/getting-started/git.html">Git</a></li>
+											
+											<li ><a href="/getting-started/development.html">Development</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+											
+											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+											
+											<li class="on"><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+											
+											<li ><a href="/customize/permissions.html">Permissions</a></li>
+											
+											<li ><a href="/customize/database.html">Database</a></li>
+											
+											<li ><a href="/customize/email.html">Email</a></li>
+											
+											<li ><a href="/customize/php_ini.html">php.ini</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+											
+											<li ><a href="/best-practices/caching.html">Caching</a></li>
+											
+											<li ><a href="/best-practices/storage.html">Storage</a></li>
+											
+											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+											
+										</ul>
+
+										<ul class="pages">
+											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+											<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
+											<li ><a href="/security.html"><h6>Security</h6></a></li>
+											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+										</ul>
+										<a class="top" href="#">&uarr; Back to top</a>
+									</nav>
+									<div class="tab-content activated">
+										<div class="on ui-box-content">
+									<h2>SSL for Custom Domain Names</h2>
+											<h3 id="before-you-begin">1. Before You Begin</h3>
+
+<ol>
+<li type="a">Make sure you have your certificate, private key, and (if you have one) intermediate key.</li>
+<li type="a">Make sure you're using: <br /><br />
+<ol>
+<li type="i">subdomain certificates (e.g. www.example.com) </li>
+</ol>
+<em>OR</em> <br /><br />
+<ol>
+<li type="i" value="2">your certificate is a root domain wildcard certificate for subdomains (e.g. \*.example.com).</li>
+</ol>
+</li>
+<li type="a">Make sure your private certificate *does not* have a passphrase associated with it.</li>
+</ol>
+
+<h3 id="app-console">2. App Console</h3>
+
+<p>Go to your app console and click on the &ldquo;SSL&rdquo; tab on the left. </p>
+
+<p>Open your certificate in your favorite text editor. Copy the <em>entire</em> contents of that file and paste it into the &ldquo;Signed Certificate&rdquo; field.</p>
+
+<p>Open your private key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the &ldquo;RSA or DSA Private Key&rdquo; field.</p>
+
+<p>If you have an intermediate certificate:</p>
+
+<ol>
+	<li type="a">Check the "Use intermediate cerficate" check box and a new field will appear.</li>
+	<li type="a">Open your intermediate key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the "Intermediate certificate" field.</li>
+</ol>
+
+<p>Click &ldquo;Save&rdquo;. Grab a cup of coffee while your elastic load balancer configures and deploys your settings.</p>
+
+<p>On the next screen, you&rsquo;ll see a CNAME record. Update your DNS from <code>CNAME01.phpfog.com</code> to this new record.</p>
+
+<p>You now have SSL for your custom domain name!</p>
+
+<h3 id="ssl-for-root-domains">SSL for Root Domains</h3>
+
+<p>In order to enable SSL for root domains on PHP Fog, you&rsquo;ll have to move your DNS to <a href="http://aws.amazon.com/route53/">Amazon&rsquo;s Route 53</a>.</p>
+
+<ol>
+  <li>Email <a href="mailto:support@appfog.com">support@appfog.com</a> and ask for your SSL&rsquo;s &ldquo;Alias DNS Name&rdquo;.</li>
+  <li>Create a Route 53 account, if you don&rsquo;t already have one.</li>
+  <li>In the AWS console under Route 53, click on &ldquo;create a hosted zone&rdquo; and fill out the required information. The console will return name servers to fill in at your registrar. By changing those values you allow Route 53 to take control of your DNS settings.</li>
+  <li>With your Alias Hosted Zone ID and Alias DNS Name in hand create a &ldquo;record set&rdquo; for your root domain. With the default &ldquo;A record&rdquo; click the alias radio button to &ldquo;yes&rdquo;. Paste the Hosted Zone ID and Alias DNS Name in the associated fields. </li>
+  <li>Save your changes.</li>
+</ol>
+
+<p>Congratulations, your root domain is now secured by SSL!</p>
+
+<h3 id="why-does-it-cost-20month">Why does it cost $20/month?</h3>
+
+<p>For every custom SSL, we create a new elastic load balancer instance with a dedicated elastic IP. As such, not only do you get custom SSL support, but you get your own load balancer and a dedicated elastic IP. But there are some less expensive alternatives: </p>
+
+<ul>
+  <li>You can use a *.phpfogapp.com subdomain which falls under the PHP Fog SSL certificate automatically. </li>
+  <li>You can also use a service like <a href="http://cloudflare.com">CloudFlare</a> which uses a different method to provide an SSL certificate for your custom domain name, though it&rsquo;s shared with other custom domain names.</li>
+</ul>
+
+
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="root_footer"></div>
+			</section>
+
+		</div>
+		<footer>
+		<div class='wrapper'>
+		<div class='logo'>
+		<h5>PHP Fog</h5>
+		<p>&copy; 2012. All Rights Reserved.</p>
+		</div>
+		<div class='contact'>
+		<h4>Contact Us</h4>
+		<ul>
+		<li><a href="http://help.phpfog.com">Support</a></li>
+		<li><a href="/about">About Us</a></li>
+		<li><a href="http://docs.phpfog.com">Documentation</a></li>
+		<li class='phone'>1.888.974.7364</li>
+		<li class='phone'>1.888.9.PHPFOG</li>
+		</ul>
+		</div>
+		<div class='more-info'>
+		<h4>More Info</h4>
+		<ul>
+		<!-- /%li= link_to "Free Tools", tools_path -->
+		<!-- %li -->
+		<!-- = link_to "Enterprise", enterprise_path -->
+		<li>
+		<a href="/privacy">Privacy Policy</a>
+		</li>
+		<li>
+		<a href="/service_agreement">Service Agreement</a>
+		</li>
+		<li>
+		<a href="/terms_of_service">Terms of Service</a>
+		</li>
+		</ul>
+		</div>
+		<div class='social'>
+		<h4>Social</h4>
+		<ul>
+		<li class='blog'>
+		<a href='http://blog.phpfog.com/'>Blog</a>
+		</li>
+		<li class='twitter'>
+		<a href='http://twitter.com/phpfog'>Twitter</a>
+		</li>
+		<li class='facebook'>
+		<a href='http://on.fb.me/phpfog'>Facebook</a>
+		</li>
+		<li class='community'>
+		<a href='http://community.phpfog.com'>Community</a>
+		</li>
+		</ul>
+		</div>
+		</div>
+		</footer>
+	</body>
+</html>
