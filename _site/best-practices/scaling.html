@@ -8,7 +8,7 @@
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body>
+	<body id="blog">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://afblog.phpfogapp.com/wp-content/themes/appfog/images/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -27,26 +27,18 @@
 			</ul>
 		</div> 
 	</div>
-<!-- 		<div id="header">
-			<div class="wrapper">
-				<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
-				<nav id="page-nav">
-					<form id="search-form" action="/search">
-						<input type="text" id="search" name="q" size="30" />
-						<input class="btn-normal" type="submit" value="Search" />
-					</form>
-				</nav>
-			</div>
-		</div> -->
 	<div id="main_content">
 		<div class='container'>
+
 			
 			<div id="top_bar" class="row gray_blue margin_bottom">
 				<div class="span12">
-					<a href="/"><h1 class="title">Documentation</h1></a>
+					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
 					<ul id="secondary_nav">
+						
 						<li><a href="/best-practices">Best Practices</a></li>
-						<li><a href="/">Scaling</a></li>
+						
+						<li><a href="#">Scaling</a></li>
 					</ul>
 				</div>
 
@@ -56,10 +48,13 @@
 
 
 			<div id="content" class="row white">
-
-				<div class="span8 content_column">
-						<h2>Scaling</h2>
-						<p>Scalability is one of PHP Fog&rsquo;s core customer values. We&rsquo;ve built our infrastructure to make it as easy as possible to scale your app up and down to reflect your traffic demands. </p>
+				<div class="span8 entries main_content">
+					<div class="row">
+						<div class="span8">
+							<div class="row">
+								<div class="span8">
+									<h1>Scaling</h1>
+									<p>Scalability is one of PHP Fog&rsquo;s core customer values. We&rsquo;ve built our infrastructure to make it as easy as possible to scale your app up and down to reflect your traffic demands. </p>
 
 <h3 id="why-do-i-need-to-scale">Why do I need to scale?</h3>
 
@@ -135,12 +130,27 @@
 </ul>
 
 
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="span3 sidebar padding">
 					<div class="row border-bottom">
+						<div class="span3">
+							<form id="search-form" action="/search">
+								<input type="search" placeholder="Search" id="search" name="q" size="30" />
+								<input class="btn gray_blue search" type="submit" value="Go" />
+							</form>
+						</div>
+					</div>
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/getting-started/"><h6>Getting Started</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
 						
 						<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
 						
@@ -154,9 +164,12 @@
 						
 					</ul>
 
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/customize/"><h6>Customize Your App</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
-						<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 						
 						<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
 						
@@ -174,8 +187,12 @@
 						
 					</ul>
 
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/best-practices/"><h6>Best Practices</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
 						
 						<li ><a href="/best-practices/caching.html">Caching</a></li>
 						
@@ -185,14 +202,13 @@
 						
 					</ul>
 
-					<ul class="pages">
-						<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
-						<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
-						<li ><a href="/billing.html"><h6>Billing</h6></a></li>
-						<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
-						<li ><a href="/security.html"><h6>Security</h6></a></li>
-						<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
-					</ul>
+						<div class="row border-bottom "><div class="span3"><a href="/faqs.html"><h6>FAQ</h6></div></a></div>
+						<div class="row border-bottom"> <a href="http://phpfog.com/pricing"><div class="span3"><h6>Pricing</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/billing.html"><h6>Billing</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/reliability.html"><h6>Reliability</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/security.html"><h6>Security</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/troubleshooting.html"><h6>Troubleshooting</h6></div></a></div>
+
 					</div>
 				</div>
 			</div><!-- content -->

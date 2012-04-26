@@ -8,7 +8,7 @@
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body>
+	<body id="blog">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://afblog.phpfogapp.com/wp-content/themes/appfog/images/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -27,26 +27,18 @@
 			</ul>
 		</div> 
 	</div>
-<!-- 		<div id="header">
-			<div class="wrapper">
-				<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
-				<nav id="page-nav">
-					<form id="search-form" action="/search">
-						<input type="text" id="search" name="q" size="30" />
-						<input class="btn-normal" type="submit" value="Search" />
-					</form>
-				</nav>
-			</div>
-		</div> -->
 	<div id="main_content">
 		<div class='container'>
+
 			
 			<div id="top_bar" class="row gray_blue margin_bottom">
 				<div class="span12">
-					<a href="/"><h1 class="title">Documentation</h1></a>
+					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
 					<ul id="secondary_nav">
+						
 						<li><a href="/getting-started">Getting Started</a></li>
-						<li><a href="/">Development</a></li>
+						
+						<li><a href="#">Development</a></li>
 					</ul>
 				</div>
 
@@ -56,10 +48,13 @@
 
 
 			<div id="content" class="row white">
-
-				<div class="span8 content_column">
-						<h2>Development</h2>
-						<p>Now that you can push code to and from your app, you&rsquo;ll want to set up a local development environment before doing anything serious. Setting up a local environment allows you to shorten the feedback loop on your development process. It also keeps all of your code in git, which makes it easy to roll back changes and makes your app easily scalable. </p>
+				<div class="span8 entries main_content">
+					<div class="row">
+						<div class="span8">
+							<div class="row">
+								<div class="span8">
+									<h1>Development</h1>
+									<p>Now that you can push code to and from your app, you&rsquo;ll want to set up a local development environment before doing anything serious. Setting up a local environment allows you to shorten the feedback loop on your development process. It also keeps all of your code in git, which makes it easy to roll back changes and makes your app easily scalable. </p>
 
 <h3 id="set-up-your-local-environment">1. Set up your local environment.</h3>
 
@@ -91,12 +86,27 @@
 <p>Smashing Magazine has <a href="http://wp.smashingmagazine.com/2011/09/28/developing-wordpress-locally-with-mamp/">a great walkthrough</a> on setting up a local development environment for WordPress.</p>
 
 
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="span3 sidebar padding">
 					<div class="row border-bottom">
+						<div class="span3">
+							<form id="search-form" action="/search">
+								<input type="search" placeholder="Search" id="search" name="q" size="30" />
+								<input class="btn gray_blue search" type="submit" value="Go" />
+							</form>
+						</div>
+					</div>
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/getting-started/"><h6>Getting Started</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
 						
 						<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
 						
@@ -110,9 +120,12 @@
 						
 					</ul>
 
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/customize/"><h6>Customize Your App</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
-						<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 						
 						<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
 						
@@ -130,8 +143,12 @@
 						
 					</ul>
 
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/best-practices/"><h6>Best Practices</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
 						
 						<li ><a href="/best-practices/caching.html">Caching</a></li>
 						
@@ -141,14 +158,13 @@
 						
 					</ul>
 
-					<ul class="pages">
-						<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
-						<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
-						<li ><a href="/billing.html"><h6>Billing</h6></a></li>
-						<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
-						<li ><a href="/security.html"><h6>Security</h6></a></li>
-						<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
-					</ul>
+						<div class="row border-bottom "><div class="span3"><a href="/faqs.html"><h6>FAQ</h6></div></a></div>
+						<div class="row border-bottom"> <a href="http://phpfog.com/pricing"><div class="span3"><h6>Pricing</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/billing.html"><h6>Billing</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/reliability.html"><h6>Reliability</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/security.html"><h6>Security</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/troubleshooting.html"><h6>Troubleshooting</h6></div></a></div>
+
 					</div>
 				</div>
 			</div><!-- content -->

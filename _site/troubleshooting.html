@@ -8,7 +8,7 @@
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body>
+	<body id="blog">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://afblog.phpfogapp.com/wp-content/themes/appfog/images/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -27,26 +27,16 @@
 			</ul>
 		</div> 
 	</div>
-<!-- 		<div id="header">
-			<div class="wrapper">
-				<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
-				<nav id="page-nav">
-					<form id="search-form" action="/search">
-						<input type="text" id="search" name="q" size="30" />
-						<input class="btn-normal" type="submit" value="Search" />
-					</form>
-				</nav>
-			</div>
-		</div> -->
 	<div id="main_content">
 		<div class='container'>
+
 			
 			<div id="top_bar" class="row gray_blue margin_bottom">
 				<div class="span12">
-					<a href="/"><h1 class="title">Documentation</h1></a>
+					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
 					<ul id="secondary_nav">
-						<li><a href="/"></a></li>
-						<li><a href="/">Troubleshooting</a></li>
+						
+						<li><a href="#">Troubleshooting</a></li>
 					</ul>
 				</div>
 
@@ -56,10 +46,13 @@
 
 
 			<div id="content" class="row white">
-
-				<div class="span8 content_column">
-						<h2>Troubleshooting</h2>
-						<p>Here are some of the most common issues and how to deal with them. </p>
+				<div class="span8 entries main_content">
+					<div class="row">
+						<div class="span8">
+							<div class="row">
+								<div class="span8">
+									<h1>Troubleshooting</h1>
+									<p>Here are some of the most common issues and how to deal with them. </p>
 
 <p>Don&rsquo;t see your issue here? Try our <a href="http://community.phpfog.com/">community</a> or <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#097;&#112;&#112;&#102;&#111;&#103;&#046;&#099;&#111;&#109;">&#101;&#109;&#097;&#105;&#108;&#032;&#111;&#117;&#114;&#032;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#032;&#100;&#101;&#115;&#107;</a>.</p>
 
@@ -186,12 +179,27 @@
 </code></pre>
 
 
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="span3 sidebar padding">
 					<div class="row border-bottom">
+						<div class="span3">
+							<form id="search-form" action="/search">
+								<input type="search" placeholder="Search" id="search" name="q" size="30" />
+								<input class="btn gray_blue search" type="submit" value="Go" />
+							</form>
+						</div>
+					</div>
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/getting-started/"><h6>Getting Started</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
 						
 						<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
 						
@@ -205,9 +213,12 @@
 						
 					</ul>
 
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/customize/"><h6>Customize Your App</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
-						<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 						
 						<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
 						
@@ -225,8 +236,12 @@
 						
 					</ul>
 
+					<div class="row border-bottom ">
+						<div class="span3">
+							<a href="/best-practices/"><h6>Best Practices</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
 						
 						<li ><a href="/best-practices/caching.html">Caching</a></li>
 						
@@ -236,14 +251,13 @@
 						
 					</ul>
 
-					<ul class="pages">
-						<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
-						<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
-						<li ><a href="/billing.html"><h6>Billing</h6></a></li>
-						<li ><a href="/reliability.html"><h6>Reliability</h6></a></li>
-						<li ><a href="/security.html"><h6>Security</h6></a></li>
-						<li class="on"><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
-					</ul>
+						<div class="row border-bottom "><div class="span3"><a href="/faqs.html"><h6>FAQ</h6></div></a></div>
+						<div class="row border-bottom"> <a href="http://phpfog.com/pricing"><div class="span3"><h6>Pricing</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/billing.html"><h6>Billing</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/reliability.html"><h6>Reliability</h6></div></a></div>
+						<div class="row border-bottom "><div class="span3"><a href="/security.html"><h6>Security</h6></div></a></div>
+						<div class="row border-bottom on"><div class="span3"><a href="/troubleshooting.html"><h6>Troubleshooting</h6></div></a></div>
+
 					</div>
 				</div>
 			</div><!-- content -->

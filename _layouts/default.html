@@ -8,7 +8,7 @@
 		{% if page.url == "/search.html" %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>{% endif %}
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body>
+	<body id="blog">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://afblog.phpfogapp.com/wp-content/themes/appfog/images/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -27,26 +27,18 @@
 			</ul>
 		</div> 
 	</div>
-<!-- 		<div id="header">
-			<div class="wrapper">
-				<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
-				<nav id="page-nav">
-					<form id="search-form" action="/search">
-						<input type="text" id="search" name="q" size="30" />
-						<input class="btn-normal" type="submit" value="Search" />
-					</form>
-				</nav>
-			</div>
-		</div> -->
 	<div id="main_content">
 		<div class='container'>
+
 			{% if page.url != "/index.html" %}
 			<div id="top_bar" class="row gray_blue margin_bottom">
 				<div class="span12">
-					<a href="/"><h1 class="title">Documentation</h1></a>
+					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
 					<ul id="secondary_nav">
+						{% if page.categories %}
 						<li><a href="/{{ page.categories }}">{% if page.categories[0] == "getting-started" %}Getting Started{% endif %}{% if page.categories[0] == "customize" %}Customize Your App{% endif %}{% if page.categories[0] == "best-practices" %}Best Practices{% endif %}{% if page.categories[0] == "other" %}Other{% endif %}{% if page.categories[0] == "addons" %}Add-ons{% endif %}</a></li>
-						<li><a href="/">{{ page.title }}</a></li>
+						{% endif %}
+						<li><a href="#">{{ page.title }}</a></li>
 					</ul>
 				</div>
 
@@ -56,44 +48,68 @@
 
 
 			<div id="content" class="row white">
-
-				<div class="span8 content_column">
-						<h2>{{ page.title }}</h2>
-						{{ content }}
+				<div class="span8 entries main_content">
+					<div class="row">
+						<div class="span8">
+							<div class="row">
+								<div class="span8">
+									<h1>{{ page.title }}</h1>
+									{{ content }}
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="span3 sidebar padding">
 					<div class="row border-bottom">
+						<div class="span3">
+							<form id="search-form" action="/search">
+								<input type="search" placeholder="Search" id="search" name="q" size="30" />
+								<input class="btn gray_blue search" type="submit" value="Go" />
+							</form>
+						</div>
+					</div>
+					<div class="row border-bottom {% if page.url == "/getting-started/index.html" %}on{% endif %}">
+						<div class="span3">
+							<a href="/getting-started/"><h6>Getting Started</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li {% if page.url == "/getting-started/index.html" %}class="on"{% endif %}><a href="/getting-started/"><h6>Getting Started</h6></a></li>
 						{% for current in site.categories.getting-started %}
 						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
 						{% endfor %}
 					</ul>
 
+					<div class="row border-bottom {% if page.url == "/customize/index.html" %}on{% endif %}">
+						<div class="span3">
+							<a href="/customize/"><h6>Customize Your App</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li {% if page.url == "/customize/index.html" %}class="on"{% endif %}><a href="/customize/"><h6>Customize Your App</h6></a></li>
-						<li><a href="http://phpfog.com/addons">Add-ons</a></li>
 						{% for current in site.categories.customize %}
 						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
 						{% endfor %}
 					</ul>
 
+					<div class="row border-bottom {% if page.url == "/best-practices/index.html" %}on{% endif %}">
+						<div class="span3">
+							<a href="/best-practices/"><h6>Best Practices</h6></a>
+						</div>
+					</div>
 					<ul class="pages">
-						<li {% if page.url == "/best-practices/index.html" %}class="on"{% endif %}><a href="/best-practices/"><h6>Best Practices</h6></a></li>
 						{% for current in site.categories.best-practices %}
 						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
 						{% endfor %}
 					</ul>
 
-					<ul class="pages">
-						<li {% if page.url == "/faqs.html" %}class="on"{% endif %}><a href="/faqs.html"><h6>FAQ</h6></a></li>
-						<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
-						<li {% if page.url == "/billing.html" %}class="on"{% endif %}><a href="/billing.html"><h6>Billing</h6></a></li>
-						<li {% if page.url == "/reliability.html" %}class="on"{% endif %}><a href="/reliability.html"><h6>Reliability</h6></a></li>
-						<li {% if page.url == "/security.html" %}class="on"{% endif %}><a href="/security.html"><h6>Security</h6></a></li>
-						<li {% if page.url == "/troubleshooting.html" %}class="on"{% endif %}><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
-					</ul>
+						<div class="row border-bottom {% if page.url == "/faqs.html" %}on{% endif %}"><div class="span3"><a href="/faqs.html"><h6>FAQ</h6></div></a></div>
+						<div class="row border-bottom"> <a href="http://phpfog.com/pricing"><div class="span3"><h6>Pricing</h6></div></a></div>
+						<div class="row border-bottom {% if page.url == "/billing.html" %}on{% endif %}"><div class="span3"><a href="/billing.html"><h6>Billing</h6></div></a></div>
+						<div class="row border-bottom {% if page.url == "/reliability.html" %}on{% endif %}"><div class="span3"><a href="/reliability.html"><h6>Reliability</h6></div></a></div>
+						<div class="row border-bottom {% if page.url == "/security.html" %}on{% endif %}"><div class="span3"><a href="/security.html"><h6>Security</h6></div></a></div>
+						<div class="row border-bottom {% if page.url == "/troubleshooting.html" %}on{% endif %}"><div class="span3"><a href="/troubleshooting.html"><h6>Troubleshooting</h6></div></a></div>
+
 					</div>
 				</div>
 			</div><!-- content -->
