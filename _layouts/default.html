@@ -62,36 +62,40 @@
 						{{ content }}
 				</div>
 
-				<ul class="pages">
-					<li {% if page.url == "/getting-started/index.html" %}class="on"{% endif %}><a href="/getting-started/"><h6>Getting Started</h6></a></li>
-					{% for current in site.categories.getting-started %}
-					<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
-					{% endfor %}
-				</ul>
+				<div class="span3 sidebar padding">
+					<div class="row border-bottom">
+					<ul class="pages">
+						<li {% if page.url == "/getting-started/index.html" %}class="on"{% endif %}><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+						{% for current in site.categories.getting-started %}
+						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+						{% endfor %}
+					</ul>
 
-				<ul class="pages">
-					<li {% if page.url == "/customize/index.html" %}class="on"{% endif %}><a href="/customize/"><h6>Customize Your App</h6></a></li>
-					<li><a href="http://phpfog.com/addons">Add-ons</a></li>
-					{% for current in site.categories.customize %}
-					<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
-					{% endfor %}
-				</ul>
+					<ul class="pages">
+						<li {% if page.url == "/customize/index.html" %}class="on"{% endif %}><a href="/customize/"><h6>Customize Your App</h6></a></li>
+						<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+						{% for current in site.categories.customize %}
+						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+						{% endfor %}
+					</ul>
 
-				<ul class="pages">
-					<li {% if page.url == "/best-practices/index.html" %}class="on"{% endif %}><a href="/best-practices/"><h6>Best Practices</h6></a></li>
-					{% for current in site.categories.best-practices %}
-					<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
-					{% endfor %}
-				</ul>
+					<ul class="pages">
+						<li {% if page.url == "/best-practices/index.html" %}class="on"{% endif %}><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+						{% for current in site.categories.best-practices %}
+						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+						{% endfor %}
+					</ul>
 
-				<ul class="pages">
-					<li {% if page.url == "/faqs.html" %}class="on"{% endif %}><a href="/faqs.html"><h6>FAQ</h6></a></li>
-					<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
-					<li {% if page.url == "/billing.html" %}class="on"{% endif %}><a href="/billing.html"><h6>Billing</h6></a></li>
-					<li {% if page.url == "/reliability.html" %}class="on"{% endif %}><a href="/reliability.html"><h6>Reliability</h6></a></li>
-					<li {% if page.url == "/security.html" %}class="on"{% endif %}><a href="/security.html"><h6>Security</h6></a></li>
-					<li {% if page.url == "/troubleshooting.html" %}class="on"{% endif %}><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
-				</ul>
+					<ul class="pages">
+						<li {% if page.url == "/faqs.html" %}class="on"{% endif %}><a href="/faqs.html"><h6>FAQ</h6></a></li>
+						<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+						<li {% if page.url == "/billing.html" %}class="on"{% endif %}><a href="/billing.html"><h6>Billing</h6></a></li>
+						<li {% if page.url == "/reliability.html" %}class="on"{% endif %}><a href="/reliability.html"><h6>Reliability</h6></a></li>
+						<li {% if page.url == "/security.html" %}class="on"{% endif %}><a href="/security.html"><h6>Security</h6></a></li>
+						<li {% if page.url == "/troubleshooting.html" %}class="on"{% endif %}><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+					</ul>
+					</div>
+				</div>
 			</div><!-- content -->
 		</div><!-- container -->
 	</div><!-- main_content -->
