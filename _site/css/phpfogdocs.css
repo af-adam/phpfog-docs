@@ -1,3 +1,7 @@
+#content {
+	background: url(/img/bg-content-sidebar.png);
+}
+/*
 h1#logo2 { 
 	display: inline;
 	float: left;
@@ -11,11 +15,11 @@ h1#logo2 {
 
 #main .ui-box.vertical-tabs > .tab-container {
 	overflow: hidden;
-	min-height: 968px;
+	min-height: 1002px;
 }
 
 .ui-box-content {
-	min-height: 930px;
+	min-height: 965px;
 }
 
 #search-form > input#search {

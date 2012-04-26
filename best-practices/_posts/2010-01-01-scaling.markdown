@@ -2,7 +2,7 @@
 title: Scaling
 layout: doc-page
 weight: 12
-description: "We make it easy to deal with success."
+description: "It shouldn't be a hassle to deal with success. Now it isn't."
 ---
 
 Scalability is one of PHP Fog's core customer values. We've built our infrastructure to make it as easy as possible to scale your app up and down to reflect your traffic demands. 

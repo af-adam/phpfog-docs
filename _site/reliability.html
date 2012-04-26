@@ -3,102 +3,63 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PHP Fog &mdash; Documentation Reliability</title> 
-		<link href="https://phpfog.com/stylesheets/site.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
 	<body>
-		<div id='root'>
-			<header>
-				<div class="wrapper">
-					<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
-					<nav id="page-nav">
-						<form id="search-form" action="/search">
-							<input type="text" id="search" name="q" size="30" />
-							<input class="btn-normal" type="submit" value="Search" />
-						</form>
-					</nav>
+	<div id="header">
+		<div class="container">
+			<a href="http://appfog.com/" id="app_fog"><img src="http://afblog.phpfogapp.com/wp-content/themes/appfog/images/app-fog.png" width="189" height="47" alt="App Fog"></a>
+			<ul id="main_nav">
+				<li id="nproducts">
+					<a href="#" title="Products" class="parent"><span>Products</span></a>
+					<ul>
+						<li><a href="http://appfog.com/products/php-fog/">PHP Fog</a></li>
+						<li><a href="http://appfog.com/products/appfog">AppFog</a></li>
+					</ul>
+				</li>
+				<li id="nshowcase"><a href="http://appfog.com/showcase/" title="Showcase">Showcase</a></li>
+				<li id="nabout"><a href="http://appfog.com/about/" title="About">About</a></li>
+				<li id="nsupport"><a href="http://appfog.com/support/" title="Support">Support</a></li>
+				<li id="nblog" class="active"><a href="http://afblog.phpfogapp.com/" title="Blog">Blog</a></li>
+			</ul>
+		</div> 
+	</div>
+<!-- 		<div id="header">
+			<div class="wrapper">
+				<h1 id='logo'><a href="/">PHPFog</a></h1><h1 id='logo2'><a href="/">Docs</a></h1>
+				<nav id="page-nav">
+					<form id="search-form" action="/search">
+						<input type="text" id="search" name="q" size="30" />
+						<input class="btn-normal" type="submit" value="Search" />
+					</form>
+				</nav>
+			</div>
+		</div> -->
+	<div id="main_content">
+		<div class='container'>
+			
+			<div id="top_bar" class="row gray_blue margin_bottom">
+				<div class="span12">
+					<a href="/"><h1 class="title">Documentation</h1></a>
+					<ul id="secondary_nav">
+						<li><a href="/"></a></li>
+						<li><a href="/">Reliability</a></li>
+					</ul>
 				</div>
-			</header>
-			<section id='content'>
-				<div class="wrapper">
-					<div id="main">
-								
-						<nav class="breadcrumb">
-							<ul>
-								<li><a href="/">Documentation</a></li>
-								<li><a href="/"></a></li>
-								<li>Reliability</li>
-							</ul>
-						</nav>
-								
-						
+
+			</div>
+			
+					
 
 
-						<div class="row">
-							<div class="ui-box vertical-tabs">
-								<div class="ui-box-vertical-tabs-header">
-								</div>
-								<nav class="tab-container">
-										<ul class="pages">
-											<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
-											
-											<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
-											
-											<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
-											
-											<li ><a href="/getting-started/ssh.html">SSH</a></li>
-											
-											<li ><a href="/getting-started/git.html">Git</a></li>
-											
-											<li ><a href="/getting-started/development.html">Development</a></li>
-											
-										</ul>
+			<div id="content" class="row white">
 
-										<ul class="pages">
-											<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
-											<li><a href="http://phpfog.com/addons">Add-ons</a></li>
-											
-											<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
-											
-											<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
-											
-											<li ><a href="/customize/permissions.html">Permissions</a></li>
-											
-											<li ><a href="/customize/database.html">Database</a></li>
-											
-											<li ><a href="/customize/email.html">Email</a></li>
-											
-											<li ><a href="/customize/php_ini.html">php.ini</a></li>
-											
-										</ul>
-
-										<ul class="pages">
-											<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
-											
-											<li ><a href="/best-practices/caching.html">Caching</a></li>
-											
-											<li ><a href="/best-practices/storage.html">Storage</a></li>
-											
-											<li ><a href="/best-practices/scaling.html">Scaling</a></li>
-											
-										</ul>
-
-										<ul class="pages">
-											<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
-											<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
-											<li ><a href="/billing.html"><h6>Billing</h6></a></li>
-											<li class="on"><a href="/reliability.html"><h6>Reliability</h6></a></li>
-											<li ><a href="/security.html"><h6>Security</h6></a></li>
-											<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
-										</ul>
-										<a class="top" href="#">&uarr; Back to top</a>
-									</nav>
-									<div class="tab-content activated">
-										<div class="on ui-box-content">
-									<h2>Reliability</h2>
-											<p>Here&rsquo;s a walkthrough for an HTTP request from the client all the way to the database for a better look at our reliability mechanisms:</p>
+				<div class="span8 content_column">
+						<h2>Reliability</h2>
+						<p>Here&rsquo;s a walkthrough for an HTTP request from the client all the way to the database for a better look at our reliability mechanisms:</p>
 
 <h6 id="dns-lookup">DNS Lookup</h6>
 
@@ -139,67 +100,109 @@
 <p>We have done a lot of work so far to make PHP Fog reliable; however, we continue to push to make the service even more resilient. While we have redundancy and failover in the entire stack, we want to make each of the components available not just in different availability zones, but different regions, and even different cloud providers altogether.</p>
 
 
-										</div>
-									</div>
-							</div>
-						</div>
-					</div>
 				</div>
-				<div id="root_footer"></div>
-			</section>
 
-		</div>
-		<footer>
-		<div class='wrapper'>
-		<div class='logo'>
-		<h5>PHP Fog</h5>
-		<p>&copy; 2012. All Rights Reserved.</p>
-		</div>
-		<div class='contact'>
-		<h4>Contact Us</h4>
-		<ul>
-		<li><a href="http://help.phpfog.com">Support</a></li>
-		<li><a href="/about">About Us</a></li>
-		<li><a href="http://docs.phpfog.com">Documentation</a></li>
-		<li class='phone'>1.888.974.7364</li>
-		<li class='phone'>1.888.9.PHPFOG</li>
-		</ul>
-		</div>
-		<div class='more-info'>
-		<h4>More Info</h4>
-		<ul>
-		<!-- /%li= link_to "Free Tools", tools_path -->
-		<!-- %li -->
-		<!-- = link_to "Enterprise", enterprise_path -->
-		<li>
-		<a href="/privacy">Privacy Policy</a>
-		</li>
-		<li>
-		<a href="/service_agreement">Service Agreement</a>
-		</li>
-		<li>
-		<a href="/terms_of_service">Terms of Service</a>
-		</li>
-		</ul>
-		</div>
-		<div class='social'>
-		<h4>Social</h4>
-		<ul>
-		<li class='blog'>
-		<a href='http://blog.phpfog.com/'>Blog</a>
-		</li>
-		<li class='twitter'>
-		<a href='http://twitter.com/phpfog'>Twitter</a>
-		</li>
-		<li class='facebook'>
-		<a href='http://on.fb.me/phpfog'>Facebook</a>
-		</li>
-		<li class='community'>
-		<a href='http://community.phpfog.com'>Community</a>
-		</li>
-		</ul>
-		</div>
-		</div>
-		</footer>
-	</body>
+				<ul class="pages">
+					<li ><a href="/getting-started/"><h6>Getting Started</h6></a></li>
+					
+					<li ><a href="/getting-started/jumpstarts.html">Jumpstarts</a></li>
+					
+					<li ><a href="/getting-started/pf-command-line-tool.html">PF Command Line Tool</a></li>
+					
+					<li ><a href="/getting-started/ssh.html">SSH</a></li>
+					
+					<li ><a href="/getting-started/git.html">Git</a></li>
+					
+					<li ><a href="/getting-started/development.html">Development</a></li>
+					
+				</ul>
+
+				<ul class="pages">
+					<li ><a href="/customize/"><h6>Customize Your App</h6></a></li>
+					<li><a href="http://phpfog.com/addons">Add-ons</a></li>
+					
+					<li ><a href="/customize/custom-domain-names.html">Custom Domain Names</a></li>
+					
+					<li ><a href="/customize/ssl.html">SSL for Custom Domain Names</a></li>
+					
+					<li ><a href="/customize/permissions.html">Permissions</a></li>
+					
+					<li ><a href="/customize/logging.html">Logging</a></li>
+					
+					<li ><a href="/customize/database.html">Database</a></li>
+					
+					<li ><a href="/customize/email.html">Email</a></li>
+					
+					<li ><a href="/customize/php_ini.html">php.ini</a></li>
+					
+				</ul>
+
+				<ul class="pages">
+					<li ><a href="/best-practices/"><h6>Best Practices</h6></a></li>
+					
+					<li ><a href="/best-practices/caching.html">Caching</a></li>
+					
+					<li ><a href="/best-practices/storage.html">Storage</a></li>
+					
+					<li ><a href="/best-practices/scaling.html">Scaling</a></li>
+					
+				</ul>
+
+				<ul class="pages">
+					<li ><a href="/faqs.html"><h6>FAQ</h6></a></li>
+					<li> <a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></li>
+					<li ><a href="/billing.html"><h6>Billing</h6></a></li>
+					<li class="on"><a href="/reliability.html"><h6>Reliability</h6></a></li>
+					<li ><a href="/security.html"><h6>Security</h6></a></li>
+					<li ><a href="/troubleshooting.html"><h6>Troubleshooting</h6></a></li>
+				</ul>
+			</div><!-- content -->
+		</div><!-- container -->
+	</div><!-- main_content -->
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="span1">
+					<img src="http://afblog.phpfogapp.com/wp-content/themes/appfog/images/bydevfordev_95.png" width="95" height="79" alt="By Developers For Developers" id="badge">
+				</div>
+				<div class="span3">
+					<h4>About AppFog</h4>
+					<p>Easily build and deploy fast, scalable, and reliable applications to the cloud in seconds. Yeah, it’s that easy.</p>					
+				</div>
+				<div class="span2">
+					<h4>Info</h4>
+					<ul>
+						<li><a href="http://appfog.com/support/">Support</a></li>
+						<li><a href="https://appfog.com/about/">About</a></li>
+						<li><a href="http://dev.appfog.com/">Documentation</a></li>
+					</ul>
+				</div>
+				<div class="span2 offsettop">
+					<ul>
+						<li>Phone: 1.888.974.7364</li>
+						<li>&copy; <script>document.write(new Date().getFullYear());</script> AppFog.</li>
+						<li>All Rights Reserved.</li>
+					</ul>
+				</div>
+				<div class="span4">
+					<h4>Social</h4>
+					<ul id="social">
+						<li id="facebook"><a href="http://www.facebook.com/pages/AppFog/159333004147490">Facebook</a></li>
+						<li id="twitter"><a href="https://twitter.com/#!/appfog">Twitter</a></li>
+						<li id="linkedin"><a href="http://www.linkedin.com/company/appfog">LinkedIn</a></li>
+					</ul>
+				</div>
+			</div>
+		</div> <!-- / .container -->
+	</div>
+	
+	
+<!-- scripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://afblog.phpfogapp.com/wp-content/themes/appfog/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+<script src="http://afblog.phpfogapp.com/wp-content/themes/appfog/js/plugins.js"></script>
+<script src="http://afblog.phpfogapp.com/wp-content/themes/appfog/js/script.js"></script>
+
+</body>
 </html>
