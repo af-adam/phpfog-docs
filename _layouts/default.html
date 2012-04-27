@@ -30,7 +30,14 @@
 	<div id="main_content">
 		<div class='container'>
 
-			{% if page.url != "/index.html" %}
+			{% if page.url == "/index.html" %}
+			<div id="top_bar" class="row gray_blue margin_bottom">
+				<div class="span12">
+					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
+				</div>
+
+			</div>
+			{% else %}
 			<div id="top_bar" class="row gray_blue margin_bottom">
 				<div class="span12">
 					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
@@ -111,7 +118,7 @@
 					</ul>
 
 						<div class="row border-bottom"><div class="span3"><a href="/faqs.html" {% if page.url == "/faqs.html" %}class="on"{% endif %}><h6>FAQ</h6></div></a></div>
-						<div class="row border-bottom"> <a href="http://phpfog.com/pricing"><div class="span3"><h6>Pricing</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></div></div>
 						<div class="row border-bottom"><div class="span3"><a href="/billing.html" {% if page.url == "/billing.html" %}class="on"{% endif %}><h6>Billing</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/reliability.html" {% if page.url == "/reliability.html" %}class="on"{% endif %}><h6>Reliability</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/security.html" {% if page.url == "/security.html" %}class="on"{% endif %}><h6>Security</h6></div></a></div>

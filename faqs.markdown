@@ -13,7 +13,7 @@ weight: 14
 * [Do I have to modify my app to run on PHP Fog?](#modify)
 * [Can I get SSH access?](#ssh)
 * [Can I get FTP access?](#ftp)
-* [I made changes to my app through a web interface and those changes aren't reflected in git. What's going on?](#web)
+* [I modified my app through a web interface but those changes aren't reflected in git. Why not?](#web)
 * [Can my app access third party services?](#3rdparty)
 * [What version of PHP, Apache, and MySQL does PHP Fog use?](#version)
 * [What are the differences between Shared and Dedicated Clouds?](#sharedvdedicated)
@@ -56,7 +56,7 @@ To maintain security across our service, we don't offer SSH access.
 
 We have an SFTP feature on our roadmap, but no ETA. Meanwhile, you can access your source code using our [PF Command Line Tool](/getting-started/pf-command-line-tool) or [Git](/getting-started/git).
 
-#### I made changes to my app through a web interface and those changes aren't reflected in git. What's going on? {#web}
+#### I modified my app through a web interface but those changes aren't reflected in git. Why not? {#web}
 
 Git is a one-way versioning tool. That means any changes you make to your file system through a web interface will not propagate back into git. This is why we recommend setting up a local dev environment and making all code changes there and pushing those changes to your app through git. Read more about that in our [local dev environment guide](/getting-started/local-dev).
 

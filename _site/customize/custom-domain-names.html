@@ -62,13 +62,13 @@
 
 <p>We recommend using the <code>www.</code> subdomain as your canonical domain. Here&rsquo;s how to do that:</p>
 
-<h6 id="a-redirect-your-root-domain">a. Redirect your root domain.</h6>
+<h4 id="a-redirect-your-root-domain">a. Redirect your root domain.</h4>
 
 <p>At your domain host, set up a redirect (302) from your root domain (<code>yourdomain.com</code>) to <code>www.yourdomain.com</code>. </p>
 
 <p>This is a fairly standard tool that DNS services provide. If you don&rsquo;t see an option for it at your domain host, contact their support services and they should be able to do that for you.</p>
 
-<h6 id="b-create-a-cname-alias">b. Create a CNAME alias.</h6>
+<h4 id="b-create-a-cname-alias">b. Create a CNAME alias.</h4>
 
 <p>Create a CNAME alias record for <code>www.yourdomain.com</code> to: </p>
 
@@ -77,7 +77,7 @@
 
 <p>That&rsquo;s the simplest and most reliable method. For more details on why this is is more reliable, check out our <a href="/reliability">reliability doc</a>.</p>
 
-<p>If you need to make your root domain <code>yourdomain.com</code>) canonical instead of the www subdomain, <a href="#rootdomain">check the bottom of this page</a>.</p>
+<p>If you need to make your root domain (<code>yourdomain.com</code>) canonical instead of the www subdomain, <a href="#rootdomain">check the bottom of this page</a>.</p>
 
 <h3 id="change-the-domain-name-setting-in-the-php-fog-app-console">2. Change the domain name setting in the PHP Fog app console.</h3>
 
@@ -124,11 +124,11 @@ else if ($subdomain == 'help')
 
 <p>If you need to make your root domain (e.g. <code>yourdomain.com</code>) canonical, here&rsquo;s how:</p>
 
-<h6 id="redirect-your-www-subdomain">1. Redirect your &ldquo;www.&rdquo; subdomain.</h6>
+<h4 id="redirect-your-www-subdomain">1. Redirect your &ldquo;www.&rdquo; subdomain.</h4>
 
 <p>Set up a redirect from <code>www.yourdomain.com</code> to <code>yourdomain.com</code>, either at your domain host or in your .htaccess configuration. </p>
 
-<h6 id="create-a-records">2. Create &ldquo;A&rdquo; records.</h6>
+<h4 id="create-a-records">2. Create &ldquo;A&rdquo; records.</h4>
 
 <p>Create three &ldquo;A&rdquo; records to: </p>
 
@@ -218,7 +218,7 @@ else if ($subdomain == 'help')
 					</ul>
 
 						<div class="row border-bottom"><div class="span3"><a href="/faqs.html" ><h6>FAQ</h6></div></a></div>
-						<div class="row border-bottom"> <a href="http://phpfog.com/pricing"><div class="span3"><h6>Pricing</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></div></div>
 						<div class="row border-bottom"><div class="span3"><a href="/billing.html" ><h6>Billing</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/reliability.html" ><h6>Reliability</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/security.html" ><h6>Security</h6></div></a></div>

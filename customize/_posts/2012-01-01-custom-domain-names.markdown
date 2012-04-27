@@ -11,13 +11,13 @@ With PHP Fog you can host custom domain names (e.g. my-web-app.com) or PHP Fog d
 
 We recommend using the `www.` subdomain as your canonical domain. Here's how to do that:
 
-###### a. Redirect your root domain.
+#### a. Redirect your root domain.
 
 At your domain host, set up a redirect (302) from your root domain (`yourdomain.com`) to `www.yourdomain.com`. 
 
 This is a fairly standard tool that DNS services provide. If you don't see an option for it at your domain host, contact their support services and they should be able to do that for you.
 
-###### b. Create a CNAME alias.
+#### b. Create a CNAME alias.
 
 Create a CNAME alias record for `www.yourdomain.com` to: 
 
@@ -25,7 +25,7 @@ Create a CNAME alias record for `www.yourdomain.com` to:
 
 That's the simplest and most reliable method. For more details on why this is is more reliable, check out our [reliability doc](/reliability).
 
-If you need to make your root domain `yourdomain.com`) canonical instead of the www subdomain, [check the bottom of this page](#rootdomain).
+If you need to make your root domain (`yourdomain.com`) canonical instead of the www subdomain, [check the bottom of this page](#rootdomain).
 
 ### 2. Change the domain name setting in the PHP Fog app console.
 
@@ -68,11 +68,11 @@ If you've enabled wildcard domains and want to share your session data between s
 
 If you need to make your root domain (e.g. `yourdomain.com`) canonical, here's how:
 
-###### 1. Redirect your "www." subdomain.
+#### 1. Redirect your "www." subdomain.
 
 Set up a redirect from `www.yourdomain.com` to `yourdomain.com`, either at your domain host or in your .htaccess configuration. 
 
-###### 2. Create "A" records.
+#### 2. Create "A" records.
 
 Create three "A" records to: 
 

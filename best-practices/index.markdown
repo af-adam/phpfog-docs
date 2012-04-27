@@ -3,8 +3,7 @@ layout: default
 title: Best Practices
 ---
 
-<ol>
 {% for current in site.categories.best-practices %}
-<li><a href="{{ current.url }}">{{ current.title }}</a><br /><p>{{ current.description }}</p></li>
+<h3><a href="{{ current.url }}">{{ forloop.index }}. {{ current.title }}</a></h3>
+<p>{{ current.description }}</p>
 {% endfor %}
-</ol>

@@ -2,6 +2,15 @@
 	background: url(/img/bg-content-sidebar.png);
 }
 
+.entries a:link, .entries a:visited {
+	color: #668A97;
+	text-decoration: none;
+}
+
+#blog #content h3 {
+	color: #33383F;
+}
+
 #secondary_nav {
 	float: left;
 	margin-left: 30px;
@@ -91,6 +100,7 @@ input.search {
 #search {
 	padding: 6px 15px;
 	width: 154px;
+	margin-bottom: 30px;
 }
 /*
 h1#logo2 { 
