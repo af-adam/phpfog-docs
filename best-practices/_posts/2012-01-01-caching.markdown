@@ -11,13 +11,13 @@ PHP Fog apps can take advantage of two types of caching: Varnish and APC. Proper
 
 All PHP Fog apps are fronted by Varnish, a web application accelerator that runs in front of your app server and caches content according to your HTTP Header information. Varnish can speed up delivery of your content by a factor of 300-1000, depending on your app. For more information, check out [the Varnish site](https://www.varnish-cache.org/). 
 
-###### Default Caching
+#### Default Caching
 
 Varnish caches content automatically for 300 seconds (5 minutes). For static content, this means you don't you have to do anything to take advantage of Varnish.
 
 There are two key exceptions, though. First, if there are cookies in the HTTP header on the request or response, the page will not be cached. Second, only responses to GET requests can be cached.
 
-###### Caching with Cookies
+#### Caching with Cookies
 
 Requests that include cookies are not cached by default so that stale cookies don't impact the application behavior.
 
@@ -31,7 +31,7 @@ Currently only the following cookies are dropped:
 
 We can also setup a custom configuration for your application. We're also building tools for you to manage caching, so stay tuned!
 
-###### Caching Dynamic Content
+#### Caching Dynamic Content
 
 Caching dynamic content in Varnish can greatly improve the performance of your app. You can explicitly instruct Varnish to cache the requests and for how long.
 
@@ -41,23 +41,23 @@ The simplest way to cache a page is to set a header on output which cues Varnish
 
 Note: The longest Varnish will cache any content is 1 day. 
 
-###### Preventing Caching
+#### Preventing Caching
 
 To prevent caching set the "Cache-Control" header to "no-cache". This is generally required in applications that don't produce or consume cookies, but serve dynamic content. This is how to set the "Cache-Control" header in PHP:
 
 	header("Cache-Control: no-cache");
 
-###### Purging Cache Data
+#### Purging Cache Data
 
 We are currently working on tools to reset the cache; however, this is not yet functional. In the mean time if you need to purge the cache, please email support@appfog.com.
 
-###### Caching in WordPress
+#### Caching in WordPress
 
 WordPress by default takes little advantage of caching; however, there are plugins that can improve caching by intelligently presenting the appropriate cache headers.
 
 The [WP Super Cache](http://wordpress.org/extend/plugins/wp-super-cache/) plugin and the [WordPress Varnish](http://wordpress.org/extend/plugins/wordpress-varnish/) plugin are two plugins we recommend installing to take advantage of Varnish.
 
-###### Caching in Drupal
+#### Caching in Drupal
 
 Drupal by default takes little advantage of caching. We recommend installing Drupal's [Varnish HTTP Accelerator Integration module](http://drupal.org/project/varnish) to take advantage of Varnish on your Drupal app. 
 

@@ -39,17 +39,17 @@ You can configure your app to use a third-party database, e.g. an Amazon RDS ins
 
 Let's walk through the configuration of an RDS instance. 
 
-###### 1. Back up your database through phpMyAdmin.
+#### 1. Back up your database through phpMyAdmin.
 
-###### 2. Create an Amazon Web Services account if you don't already have one.
+#### 2. Create an Amazon Web Services account if you don't already have one.
 
 Sign up [here](http://aws.amazon.com/).
 
-###### 3. Set up RDS.
+#### 3. Set up RDS.
 
 Make sure to note your database's name, user ID, password, and host name.
 
-###### 4. Set up your Security Group.
+#### 4. Set up your Security Group.
 
 a. In the "RDS" tab of your AWS Management Console, click on "DB Security Groups" in the "Navigation" menu on the left.
 
@@ -64,7 +64,7 @@ d. In the "Description" tab at the bottom:
 
 e. Wait for the status to change to "authorized".
 
-###### 5. Change your app's database configuration.
+#### 5. Change your app's database configuration.
 
 We'll use WordPress as an example.
 
@@ -93,7 +93,7 @@ c. Save and quit.
 
 d. Commit your changes to git (but don't push yet).
 
-###### 6. Synchronize your databases.
+#### 6. Synchronize your databases.
 
 a. Log in to your phpMyAdmin and click on the "Synchronize" tab at the top.
 
@@ -104,6 +104,6 @@ c. Under "Target database", enter your RDS database information. (Leave the "Soc
 d. Hit the "Go" button.
 
 
-###### 7. Push your code to PHP Fog.
+#### 7. Push your code to PHP Fog.
 
 You're done!

@@ -66,7 +66,7 @@
 
 <h3 id="ssh">SSH, Git, and PF Command Line Tool</h3>
 
-<h6 id="permission-denied-publickey">&ldquo;Permission denied (publickey)&rdquo;</h6>
+<h4 id="permission-denied-publickey">&ldquo;Permission denied (publickey)&rdquo;</h4>
 
 <ol>
   <li>Follow our <a href="/getting-started/ssh">guide to generating your SSH key</a>.</li>
@@ -79,13 +79,13 @@
 <li type="a">Unlock and lock your keychain by clicking on the lock icon at the upper left.</li>
 </ol>
 
-<h6 id="unauthorized-access-for-user">&ldquo;Unauthorized access for user&rdquo;</h6>
+<h4 id="unauthorized-access-for-user">&ldquo;Unauthorized access for user&rdquo;</h4>
 
 <p>This error occurs when you try to use the same SSH key for multiple accounts. You&rsquo;ll have to generate a new key for each account. Check out <a href="/getting-started/ssh#multiple">our guide on using SSH keys with multiple account</a>.</p>
 
 <h3 id="500">HTTP 500, 502, 503, and 504 Errors</h3>
 
-<h6 id="internal-server-error">500: Internal Server Error</h6>
+<h4 id="internal-server-error">500: Internal Server Error</h4>
 
 <p>HTTP 500 is a generic &ldquo;catch-all&rdquo; that indicates that the web server was unable to fulfill the HTTP/S request. This is usually caused by syntax errors, script run times, or deployment issues. </p>
 
@@ -93,21 +93,21 @@
 
 <p>If you still don&rsquo;t get anything besides an HTTP 500, it&rsquo;s probably an issue with your <code>.htaccess</code> file. Check that file for syntax errors. </p>
 
-<h6 id="bad-gateway">502: Bad Gateway</h6>
+<h4 id="bad-gateway">502: Bad Gateway</h4>
 
 <p>HTTP 502 errors are extremely rare and generally due to an infrastructure failure. If you receive this error, wait a few minutes and try again. If you experience this issue for longer than a few minutes, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#097;&#112;&#112;&#102;&#111;&#103;&#046;&#099;&#111;&#109;">&#101;&#109;&#097;&#105;&#108;&#032;&#117;&#115;</a> and we&rsquo;ll work to resolve the issue as fast as possible.</p>
 
-<h6 id="service-unavailable">503: Service Unavailable</h6>
+<h4 id="service-unavailable">503: Service Unavailable</h4>
 
 <p>HTTP 503 errors are specified by your app.</p>
 
-<h6 id="gateway-timeout">504: Gateway Timeout</h6>
+<h4 id="gateway-timeout">504: Gateway Timeout</h4>
 
 <p>HTTP 504 errors mean your app is unable to service requests. The load balancers that sit between your app and its HTTP clients are configured to timeout requests after 60 seconds. So after the load balancer receives the initial request and forwards it to your app server, if the load balancer doesn&rsquo;t receive anything for 60 seconds, it returns a 504 error to the client.</p>
 
 <p>Timeouts can be caused by a a variety of reasons, but the two most common are: 1. CPU over-utilization, and 2. blocking sync calls to other services. </p>
 
-<h6 id="cpu">CPU</h6>
+<h4 id="cpu">CPU</h4>
 
 <p>If your app is on a Shared or Silver Cloud, the CPU utilization is throttled in &ldquo;Bursts&rdquo;. These plans provide a small amount of consistent CPU resources and allow your application to burst CPU capacity when additional cycles are available. They are well suited for lower throughput applications and web sites that consume significant compute cycles periodically. If the processing takes longer than a burst, the processing gets heavily throttled. This means something that can take just a few seconds on your desktop might take much longer on these plans and therefore cause the HTTP request to timeout.</p>
 
@@ -119,7 +119,7 @@
   <li>Heavy calculations (e.g. Fourier transform of an MP3)</li>
 </ul>
 
-<h6 id="blocking-calls-to-other-services">Blocking calls to other services</h6>
+<h4 id="blocking-calls-to-other-services">Blocking calls to other services</h4>
 
 <p>If your application makes calls to third-party services these calls may be blocking. That is, when your applications make a call to a method like file_get_contents() it won&rsquo;t finish until the full HTTP transaction is complete. Making too many calls like this may cause the time to complete all the transactions longer than the timeout period.</p>
 
@@ -131,7 +131,7 @@
   <li>Web-scraping</li>
 </ul>
 
-<h6 id="solutions">Solutions</h6>
+<h4 id="solutions">Solutions</h4>
 
 <ul>
   <li>
@@ -156,19 +156,19 @@
 
 <h3 id="ssl">SSL</h3>
 
-<h6 id="doman-name-mismatch">&ldquo;Doman name mismatch&rdquo;</h6>
+<h4 id="doman-name-mismatch">&ldquo;Doman name mismatch&rdquo;</h4>
 
 <p>A domain name mismatch means that the domain name on your certificate doesn&rsquo;t match your app&rsquo;s actual URL. For example, your certificate might say &ldquo;<code>foo.com</code>&rdquo; while your app&rsquo;s domain is actually &ldquo;<code>www.foo.com</code>&rdquo;.</p>
 
 <p>Solution: Change your app&rsquo;s domain name to match the certificate. Alternatively, you can have a new certificate issued to match your app&rsquo;s domain name (this includes wildcard certificates, e.g. &ldquo;<code>\*.foo.com</code>&rdquo;).</p>
 
-<h6 id="cannot-verify">&ldquo;Cannot verify&rdquo;</h6>
+<h4 id="cannot-verify">&ldquo;Cannot verify&rdquo;</h4>
 
 <p>The most common reason your browser cannot verify your app is an expired certificate. </p>
 
 <p>Solution: Have your Certificate Authority update your certificate.</p>
 
-<h6 id="certificate-authority-says-i-need-a-csr">Certificate Authority says I need a CSR.</h6>
+<h4 id="certificate-authority-says-i-need-a-csr">Certificate Authority says I need a CSR.</h4>
 
 <p>Solution: To generate a CSR on your local machine for PHP Fog check out <a href="http://www.globalsign.com/support/csr/serversign_apache.php">this document</a>.</p>
 
