@@ -36,8 +36,10 @@
 					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
 					<ul id="secondary_nav">
 						{% if page.categories %}
+						<li class="breadcrumb-separator">&raquo;</li>
 						<li><a href="/{{ page.categories }}">{% if page.categories[0] == "getting-started" %}Getting Started{% endif %}{% if page.categories[0] == "customize" %}Customize Your App{% endif %}{% if page.categories[0] == "best-practices" %}Best Practices{% endif %}{% if page.categories[0] == "other" %}Other{% endif %}{% if page.categories[0] == "addons" %}Add-ons{% endif %}</a></li>
 						{% endif %}
+						<li class="breadcrumb-separator">&raquo;</li>
 						<li><a href="#">{{ page.title }}</a></li>
 					</ul>
 				</div>
@@ -70,45 +72,50 @@
 							</form>
 						</div>
 					</div>
-					<div class="row border-bottom {% if page.url == "/getting-started/index.html" %}on{% endif %}">
+					<div class="row border-bottom {% if page.url == "/index.html" %}on{% endif %}">
 						<div class="span3">
-							<a href="/getting-started/"><h6>Getting Started</h6></a>
+							<a href="/"><h6>PHP Fog Docs</h6></a>
+						</div>
+					</div>
+					<div class="row border-bottom">
+						<div class="span3">
+							<a href="/getting-started/" {% if page.url == "/getting-started/index.html" %}class="on"{% endif %}><h6>Getting Started</h6></a>
 						</div>
 					</div>
 					<ul class="pages">
 						{% for current in site.categories.getting-started %}
-						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
 						{% endfor %}
 					</ul>
 
-					<div class="row border-bottom {% if page.url == "/customize/index.html" %}on{% endif %}">
+					<div class="row border-bottom">
 						<div class="span3">
-							<a href="/customize/"><h6>Customize Your App</h6></a>
+							<a href="/customize/" {% if page.url == "/customize/index.html" %}class="on"{% endif %}><h6>Customize Your App</h6></a>
 						</div>
 					</div>
 					<ul class="pages">
 						{% for current in site.categories.customize %}
-						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
 						{% endfor %}
 					</ul>
 
-					<div class="row border-bottom {% if page.url == "/best-practices/index.html" %}on{% endif %}">
+					<div class="row border-bottom">
 						<div class="span3">
-							<a href="/best-practices/"><h6>Best Practices</h6></a>
+							<a href="/best-practices/" {% if page.url == "/best-practices/index.html" %}on{% endif %}><h6>Best Practices</h6></a>
 						</div>
 					</div>
 					<ul class="pages">
 						{% for current in site.categories.best-practices %}
-						<li {% if current.url == page.url %}class="on"{% endif %}><a href="{{ current.url }}">{{ current.title }}</a></li>
+						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
 						{% endfor %}
 					</ul>
 
-						<div class="row border-bottom {% if page.url == "/faqs.html" %}on{% endif %}"><div class="span3"><a href="/faqs.html"><h6>FAQ</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/faqs.html" {% if page.url == "/faqs.html" %}class="on"{% endif %}><h6>FAQ</h6></div></a></div>
 						<div class="row border-bottom"> <a href="http://phpfog.com/pricing"><div class="span3"><h6>Pricing</h6></div></a></div>
-						<div class="row border-bottom {% if page.url == "/billing.html" %}on{% endif %}"><div class="span3"><a href="/billing.html"><h6>Billing</h6></div></a></div>
-						<div class="row border-bottom {% if page.url == "/reliability.html" %}on{% endif %}"><div class="span3"><a href="/reliability.html"><h6>Reliability</h6></div></a></div>
-						<div class="row border-bottom {% if page.url == "/security.html" %}on{% endif %}"><div class="span3"><a href="/security.html"><h6>Security</h6></div></a></div>
-						<div class="row border-bottom {% if page.url == "/troubleshooting.html" %}on{% endif %}"><div class="span3"><a href="/troubleshooting.html"><h6>Troubleshooting</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/billing.html" {% if page.url == "/billing.html" %}class="on"{% endif %}><h6>Billing</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/reliability.html" {% if page.url == "/reliability.html" %}class="on"{% endif %}><h6>Reliability</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/security.html" {% if page.url == "/security.html" %}class="on"{% endif %}><h6>Security</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/troubleshooting.html" {% if page.url == "/troubleshooting.html" %}class="on"{% endif %}><h6>Troubleshooting</h6></div></a></div>
 
 					</div>
 				</div>
