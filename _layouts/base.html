@@ -2,10 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Mailgun</title> 
+		<title>PHP Fog &mdash; Documentation {{ page.title }}</title> 
 		<link href="/css/style.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
-		
+		{% if page.url == "/search.html" %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>{% endif %}
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
 	<body id="blog">
@@ -30,62 +30,35 @@
 	<div id="main_content">
 		<div class='container'>
 
-			
+			{% if page.url == "/index.html" %}
+			<div id="top_bar" class="row gray_blue margin_bottom">
+				<div class="span12">
+					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
+				</div>
+
+			</div>
+			{% else %}
 			<div id="top_bar" class="row gray_blue margin_bottom">
 				<div class="span12">
 					<a href="/"><h1 class="title">PHP Fog Docs</h1></a>
 					<ul id="secondary_nav">
-						
+						{% if page.categories %}
 						<li class="breadcrumb-separator">&raquo;</li>
-						<li><a href="/addons">Add-ons</a></li>
-						
+						<li><a href="/{{ page.categories }}">{% if page.categories[0] == "getting-started" %}Getting Started{% endif %}{% if page.categories[0] == "customize" %}Customize Your App{% endif %}{% if page.categories[0] == "best-practices" %}Best Practices{% endif %}{% if page.categories[0] == "other" %}Other{% endif %}{% if page.categories[0] == "addons" %}Add-ons{% endif %}</a></li>
+						{% endif %}
 						<li class="breadcrumb-separator">&raquo;</li>
-						<li><a href="#">Mailgun</a></li>
+						<li><a href="#">{{ page.title }}</a></li>
 					</ul>
 				</div>
 
 			</div>
-			
+			{% endif %}
 					
 
 
 			<div id="content" class="row white">
 				<div class="span8 main_content">
-					<div class="row entries">
-	<div class="span8">
-		<div class="row">
-			<div class="span8">
-				<h1>Mailgun</h1>
-				<h3 id="install-mailgun">Install Mailgun</h3>
-
-<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the Mailgun add-on. That&rsquo;s it!</p>
-
-<h3 id="pricing">Pricing</h3>
-
-<p>With the Mailgun add-on for PHP Fog, you get a free plan that includes: </p>
-
-<ul>
-  <li>300 messages per day</li>
-  <li>Real time reports and stats</li>
-  <li>Fully featured account</li>
-  <li>Temporary mailbox storage</li>
-  <li>Premium support</li>
-</ul>
-
-<p>If you need more than that, you can upgrade through Mailgun. Check out their pricing <a href="http://mailgun.net/pricing">here</a>.</p>
-
-<h3 id="using-mailgun">Using MailGun</h3>
-
-<p>To use Mailgun with your app check out the <a href="http://documentation.mailgun.net/quickstart.html">Quick Start Guide</a> under the PHP tab.</p>
-
-<p>For more extensive documentation, see the <a href="http://documentation.mailgun.net/user_manual.html">User Manual</a>.</p>
-
-
-			</div>
-		</div>
-	</div>
-</div>
-
+					{{ content }}
 				</div>
 
 				<div class="span3 sidebar padding">
@@ -97,74 +70,50 @@
 							</form>
 						</div>
 					</div>
-					<div class="row border-bottom ">
+					<div class="row border-bottom {% if page.url == "/index.html" %}on{% endif %}">
 						<div class="span3">
 							<a href="/"><h6>PHP Fog Docs</h6></a>
 						</div>
 					</div>
 					<div class="row border-bottom">
 						<div class="span3">
-							<a href="/getting-started/" ><h6>Getting Started</h6></a>
+							<a href="/getting-started/" {% if page.url == "/getting-started/index.html" %}class="on"{% endif %}><h6>Getting Started</h6></a>
 						</div>
 					</div>
 					<ul class="pages">
-						
-						<li><a href="/getting-started/jumpstarts.html" >Jumpstarts</a></li>
-						
-						<li><a href="/getting-started/pf-command-line-tool.html" >PF Command Line Tool</a></li>
-						
-						<li><a href="/getting-started/ssh.html" >SSH</a></li>
-						
-						<li><a href="/getting-started/git.html" >Git</a></li>
-						
-						<li><a href="/getting-started/development.html" >Development</a></li>
-						
+						{% for current in site.categories.getting-started %}
+						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
+						{% endfor %}
 					</ul>
 
 					<div class="row border-bottom">
 						<div class="span3">
-							<a href="/customize/" ><h6>Customize Your App</h6></a>
+							<a href="/customize/" {% if page.url == "/customize/index.html" %}class="on"{% endif %}><h6>Customize Your App</h6></a>
 						</div>
 					</div>
 					<ul class="pages">
-						
-						<li><a href="/customize/custom-domain-names.html" >Custom Domain Names</a></li>
-						
-						<li><a href="/customize/ssl.html" >SSL for Custom Domain Names</a></li>
-						
-						<li><a href="/customize/permissions.html" >Permissions</a></li>
-						
-						<li><a href="/customize/logging.html" >Logging</a></li>
-						
-						<li><a href="/customize/database.html" >Database</a></li>
-						
-						<li><a href="/customize/email.html" >Email</a></li>
-						
-						<li><a href="/customize/php_ini.html" >php.ini</a></li>
-						
+						{% for current in site.categories.customize %}
+						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
+						{% endfor %}
 					</ul>
 
 					<div class="row border-bottom">
 						<div class="span3">
-							<a href="/best-practices/" ><h6>Best Practices</h6></a>
+							<a href="/best-practices/" {% if page.url == "/best-practices/index.html" %}on{% endif %}><h6>Best Practices</h6></a>
 						</div>
 					</div>
 					<ul class="pages">
-						
-						<li><a href="/best-practices/caching.html" >Caching</a></li>
-						
-						<li><a href="/best-practices/storage.html" >Storage</a></li>
-						
-						<li><a href="/best-practices/scaling.html" >Scaling</a></li>
-						
+						{% for current in site.categories.best-practices %}
+						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
+						{% endfor %}
 					</ul>
 
-						<div class="row border-bottom"><div class="span3"><a href="/faqs.html" ><h6>FAQ</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/faqs.html" {% if page.url == "/faqs.html" %}class="on"{% endif %}><h6>FAQ</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></div></div>
-						<div class="row border-bottom"><div class="span3"><a href="/billing.html" ><h6>Billing</h6></div></a></div>
-						<div class="row border-bottom"><div class="span3"><a href="/reliability.html" ><h6>Reliability</h6></div></a></div>
-						<div class="row border-bottom"><div class="span3"><a href="/security.html" ><h6>Security</h6></div></a></div>
-						<div class="row border-bottom"><div class="span3"><a href="/troubleshooting.html" ><h6>Troubleshooting</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/billing.html" {% if page.url == "/billing.html" %}class="on"{% endif %}><h6>Billing</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/reliability.html" {% if page.url == "/reliability.html" %}class="on"{% endif %}><h6>Reliability</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/security.html" {% if page.url == "/security.html" %}class="on"{% endif %}><h6>Security</h6></div></a></div>
+						<div class="row border-bottom"><div class="span3"><a href="/troubleshooting.html" {% if page.url == "/troubleshooting.html" %}class="on"{% endif %}><h6>Troubleshooting</h6></div></a></div>
 
 					</div>
 				</div>
