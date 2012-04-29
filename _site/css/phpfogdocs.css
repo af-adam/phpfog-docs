@@ -1,3 +1,7 @@
+#main_nav #nblog {
+	margin-right: -12px;
+}
+
 #content {
 	background: url(/img/bg-content-sidebar.png);
 }
@@ -11,17 +15,35 @@
 	color: #33383F;
 }
 
-#secondary_nav {
+#docs_nav {
 	float: left;
-	margin-left: 30px;
 	border: none;
+	list-style-type: none;
+	display: block;
+	margin: 0;
 }
 
-#secondary_nav a, #secondary_nav a:link, #secondary_nav a:visited {
+#docs_nav li {
+padding: 0;
+margin: 0;
+float: left;
+}
+
+#docs_nav a {
+	color: #666;
+	padding: 24px 20px 0;
+	height: 36px;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	font: 600 14px/1 "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#docs_nav a, #docs_nav a:link, #docs_nav a:visited {
 	border-right: none;
 }
 
-#secondary_nav .breadcrumb-separator {
+#docs_nav .breadcrumb-separator {
 
 	padding: 19px 0;
 	color: #708C9E;

@@ -7,14 +7,14 @@ description: "Everything you need to know about your PHP Fog Database."
 
 PHP Fog provides each app with a MySQL database of 20MB.
 
-## Accessing the Database through phpMyAdmin
+### Accessing the Database through phpMyAdmin
 
 1. Go to your PHP Fog app console.
 2. Click on the "Database" tab on the left.
 3. Click on the "Launch phpMyAdmin" button.
 4. Log in with your MySQL credentials.
 
-## Increasing Database Capacity
+### Increasing Database Capacity
 
 Database capacity beyond the initial 20MB costs $2/GB per month. 
 
@@ -23,17 +23,17 @@ Database capacity beyond the initial 20MB costs $2/GB per month.
 3. Use the slider to increase the capacity to suit your needs.
 3. Click on "Save Changes".
 
-## Backups
+### Backups
 
 You can perform manual backups of your app's database by exporting it through phpMyAdmin. We don't support automated backups to users' systems yet, but that feature is on our road map. 
 
 PHP Fog also backs up your app's database on a daily basis and keeps the backups for one week. You can contact <a href="mailto:support@appfog.com">support@appfog.com</a> for access to these.
 
-## Remote Database Access
+### Remote Database Access
 
 Access to an app's database is currently restricted to your PHP app and phpMyAdmin. 
 
-## Third-Party Databases
+### Third-Party Databases
 
 You can configure your app to use a third-party database, e.g. an Amazon RDS instance, which is a cloud-based relational database that's easy to set up, operate, and scale. Read more about it [here](http://aws.amazon.com/rds/).
 
