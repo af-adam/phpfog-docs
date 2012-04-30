@@ -9,4 +9,4 @@ PHP Fog provides logging by interacting with third-party log hosting services.
 
 ### Install Logging
 
-To install logging with Papertrail
+To install logging with Papertrail TKTKTK

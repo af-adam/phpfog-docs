@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Getting Started</title> 
+		<title>PHP Fog &mdash; Documentation Environment Variables</title> 
 		<link href="/css/style.css" rel="stylesheet">
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
 		
@@ -38,7 +38,10 @@
 					<ul id="docs_nav">
 						
 						<li class="breadcrumb-separator">&raquo;</li>
-						<li><a href="#">Getting Started</a></li>
+						<li><a href="/getting-started">Getting Started</a></li>
+						
+						<li class="breadcrumb-separator">&raquo;</li>
+						<li><a href="#">Environment Variables</a></li>
 					</ul>
 					<ul id="secondary_nav">
 						<li><a href="#">AppFog Docs</a></li>
@@ -56,25 +59,20 @@
 	<div class="span8">
 		<div class="row">
 			<div class="span8">
-				<h1>Getting Started</h1>
-				
-<h3><a href="/getting-started/jumpstarts.html">1. Jumpstarts</a></h3>
-<p>The easiest way to spin up a PHP app. Quick and dead simple.</p>
+				<h1>Environment Variables</h1>
+				<p>When you first create your app, PHP Fog sets up your MySQL Database credentials for you. Instead of hard-coding these credentials into your app, PHP Fog creates a set of environment variables and stores your credentials there. </p>
 
-<h3><a href="/getting-started/pf-command-line-tool.html">2. PF Command Line Tool</a></h3>
-<p>Git and SSH made easy.</p>
+<p>To access these credentials in your app, simply call these environment variables using the <code>getenv()</code> function. You can find these environment variables and the actual credential values in your PHP Fog app console under the &ldquo;Env. Variables&rdquo; tab. </p>
 
-<h3><a href="/getting-started/ssh.html">3. SSH</a></h3>
-<p>Everything you need to know about SSH.</p>
+<p>Here&rsquo;s an example of how to access your environment variables:</p>
 
-<h3><a href="/getting-started/git.html">4. Git</a></h3>
-<p>For developers already familiar with Git.</p>
+<pre><code>&lt;?php
+// Example use of getenv()
+$ip = getenv('MYSQL_DB_HOST');
+?&gt;
+</code></pre>
 
-<h3><a href="/getting-started/env-vars.html">5. Environment Variables</a></h3>
-<p>Where you credentials live.</p>
-
-<h3><a href="/getting-started/development.html">6. Development</a></h3>
-<p>How to prepare your local development environment.</p>
+<p>These environment variables also make it easy for you to <a href="/getting-started/development">set up your development environment</a>.</p>
 
 
 			</div>
@@ -100,7 +98,7 @@
 					</div>
 					<div class="row border-bottom">
 						<div class="span3">
-							<a href="/getting-started/" class="on"><h6>Getting Started</h6></a>
+							<a href="/getting-started/" ><h6>Getting Started</h6></a>
 						</div>
 					</div>
 					<ul class="pages">
@@ -113,7 +111,7 @@
 						
 						<li><a href="/getting-started/git.html" >Git</a></li>
 						
-						<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
+						<li><a href="/getting-started/env-vars.html" class="on">Environment Variables</a></li>
 						
 						<li><a href="/getting-started/development.html" >Development</a></li>
 						

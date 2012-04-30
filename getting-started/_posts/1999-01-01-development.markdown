@@ -21,17 +21,13 @@ Install <a href="/faqs#version">these versions</a> of Apache, MySQL, and PHP.
 
 Download and install <a href="http://www.wampserver.com/en/">WAMP</a>.
 
-### 2. Create environment variables.
+### 2. Configure your local environment variables.
 
-After you have your local environment set up, you'll want to be able to deploy the same code in both your local environment and your live PHP Fog Cloud. In order to do this, you'll place the necessary configuration elements in environment variables.
+After you have your local environment set up, you'll want to be able to deploy the same code in both your local environment and your live PHP Fog Cloud. PHP Fog makes this easy by [setting environment variables with your database credentials](/getting-started/env-vars).
 
-<ol>
-<li type="a">Make sure your code references relative URLs.</li>
-<li type="a">Create environment variables on your local machine. You'll want these to include database host name, database name, username, and password.</li>
-<li type="a">Go to your PHP Fog app console and create those same environment variables with the PHP Fog values.</li>
-<li type="a">Change those values in your code base to the environment variables.</li>
-</ol>
+To take advantage of this, set those environment variables in your local environment. TKTKTK
 
+You'll also want to make sure your code references relative URLs.
 
 ### WordPress Walkthrough
 
