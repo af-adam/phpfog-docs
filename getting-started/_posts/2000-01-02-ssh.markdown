@@ -98,6 +98,8 @@ A real key will look like:
 
 Now log in to the PHP Fog App Console and click on the "SSH Keys" tab. Hit the "Add another SSH key" button and paste the public key into the "SSH Public Key" field, give it a name, and hit "Save Changes".
 
+<img class="screenshot" src="/img/screenshots/ssh.png" alt="SSH"/>
+
 That's it, you've generated a new SSH key and added it to PHP Fog! 
 
 [Continue on to our tutorial on git](/getting-started/git).

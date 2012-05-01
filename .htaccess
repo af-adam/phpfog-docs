@@ -1,6 +1,45 @@
 DirectoryIndex index.html index.xml index.php
 
-# Redirect old doc URLs
+## Redirect old doc URLs
+redirect 301 /index.php/features/article/getting_started_custom_application /getting-started/ssh/
+redirect 301 /index.php/features/article/getting_started_pf_command_line /getting-started/pf-command-line-tool/
+redirect 301 /index.php/features/article/caching_with_apc /best-practices/caching#apc
+redirect 301 /index.php/features/article/composer /getting-started/git#composer
+redirect 301 /index.php/features/article/generating_a_ssh_key /getting-started/ssh/
+redirect 301 /index.php/features/article/gitignore /getting-started/git#gitignore
+redirect 301 /index.php/features/article/handling_multiple_ssh_keys /getting-started/ssh#multiple
+redirect 301 /index.php/features/article/handling_large_static_assets /best-practices/storage/
+redirect 301 /index.php/features/article/changing_file_folder_permissions /customize/permissions/
+redirect 301 /index.php/features/article/pf_command_line_tool /getting-started/pf-command-line-tool/
+redirect 301 /index.php/features/article/custom_ssl /customize/ssl/
+redirect 301 /index.php/features/article/scaling_your_application /best-practices/scaling/
+redirect 301 /index.php/features/article/sending_email /customize/email/
+redirect 301 /index.php/features/article/set_php.ini_values_using_.htaccess_and_set_ini /customize/php_ini/
+redirect 301 /index.php/features/article/setup_dns_records /customize/custom-domain-names/
+redirect 301 /index.php/features/article/shared_vs_dedicated /faqs/#sharedvdedicated
+redirect 301 /index.php/features/article/tips_and_tricks /best-practices/
+redirect 301 /index.php/features/article/troubleshooting_http_500_errors /troubleshooting/#500
+redirect 301 /index.php/features/article/troubleshooting_timeouts /troubleshooting/#500
+redirect 301 /index.php/features/article/what_you_need_to_know /best-practices/
+redirect 301 /index.php/features/article/working_around_limitations /best-practices/
+redirect 301 /index.php/features/article/faq /faqs/
+redirect 301 /index.php/features/article/faq_billing /billing/
+redirect 301 /index.php/features/article/database /customize/database/
+redirect 301 /index.php/features/article/faq_how_reliable_is_php_fog /reliability/
+redirect 301 /index.php/features/article/faq_git_and_ssh /getting-started/git/
+redirect 301 /index.php/features/article/amazon_rds /customize/database#third-party-databases
+redirect 301 /index.php/features/article/amazon_s3 /best-practices/storage/
+redirect 301 /index.php/features/article/caching /best-practices/caching/
+redirect 301 /index.php/features/article/blitz /addons/blitz
+redirect 301 /index.php/features/article/cleardb /addons/cleardb
+redirect 301 /index.php/features/article/cloudmailin /addons/cloudmailin
+redirect 301 /index.php/features/article/ironmq /addons/ironmq
+redirect 301 /index.php/features/article/ironworker /addons/ironworker
+redirect 301 /index.php/features/article/mailgun /addons/mailgun
+redirect 301 /index.php/features/article/mongohq /addons/mongohq
+redirect 301 /index.php/features/article/mongolab /addons/mongolab
+redirect 301 /index.php/features/article/new_relic /addons/newrelic
+redirect 301 /index.php/features/article/supported_frameworks http://www.phpfog.com/jumpstarts
 
 redirect 301 /features/article/getting_started_custom_application /getting-started/ssh/
 redirect 301 /features/article/getting_started_pf_command_line /getting-started/pf-command-line-tool/

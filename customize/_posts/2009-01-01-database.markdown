@@ -14,6 +14,8 @@ PHP Fog provides each app with a MySQL database of 20MB.
 3. Click on the "Launch phpMyAdmin" button.
 4. Log in with your MySQL credentials.
 
+<img class="screenshot" src="/img/screenshots/database.png" alt="Database"/>
+
 ### Increasing Database Capacity
 
 Database capacity beyond the initial 20MB costs $2/GB per month. 
@@ -22,6 +24,8 @@ Database capacity beyond the initial 20MB costs $2/GB per month.
 2. Click on the "Database" tab on the left.
 3. Use the slider to increase the capacity to suit your needs.
 3. Click on "Save Changes".
+
+<img class="screenshot" src="/img/screenshots/database-cap.png" alt="Database Capacity"/>
 
 ### Backups
 

@@ -31,7 +31,11 @@ If you need to make your root domain (`yourdomain.com`) canonical instead of the
 
 Go to your app console at PHP Fog and click on the "Domain Name" tab on the left. Enter your custom domain name in the field. Use the root domain name (`yourdomain.com`) whether you're using `www`. or the root domain.
 
+<img class="screenshot" src="/img/screenshots/domain.png" alt="Custom Domain"/>
+
 Note: With WordPress apps, you *must* change your domain name in the WordPress administration panel before changing it in the PHP Fog app console.
+
+Using a custom domain on our Shared Cloud will cost you $5/month, but it's free on our Dedicated Clouds. 
 
 ### 3. Wait for your DNS settings to propagate.
 
@@ -40,6 +44,7 @@ This can take anywhere from a few minutes to 48 hours, depending on your locatio
 ## Recommended DNS Providers
 
 * Amazon's Route 53
+* TK
 
 ## Handling Subdomains with Wildcards
 
@@ -80,4 +85,4 @@ Create three "A" records to:
 	184.72.222.30
 	107.22.161.126
 
-Important: make sure to use all three IP addresses for maximum reliability!
+Note: make sure to use all three IP addresses for maximum reliability!

@@ -25,9 +25,15 @@ description: How to set up your SSL Certificate for HTTPS.
 
 Go to your app console and click on the "SSL" tab on the left. 
 
+<img class="screenshot" src="/img/screenshots/ssl-tab.png" alt="SSL Tab"/>
+
 Open your certificate in your favorite text editor. Copy the <em>entire</em> contents of that file and paste it into the "Signed Certificate" field.
 
+<img class="screenshot" src="/img/screenshots/ssl-signed.png" alt="SSL Signed Certificate"/>
+
 Open your private key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the "RSA or DSA Private Key" field.
+
+<img class="screenshot" src="/img/screenshots/ssl-dsa.png" alt="RSA or DSA Private Key"/>
 
 If you have an intermediate certificate:
 

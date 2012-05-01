@@ -44,7 +44,7 @@
 						<li><a href="#">Environment Variables</a></li>
 					</ul>
 					<ul id="secondary_nav">
-						<li><a href="#">AppFog Docs</a></li>
+						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
 					</ul>
 				</div>
 
@@ -63,6 +63,8 @@
 				<p>When you first create your app, PHP Fog sets up your MySQL Database credentials for you. Instead of hard-coding these credentials into your app, PHP Fog creates a set of environment variables and stores your credentials there. </p>
 
 <p>To access these credentials in your app, simply call these environment variables using the <code>getenv()</code> function. You can find these environment variables and the actual credential values in your PHP Fog app console under the &ldquo;Env. Variables&rdquo; tab. </p>
+
+<p><img class="screenshot" src="/img/screenshots/env-vars.png" alt="Environment Variables" /></p>
 
 <p>Here&rsquo;s an example of how to access your environment variables:</p>
 
@@ -129,8 +131,6 @@ $ip = getenv('MYSQL_DB_HOST');
 						<li><a href="/customize/ssl.html" >SSL for Custom Domain Names</a></li>
 						
 						<li><a href="/customize/permissions.html" >Permissions</a></li>
-						
-						<li><a href="/customize/logging.html" >Logging</a></li>
 						
 						<li><a href="/customize/database.html" >Database</a></li>
 						

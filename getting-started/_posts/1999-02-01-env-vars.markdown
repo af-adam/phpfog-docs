@@ -9,6 +9,8 @@ When you first create your app, PHP Fog sets up your MySQL Database credentials 
 
 To access these credentials in your app, simply call these environment variables using the `getenv()` function. You can find these environment variables and the actual credential values in your PHP Fog app console under the "Env. Variables" tab. 
 
+<img class="screenshot" src="/img/screenshots/env-vars.png" alt="Environment Variables"/>
+
 Here's an example of how to access your environment variables:
 
     <?php

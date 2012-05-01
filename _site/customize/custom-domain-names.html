@@ -44,7 +44,7 @@
 						<li><a href="#">Custom Domain Names</a></li>
 					</ul>
 					<ul id="secondary_nav">
-						<li><a href="#">AppFog Docs</a></li>
+						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
 					</ul>
 				</div>
 
@@ -87,7 +87,11 @@
 
 <p>Go to your app console at PHP Fog and click on the &ldquo;Domain Name&rdquo; tab on the left. Enter your custom domain name in the field. Use the root domain name (<code>yourdomain.com</code>) whether you&rsquo;re using <code>www</code>. or the root domain.</p>
 
+<p><img class="screenshot" src="/img/screenshots/domain.png" alt="Custom Domain" /></p>
+
 <p>Note: With WordPress apps, you <em>must</em> change your domain name in the WordPress administration panel before changing it in the PHP Fog app console.</p>
+
+<p>Using a custom domain on our Shared Cloud will cost you $5/month, but it&rsquo;s free on our Dedicated Clouds. </p>
 
 <h3 id="wait-for-your-dns-settings-to-propagate">3. Wait for your DNS settings to propagate.</h3>
 
@@ -97,6 +101,7 @@
 
 <ul>
   <li>Amazon&rsquo;s Route 53</li>
+  <li>TK</li>
 </ul>
 
 <h2 id="handling-subdomains-with-wildcards">Handling Subdomains with Wildcards</h2>
@@ -141,7 +146,7 @@ else if ($subdomain == 'help')
 107.22.161.126
 </code></pre>
 
-<p>Important: make sure to use all three IP addresses for maximum reliability!</p>
+<p>Note: make sure to use all three IP addresses for maximum reliability!</p>
 
 
 			</div>
@@ -198,8 +203,6 @@ else if ($subdomain == 'help')
 						<li><a href="/customize/ssl.html" >SSL for Custom Domain Names</a></li>
 						
 						<li><a href="/customize/permissions.html" >Permissions</a></li>
-						
-						<li><a href="/customize/logging.html" >Logging</a></li>
 						
 						<li><a href="/customize/database.html" >Database</a></li>
 						

@@ -45,17 +45,27 @@ PHP Fog lets you choose between scaling up and scaling out. Scaling up means upg
 
 Your decision on whether to scale up or scale out (or both!) will depend on the nature of your app, your budget considerations, and your traffic. Fortunately, PHP Fog makes scaling easy and flexible enough to let you experiment and figure out exactly what's right for you. 
 
-###### Scale Up
+#### Scale Up
 
 Scaling up is extremely easy. If you're upgrading a Shared app, just go to your app console, click on the "Upgrade" tab on the left, choose the level you want to upgrade to, and hit the "Save Changes" button. If you're upgrading a Dedicated app, go to your Cloud console, click on the "Scaling" button, choose the level you want to upgrade to, and hit the "Save Changes" button. 
+
+<img class="screenshot" src="/img/screenshots/upgrade.png" alt="Scale Up"/>
 
 That's it! Cloud upgrades generally take a few hours, and no more than 24. 
 
 Note: You can migrate back and forth between any level of Dedicated Cloud, but because of the more restrictive nature of Shared, once you upgrade from a Shared Cloud to a Dedicated Cloud, you cannot downgrade back to Shared. 
 
-###### Scale Out
+#### Scale Out
 
-Scaling out is easy, too. Just go to your Cloud console, click on the "Scaling" button, drag the slider to the number of servers you want, and click the "Save Changes" button. 
+Scaling out is easy, too. Just go to your Cloud console, click on the "Scaling" button. 
+
+<img class="screenshot" src="/img/screenshots/scaling-1.png" alt="Scale Out"/>
+
+<img class="screenshot" src="/img/screenshots/scaling-2.png" alt="Scale Out"/>
+
+Then drag the slider to the number of servers you want, and click the "Save Changes" button. 
+
+<img class="screenshot" src="/img/screenshots/scaling-slider.png" alt="Scale Out"/>
 
 That's it! Scaling to more servers generally take just a few minutes. 
 

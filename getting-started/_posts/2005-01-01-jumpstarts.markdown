@@ -11,11 +11,19 @@ Go to [www.phpfog.com](http://www.phpfog.com) and create an account.
 
 ### 2. Create your app.
 
-Choose from our App or Framework Jumpstarts, or start from scratch with your own custom PHP app.
+Choose from our App or Framework Jumpstarts. 
+
+<img class="screenshot" src="/img/screenshots/apps-frameworks.png" alt="App and Framework Jumpstarts"/>
+
+Or start from scratch with your own custom PHP app.
+
+<img class="screenshot" src="/img/screenshots/custom.png" alt="Custom Jumpstart"/>
 
 ### 3. Enter the details.
 
 Enter your Application Details and choose a domain name. 
+
+<img class="screenshot" src="/img/screenshots/details.png" alt="App Details"/>
 
 ### 4. There is no step 4. 
 
