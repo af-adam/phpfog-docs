@@ -21,6 +21,7 @@
 	list-style-type: none;
 	display: block;
 	margin: 0;
+	padding-left: 25px;
 }
 
 #docs_nav li {
@@ -49,6 +50,10 @@ float: left;
 	color: #708C9E;
 	font-weight: 400;
 	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#blog .sidebar {
+	min-height: 1300px;
 }
 
 #blog .sidebar .row {
@@ -138,4 +143,9 @@ input.search {
 
 img.screenshot {
 	max-width: 750px;
+}
+
+.top-link {
+	position: absolute;
+	bottom: 0;
 }

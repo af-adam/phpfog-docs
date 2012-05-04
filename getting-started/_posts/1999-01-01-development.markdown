@@ -9,7 +9,7 @@ Now that you can push code to and from your app, you'll want to set up a local d
 
 ### 1. Set up your local environment.
 
-#### Mac OSX
+#### Mac OS X
 
 Download and install <a href="http://www.mamp.info/en/index.html">MAMP</a>.
 
