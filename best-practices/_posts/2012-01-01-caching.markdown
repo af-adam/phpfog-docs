@@ -67,7 +67,7 @@ As another alternative we recommend [PressFlow](http://pressflow.org/), which is
 
 The Alternative PHP Cache, or APC, is a free and open opcode cache for PHP that can significantly boost performance in your app. It's installed by default on all Dedicated Cloud apps.
 
-Implementation of APC varies depending on your app. For example, the Cake framework has documentation [here](http://api.cakephp.org/file/cake/libs/cache/apc.php). Most frameworks will have similar documentation on implementation of APC.
+Implementation of APC varies depending on your app. For example, the Cake framework has documentation [here](http://api.cakephp.org/class/apc-engine). Most frameworks will have similar documentation on implementation of APC.
 
 ##### What if all of my code is custom?
 

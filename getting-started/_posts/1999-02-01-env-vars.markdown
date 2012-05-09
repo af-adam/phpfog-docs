@@ -2,7 +2,7 @@
 title: Environment Variables
 layout: doc-page
 weight: 4
-description: "Where you credentials live."
+description: "Where your credentials live."
 ---
 
 When you first create your app, PHP Fog sets up your MySQL Database credentials for you. Instead of hard-coding these credentials into your app, PHP Fog creates a set of environment variables and stores your credentials there. 

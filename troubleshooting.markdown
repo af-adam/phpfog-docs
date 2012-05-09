@@ -108,6 +108,20 @@ Solution: Have your Certificate Authority update your certificate.
 
 Solution: To generate a CSR on your local machine for PHP Fog check out [this document](http://www.globalsign.com/support/csr/serversign_apache.php).
 
+#### "Not a valid RSA key"
+
+PHP Fog takes certifications in RSA and DSA formats.
+
+If you're getting this error, you can run your key through a converter:
+
+	$ openssl rsa -in domain.key -out domain_new.key
+
+After running this command, your new file format should look like this: 
+
+	-----BEGIN RSA PRIVATE KEY----- 
+	encrypted text 
+	-----END RSA PRIVATE KEY-----
+
 ### Forcing HTTPS {#https}
 
 Using `.htaccess` rules to force HTTPS is complicated by the presence of the load balancers. If you're running into a redirect loop, try forwarding by protocol instead of by port:
