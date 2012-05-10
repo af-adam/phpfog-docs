@@ -43,9 +43,9 @@
 						<li class="breadcrumb-separator">&raquo;</li>
 						<li><a href="#">ClearDB</a></li>
 					</ul>
-					<ul id="secondary_nav">
+					<!--<ul id="secondary_nav">
 						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
-					</ul>
+					</ul>-->
 				</div>
 
 			</div>
@@ -62,9 +62,9 @@
 				<h1>ClearDB</h1>
 				<h3 id="install-cleardb">Install ClearDB</h3>
 
-<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the ClearDB add-on. That&rsquo;s it!</p>
+<p>In the “Add-ons” tab in your app console click “Install” for the ClearDB add-on. That’s it!</p>
 
-<p>Installing the ClearDB add-on automatically sets an environment variable for your app called &ldquo;<code>CLEARDB_DATABASE_URL</code>&rdquo;. You can access this in your code with <code>$_ENV["CLEARDB_DATABSE_URL"]</code>. This variable includes the full URI including the hostname, database path, username and password. The following code demonstrates how to parse the environment variable:</p>
+<p>Installing the ClearDB add-on automatically sets an environment variable for your app called “<code>CLEARDB_DATABASE_URL</code>”. You can access this in your code with <code>$_ENV["CLEARDB_DATABSE_URL"]</code>. This variable includes the full URI including the hostname, database path, username and password. The following code demonstrates how to parse the environment variable:</p>
 
 <pre><code>&lt;?php
 $url=parse_url(getenv("CLEARDB_DATABASE_URL"));

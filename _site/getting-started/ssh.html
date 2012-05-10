@@ -43,9 +43,9 @@
 						<li class="breadcrumb-separator">&raquo;</li>
 						<li><a href="#">SSH</a></li>
 					</ul>
-					<ul id="secondary_nav">
+					<!--<ul id="secondary_nav">
 						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
-					</ul>
+					</ul>-->
 				</div>
 
 			</div>
@@ -60,7 +60,7 @@
 		<div class="row">
 			<div class="span8">
 				<h1>SSH</h1>
-				<p>In order to access and modify your source code on PHP Fog, you&rsquo;ll need to generate an SSH key and add it to your PHP Fog account. This tutorial will walk you through that process for Mac OS X. </p>
+				<p>In order to access and modify your source code on PHP Fog, you’ll need to generate an SSH key and add it to your PHP Fog account. This tutorial will walk you through that process for Mac OS X. </p>
 
 <p>Looking for a way to handle multiple SSH keys? <a href="#handling-multiple-ssh-keys-for-a-single-account">Click here</a>.</p>
 
@@ -68,17 +68,17 @@
 
 <p>Running into problems? Try <a href="/troubleshooting#ssh">our Troubleshooting Guide for SSH</a>.</p>
 
-<h3 id="first-make-sure-you-dont-have-a-key-already">1. First, make sure you don&rsquo;t have a key already.</h3>
+<h3 id="first-make-sure-you-dont-have-a-key-already">1. First, make sure you don’t have a key already.</h3>
 
 <pre><code>$ cd ~/.ssh
 </code></pre>
 
-<p>If you get &ldquo;no such file or directory&rdquo;, create the directory: </p>
+<p>If you get “no such file or directory”, create the directory: </p>
 
 <pre><code>$ mkdir ~/.ssh
 </code></pre>
 
-<p>Then, <a href="#generate">skip ahead to &ldquo;3. Generate Your Key&rdquo;</a>.</p>
+<p>Then, <a href="#generate">skip ahead to “3. Generate Your Key”</a>.</p>
 
 <h3 id="backup-and-remove-existing-ssh-keys">2. Backup and remove existing SSH keys.</h3>
 
@@ -87,9 +87,9 @@
 <pre><code>$ ls
 </code></pre>
 
-<p>If you don&rsquo;t see any files named &ldquo;id_rsa&rdquo; or &ldquo;id_rsa.pub&rdquo; <a href="#generate">skip ahead to &ldquo;3. Generate Your Key&rdquo;</a>. </p>
+<p>If you don’t see any files named “id_rsa” or “id_rsa.pub” <a href="#generate">skip ahead to “3. Generate Your Key”</a>. </p>
 
-<p>If they exist, you&rsquo;ll you need to back them up by creating a new directory and moving those files there.</p>
+<p>If they exist, you’ll you need to back them up by creating a new directory and moving those files there.</p>
 
 <pre><code>$ mkdir key_backup
 $ mv id_rsa* key_backup/
@@ -112,7 +112,7 @@ $ mv id_rsa* key_backup/
 <pre><code>Enter file in which to save the key (/Users/PHPFog/.ssh/id_rsa):
 </code></pre>
 
-<p>When asked about the directory, we recommend using the default name and location (<code>id_rsa</code>). Just hit &lsquo;Enter&rsquo; to use the default filename.</p>
+<p>When asked about the directory, we recommend using the default name and location (<code>id_rsa</code>). Just hit ‘Enter’ to use the default filename.</p>
 
 <p>Note: Git and other tools generally look for keys in the default directory, so using a different directory may have unintended consequences.</p>
 
@@ -123,7 +123,7 @@ Enter same passphrase again:
 This password is used to protect the private key.
 </code></pre>
 
-<p>If the passphrases match, you&rsquo;ll get a keypair.</p>
+<p>If the passphrases match, you’ll get a keypair.</p>
 
 <pre><code>Your identification has been saved in /Users/PHPFog/.ssh/id_rsa.
 Your public key has been saved in /Users/PHPFog/.ssh/id_rsa.pub.
@@ -143,7 +143,7 @@ The key's randomart image is:
 +-----------------+
 </code></pre>
 
-<p>Note: On Windows the path &ldquo;/Users/PHPFog/.ssh/&rdquo; is going to be different.</p>
+<p>Note: On Windows the path “/Users/PHPFog/.ssh/” is going to be different.</p>
 
 <h3 id="copy-the-public-key-and-add-it-to-your-php-fog-account">5. Copy the public key and add it to your PHP Fog account.</h3>
 
@@ -161,11 +161,11 @@ D7Te78lX+AImxPYhOQccODJlswTTlxKNZuqa9znAGaiyf1pYigHLVD5
 us@phpfog.com
 </code></pre>
 
-<p>Now log in to the PHP Fog App Console and click on the &ldquo;SSH Keys&rdquo; tab. Hit the &ldquo;Add another SSH key&rdquo; button and paste the public key into the &ldquo;SSH Public Key&rdquo; field, give it a name, and hit &ldquo;Save Changes&rdquo;.</p>
+<p>Now log in to the PHP Fog App Console and click on the “SSH Keys” tab. Hit the “Add another SSH key” button and paste the public key into the “SSH Public Key” field, give it a name, and hit “Save Changes”.</p>
 
 <p><img class="screenshot" src="/img/screenshots/ssh.png" alt="SSH" /></p>
 
-<p>That&rsquo;s it, you&rsquo;ve generated a new SSH key and added it to PHP Fog! </p>
+<p>That’s it, you’ve generated a new SSH key and added it to PHP Fog! </p>
 
 <p><a href="/getting-started/git">Continue on to our tutorial on git</a>.</p>
 
@@ -175,15 +175,15 @@ us@phpfog.com
 
 <p>Sometimes you need to give more than one person SSH access to your PHP Fog git repository. Fortunately, adding more SSH keys to your account is easy. </p>
 
-<p>Just go to your PHP Fog account, click on the &ldquo;SSH Keys&rdquo; tab, and hit the &ldquo;Add another SSH key&rdquo; button. </p>
+<p>Just go to your PHP Fog account, click on the “SSH Keys” tab, and hit the “Add another SSH key” button. </p>
 
-<p>Give the new key a name, paste in the contents of the public key, hit &ldquo;Save SSH Key&rdquo;, and you&rsquo;re done!</p>
+<p>Give the new key a name, paste in the contents of the public key, hit “Save SSH Key”, and you’re done!</p>
 
 <h2 id="multiple">Handling SSH Keys for Multiple Accounts</h2>
 
-<p>Sometimes you need SSH access to multiple PHP Fog accounts. Unfortunately, you can&rsquo;t use the same key with multiple accounts, so you&rsquo;ll have to generate a new key for each account you want access to. </p>
+<p>Sometimes you need SSH access to multiple PHP Fog accounts. Unfortunately, you can’t use the same key with multiple accounts, so you’ll have to generate a new key for each account you want access to. </p>
 
-<p>If you don&rsquo;t have any SSH keys set up with PHP Fog yet, head to the top of this page and follow the guide on creating and adding an SSH key. If you already have one set up, read on:</p>
+<p>If you don’t have any SSH keys set up with PHP Fog yet, head to the top of this page and follow the guide on creating and adding an SSH key. If you already have one set up, read on:</p>
 
 <h3 id="generate-a-second-key">1. Generate a second key.</h3>
 
@@ -231,18 +231,18 @@ The key's randomart image is:
 
 <h3 id="add-your-new-ssh-key-to-the-second-account">2. Add your new SSH key to the second account.</h3>
 
-<p>Now go to your PHP Fog account, click on the &ldquo;SSH Keys&rdquo; tab, and hit the &ldquo;Add another SSH key&rdquo; button. </p>
+<p>Now go to your PHP Fog account, click on the “SSH Keys” tab, and hit the “Add another SSH key” button. </p>
 
-<p>Give the new key a name, paste in the contents of the public key, and hit &ldquo;Save SSH Key&rdquo;.</p>
+<p>Give the new key a name, paste in the contents of the public key, and hit “Save SSH Key”.</p>
 
 <h3 id="edit-your-ssh-configuration-file">3. Edit your SSH configuration file.</h3>
 
-<p>Open &ldquo;<code>~/.ssh/config</code>&rdquo; in your favorite text editor.</p>
+<p>Open “<code>~/.ssh/config</code>” in your favorite text editor.</p>
 
 <pre><code>$ vim ~/.ssh/config
 </code></pre>
 
-<p>Note: You might have to create this file if it doesn&rsquo;t exist already.</p>
+<p>Note: You might have to create this file if it doesn’t exist already.</p>
 
 <p>Add the following to the config file: </p>
 
@@ -263,7 +263,7 @@ IdentityFile /Users/&lt;your username&gt;/.ssh/id_rsa_1
 
 <h3 id="your-new-git-workflow">4. Your new git workflow.</h3>
 
-<p>From now on, you&rsquo;ll have to modify the way you interact with PHP Fog git repositories slightly. Because you have multiple hosts, you&rsquo;ll have to specify the host&rsquo;s name when you work with these remote repositories. For example:</p>
+<p>From now on, you’ll have to modify the way you interact with PHP Fog git repositories slightly. Because you have multiple hosts, you’ll have to specify the host’s name when you work with these remote repositories. For example:</p>
 
 <p>To clone your first app:</p>
 

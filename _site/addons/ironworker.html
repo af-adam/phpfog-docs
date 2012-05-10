@@ -43,9 +43,9 @@
 						<li class="breadcrumb-separator">&raquo;</li>
 						<li><a href="#">IronWorker</a></li>
 					</ul>
-					<ul id="secondary_nav">
+					<!--<ul id="secondary_nav">
 						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
-					</ul>
+					</ul>-->
 				</div>
 
 			</div>
@@ -62,7 +62,7 @@
 				<h1>IronWorker</h1>
 				<h3 id="install-ironworker">Install IronWorker</h3>
 
-<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the IronWorker add-on. That&rsquo;s it!</p>
+<p>In the “Add-ons” tab in your app console click “Install” for the IronWorker add-on. That’s it!</p>
 
 <h3 id="integrate-ironworker">Integrate IronWorker</h3>
 
@@ -82,17 +82,17 @@ require_once "IronWorker.class.php
 ));
 </code></pre>
 
-<p>Here&rsquo;s an example worker:</p>
+<p>Here’s an example worker:</p>
 
 <pre><code>&lt;?php
 echo "Hello PHP World!\n";
 </code></pre>
 
-<p>We&rsquo;ll call this worker &ldquo;HelloWorld.php&rdquo;.</p>
+<p>We’ll call this worker “HelloWorld.php”.</p>
 
 <h3 id="upload-your-worker">Upload Your Worker</h3>
 
-<p>Here&rsquo;s how to take the example above, zip it up, and upload it to IronWorker.</p>
+<p>Here’s how to take the example above, zip it up, and upload it to IronWorker.</p>
 
 <pre><code>&lt;?php
 # Zip single file:
@@ -131,7 +131,7 @@ $details = $iw-&gt;getTaskDetails($task_id);
 echo $details-&gt;status; # prints 'queued', 'complete', 'error' etc.
 </code></pre>
 
-<h3 id="and-more">And More&hellip;</h3>
+<h3 id="and-more">And More…</h3>
 
 <p>You can also pass payloads to your tasks, set progress status, logs, etc. For more information, check out some of these resources:</p>
 

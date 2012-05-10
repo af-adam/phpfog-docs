@@ -43,9 +43,9 @@
 						<li class="breadcrumb-separator">&raquo;</li>
 						<li><a href="#">Storage</a></li>
 					</ul>
-					<ul id="secondary_nav">
+					<!--<ul id="secondary_nav">
 						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
-					</ul>
+					</ul>-->
 				</div>
 
 			</div>
@@ -60,9 +60,9 @@
 		<div class="row">
 			<div class="span8">
 				<h1>Storage</h1>
-				<p>As a general principle, PHP Fog app servers are designed to run your app&rsquo;s executable code. PHP Fog isn&rsquo;t designed to handle large static assets like images, audio, video, etc. Fortunately, there are third-party services that <em>are</em> designed to handle that stuff that you can easily integrate with your app. </p>
+				<p>As a general principle, PHP Fog app servers are designed to run your app’s executable code. PHP Fog isn’t designed to handle large static assets like images, audio, video, etc. Fortunately, there are third-party services that <em>are</em> designed to handle that stuff that you can easily integrate with your app. </p>
 
-<p>We recommend storing these assets in Amazon&rsquo;s Simple Storage System (in the US-East region for the lowest latency). This will not only make your app easily scalable, but it will also reduce load on your app server(s). </p>
+<p>We recommend storing these assets in Amazon’s Simple Storage System (in the US-East region for the lowest latency). This will not only make your app easily scalable, but it will also reduce load on your app server(s). </p>
 
 <p>Nettuts+ has <a href="http://net.tutsplus.com/tutorials/php/how-to-use-amazon-s3-php-to-dynamically-store-and-manage-files-with-ease/">a great writeup</a> on using S3 to store and manage files. </p>
 
@@ -70,17 +70,17 @@
 
 <p>Integrating S3 into your custom PHP Fog app is easy. You can use a number of tools to upload your assets to your S3 bucket including the <a href="https://github.com/s3tools/s3cmd">s3cmd command line tool</a> and <a href="http://aws.amazon.com/developertools/Amazon-S3/771">Amazon S3 Organizer extension for Firefox</a>. Amazon has a whole list of developer tools <a href="http://aws.amazon.com/developertools/Amazon-S3">here</a>. </p>
 
-<p>Once you&rsquo;ve uploaded your assets, you can make them publicly available in S3 and reference them from your PHP Fog app.</p>
+<p>Once you’ve uploaded your assets, you can make them publicly available in S3 and reference them from your PHP Fog app.</p>
 
 <h3 id="wordpress">WordPress</h3>
 
 <p>If you installed WordPress using our Jumpstart, you already have the <a href="http://wordpress.org/extend/plugins/tantan-s3/">Amazon S3 plugin</a> installed. This plugin transparently integrates with your WordPress app. Just activate the plugin and provide your Amazon S3 credentials and your app will automatically save file uploads into your Amazon S3 bucket. Once saved, Amazon S3 will serve these files instead of your app server. </p>
 
-<p>You&rsquo;ll also find an &ldquo;Amazon S3&rdquo; tab next to your regular &ldquo;Upload&rdquo; tab in your WordPress admin panel, which allows you to easily browse and manage files that you uploaded directly to S3.</p>
+<p>You’ll also find an “Amazon S3” tab next to your regular “Upload” tab in your WordPress admin panel, which allows you to easily browse and manage files that you uploaded directly to S3.</p>
 
 <h3 id="drupal">Drupal</h3>
 
-<p><a href="http://drupal.org/project/amazons3">Drupal&rsquo;s Amazon S3 module</a> makes integrating S3 with your Drupal app very easy. An alternative is upload your app&rsquo;s static assets to S3 and set up <a href="http://drupal.org/project/cdn">AWS Cloudfront CDN</a>. </p>
+<p><a href="http://drupal.org/project/amazons3">Drupal’s Amazon S3 module</a> makes integrating S3 with your Drupal app very easy. An alternative is upload your app’s static assets to S3 and set up <a href="http://drupal.org/project/cdn">AWS Cloudfront CDN</a>. </p>
 
 
 			</div>

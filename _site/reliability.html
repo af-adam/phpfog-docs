@@ -40,9 +40,9 @@
 						<li class="breadcrumb-separator">&raquo;</li>
 						<li><a href="#">Reliability</a></li>
 					</ul>
-					<ul id="secondary_nav">
+					<!--<ul id="secondary_nav">
 						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
-					</ul>
+					</ul>-->
 				</div>
 
 			</div>
@@ -57,21 +57,21 @@
 		<div class="row">
 			<div class="span8">
 				<h1>Reliability</h1>
-				<p>Here&rsquo;s a walkthrough for an HTTP request from the client all the way to the database for a better look at our reliability mechanisms:</p>
+				<p>Here’s a walkthrough for an HTTP request from the client all the way to the database for a better look at our reliability mechanisms:</p>
 
 <h4 id="dns-lookup">DNS Lookup</h4>
 
-<p>When a client makes an HTTP request to your PHP Fog app, the first step is to perform a DNS lookup for the IP address of your application. In our guide for <a href="/getting-started/custom-domain-names">setting up custom domains</a>, we recommended using a CNAME record. This is a mechanism to help with failover. While the CNAME record currently points to Amazon&rsquo;s Elastic Load Balancer, in the case of a failure, we can update our DNS records to reference a different service, maintaining service. This particular failover mechanism is built into a point before a request even touches any PHP Fog components. </p>
+<p>When a client makes an HTTP request to your PHP Fog app, the first step is to perform a DNS lookup for the IP address of your application. In our guide for <a href="/getting-started/custom-domain-names">setting up custom domains</a>, we recommended using a CNAME record. This is a mechanism to help with failover. While the CNAME record currently points to Amazon’s Elastic Load Balancer, in the case of a failure, we can update our DNS records to reference a different service, maintaining service. This particular failover mechanism is built into a point before a request even touches any PHP Fog components. </p>
 
 <p>On the other hand, an A record references a static IP address, which is a single point of failure. This is why we recommend CNAME over A records.</p>
 
 <h4 id="first-load-balancer">First Load Balancer</h4>
 
-<p>After the DNS lookup is complete, the HTTP request is routed to the Amazon Elastic Load Balancer. Amazon&rsquo;s load balancer distributes the load of the requests across numerous servers and provides redundancy.</p>
+<p>After the DNS lookup is complete, the HTTP request is routed to the Amazon Elastic Load Balancer. Amazon’s load balancer distributes the load of the requests across numerous servers and provides redundancy.</p>
 
 <h4 id="caching-server">Caching Server</h4>
 
-<p>Next, the load balancer forwards the request to one of our Varnish Cache Servers. We&rsquo;ve set up multiple cache servers to handle requests and we&rsquo;ve distributed them across different &ldquo;availability zones&rdquo;. Availability zones are distinct locations that are engineered to be insulated from failures in other availability zones and provide low latency network connectivity to other availability zones. Properly configured, the Caching Servers can actually load static contents from your app, even when your app server is down.</p>
+<p>Next, the load balancer forwards the request to one of our Varnish Cache Servers. We’ve set up multiple cache servers to handle requests and we’ve distributed them across different “availability zones”. Availability zones are distinct locations that are engineered to be insulated from failures in other availability zones and provide low latency network connectivity to other availability zones. Properly configured, the Caching Servers can actually load static contents from your app, even when your app server is down.</p>
 
 <h4 id="second-load-balancer">Second Load Balancer</h4>
 
