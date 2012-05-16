@@ -40,6 +40,7 @@ redirect 301 /index.php/features/article/mongohq /addons/mongohq
 redirect 301 /index.php/features/article/mongolab /addons/mongolab
 redirect 301 /index.php/features/article/new_relic /addons/newrelic
 redirect 301 /index.php/features/article/supported_frameworks http://www.phpfog.com/jumpstarts
+redirect 301 /index.php/features/article/xeround /addons/xeround
 
 redirect 301 /features/article/getting_started_custom_application /getting-started/ssh/
 redirect 301 /features/article/getting_started_pf_command_line /getting-started/pf-command-line-tool/
