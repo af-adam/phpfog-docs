@@ -20,7 +20,7 @@ This will also add an environment variable called `SEARCHIFY_API_URL` in the "En
 
 ### Set up your local development environment
 
-The `SEARCHIFY_API_URL` is the private URL used to access the Searchify service from within a local environment.  Developers will typically create one search index for testing and one for production.
+The `SEARCHIFY_API_URL` environment variable holds the private URL you'll use to access the Searchify service from within a local environment. Developers will typically create one search index for testing and one for production.
 
 The next step is to install the appropriate language client library to develop locally with Searchify.
 
