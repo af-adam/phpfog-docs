@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation IronWorker</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -165,59 +167,59 @@
 		<div class="row">
 			<div class="span8">
 				<h1>IronWorker</h1>
-				<h3 id="install-ironworker">Install IronWorker</h3>
+				<h4 id="install-ironworker">Install IronWorker</h4>
 
 <p>In the “Add-ons” tab in your app console click “Install” for the IronWorker add-on. That’s it!</p>
 
-<h3 id="integrate-ironworker">Integrate IronWorker</h3>
+<h4 id="integrate-ironworker">Integrate IronWorker</h4>
 
 <p>Just copy <a href="https://github.com/iron-io/iron_worker_php/blob/master/IronWorker.class.php">IronWorker.class.php</a> and include it in your script:</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 require_once "IronWorker.class.php
 </code></pre>
 
-<h3 id="create-a-worker">Create a Worker</h3>
+<h4 id="create-a-worker">Create a Worker</h4>
 
 <p>When you install IronWorker, the installer creates two environment variables set with the necessary credentials. Create a worker and pass in those credentials like this:</p>
 
-<pre><code>$worker = new IronWorker(array(
+<pre class="prettyprint linenums:3 linenums">
+$worker = new IronWorker(array(
 'token' =&gt; getenv('IRON_WORKER_TOKEN'),
 'project_id' =&gt; getenv('IRON_WORKER_PROJECT_ID')
-));
-</code></pre>
+));</pre>
 
 <p>Here’s an example worker:</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 echo "Hello PHP World!\n";
 </code></pre>
 
 <p>We’ll call this worker “HelloWorld.php”.</p>
 
-<h3 id="upload-your-worker">Upload Your Worker</h3>
+<h4 id="upload-your-worker">Upload Your Worker</h4>
 
 <p>Here’s how to take the example above, zip it up, and upload it to IronWorker.</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 # Zip single file:
 IronWorker::createZip(dirname(__FILE__), array('HelloWorld.php'), 'worker.zip', true);
 $res = $iw-&gt;postCode('HelloWorld.php', 'worker.zip', 'HelloWorld');
 </code></pre>
 
-<h3 id="queue-your-worker">Queue Your Worker</h3>
+<h4 id="queue-your-worker">Queue Your Worker</h4>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 $task_id = $iw-&gt;postTask('HelloWorld');
 </code></pre>
 
 <p>Your worker should start in a few seconds.</p>
 
-<h3 id="schedule-your-worker">Schedule Your Worker</h3>
+<h4 id="schedule-your-worker">Schedule Your Worker</h4>
 
 <p>If you want to run your code more than once or run it in regular intervals, you can schedule it:</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 # 3 minutes from now
 $start_at = time() + 3*60;
 
@@ -225,18 +227,18 @@ $start_at = time() + 3*60;
 $iw-&gt;postScheduleAdvanced('HelloWorld', array(), $start_at, 2*60, null, 10);
 </code></pre>
 
-<h3 id="check-the-status-of-your-worker">Check the Status of Your Worker</h3>
+<h4 id="check-the-status-of-your-worker">Check the Status of Your Worker</h4>
 
 <p>Use the <code>getTaskDetails()</code> method.</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 $task_id = $iw-&gt;postTask('HelloWorld');
 $details = $iw-&gt;getTaskDetails($task_id);
 
 echo $details-&gt;status; # prints 'queued', 'complete', 'error' etc.
 </code></pre>
 
-<h3 id="and-more">And More…</h3>
+<h4 id="and-more">And More…</h4>
 
 <p>You can also pass payloads to your tasks, set progress status, logs, etc. For more information, check out some of these resources:</p>
 

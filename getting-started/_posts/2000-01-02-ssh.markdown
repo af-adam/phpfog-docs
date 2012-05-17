@@ -15,10 +15,12 @@ Running into problems? Try [our Troubleshooting Guide for SSH](/troubleshooting#
 
 ### 1. First, make sure you don't have a key already.
 
+{: .prettyprint}
     $ cd ~/.ssh
 
 If you get "no such file or directory", create the directory: 
 
+{: .prettyprint}
     $ mkdir ~/.ssh
 
 Then, [skip ahead to "3. Generate Your Key"](#generate).
@@ -27,12 +29,14 @@ Then, [skip ahead to "3. Generate Your Key"](#generate).
 
 If the directory exists, check to see if you already have a keypair in it: 
 
+{: .prettyprint}
     $ ls
 
 If you don't see any files named "id_rsa" or "id_rsa.pub" [skip ahead to "3. Generate Your Key"](#generate). 
 
 If they exist, you'll you need to back them up by creating a new directory and moving those files there.
 
+{: .prettyprint}
 	$ mkdir key_backup
 	$ mv id_rsa* key_backup/
 
@@ -40,6 +44,7 @@ If they exist, you'll you need to back them up by creating a new directory and m
 
 Run this command: 
 
+{: .prettyprint}
     $ ssh-keygen -t rsa
 
 Terminal will start the key generation process and you should see this:
@@ -68,15 +73,15 @@ If the passphrases match, you'll get a keypair.
 	31:be:4f:13:d4:68:f1:43:ea:97:9b:33:ad:b6:e5:85 us@phpfog.com
 	The key's randomart image is:
 	+--[ RSA 2048]----+
-	| . . |
-	| B |
-	| o = + |
-	| . * o |
-	| S o o |
-	| . o + . |
-	| . o = E .|
-	| o ..* . |
-	| ..o.. |
+	|                 |
+	|         .       |
+	|        . o      |
+	|       . * = .   |
+	|        S B E .  |
+	|       o = o o   |
+	|        o o o .  |
+	|         . . o o.|
+	|             .+.*|
 	+-----------------+
 
 Note: On Windows the path "/Users/PHPFog/.ssh/" is going to be different.
@@ -124,6 +129,7 @@ If you don't have any SSH keys set up with PHP Fog yet, head to the top of this 
 
 In your terminal application, make the following commands:
 
+{: .prettyprint}
     $ cd ~/.ssh
     $ ssh-keygen -t rsa
 
@@ -134,6 +140,7 @@ You should see something like this:
 
 That filename should already be taken by your first key, so enter this one instead:
 
+{: .prettyprint}
 	/Users/<your username>/.ssh/id_rsa_1 
 
 After you enter your passphrase (twice), you should see output that looks like this: 
@@ -157,6 +164,7 @@ After you enter your passphrase (twice), you should see output that looks like t
 
 Finally, run the following:
 
+{: .prettyprint}
 	$ ssh-add ~/.ssh/id_rsa_1
 
 ### 2. Add your new SSH key to the second account.
@@ -169,18 +177,21 @@ Give the new key a name, paste in the contents of the public key, and hit "Save 
 
 Open "`~/.ssh/config`" in your favorite text editor.
 
+{: .prettyprint}
 	$ vim ~/.ssh/config
 
 Note: You might have to create this file if it doesn't exist already.
 
 Add the following to the config file: 
 
+{: .prettyprint}
 	# Default PHP Fog user (name)
 	Host phpfog
 	HostName git01.phpfog.com
 	User git
 	IdentityFile /Users/<your username>/.ssh/id_rsa
 
+{: .prettyprint}
 	# 2nd PHP Fog user (name2)
 	Host phpfog-1
 	HostName git01.phpfog.com

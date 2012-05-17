@@ -4,11 +4,11 @@ layout: doc-page
 weight: 16
 ---
 
-### Install CloudMailin
+#### Install CloudMailin
 
 In the "Add-ons" tab in your app console click "Install" for the CloudMailin add-on. That's it!
 
-### Receive Email
+#### Receive Email
 
 Cloudmailin can receive email and forward them to your app by performing a POST to a specific page.
 
@@ -18,22 +18,23 @@ Go to "Edit Target" and specify the address in your application that will receiv
 
 Here's the code that goes into that page:
 
+{: .prettyprint .linenums}
 	<?php
-	$from = $_POST['from'];
-	$to = $_POST['to'];
-	$plain_text = $_POST['plain'];
+		$from = $_POST['from'];
+		$to = $_POST['to'];
+		$plain_text = $_POST['plain'];
 
-	header("Content-type: text/plain");
+		header("Content-type: text/plain");
 
-	if ($to == getenv("CLOUDMAILIN_FORWARD_ADDRESS")){
-	header("HTTP/1.0 200 OK");
-	echo('success');
-	}else{
-	header("HTTP/1.0 403 OK");
-	echo('user not allowed here');
-	}
+		if ($to == getenv("CLOUDMAILIN_FORWARD_ADDRESS")) {
+			header("HTTP/1.0 200 OK");
+			echo('success');
+			}else{
+			header("HTTP/1.0 403 OK");
+			echo('user not allowed here');
+		}
 
-	exit;
+		exit;
 	?>
 
 That's it! Now any email sent to your CloudMailin email address will forward to your app. You can always check to see what your CloudMailin email address is by going to the "Env. Variables" tab in your PHP Fog app console and looking for the "`CLOUDMAILIN_FORWARD_ADDRESS`", or by logging in to CloudMailin directly. 

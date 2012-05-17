@@ -142,3 +142,24 @@ img.screenshot {
 	position: absolute;
 	bottom: 0;
 }
+
+
+/* PRETTIFY CUSTOM */
+
+pre, pre.prettyprint {
+	white-space: pre-wrap;
+	background: #EEF6FB;
+	word-wrap: break-word;
+	border-radius: 5px;
+	font-size: 11px;
+	border: 1px solid #E2EEF6;
+	padding: 20px 0 20px 20px;
+}
+
+pre.prettyprint.linenums {
+	padding-left: 0;
+}
+
+ol.linenums > li {
+	list-style-type: decimal;
+}

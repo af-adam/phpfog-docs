@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation Git</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -183,11 +185,12 @@
 
 <p>Copy the value for “Clone your git repository:”, which should look something like: </p>
 
-<p><code> $ git clone git@:foo.phpfogapp.com </code></p>
+<pre class="prettyprint"><code>$ git clone git@:foo.phpfogapp.com
+</code></pre>
 
 <p>Run the command in your terminal, and you should see something like this: </p>
 
-<pre><code>Initialized empty Git repository in /Users/(your username)/Documents/git/foo.phpfogapp.com/.git
+<pre class="prettyprint"><code>Initialized empty Git repository in /Users/(your username)/Documents/git/foo.phpfogapp.com/.git
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reuse 0 (delta 0)
 Receiving objects: 100% (3/3), done.
@@ -201,33 +204,33 @@ Receiving objects: 100% (3/3), done.
 
 <p>Change your current working directory to the repo you just cloned:</p>
 
-<pre><code>$ cd foo.phpfogapp.com/
+<pre class="prettyprint"><code>$ cd foo.phpfogapp.com/
 </code></pre>
 
 <p>(Replace “foo.phpfogapp.com” with your app’s name.)</p>
 
 <p>Create a new file called “helloworld.php” and populate it with some code:</p>
 
-<pre><code>&lt;?php
-echo "hello world";
+<pre class="prettyprint linenums"><code>&lt;?php
+	echo "hello world";
 ?&gt;
 </code></pre>
 
 <h3 id="add-and-commit-your-code-to-git">5. Add and commit your code to git.</h3>
 
-<pre><code>$ git add .
+<pre class="prettyprint"><code>$ git add .
 </code></pre>
 
 <p>The “add” command tells git to “stage” new files in preparation for a commit. The “.” tells git to add all the files in the current directory recursively.</p>
 
-<pre><code>$ git commit -m "first commit"
+<pre class="prettyprint"><code>$ git commit -m "first commit"
 </code></pre>
 
 <p>This command commits the added file to your git repository. It’s still local, but now it’s ready to be uploaded (i.e. “pushed”).</p>
 
 <h3 id="push-your-code-changes">6. Push your code changes.</h3>
 
-<pre><code>$ git push
+<pre class="prettyprint"><code>$ git push
 </code></pre>
 
 <p>This command uploads your local repository to the remote server at PHP Fog. And you’re done! Give it a few minutes to deploy your changes, then visit your app to see your changes live! </p>
@@ -242,7 +245,7 @@ echo "hello world";
 
 <p>In your local git repository, open the file “.gitignore” with your favorite text editor. If it doesn’t exist yet, simply create a new one. </p>
 
-<pre><code># You can ignore specific files.
+<pre class="prettyprint linenums"><code># You can ignore specific files.
 .DS_Store
 
 # And use wildcards.
@@ -255,7 +258,7 @@ tmp/**/*
 
 <p>If the directory or file you’re adding to .gitignore is already being tracked by git, you’ll need to manually tell git to stop tracking it. </p>
 
-<pre><code>$ git rm --cached [filename/directory]
+<pre class="prettyprint"><code>$ git rm --cached [filename/directory]
 </code></pre>
 
 <p>That’s it! Git will no longer overwrite those files.</p>
@@ -275,7 +278,7 @@ tmp/**/*
 
 <h3 id="sample-code">Sample Code</h3>
 
-<p>You can find a sample project using composer here: [https://github.com/phpfog/pf-sample-composer-app].</p>
+<p>You can find a sample project using composer <a href="https://github.com/phpfog/pf-sample-composer-app">here</a>.</p>
 
 <h3 id="limitations">Limitations</h3>
 
@@ -287,17 +290,17 @@ tmp/**/*
 
 <p>Download it to the project directory:</p>
 
-<pre><code>$ curl http://getcomposer.org/composer.phar -O composer.phar
+<pre class="prettyprint"><code>$ curl http://getcomposer.org/composer.phar -O composer.phar
 </code></pre>
 
 <p>Or if you don’t have <code>curl</code>:</p>
 
-<pre><code>$ wget http://getcomposer.org/composer.phar
+<pre class="prettyprint"><code>$ wget http://getcomposer.org/composer.phar
 </code></pre>
 
 <p>Or install with Homebrew:</p>
 
-<pre><code>$ brew uninstall composer ; brew install --HEAD https://raw.github.com/gist/1574469/composer.rb
+<pre class="prettyprint"><code>$ brew uninstall composer ; brew install --HEAD https://raw.github.com/gist/1574469/composer.rb
 </code></pre>
 
 <p>(This makes sure you get the latest version of Composer.)</p>
@@ -306,7 +309,7 @@ tmp/**/*
 
 <p>In the root project directory, create a “composer.json” manifest file:</p>
 
-<pre><code>{
+<pre class="prettyprint"><code>{
 	"require": {
 		"symfony/yaml": "&gt;=2.0.6",
 		"imagine/Imagine": "&gt;=0.2.8"
@@ -318,14 +321,14 @@ tmp/**/*
 
 <p>In the directory you created “composer.json”, run the following command:</p>
 
-<pre><code>$ composer.phar install
+<pre class="prettyprint"><code>$ composer.phar install
 </code></pre>
 
 <p>Composer will create a <code>vendor</code> directory and download the required libraries there. You have to use this <code>install</code> command every time you add a new library. Composer records the version numbers of the libraries it fetches in the <code>composer.lock</code> file. It does this to maintain project stability by guaranteeing that Composer only uses the library versions you used to develop and test the project.</p>
 
 <p>Below is what a simple project directory might look like after running the install command:</p>
 
-<pre><code>├── composer.json \&lt;- Manifest created above
+<pre class="prettyprint"><code>├── composer.json \&lt;- Manifest created above
 ├── composer.lock \&lt;- Generated lock file preserves current dependency versions
 ├── index.php
 ├── .composer
@@ -342,7 +345,7 @@ tmp/**/*
 
 <p>To start using the Composer installed libraries, just add the following line to <code>index.php</code> files in your project:</p>
 
-<pre><code>require "vendor/.composer/autoload.php";
+<pre class="prettyprint"><code>require "vendor/.composer/autoload.php";
 </code></pre>
 
 <p>Note: Most PHP frameworks will have single place for this.</p>
@@ -353,7 +356,7 @@ tmp/**/*
 
 <p>To fetch the latest library versions run the following command:</p>
 
-<pre><code>$ composer.phar update
+<pre class="prettyprint"><code>$ composer.phar update
 </code></pre>
 
 <p>This will download the newest available libraries using the version rules specified in the manifest. It will also update the <code>composer.lock</code> file to reflect the new version numbers.</p>
@@ -362,7 +365,7 @@ tmp/**/*
 
 <p>Once the dependencies are installed, tested, and the app is ready for release, commit and push the project (including the vendor directory) to PHP Fog.</p>
 
-<pre><code>$ git add .
+<pre class="prettyprint"><code>$ git add .
 $ git commit -m "Added Composer and dependencies"
 $ git push
 </code></pre>

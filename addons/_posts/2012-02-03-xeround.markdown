@@ -17,6 +17,7 @@ The first URL is used for connecting to your database from outside the datacente
 
 Each of the URLs contains a string of the following syntax:
 
+{: .prettyprint}
 	mysql://username:password@host:port/database
 
 The different parts of the URL are also set in separate environment variables:
@@ -27,7 +28,7 @@ The different parts of the URL are also set in separate environment variables:
 * `XEROUND_DATABASE_HOST`
 * `XEROUND_DATABASE_PORT`
 * `XEROUND_DATABASE_NAME`
-
+^
 * `XEROUND_DATABASE_INTERNAL_ADAPTER`
 * `XEROUND_DATABASE_INTERNAL_USERNAME`
 * `XEROUND_DATABASE_INTERNAL_PASSWORD`
@@ -37,6 +38,7 @@ The different parts of the URL are also set in separate environment variables:
 
 Here's an example of how to use these environment variables in your code:
 
+{: .prettyprint .linenums}
 	<?php
 		$ip = getenv('XEROUND_DATABASE_INTERNAL_HOST');
 	?>

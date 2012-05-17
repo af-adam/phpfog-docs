@@ -15,14 +15,17 @@ Prefer to just use git? Comfortable with SSH keys already? PF is completely opti
 
 ### 1. Download and install PF.
 
-    $ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php 
+{: .prettyprint}
+    $ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php
 
 ### 2. Set up your credentials in PF.
 
+{: .prettyprint}
     $ pf setup 
 
 ### 3. List your apps.
 
+{: .prettyprint}
     $ pf list apps 
 
 This will allow you to pick the name/id to use to download an app in the next step.
@@ -31,6 +34,7 @@ This will allow you to pick the name/id to use to download an app in the next st
 
 To get the code we'll use the "pf clone" command. You can use the "ID" or the "Name" of the app list in the previous step. 
 
+{: .prettyprint}
     $ pf clone 811 
 
 Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in 'yes'.
@@ -41,30 +45,33 @@ Running into problems with this step? Check out our guide on [troubleshooting ss
 
 Change your current working directory to the git repo.
 
+{: .prettyprint}
      cd foo.phpfogapp.com/  
 
 Create a new file called `helloworld.php` and populate it with some text.
 
-     
+{: .prettyprint .linenums}
 	<?php
-	echo "hello world";
+		echo "hello world";
 	?>
  
-
 ### 6. Add the file to staging.
 
+{: .prettyprint}
     $ git add . 
 
 This command tells git to "stage" the file to get ready to commit to your repository. The "." adds all the files in this directory recursively.
 
 ### 7. Commit your changes.
 
+{: .prettyprint}
     $ git commit -m "my first update" 
 
 This commits the new file to your git repository. It's still local, but now it's ready to be uploaded (i.e. "pushed"). 
 
 ### 8. Push your changes.
 
+{: .prettyprint}
     $ pf push 
 
 This command uploads the committed changes to PHP Fog.

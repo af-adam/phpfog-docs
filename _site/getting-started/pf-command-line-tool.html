@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation PF Command Line Tool</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -175,17 +177,17 @@
 
 <h3 id="download-and-install-pf">1. Download and install PF.</h3>
 
-<pre><code>$ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php 
+<pre class="prettyprint"><code>$ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php
 </code></pre>
 
 <h3 id="set-up-your-credentials-in-pf">2. Set up your credentials in PF.</h3>
 
-<pre><code>$ pf setup 
+<pre class="prettyprint"><code>$ pf setup 
 </code></pre>
 
 <h3 id="list-your-apps">3. List your apps.</h3>
 
-<pre><code>$ pf list apps 
+<pre class="prettyprint"><code>$ pf list apps 
 </code></pre>
 
 <p>This will allow you to pick the name/id to use to download an app in the next step.</p>
@@ -194,7 +196,7 @@
 
 <p>To get the code we’ll use the “pf clone” command. You can use the “ID” or the “Name” of the app list in the previous step. </p>
 
-<pre><code>$ pf clone 811 
+<pre class="prettyprint"><code>$ pf clone 811 
 </code></pre>
 
 <p>Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in ‘yes’.</p>
@@ -205,33 +207,33 @@
 
 <p>Change your current working directory to the git repo.</p>
 
-<pre><code> cd foo.phpfogapp.com/  
+<pre class="prettyprint"><code> cd foo.phpfogapp.com/  
 </code></pre>
 
 <p>Create a new file called <code>helloworld.php</code> and populate it with some text.</p>
 
-<pre><code>&lt;?php
-echo "hello world";
+<pre class="prettyprint linenums"><code>&lt;?php
+	echo "hello world";
 ?&gt;
 </code></pre>
 
 <h3 id="add-the-file-to-staging">6. Add the file to staging.</h3>
 
-<pre><code>$ git add . 
+<pre class="prettyprint"><code>$ git add . 
 </code></pre>
 
 <p>This command tells git to “stage” the file to get ready to commit to your repository. The “.” adds all the files in this directory recursively.</p>
 
 <h3 id="commit-your-changes">7. Commit your changes.</h3>
 
-<pre><code>$ git commit -m "my first update" 
+<pre class="prettyprint"><code>$ git commit -m "my first update" 
 </code></pre>
 
 <p>This commits the new file to your git repository. It’s still local, but now it’s ready to be uploaded (i.e. “pushed”). </p>
 
 <h3 id="push-your-changes">8. Push your changes.</h3>
 
-<pre><code>$ pf push 
+<pre class="prettyprint"><code>$ pf push 
 </code></pre>
 
 <p>This command uploads the committed changes to PHP Fog.</p>

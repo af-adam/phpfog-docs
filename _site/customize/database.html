@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation Database</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -225,10 +227,13 @@
 
 <p>c. Select the security group you just created. </p>
 
-<p>d. In the “Description” tab at the bottom: 
-	Set the drop down to “EC2 Security Group”. 
-	Change the “AWS Account ID” to “512617943067”.
-	Set the “EC2 Security Group” field to “fog_user”.</p>
+<p>d. In the “Description” tab at the bottom: </p>
+
+<p>Set the drop down to “EC2 Security Group”. </p>
+
+<p>Change the “AWS Account ID” to “512617943067”.</p>
+
+<p>Set the “EC2 Security Group” field to “fog_user”.</p>
 
 <p>e. Wait for the status to change to “authorized”.</p>
 
@@ -240,7 +245,7 @@
 
 <p>b. Find the following code and input the information from your RDS database:</p>
 
-<pre><code>define('DB_NAME', '&lt;your RDS database's name&gt;');
+<pre class="prettyprint linenums"><code>define('DB_NAME', '&lt;your RDS database's name&gt;');
 
 /** MySQL database username */
 define('DB_USER', '&lt;your RDS user ID&gt;');

@@ -44,21 +44,19 @@ This can take anywhere from a few minutes to 48 hours, depending on your locatio
 ## Recommended DNS Providers
 
 * Amazon's Route 53
-* TK
+<!-- add more TKTK -->
 
 ## Handling Subdomains with Wildcards
 
 If you want to enable wildcards and host content that's dependent on the subdomain, here's how:
 
+{: .prettyprint .linenums} 
 	$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
 	$subdomain = $url_parts[0];
-	if ($subdomain == 'www' || $subdomain == '')
-	{
-	// show home page
-	}
-	else if ($subdomain == 'help')
-	{
-	// show help page
+	if ($subdomain == 'www' || $subdomain == '') {
+		// show home page
+	} else if ($subdomain == 'help') {
+		// show help page
 	}
 
 ## Sharing sessions between subdomains

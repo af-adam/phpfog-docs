@@ -4,11 +4,11 @@ layout: doc-page
 weight: 16
 ---
 
-### Install IronMQ
+#### Install IronMQ
 
 In the "Add-ons" tab in your app console click "Install" for the IronMQ add-on. That's it!
 
-### Authentication
+#### Authentication
 
 You need two things to authenticate and tell IronMQ which project to attach your queues to:
 
@@ -18,7 +18,7 @@ You need two things to authenticate and tell IronMQ which project to attach your
 
 You can find these environment variables in the "Env. Variables" tab in your app console. You can also access these variables in PHP through the `getenv()` function.
 
-### The Basics
+#### The Basics
 
 There are three basic actions you can perform on a message queue:
 
@@ -28,6 +28,7 @@ There are three basic actions you can perform on a message queue:
 
 These three simple actions are the main actions you'll typically use. Here's some sample code using our client that shows how to use these functions.
 
+{: .prettyprint .linenums}
 	// Get package here: https://github.com/iron-io/iron_mq_php
 	require_once "IronMQ.class.php"
 

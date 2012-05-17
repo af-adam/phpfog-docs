@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation Custom Domain Names</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -205,23 +207,20 @@
 <h2 id="recommended-dns-providers">Recommended DNS Providers</h2>
 
 <ul>
-  <li>Amazon’s Route 53</li>
-  <li>TK</li>
+  <li>Amazon’s Route 53
+<!-- add more TKTK --></li>
 </ul>
 
 <h2 id="handling-subdomains-with-wildcards">Handling Subdomains with Wildcards</h2>
 
 <p>If you want to enable wildcards and host content that’s dependent on the subdomain, here’s how:</p>
 
-<pre><code>$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
+<pre class="prettyprint linenums"><code>$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
 $subdomain = $url_parts[0];
-if ($subdomain == 'www' || $subdomain == '')
-{
-// show home page
-}
-else if ($subdomain == 'help')
-{
-// show help page
+if ($subdomain == 'www' || $subdomain == '') {
+	// show home page
+} else if ($subdomain == 'help') {
+	// show help page
 }
 </code></pre>
 

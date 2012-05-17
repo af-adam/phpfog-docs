@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation CloudMailin</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -165,11 +167,11 @@
 		<div class="row">
 			<div class="span8">
 				<h1>CloudMailin</h1>
-				<h3 id="install-cloudmailin">Install CloudMailin</h3>
+				<h4 id="install-cloudmailin">Install CloudMailin</h4>
 
 <p>In the “Add-ons” tab in your app console click “Install” for the CloudMailin add-on. That’s it!</p>
 
-<h3 id="receive-email">Receive Email</h3>
+<h4 id="receive-email">Receive Email</h4>
 
 <p>Cloudmailin can receive email and forward them to your app by performing a POST to a specific page.</p>
 
@@ -179,22 +181,22 @@
 
 <p>Here’s the code that goes into that page:</p>
 
-<pre><code>&lt;?php
-$from = $_POST['from'];
-$to = $_POST['to'];
-$plain_text = $_POST['plain'];
+<pre class="prettyprint linenums"><code>&lt;?php
+	$from = $_POST['from'];
+	$to = $_POST['to'];
+	$plain_text = $_POST['plain'];
 
-header("Content-type: text/plain");
+	header("Content-type: text/plain");
 
-if ($to == getenv("CLOUDMAILIN_FORWARD_ADDRESS")){
-header("HTTP/1.0 200 OK");
-echo('success');
-}else{
-header("HTTP/1.0 403 OK");
-echo('user not allowed here');
-}
+	if ($to == getenv("CLOUDMAILIN_FORWARD_ADDRESS")) {
+		header("HTTP/1.0 200 OK");
+		echo('success');
+		}else{
+		header("HTTP/1.0 403 OK");
+		echo('user not allowed here');
+	}
 
-exit;
+	exit;
 ?&gt;
 </code></pre>
 

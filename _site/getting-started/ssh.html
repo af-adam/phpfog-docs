@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation SSH</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -175,12 +177,12 @@
 
 <h3 id="first-make-sure-you-dont-have-a-key-already">1. First, make sure you don’t have a key already.</h3>
 
-<pre><code>$ cd ~/.ssh
+<pre class="prettyprint"><code>$ cd ~/.ssh
 </code></pre>
 
 <p>If you get “no such file or directory”, create the directory: </p>
 
-<pre><code>$ mkdir ~/.ssh
+<pre class="prettyprint"><code>$ mkdir ~/.ssh
 </code></pre>
 
 <p>Then, <a href="#generate">skip ahead to “3. Generate Your Key”</a>.</p>
@@ -189,14 +191,14 @@
 
 <p>If the directory exists, check to see if you already have a keypair in it: </p>
 
-<pre><code>$ ls
+<pre class="prettyprint"><code>$ ls
 </code></pre>
 
 <p>If you don’t see any files named “id_rsa” or “id_rsa.pub” <a href="#generate">skip ahead to “3. Generate Your Key”</a>. </p>
 
 <p>If they exist, you’ll you need to back them up by creating a new directory and moving those files there.</p>
 
-<pre><code>$ mkdir key_backup
+<pre class="prettyprint"><code>$ mkdir key_backup
 $ mv id_rsa* key_backup/
 </code></pre>
 
@@ -204,7 +206,7 @@ $ mv id_rsa* key_backup/
 
 <p>Run this command: </p>
 
-<pre><code>$ ssh-keygen -t rsa
+<pre class="prettyprint"><code>$ ssh-keygen -t rsa
 </code></pre>
 
 <p>Terminal will start the key generation process and you should see this:</p>
@@ -236,15 +238,15 @@ The key fingerprint is:
 31:be:4f:13:d4:68:f1:43:ea:97:9b:33:ad:b6:e5:85 us@phpfog.com
 The key's randomart image is:
 +--[ RSA 2048]----+
-| . . |
-| B |
-| o = + |
-| . * o |
-| S o o |
-| . o + . |
-| . o = E .|
-| o ..* . |
-| ..o.. |
+|                 |
+|         .       |
+|        . o      |
+|       . * = .   |
+|        S B E .  |
+|       o = o o   |
+|        o o o .  |
+|         . . o o.|
+|             .+.*|
 +-----------------+
 </code></pre>
 
@@ -294,7 +296,7 @@ us@phpfog.com
 
 <p>In your terminal application, make the following commands:</p>
 
-<pre><code>$ cd ~/.ssh
+<pre class="prettyprint"><code>$ cd ~/.ssh
 $ ssh-keygen -t rsa
 </code></pre>
 
@@ -306,7 +308,7 @@ Enter file in which to save the key (/Users/&lt;your username&gt;/.ssh/id_rsa):
 
 <p>That filename should already be taken by your first key, so enter this one instead:</p>
 
-<pre><code>/Users/&lt;your username&gt;/.ssh/id_rsa_1 
+<pre class="prettyprint"><code>/Users/&lt;your username&gt;/.ssh/id_rsa_1 
 </code></pre>
 
 <p>After you enter your passphrase (twice), you should see output that looks like this: </p>
@@ -331,7 +333,7 @@ The key's randomart image is:
 
 <p>Finally, run the following:</p>
 
-<pre><code>$ ssh-add ~/.ssh/id_rsa_1
+<pre class="prettyprint"><code>$ ssh-add ~/.ssh/id_rsa_1
 </code></pre>
 
 <h3 id="add-your-new-ssh-key-to-the-second-account">2. Add your new SSH key to the second account.</h3>
@@ -344,20 +346,21 @@ The key's randomart image is:
 
 <p>Open “<code>~/.ssh/config</code>” in your favorite text editor.</p>
 
-<pre><code>$ vim ~/.ssh/config
+<pre class="prettyprint"><code>$ vim ~/.ssh/config
 </code></pre>
 
 <p>Note: You might have to create this file if it doesn’t exist already.</p>
 
 <p>Add the following to the config file: </p>
 
-<pre><code># Default PHP Fog user (name)
+<pre class="prettyprint"><code># Default PHP Fog user (name)
 Host phpfog
 HostName git01.phpfog.com
 User git
 IdentityFile /Users/&lt;your username&gt;/.ssh/id_rsa
+</code></pre>
 
-# 2nd PHP Fog user (name2)
+<pre class="prettyprint"><code># 2nd PHP Fog user (name2)
 Host phpfog-1
 HostName git01.phpfog.com
 User git

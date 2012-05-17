@@ -62,9 +62,12 @@ b. Click on the "Create DB Security Group" button, and give your new group a nam
 c. Select the security group you just created. 
 
 d. In the "Description" tab at the bottom: 
-	Set the drop down to "EC2 Security Group". 
-	Change the "AWS Account ID" to "512617943067".
-	Set the "EC2 Security Group" field to "fog_user".
+
+Set the drop down to "EC2 Security Group". 
+
+Change the "AWS Account ID" to "512617943067".
+
+Set the "EC2 Security Group" field to "fog_user".
 
 e. Wait for the status to change to "authorized".
 
@@ -76,6 +79,7 @@ a. In your WordPress app's git repository, find the file `wp-config.php` and ope
 
 b. Find the following code and input the information from your RDS database:
 
+{: .prettyprint .linenums}
 	define('DB_NAME', '<your RDS database's name>');
 	
 	/** MySQL database username */

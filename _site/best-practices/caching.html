@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation Caching</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -199,7 +201,7 @@
 
 <p>The simplest way to cache a page is to set a header on output which cues Varnish that this page can be served unmodified to anyone visiting a given URL. The “Cache-Control” header also specifies how long the cached copy should be retained. The following is a PHP example of setting the cache to 10 minutes (600 seconds):</p>
 
-<pre><code>header("Cache-Control: public, max-age=600");
+<pre class="prettyprint"><code>header("Cache-Control: public, max-age=600");
 </code></pre>
 
 <p>Note: The longest Varnish will cache any content is 1 day. </p>
@@ -208,7 +210,7 @@
 
 <p>To prevent caching set the “Cache-Control” header to “no-cache”. This is generally required in applications that don’t produce or consume cookies, but serve dynamic content. This is how to set the “Cache-Control” header in PHP:</p>
 
-<pre><code>header("Cache-Control: no-cache");
+<pre class="prettyprint"><code>header("Cache-Control: no-cache");
 </code></pre>
 
 <h4 id="purging-cache-data">Purging Cache Data</h4>

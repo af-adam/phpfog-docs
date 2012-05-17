@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation IronMQ</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -165,11 +167,11 @@
 		<div class="row">
 			<div class="span8">
 				<h1>IronMQ</h1>
-				<h3 id="install-ironmq">Install IronMQ</h3>
+				<h4 id="install-ironmq">Install IronMQ</h4>
 
 <p>In the “Add-ons” tab in your app console click “Install” for the IronMQ add-on. That’s it!</p>
 
-<h3 id="authentication">Authentication</h3>
+<h4 id="authentication">Authentication</h4>
 
 <p>You need two things to authenticate and tell IronMQ which project to attach your queues to:</p>
 
@@ -180,7 +182,7 @@ Project ID: IRON_WORKER_PROJECT_ID
 
 <p>You can find these environment variables in the “Env. Variables” tab in your app console. You can also access these variables in PHP through the <code>getenv()</code> function.</p>
 
-<h3 id="the-basics">The Basics</h3>
+<h4 id="the-basics">The Basics</h4>
 
 <p>There are three basic actions you can perform on a message queue:</p>
 
@@ -192,7 +194,7 @@ Project ID: IRON_WORKER_PROJECT_ID
 
 <p>These three simple actions are the main actions you’ll typically use. Here’s some sample code using our client that shows how to use these functions.</p>
 
-<pre><code>// Get package here: https://github.com/iron-io/iron_mq_php
+<pre class="prettyprint linenums"><code>// Get package here: https://github.com/iron-io/iron_mq_php
 require_once "IronMQ.class.php"
 
 $ironmq = new IronMQ(array(

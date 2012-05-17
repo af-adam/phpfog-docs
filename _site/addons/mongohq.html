@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation MongoHQ</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -171,12 +173,12 @@
 
 <p>Installing the MongoHQ add-on automatically sets an environment variable for your app called “<code>MONGOHQ_URL</code>”. You can access this in your code with <code>$_ENV["MONGOHQ_URL"]</code>. This variable includes the full URI including the hostname, database path, username and password. It looks like this: </p>
 
-<pre><code>mongodb://username:password@host:port/database
+<pre class="prettyprint"><code>mongodb://username:password@host:port/database
 </code></pre>
 
 <p>Using MongoDB from a PHP app is very easy. The required extensions are already installed on all servers, so you can use the Mongo objects from your app immediately. Here is a little sample app you can use to test out your newly created MongoDB:</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 	// connect
 	$m = new Mongo($_ENV["MONGOLAB_URI"]);
 	

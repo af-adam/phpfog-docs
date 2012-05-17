@@ -114,6 +114,7 @@ PHP Fog takes certifications in RSA and DSA formats.
 
 If you're getting this error, you can run your key through a converter:
 
+{: .prettyprint}
 	$ openssl rsa -in domain.key -out domain_new.key
 
 After running this command, your new file format should look like this: 
@@ -126,4 +127,5 @@ After running this command, your new file format should look like this:
 
 Using `.htaccess` rules to force HTTPS is complicated by the presence of the load balancers. If you're running into a redirect loop, try forwarding by protocol instead of by port:
 
+{: .prettyprint}
 	RewriteCond %{HTTP:X-Forwarded-Proto} https

@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation ClearDB</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -165,13 +167,13 @@
 		<div class="row">
 			<div class="span8">
 				<h1>ClearDB</h1>
-				<h3 id="install-cleardb">Install ClearDB</h3>
+				<h4 id="install-cleardb">Install ClearDB</h4>
 
 <p>In the “Add-ons” tab in your app console click “Install” for the ClearDB add-on. That’s it!</p>
 
 <p>Installing the ClearDB add-on automatically sets an environment variable for your app called “<code>CLEARDB_DATABASE_URL</code>”. You can access this in your code with <code>$_ENV["CLEARDB_DATABASE_URL"]</code>. This variable includes the full URI including the hostname, database path, username and password. The following code demonstrates how to parse the environment variable:</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 	$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 	mysql_connect(

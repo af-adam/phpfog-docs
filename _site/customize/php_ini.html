@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation php.ini</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -171,7 +173,7 @@
 
 <p>Setting the value of a directive in <code>.htaccess</code> is easy. Simply place the following line of code in your <code>.htaccess</code> file, and insert the name and value of the directive you want to use:</p>
 
-<pre><code>php_value &lt;name&gt; &lt;value&gt;
+<pre class="prettyprint"><code>php_value &lt;name&gt; &lt;value&gt;
 </code></pre>
 
 <p>For more information on this topic, check out the following references: </p>

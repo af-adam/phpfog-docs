@@ -5,11 +5,13 @@
 		<title>PHP Fog &mdash; Documentation Xeround</title> 
 
 		<link href="/css/style.css" rel="stylesheet">
+		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
 		<link href="/css/phpfogdocs.css" rel="stylesheet">
+		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
-	<body id="blog">
+	<body id="blog" onload="prettyPrint()">
 	<div id="header">
 		<div class="container">
 			<a href="http://appfog.com/" id="app_fog"><img src="http://appfog.com/img/app-fog.png" width="189" height="47" alt="App Fog"></a>
@@ -180,7 +182,7 @@
 
 <p>Each of the URLs contains a string of the following syntax:</p>
 
-<pre><code>mysql://username:password@host:port/database
+<pre class="prettyprint"><code>mysql://username:password@host:port/database
 </code></pre>
 
 <p>The different parts of the URL are also set in separate environment variables:</p>
@@ -191,9 +193,9 @@
   <li><code>XEROUND_DATABASE_PASSWORD</code></li>
   <li><code>XEROUND_DATABASE_HOST</code></li>
   <li><code>XEROUND_DATABASE_PORT</code></li>
-  <li>
-    <p><code>XEROUND_DATABASE_NAME</code></p>
-  </li>
+  <li><code>XEROUND_DATABASE_NAME</code></li>
+</ul>
+<ul>
   <li><code>XEROUND_DATABASE_INTERNAL_ADAPTER</code></li>
   <li><code>XEROUND_DATABASE_INTERNAL_USERNAME</code></li>
   <li><code>XEROUND_DATABASE_INTERNAL_PASSWORD</code></li>
@@ -204,7 +206,7 @@
 
 <p>Here’s an example of how to use these environment variables in your code:</p>
 
-<pre><code>&lt;?php
+<pre class="prettyprint linenums"><code>&lt;?php
 	$ip = getenv('XEROUND_DATABASE_INTERNAL_HOST');
 ?&gt;
 </code></pre>
