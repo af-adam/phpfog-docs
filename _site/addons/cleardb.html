@@ -169,17 +169,17 @@
 
 <p>In the “Add-ons” tab in your app console click “Install” for the ClearDB add-on. That’s it!</p>
 
-<p>Installing the ClearDB add-on automatically sets an environment variable for your app called “<code>CLEARDB_DATABASE_URL</code>”. You can access this in your code with <code>$_ENV["CLEARDB_DATABSE_URL"]</code>. This variable includes the full URI including the hostname, database path, username and password. The following code demonstrates how to parse the environment variable:</p>
+<p>Installing the ClearDB add-on automatically sets an environment variable for your app called “<code>CLEARDB_DATABASE_URL</code>”. You can access this in your code with <code>$_ENV["CLEARDB_DATABASE_URL"]</code>. This variable includes the full URI including the hostname, database path, username and password. The following code demonstrates how to parse the environment variable:</p>
 
 <pre><code>&lt;?php
-$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+	$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-mysql_connect(
-$server = $url["host"],
-$username = $url["user"],
-$password = $url["pass"]);
-$db=substr($url["path"],1);
-mysql_select_db($db);
+	mysql_connect(
+	$server = $url["host"],
+	$username = $url["user"],
+	$password = $url["pass"]);
+	$db=substr($url["path"],1);
+	mysql_select_db($db);
 ?&gt;
 </code></pre>
 
