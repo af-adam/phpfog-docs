@@ -58,7 +58,7 @@ We have an SFTP feature on our roadmap, but no ETA. Meanwhile, you can access yo
 
 #### I modified my app through a web interface but those changes aren't reflected in git. Why not? {#web}
 
-Git is a one-way versioning tool. That means any changes you make to your file system through a web interface will not propagate back into git. This is why we recommend setting up a local dev environment and making all code changes there and pushing those changes to your app through git. Read more about that in our [local dev environment guide](/getting-started/local-dev).
+Git is a one-way versioning tool. That means any changes you make to your file system through a web interface will not propagate back into git. This is why we recommend setting up a local dev environment and making all code changes there and pushing those changes to your app through git. Read more about that in our [local dev environment guide](/getting-started/development).
 
 For WordPress, you can get a backup of your file system with the [ManageWP plugin](http://managewp.com/).
 
