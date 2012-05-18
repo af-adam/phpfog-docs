@@ -190,7 +190,7 @@
 
 <p>Run the command in your terminal, and you should see something like this: </p>
 
-<pre class="prettyprint"><code>Initialized empty Git repository in /Users/(your username)/Documents/git/foo.phpfogapp.com/.git
+<pre><code>Initialized empty Git repository in /Users/(your username)/Documents/git/foo.phpfogapp.com/.git
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reuse 0 (delta 0)
 Receiving objects: 100% (3/3), done.
@@ -212,7 +212,7 @@ Receiving objects: 100% (3/3), done.
 <p>Create a new file called “helloworld.php” and populate it with some code:</p>
 
 <pre class="prettyprint linenums"><code>&lt;?php
-	echo "hello world";
+    echo "hello world";
 ?&gt;
 </code></pre>
 
@@ -309,11 +309,11 @@ tmp/**/*
 
 <p>In the root project directory, create a “composer.json” manifest file:</p>
 
-<pre class="prettyprint"><code>{
-	"require": {
-		"symfony/yaml": "&gt;=2.0.6",
-		"imagine/Imagine": "&gt;=0.2.8"
-	}
+<pre class="prettyprint linenums"><code>{
+    "require": {
+        "symfony/yaml": "&gt;=2.0.6",
+        "imagine/Imagine": "&gt;=0.2.8"
+    }
 }
 </code></pre>
 
@@ -328,7 +328,7 @@ tmp/**/*
 
 <p>Below is what a simple project directory might look like after running the install command:</p>
 
-<pre class="prettyprint"><code>├── composer.json \&lt;- Manifest created above
+<pre><code>├── composer.json \&lt;- Manifest created above
 ├── composer.lock \&lt;- Generated lock file preserves current dependency versions
 ├── index.php
 ├── .composer
@@ -345,7 +345,7 @@ tmp/**/*
 
 <p>To start using the Composer installed libraries, just add the following line to <code>index.php</code> files in your project:</p>
 
-<pre class="prettyprint"><code>require "vendor/.composer/autoload.php";
+<pre class="prettyprint linenums"><code>require "vendor/.composer/autoload.php";
 </code></pre>
 
 <p>Note: Most PHP frameworks will have single place for this.</p>

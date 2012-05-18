@@ -80,22 +80,22 @@ a. In your WordPress app's git repository, find the file `wp-config.php` and ope
 b. Find the following code and input the information from your RDS database:
 
 {: .prettyprint .linenums}
-	define('DB_NAME', '<your RDS database's name>');
-	
-	/** MySQL database username */
-	define('DB_USER', '<your RDS user ID>');
+    define('DB_NAME', '<your RDS database's name>');
+    
+    /** MySQL database username */
+    define('DB_USER', '<your RDS user ID>');
 
-	/** MySQL database password */
-	define('DB_PASSWORD', '<your RDS password>');
+    /** MySQL database password */
+    define('DB_PASSWORD', '<your RDS password>');
 
-	/** MySQL hostname */
-	define('DB_HOST', '<your RDS host name>');
+    /** MySQL hostname */
+    define('DB_HOST', '<your RDS host name>');
 
-	/** Database Charset to use in creating database tables. */
-	define('DB_CHARSET', 'utf8');
+    /** Database Charset to use in creating database tables. */
+    define('DB_CHARSET', 'utf8');
 
-	/** The Database Collate type. Don't change this if in doubt. */
-	define('DB_COLLATE', '');
+    /** The Database Collate type. Don't change this if in doubt. */
+    define('DB_COLLATE', '');
 
 c. Save and quit.
 

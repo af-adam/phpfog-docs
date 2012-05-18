@@ -21,7 +21,7 @@ This is a fairly standard tool that DNS services provide. If you don't see an op
 
 Create a CNAME alias record for `www.yourdomain.com` to: 
 
-	cname01.phpfog.com
+    cname01.phpfog.com
 
 That's the simplest and most reliable method. For more details on why this is is more reliable, check out our [reliability doc](/reliability).
 
@@ -51,13 +51,13 @@ This can take anywhere from a few minutes to 48 hours, depending on your locatio
 If you want to enable wildcards and host content that's dependent on the subdomain, here's how:
 
 {: .prettyprint .linenums} 
-	$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
-	$subdomain = $url_parts[0];
-	if ($subdomain == 'www' || $subdomain == '') {
-		// show home page
-	} else if ($subdomain == 'help') {
-		// show help page
-	}
+    $url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
+    $subdomain = $url_parts[0];
+    if ($subdomain == 'www' || $subdomain == '') {
+        // show home page
+    } else if ($subdomain == 'help') {
+        // show help page
+    }
 
 ## Sharing sessions between subdomains
 
@@ -65,7 +65,7 @@ Thanks to [albeik](http://community.phpfog.com/discussion/85/sharing-sessions-be
 
 If you've enabled wildcard domains and want to share your session data between subdomains, add the following code snippet to your "entry point" PHP file (e.g. index.php):
 
-	("session.cookie_domain", ".domain.com");
+    ("session.cookie_domain", ".domain.com");
 
 ## <a id="rootdomain"></a> Root Domain
 
@@ -79,8 +79,8 @@ Set up a redirect from `www.yourdomain.com` to `yourdomain.com`, either at your 
 
 Create three "A" records to: 
 
-	50.19.115.173
-	184.72.222.30
-	107.22.161.126
+    50.19.115.173
+    184.72.222.30
+    107.22.161.126
 
 Note: make sure to use all three IP addresses for maximum reliability!

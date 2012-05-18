@@ -353,19 +353,20 @@ The key's randomart image is:
 
 <p>Add the following to the config file: </p>
 
-<pre class="prettyprint"><code># Default PHP Fog user (name)
+<pre class="prettyprint linenums"><code># Default PHP Fog user (name)
 Host phpfog
 HostName git01.phpfog.com
 User git
 IdentityFile /Users/&lt;your username&gt;/.ssh/id_rsa
 </code></pre>
 
-<pre class="prettyprint"><code># 2nd PHP Fog user (name2)
+<pre class="prettyprint linenums:6 linenums">
+# 2nd PHP Fog user (name2)
 Host phpfog-1
 HostName git01.phpfog.com
 User git
-IdentityFile /Users/&lt;your username&gt;/.ssh/id_rsa_1
-</code></pre>
+IdentityFile /Users/\&lt;your username\&gt;/.ssh/id_rsa_1
+</pre>
 
 <p>Save and quit. </p>
 

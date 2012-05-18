@@ -37,8 +37,8 @@ If you don't see any files named "id_rsa" or "id_rsa.pub" [skip ahead to "3. Gen
 If they exist, you'll you need to back them up by creating a new directory and moving those files there.
 
 {: .prettyprint}
-	$ mkdir key_backup
-	$ mv id_rsa* key_backup/
+    $ mkdir key_backup
+    $ mv id_rsa* key_backup/
 
 ### 3. Generate your key. {#generate}
 
@@ -53,7 +53,7 @@ Terminal will start the key generation process and you should see this:
 
 Terminal will prompt you for the name of the file in which to save the key.
 
-	Enter file in which to save the key (/Users/PHPFog/.ssh/id_rsa):
+    Enter file in which to save the key (/Users/PHPFog/.ssh/id_rsa):
 
 When asked about the directory, we recommend using the default name and location (`id_rsa`). Just hit 'Enter' to use the default filename.
 
@@ -61,28 +61,28 @@ Note: Git and other tools generally look for keys in the default directory, so u
 
 ### 4. Enter a passphrase for your new key.
 
-	Enter passphrase (empty for no passphrase):
-	Enter same passphrase again:
-	This password is used to protect the private key.
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
+    This password is used to protect the private key.
 
 If the passphrases match, you'll get a keypair.
 
-	Your identification has been saved in /Users/PHPFog/.ssh/id_rsa.
-	Your public key has been saved in /Users/PHPFog/.ssh/id_rsa.pub.
-	The key fingerprint is:
-	31:be:4f:13:d4:68:f1:43:ea:97:9b:33:ad:b6:e5:85 us@phpfog.com
-	The key's randomart image is:
-	+--[ RSA 2048]----+
-	|                 |
-	|         .       |
-	|        . o      |
-	|       . * = .   |
-	|        S B E .  |
-	|       o = o o   |
-	|        o o o .  |
-	|         . . o o.|
-	|             .+.*|
-	+-----------------+
+    Your identification has been saved in /Users/PHPFog/.ssh/id_rsa.
+    Your public key has been saved in /Users/PHPFog/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    31:be:4f:13:d4:68:f1:43:ea:97:9b:33:ad:b6:e5:85 us@phpfog.com
+    The key's randomart image is:
+    +--[ RSA 2048]----+
+    |                 |
+    |         .       |
+    |        . o      |
+    |       . * = .   |
+    |        S B E .  |
+    |       o = o o   |
+    |        o o o .  |
+    |         . . o o.|
+    |             .+.*|
+    +-----------------+
 
 Note: On Windows the path "/Users/PHPFog/.ssh/" is going to be different.
 
@@ -92,14 +92,14 @@ Open your public key with a text editor and copy the entire text.
 
 A real key will look like:
 
-	ssh-rsa
-	AAAAB3NzaC1yc2EAAAADAQABAAABAQDgMaD2kOEQAq0ir0C/U3880mFmpv
-	K0/7/qaYx8Uu2GFnsBabIsPJttndqAl6/k1Du4c2s2S+Aem0qS+R4hbSDDuWqjZbEH
-	ks5qiAjD64vCavRwl96pKk/bvNB4sCe0MTsrPEU0rzI/MFDkCp8UkwonJkDVGafkhGIu
-	UtVrXlCd5JrZFUUvYmLQoLdiTTjCJeBlfG46VqdX2qg4LRN2tMWecYhXrb+ghXsk
-	7MfVo+RGQ9pQsiozbd2oROWOsoy2XKPsE2wXXINMpHAg/r6XUzddkW3mAfLAJ
-	D7Te78lX+AImxPYhOQccODJlswTTlxKNZuqa9znAGaiyf1pYigHLVD5
-	us@phpfog.com
+    ssh-rsa
+    AAAAB3NzaC1yc2EAAAADAQABAAABAQDgMaD2kOEQAq0ir0C/U3880mFmpv
+    K0/7/qaYx8Uu2GFnsBabIsPJttndqAl6/k1Du4c2s2S+Aem0qS+R4hbSDDuWqjZbEH
+    ks5qiAjD64vCavRwl96pKk/bvNB4sCe0MTsrPEU0rzI/MFDkCp8UkwonJkDVGafkhGIu
+    UtVrXlCd5JrZFUUvYmLQoLdiTTjCJeBlfG46VqdX2qg4LRN2tMWecYhXrb+ghXsk
+    7MfVo+RGQ9pQsiozbd2oROWOsoy2XKPsE2wXXINMpHAg/r6XUzddkW3mAfLAJ
+    D7Te78lX+AImxPYhOQccODJlswTTlxKNZuqa9znAGaiyf1pYigHLVD5
+    us@phpfog.com
 
 Now log in to the PHP Fog App Console and click on the "SSH Keys" tab. Hit the "Add another SSH key" button and paste the public key into the "SSH Public Key" field, give it a name, and hit "Save Changes".
 
@@ -136,36 +136,36 @@ In your terminal application, make the following commands:
 You should see something like this:
 
     Generating public/private rsa key pair.
-	Enter file in which to save the key (/Users/<your username>/.ssh/id_rsa): 
+    Enter file in which to save the key (/Users/<your username>/.ssh/id_rsa): 
 
 That filename should already be taken by your first key, so enter this one instead:
 
 {: .prettyprint}
-	/Users/<your username>/.ssh/id_rsa_1 
+    /Users/<your username>/.ssh/id_rsa_1 
 
 After you enter your passphrase (twice), you should see output that looks like this: 
 
-	Your identification has been saved in /Users/<your username>/.ssh/id_rsa_1.
-	Your public key has been saved in /Users/<your username>/.ssh/id_rsa_1.pub.
-	The key fingerprint is:
-	fc:c2:61:19:ed:49:ff:df:fb:e8:0c:46:4a:96:dc:2d <your username>@<your computer's name>
-	The key's randomart image is:
-	+--[ RSA 2048]----+
-	|                 |
-	|         .       |
-	|        . o      |
-	|       . * = .   |
-	|        S B E .  |
-	|       o = o o   |
-	|        o o o .  |
-	|         . . o o.|
-	|             .+.*|
-	+-----------------+
+    Your identification has been saved in /Users/<your username>/.ssh/id_rsa_1.
+    Your public key has been saved in /Users/<your username>/.ssh/id_rsa_1.pub.
+    The key fingerprint is:
+    fc:c2:61:19:ed:49:ff:df:fb:e8:0c:46:4a:96:dc:2d <your username>@<your computer's name>
+    The key's randomart image is:
+    +--[ RSA 2048]----+
+    |                 |
+    |         .       |
+    |        . o      |
+    |       . * = .   |
+    |        S B E .  |
+    |       o = o o   |
+    |        o o o .  |
+    |         . . o o.|
+    |             .+.*|
+    +-----------------+
 
 Finally, run the following:
 
 {: .prettyprint}
-	$ ssh-add ~/.ssh/id_rsa_1
+    $ ssh-add ~/.ssh/id_rsa_1
 
 ### 2. Add your new SSH key to the second account.
 
@@ -178,25 +178,26 @@ Give the new key a name, paste in the contents of the public key, and hit "Save 
 Open "`~/.ssh/config`" in your favorite text editor.
 
 {: .prettyprint}
-	$ vim ~/.ssh/config
+    $ vim ~/.ssh/config
 
 Note: You might have to create this file if it doesn't exist already.
 
 Add the following to the config file: 
 
-{: .prettyprint}
-	# Default PHP Fog user (name)
-	Host phpfog
-	HostName git01.phpfog.com
-	User git
-	IdentityFile /Users/<your username>/.ssh/id_rsa
+{: .prettyprint .linenums}
+    # Default PHP Fog user (name)
+    Host phpfog
+    HostName git01.phpfog.com
+    User git
+    IdentityFile /Users/<your username>/.ssh/id_rsa
 
-{: .prettyprint}
-	# 2nd PHP Fog user (name2)
-	Host phpfog-1
-	HostName git01.phpfog.com
-	User git
-	IdentityFile /Users/<your username>/.ssh/id_rsa_1
+<pre class="prettyprint linenums:6 linenums">
+# 2nd PHP Fog user (name2)
+Host phpfog-1
+HostName git01.phpfog.com
+User git
+IdentityFile /Users/\<your username\>/.ssh/id_rsa_1
+</pre>
 
 Save and quit. 
 
@@ -206,8 +207,8 @@ From now on, you'll have to modify the way you interact with PHP Fog git reposit
 
 To clone your first app:
 
-	git clone git@phpfog:<your app's git repository>
+    git clone git@phpfog:<your app's git repository>
 
 And your second:
 
-	git clone git@phpfog-1:<your second app's git repository>
+    git clone git@phpfog-1:<your second app's git repository>

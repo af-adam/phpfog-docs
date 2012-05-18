@@ -46,14 +46,14 @@ Running into problems with this step? Check out our guide on [troubleshooting ss
 Change your current working directory to the git repo.
 
 {: .prettyprint}
-     cd foo.phpfogapp.com/  
+     $ cd foo.phpfogapp.com/  
 
 Create a new file called `helloworld.php` and populate it with some text.
 
 {: .prettyprint .linenums}
-	<?php
-		echo "hello world";
-	?>
+    <?php
+        echo "hello world";
+    ?>
  
 ### 6. Add the file to staging.
 

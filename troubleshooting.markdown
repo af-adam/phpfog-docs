@@ -80,15 +80,15 @@ Calls that can cause this include:
 
 * Upgrade your Cloud. 
 
-	Gold and Platinum Clouds provide consistent processing power. This is a simple answer, but it's not necessarily the right one for every case. If your app's processes consistently take too long, this might not help. 
+    Gold and Platinum Clouds provide consistent processing power. This is a simple answer, but it's not necessarily the right one for every case. If your app's processes consistently take too long, this might not help. 
 
 * Use asynchronous calls instead of synchronous calls. 
 
-	This only makes sense when your application doesn't need the returned value. Check out [this StackOverflow question on asynchronous PHP calls](http://stackoverflow.com/questions/124462/asynchronous-php-calls) for more information.
+    This only makes sense when your application doesn't need the returned value. Check out [this StackOverflow question on asynchronous PHP calls](http://stackoverflow.com/questions/124462/asynchronous-php-calls) for more information.
 
 * Off-load heavy processing to an external service. 
 
-	Try our [IronWorker](http://phpfog.com/addons) add-on to take some of the asynchronous processing load from your app server. Or, you can create a new Amazon EC2 server dedicated to the heavy processing (the "worker"), and use [Amazon's Simple Queue Service](http://aws.amazon.com/sqs/) to queue jobs. This allows your app to add jobs to the queue and then the worker can pull and process them as it becomes available. 
+    Try our [IronWorker](http://phpfog.com/addons) add-on to take some of the asynchronous processing load from your app server. Or, you can create a new Amazon EC2 server dedicated to the heavy processing (the "worker"), and use [Amazon's Simple Queue Service](http://aws.amazon.com/sqs/) to queue jobs. This allows your app to add jobs to the queue and then the worker can pull and process them as it becomes available. 
 
 ### SSL {#ssl}
 
@@ -115,17 +115,17 @@ PHP Fog takes certifications in RSA and DSA formats.
 If you're getting this error, you can run your key through a converter:
 
 {: .prettyprint}
-	$ openssl rsa -in domain.key -out domain_new.key
+    $ openssl rsa -in domain.key -out domain_new.key
 
 After running this command, your new file format should look like this: 
 
-	-----BEGIN RSA PRIVATE KEY----- 
-	encrypted text 
-	-----END RSA PRIVATE KEY-----
+    -----BEGIN RSA PRIVATE KEY----- 
+    encrypted text 
+    -----END RSA PRIVATE KEY-----
 
 ### Forcing HTTPS {#https}
 
 Using `.htaccess` rules to force HTTPS is complicated by the presence of the load balancers. If you're running into a redirect loop, try forwarding by protocol instead of by port:
 
 {: .prettyprint}
-	RewriteCond %{HTTP:X-Forwarded-Proto} https
+    RewriteCond %{HTTP:X-Forwarded-Proto} https

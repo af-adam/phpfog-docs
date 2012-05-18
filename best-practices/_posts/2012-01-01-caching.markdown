@@ -38,7 +38,7 @@ Caching dynamic content in Varnish can greatly improve the performance of your a
 The simplest way to cache a page is to set a header on output which cues Varnish that this page can be served unmodified to anyone visiting a given URL. The "Cache-Control" header also specifies how long the cached copy should be retained. The following is a PHP example of setting the cache to 10 minutes (600 seconds):
 
 {: .prettyprint}
-	header("Cache-Control: public, max-age=600");
+    header("Cache-Control: public, max-age=600");
 
 Note: The longest Varnish will cache any content is 1 day. 
 
@@ -47,7 +47,7 @@ Note: The longest Varnish will cache any content is 1 day.
 To prevent caching set the "Cache-Control" header to "no-cache". This is generally required in applications that don't produce or consume cookies, but serve dynamic content. This is how to set the "Cache-Control" header in PHP:
 
 {: .prettyprint}
-	header("Cache-Control: no-cache");
+    header("Cache-Control: no-cache");
 
 #### Purging Cache Data
 

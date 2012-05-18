@@ -218,9 +218,9 @@
 <pre class="prettyprint linenums"><code>$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
 $subdomain = $url_parts[0];
 if ($subdomain == 'www' || $subdomain == '') {
-	// show home page
+    // show home page
 } else if ($subdomain == 'help') {
-	// show help page
+    // show help page
 }
 </code></pre>
 

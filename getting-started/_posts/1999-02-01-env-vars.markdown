@@ -15,8 +15,8 @@ Here's an example of how to access your environment variables:
 
 {: .prettyprint .linenums}
     <?php
-		// Example use of getenv()
-		$ip = getenv('MYSQL_DB_HOST');
+        // Example use of getenv()
+        $ip = getenv('MYSQL_DB_HOST');
     ?>
 
 These environment variables also make it easy for you to [set up your development environment](/getting-started/development).
