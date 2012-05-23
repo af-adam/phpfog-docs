@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Development</title> 
+		<title>PHP Fog &mdash; Documentation Cron Jobs</title> 
 
 		<link rel="stylesheet" href="http://appfog.com/css/style.css">
 		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
@@ -154,10 +154,10 @@
 					<ul id="docs_nav">
 						
 						<li class="breadcrumb-separator">&raquo;</li>
-						<li><a href="/getting-started">Getting Started</a></li>
+						<li><a href="/customize">Customize Your App</a></li>
 						
 						<li class="breadcrumb-separator">&raquo;</li>
-						<li><a href="#">Development</a></li>
+						<li><a href="#">Cron Jobs</a></li>
 					</ul>
 					<!--<ul id="secondary_nav">
 						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
@@ -175,36 +175,29 @@
 	<div class="span8">
 		<div class="row">
 			<div class="span8">
-				<h1>Development</h1>
-				<p>Now that you can push code to and from your app, you’ll want to set up a local development environment before doing anything serious. Setting up a local environment allows you to shorten the feedback loop on your development process. It also keeps all of your code in git, which makes it easy to roll back changes and makes your app easily scalable. </p>
+				<h1>Cron Jobs</h1>
+				<p>Sometimes you need to run a task periodically. You can do that quickly and easily on PHP Fog Dedicated Clouds with Cron Jobs. </p>
 
-<h3 id="set-up-your-local-environment">1. Set up your local environment.</h3>
+<p>Running cron jobs is dead simple. Just create a php file with the script you want to run and place it somewhere in your app. </p>
 
-<h4 id="mac-os-x">Mac OS X</h4>
+<p>Then go to your PHP Fog app console and click on the “Cron Jobs” tab. </p>
 
-<p>Download and install <a href="http://www.mamp.info/en/index.html">MAMP</a>.</p>
+<p><img class="screenshot" src="/img/screenshots/cron-1.jpg" alt="Cron Jobs tab" /></p>
 
-<h4 id="linux">Linux</h4>
+<p>Set the path to your script in the “Command Path” field and pick your schedule. </p>
 
-<p>Install <a href="/faqs#version">these versions</a> of Apache, MySQL, and PHP.</p>
+<p><img class="screenshot" src="/img/screenshots/cron-2.jpg" alt="Cron Jobs" /></p>
 
-<h4 id="windows">Windows</h4>
+<p>Hit “Save Changes” and you’re done!</p>
 
-<p>Download and install <a href="http://www.wampserver.com/en/">WAMP</a>.</p>
+<h3 id="frameworks">Frameworks</h3>
 
-<h3 id="configure-your-local-environment-variables">2. Configure your local environment variables.</h3>
+<p>For frameworks like Drupal, there’s one more step. Because the cron jobs run as if executed from the shell, the framework environment isn’t loaded. To get around this, create another file called, for example, “<code>cron-phpfog.php</code>” and add the following line to it: </p>
 
-<p>After you have your local environment set up, you’ll want to be able to deploy the same code in both your local environment and your live PHP Fog Cloud. PHP Fog makes this easy by <a href="/getting-started/env-vars">setting environment variables with your database credentials</a>.</p>
+<pre class="prettyprint linenums"><code>&lt;?php file_get_contents('http://&lt;your app's url&gt;/&lt;cron script&gt;');
+</code></pre>
 
-<p>To take advantage of this, set those environment variables in your local environment. </p>
-
-<p>You’ll also want to make sure your code references relative URLs.</p>
-
-<h3 id="wordpress-walkthrough">WordPress Walkthrough</h3>
-
-<p>Smashing Magazine has <a href="http://wp.smashingmagazine.com/2011/09/28/developing-wordpress-locally-with-mamp/">a great walkthrough</a> on setting up a local development environment for WordPress.</p>
-
-<!-- by editing the file `/Applications/MAMP/Library/bin/envvars`. -->
+<p>Then change the “Command Path” in your app console to “<code>cron-phpfog.php</code>”. That’s it!</p>
 
 
 			</div>
@@ -245,7 +238,7 @@
 						
 						<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
 						
-						<li><a href="/getting-started/development.html" class="on">Development</a></li>
+						<li><a href="/getting-started/development.html" >Development</a></li>
 						
 					</ul>
 
@@ -262,7 +255,7 @@
 						
 						<li><a href="/customize/permissions.html" >Permissions</a></li>
 						
-						<li><a href="/customize/cron.html" >Cron Jobs</a></li>
+						<li><a href="/customize/cron.html" class="on">Cron Jobs</a></li>
 						
 						<li><a href="/customize/database.html" >Database</a></li>
 						

@@ -104,3 +104,12 @@ RewriteRule ^_site/(.+)\.html$ http://%{HTTP_HOST}/$1/ [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^.+$ %{REQUEST_FILENAME}.html [L]
+
+<FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif)$">
+  Header set Cache-Control "max-age=864000, public, must-revalidate"
+  Header unset Last-Modified
+</FilesMatch>
+
+<FilesMatch "\.(html|htm|xml|txt|xsl)$">
+  Header set Cache-Control "max-age=7200, must-revalidate"
+</FilesMatch>
