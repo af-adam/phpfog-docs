@@ -192,12 +192,22 @@
 
 <h3 id="frameworks">Frameworks</h3>
 
-<p>For frameworks like Drupal, there’s one more step. Because the cron jobs run as if executed from the shell, the framework environment isn’t loaded. To get around this, create another file called, for example, “<code>cron-phpfog.php</code>” and add the following line to it: </p>
+<p>For frameworks like Drupal, there’s one more step. Because the cron jobs run as if executed from the shell, the framework environment isn’t loaded. </p>
 
-<pre class="prettyprint linenums"><code>&lt;?php file_get_contents('http://&lt;your app's url&gt;/&lt;cron script&gt;');
+<p>To work around this, you can have your cron job simply make an external HTTP request to run the actual code. Here’s how: </p>
+
+<ol>
+<li>Create another file called "&lt;your cron job 2&gt;.php" and add the following line to it: </li>
+</ol>
+
+<pre class="prettyprint"><code>&lt;?php file_get_contents('http://&lt;your app url&gt;/&lt;cron script&gt;');
 </code></pre>
 
-<p>Then change the “Command Path” in your app console to “<code>cron-phpfog.php</code>”. That’s it!</p>
+<ol start="2">
+<li>Change the "Command Path" in your app console to "&lt;your cron job 2&gt;.php". </li>
+</ol>
+
+<p>For more on using cron with Drupal, including how to keep your script secure, check out <a href="http://drupal.org/node/23714">this page</a>. </p>
 
 
 			</div>
