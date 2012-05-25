@@ -27,6 +27,6 @@ Enter your Application Details and choose a domain name.
 
 ### 4. There is no step 4. 
 
-You're done! Give us a couple of minutes to deploy your new app. When your app's status changes to "running," hit the "Vew Live Site" button.
+You're done! Give us a couple of minutes to deploy your new app. When your app's status changes to "running," hit the "View Live Site" button.
 
 Ready to dig into code? [Read on](/getting-started/pf-command-line-tool).
