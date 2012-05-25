@@ -180,7 +180,7 @@
 
 <p>In the “Add-ons” tab in your app console click “Install” for the MongoHQ add-on. That’s it!</p>
 
-<p>Installing the MongoHQ add-on automatically sets an environment variable for your app called “<code>MONGOHQ_URL</code>”. You can access this in your code with <code>$_ENV["MONGOHQ_URL"]</code>. This variable includes the full URI including the hostname, database path, username and password. It looks like this: </p>
+<p>Installing the MongoHQ add-on automatically sets an environment variable for your app called “<code>MONGOHQ_URL</code>”. You can access this in your code with <code>getenv(["MONGOHQ_URL")</code>. This variable includes the full URI including the hostname, database path, username and password. It looks like this: </p>
 
 <pre class="prettyprint"><code>mongodb://username:password@host:port/database
 </code></pre>
@@ -189,7 +189,7 @@
 
 <pre class="prettyprint linenums"><code>&lt;?php
 	// connect
-	$m = new Mongo($_ENV["MONGOLAB_URI"]);
+	$m = new Mongo(getenv("MONGOLAB_URI"));
 	
 	// select a database
 	$db = $m-&gt;comedy;
