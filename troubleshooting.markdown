@@ -19,16 +19,19 @@ Don't see your issue here? Try our [community](http://community.phpfog.com/) or 
 
 1. Follow our [guide to generating your SSH key](/getting-started/ssh).
 2. Make sure you're copying your *public* key into the PHP Fog app console, not your private key. 
-3. If you're on a Mac, flush your Keychain Access cache:
+3. Flush your ssh-agent cache:
 
-<ol>
-<li type="a">Open Keychain Access (Applications &rarr; Utilities &rarr; Keychain Access).</li>
-<li type="a">Unlock and lock your keychain by clicking on the lock icon at the upper left.</li>
-</ol>
+    $ ssh-add -D
+	All identities removed.
 
 #### "Unauthorized access for user"
 
 This error occurs when you try to use the same SSH key for multiple accounts. You'll have to generate a new key for each account. Check out [our guide on using SSH keys with multiple account](/getting-started/ssh#multiple).
+
+If you continue to see this error, flush your ssh-agent cache:
+
+    $ ssh-add -D
+	All identities removed.
 
 ### HTTP 500, 502, 503, and 504 Errors {#500}
 
