@@ -26,14 +26,14 @@ For frameworks like Drupal, there's one more step. Because the cron jobs run as 
 To work around this, you can have your cron job simply make an external HTTP request to run the actual code. Here's how: 
 
 <ol>
-<li>Create another file called "<your cron job 2>.php" and add the following line to it: </li>
+<li>Create another file called <code>"/<your cron job 2/>.php"</code> and add the following line to it: </li>
 </ol>
 
 {: .prettyprint}
     <?php file_get_contents('http://<your app url>/<cron script>');
 
 <ol start="2">
-<li>Change the "Command Path" in your app console to "<your cron job 2>.php". </li>
+<li>Change the "Command Path" in your app console to "<code><your cron job 2>.php</code>". </li>
 </ol>
 
 For more on using cron with Drupal, including how to keep your script secure, check out [this page](http://drupal.org/node/23714). 

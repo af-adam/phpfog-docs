@@ -197,14 +197,14 @@
 <p>To work around this, you can have your cron job simply make an external HTTP request to run the actual code. Here’s how: </p>
 
 <ol>
-<li>Create another file called "&lt;your cron job 2&gt;.php" and add the following line to it: </li>
+<li>Create another file called <code>"/&lt;your cron job 2/&gt;.php"</code> and add the following line to it: </li>
 </ol>
 
 <pre class="prettyprint"><code>&lt;?php file_get_contents('http://&lt;your app url&gt;/&lt;cron script&gt;');
 </code></pre>
 
 <ol start="2">
-<li>Change the "Command Path" in your app console to "&lt;your cron job 2&gt;.php". </li>
+<li>Change the "Command Path" in your app console to "<code>&lt;your cron job 2&gt;.php</code>". </li>
 </ol>
 
 <p>For more on using cron with Drupal, including how to keep your script secure, check out <a href="http://drupal.org/node/23714">this page</a>. </p>
