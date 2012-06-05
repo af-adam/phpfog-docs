@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>PHP Fog &mdash; Documentation Git</title> 
+		<title>PHP Fog &mdash; Documentation Logs</title> 
 
 		<link rel="stylesheet" href="http://appfog.com/css/style.css">
 		<link href="/css/prettify.css" type="text/css" rel="stylesheet" />
@@ -154,10 +154,10 @@
 					<ul id="docs_nav">
 						
 						<li class="breadcrumb-separator">&raquo;</li>
-						<li><a href="/getting-started">Getting Started</a></li>
+						<li><a href="/customize">Customize Your App</a></li>
 						
 						<li class="breadcrumb-separator">&raquo;</li>
-						<li><a href="#">Git</a></li>
+						<li><a href="#">Logs</a></li>
 					</ul>
 					<!--<ul id="secondary_nav">
 						<li><a href="http://docs.appfog.com">AppFog Docs</a></li>
@@ -175,217 +175,24 @@
 	<div class="span8">
 		<div class="row">
 			<div class="span8">
-				<h1>Git</h1>
-				<p>Git is a free and open source distributed version control system for source code. It allows you to manage your code between your local machine and the remote server. Read more about git <a href="http://git-scm.com/">here</a>. </p>
+				<h1>Logs</h1>
+				<p>PHP Fog provides logging by interacting with the third-party log hosting service Logentries.</p>
 
-<p>Each application in PHP Fog has its own git repository that you can interact with. This guide will walk you through the process of downloading your code, modifying it, committing your changes, and pushing the changes up to PHP Fog.  </p>
+<h3 id="install-logging">Install Logging</h3>
 
-<h3 id="download-and-install-the-git-clienthttpgit-scmcomdownload">1. <a href="http://git-scm.com/download">Download and install the git client.</a></h3>
+<p>To install logging with Logentries, just go to <a href="https://logentries.com/doc/phpfog/">this page</a> and create an account with your email address. </p>
 
-<h3 id="create-a-new-ssh-key-and-add-it-to-php-fog">2. Create a new SSH key and add it to PHP Fog.</h3>
+<p><img class="screenshot" src="/img/screenshots/logging.jpg" alt="Logentries" /></p>
 
-<p>Before you can interact with PHP Fog’s git repository, you have to set up a secure way to do so. Create a new SSH key and add it to your PHP Fog account, under the “SSH Keys” tab. Don’t know how? <a href="/getting-started/ssh">Follow this guide.</a></p>
+<p>Copy the secret token that appears.</p>
 
-<h3 id="get-your-source-code">3. Get your source code.</h3>
+<p><img class="screenshot" src="/img/screenshots/logging-2.jpg" alt="Logentries" /></p>
 
-<p>Go to your App Console at PHP Fog and click on the “Source Code” tab on the left. </p>
+<p>Then go to your PHP Fog app console and click on the “Logs” tab on the left. Click on the “Setup” button for Logentries, enter your secret token, and hit “Save and Activate”.</p>
 
-<p><img class="screenshot" src="/img/screenshots/source.png" alt="Source Code" /></p>
+<p><img class="screenshot" src="/img/screenshots/logging-3.jpg" alt="Logs tab" /></p>
 
-<p>Copy the value for “Clone your git repository:”, which should look something like: </p>
-
-<pre class="prettyprint"><code>$ git clone git@:foo.phpfogapp.com
-</code></pre>
-
-<p>Run the command in your terminal, and you should see something like this: </p>
-
-<pre><code>Initialized empty Git repository in /Users/(your username)/Documents/git/foo.phpfogapp.com/.git
-remote: Counting objects: 3, done.
-remote: Total 3 (delta 0), reuse 0 (delta 0)
-Receiving objects: 100% (3/3), done.
-</code></pre>
-
-<p>Congratulations, you’ve cloned your git repo!</p>
-
-<p>(Problems with SSH? Check out our guide for <a href="/troubleshooting#ssh">troubleshooting SSH</a>.)</p>
-
-<h3 id="modify-your-code">4. Modify your code.</h3>
-
-<p>Change your current working directory to the repo you just cloned:</p>
-
-<pre class="prettyprint"><code>$ cd foo.phpfogapp.com/
-</code></pre>
-
-<p>(Replace “foo.phpfogapp.com” with your app’s name.)</p>
-
-<p>Create a new file called “helloworld.php” and populate it with some code:</p>
-
-<pre class="prettyprint linenums"><code>&lt;?php
-    echo "hello world";
-?&gt;
-</code></pre>
-
-<h3 id="add-and-commit-your-code-to-git">5. Add and commit your code to git.</h3>
-
-<pre class="prettyprint"><code>$ git add .
-</code></pre>
-
-<p>The “add” command tells git to “stage” new files in preparation for a commit. The “.” tells git to add all the files in the current directory recursively.</p>
-
-<pre class="prettyprint"><code>$ git commit -m "first commit"
-</code></pre>
-
-<p>This command commits the added file to your git repository. It’s still local, but now it’s ready to be uploaded (i.e. “pushed”).</p>
-
-<h3 id="push-your-code-changes">6. Push your code changes.</h3>
-
-<pre class="prettyprint"><code>$ git push
-</code></pre>
-
-<p>This command uploads your local repository to the remote server at PHP Fog. And you’re done! Give it a few minutes to deploy your changes, then visit your app to see your changes live! </p>
-
-<p>This should be enough to get your started, but if you want to learn a few advanced git techniques, read on. If you want to start developing your app, head on over to <a href="/getting-started/development">the next section</a>.</p>
-
-<h2 id="gitignore">.gitignore</h2>
-
-<p>Sometimes you have files on your server that you don’t want to overwrite on a “git push”. This can be for a variety of reasons, for example WordPress and Drupal have adminstrative panels that make changes to settings in live configuration files. If you make those changes on the app server, but your local git repository doesn’t have those changes, the next time you git push, git will overwrite those configurations and they’ll revert to old settings. </p>
-
-<p>Fortunately, there’s a way you can tell git to ignore certain files so this doesn’t happen. </p>
-
-<p>In your local git repository, open the file “.gitignore” with your favorite text editor. If it doesn’t exist yet, simply create a new one. </p>
-
-<pre class="prettyprint linenums"><code># You can ignore specific files.
-.DS_Store
-
-# And use wildcards.
-*~
-*.swp
-
-# You can also ignore directories and all files in a directory.
-tmp/**/*
-</code></pre>
-
-<p>If the directory or file you’re adding to .gitignore is already being tracked by git, you’ll need to manually tell git to stop tracking it. </p>
-
-<pre class="prettyprint"><code>$ git rm --cached [filename/directory]
-</code></pre>
-
-<p>That’s it! Git will no longer overwrite those files.</p>
-
-<h2 id="composer">Composer</h2>
-
-<p>Composer is a tool for PHP dependency management that allows you to declare the dependent libraries for your project and installs them in the project for you. This guide will take you through adding Composer to a sample application. We’ll show you how to:</p>
-
-<ol>
-  <li>Download and install Composer locally.</li>
-  <li>Create a Composer manifest.</li>
-  <li>Fetch dependencies.</li>
-  <li>Include and use dependencies.</li>
-  <li>Update dependencies.</li>
-  <li>Deploy to PHP Fog.</li>
-</ol>
-
-<h3 id="sample-code">Sample Code</h3>
-
-<p>You can find a sample project using composer <a href="https://github.com/phpfog/pf-sample-composer-app">here</a>.</p>
-
-<h3 id="limitations">Limitations</h3>
-
-<p>Dependencies that include binaries may not work once deployed. PHP Fog does not support Composer libraries that include binary executables.</p>
-
-<h3 id="install-composer-locally">1. Install Composer locally.</h3>
-
-<p>You can run Composer directly from the root project directory or install it using <a href="http://mxcl.github.com/homebrew/">Homebrew</a>.</p>
-
-<p>Download it to the project directory:</p>
-
-<pre class="prettyprint"><code>$ curl http://getcomposer.org/composer.phar -O composer.phar
-</code></pre>
-
-<p>Or if you don’t have <code>curl</code>:</p>
-
-<pre class="prettyprint"><code>$ wget http://getcomposer.org/composer.phar
-</code></pre>
-
-<p>Or install with Homebrew:</p>
-
-<pre class="prettyprint"><code>$ brew uninstall composer ; brew install --HEAD https://raw.github.com/gist/1574469/composer.rb
-</code></pre>
-
-<p>(This makes sure you get the latest version of Composer.)</p>
-
-<h3 id="create-a-composer-manifest">2. Create a Composer manifest.</h3>
-
-<p>In the root project directory, create a “composer.json” manifest file:</p>
-
-<pre class="prettyprint linenums"><code>{
-    "require": {
-        "symfony/yaml": "&gt;=2.0.6",
-        "imagine/Imagine": "&gt;=0.2.8"
-    }
-}
-</code></pre>
-
-<h3 id="fetch-dependencies">3. Fetch dependencies.</h3>
-
-<p>In the directory you created “composer.json”, run the following command:</p>
-
-<pre class="prettyprint"><code>$ composer.phar install
-</code></pre>
-
-<p>Composer will create a <code>vendor</code> directory and download the required libraries there. You have to use this <code>install</code> command every time you add a new library. Composer records the version numbers of the libraries it fetches in the <code>composer.lock</code> file. It does this to maintain project stability by guaranteeing that Composer only uses the library versions you used to develop and test the project.</p>
-
-<p>Below is what a simple project directory might look like after running the install command:</p>
-
-<pre><code>├── composer.json \&lt;- Manifest created above
-├── composer.lock \&lt;- Generated lock file preserves current dependency versions
-├── index.php
-├── .composer
-│   └── autoload.php \&lt;- Auto loader to be required in code files.
-└── vendor
-├── bin
-├── imagine
-│   └── Imagine
-└── symfony
-└── yaml
-</code></pre>
-
-<h3 id="include-and-use-dependencies">4. Include and use dependencies.</h3>
-
-<p>To start using the Composer installed libraries, just add the following line to <code>index.php</code> files in your project:</p>
-
-<pre class="prettyprint linenums"><code>require "vendor/.composer/autoload.php";
-</code></pre>
-
-<p>Note: Most PHP frameworks will have single place for this.</p>
-
-<p>Composer uses “lazy loading”, so it will only load the necessary libraries for each request.</p>
-
-<h3 id="update-dependencies">5. Update dependencies.</h3>
-
-<p>To fetch the latest library versions run the following command:</p>
-
-<pre class="prettyprint"><code>$ composer.phar update
-</code></pre>
-
-<p>This will download the newest available libraries using the version rules specified in the manifest. It will also update the <code>composer.lock</code> file to reflect the new version numbers.</p>
-
-<h3 id="deploy-to-php-fog">6. Deploy to PHP Fog.</h3>
-
-<p>Once the dependencies are installed, tested, and the app is ready for release, commit and push the project (including the vendor directory) to PHP Fog.</p>
-
-<pre class="prettyprint"><code>$ git add .
-$ git commit -m "Added Composer and dependencies"
-$ git push
-</code></pre>
-
-<p>Want to learn more about Composer? Check out <a href="http://getcomposer.org/">the project page</a>. </p>
-
-<h2 id="git-submodules">Git Submodules</h2>
-
-<p>Git submodules are supported with our <a href="/getting-started/pf-command-line-tool/">PF Command Line Tool</a>.</p>
-
-<p>Ready to start developing your app? <a href="/getting-started/development">Read on</a>.</p>
+<p>That’s it! Pretty soon, you should see your logs rolling into your Logentries dashboard.</p>
 
 
 			</div>
@@ -422,7 +229,7 @@ $ git push
 						
 						<li><a href="/getting-started/ssh.html" >SSH</a></li>
 						
-						<li><a href="/getting-started/git.html" class="on">Git</a></li>
+						<li><a href="/getting-started/git.html" >Git</a></li>
 						
 						<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
 						
@@ -445,7 +252,7 @@ $ git push
 						
 						<li><a href="/customize/cron.html" >Cron Jobs</a></li>
 						
-						<li><a href="/customize/logs.html" >Logs</a></li>
+						<li><a href="/customize/logs.html" class="on">Logs</a></li>
 						
 						<li><a href="/customize/logging.html" >Logging</a></li>
 						

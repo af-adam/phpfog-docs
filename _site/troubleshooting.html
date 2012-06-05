@@ -14,7 +14,7 @@
 		<!-- css -->
 
 		<!-- modernizr -->
-		<script src="/js/libs/modernizr-2.5.3.min.js"></script>
+		<script src="http://appfog.com/js/libs/modernizr-2.5.3.min.js"></script>
 
 		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
@@ -191,17 +191,23 @@
 <ol>
   <li>Follow our <a href="/getting-started/ssh">guide to generating your SSH key</a>.</li>
   <li>Make sure you’re copying your <em>public</em> key into the PHP Fog app console, not your private key. </li>
-  <li>If you’re on a Mac, flush your Keychain Access cache:</li>
-</ol>
+  <li>
+    <p>Flush your ssh-agent cache:</p>
 
-<ol>
-<li type="a">Open Keychain Access (Applications &rarr; Utilities &rarr; Keychain Access).</li>
-<li type="a">Unlock and lock your keychain by clicking on the lock icon at the upper left.</li>
+    <p>$ ssh-add -D
+ All identities removed.</p>
+  </li>
 </ol>
 
 <h4 id="unauthorized-access-for-user">“Unauthorized access for user”</h4>
 
 <p>This error occurs when you try to use the same SSH key for multiple accounts. You’ll have to generate a new key for each account. Check out <a href="/getting-started/ssh#multiple">our guide on using SSH keys with multiple account</a>.</p>
+
+<p>If you continue to see this error, flush your ssh-agent cache:</p>
+
+<pre><code>$ ssh-add -D
+All identities removed.
+</code></pre>
 
 <h3 id="500">HTTP 500, 502, 503, and 504 Errors</h3>
 
@@ -372,6 +378,10 @@ encrypted text
 						<li><a href="/customize/permissions.html" >Permissions</a></li>
 						
 						<li><a href="/customize/cron.html" >Cron Jobs</a></li>
+						
+						<li><a href="/customize/logs.html" >Logs</a></li>
+						
+						<li><a href="/customize/logging.html" >Logging</a></li>
 						
 						<li><a href="/customize/database.html" >Database</a></li>
 						

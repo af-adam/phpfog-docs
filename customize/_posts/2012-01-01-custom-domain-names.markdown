@@ -13,7 +13,7 @@ We recommend using the `www.` subdomain as your canonical domain. Here's how to 
 
 #### a. Redirect your root domain.
 
-At your domain host, set up a redirect (302) from your root domain (`yourdomain.com`) to `www.yourdomain.com`. 
+At your DNS host, set up a redirect (302) from your root domain (`yourdomain.com`) to `www.yourdomain.com`. 
 
 This is a fairly standard tool that DNS services provide. If you don't see an option for it at your domain host, contact their support services and they should be able to do that for you.
 
@@ -48,7 +48,11 @@ This can take anywhere from a few minutes to 48 hours, depending on your locatio
 
 ## Handling Subdomains with Wildcards
 
-If you want to enable wildcards and host content that's dependent on the subdomain, here's how:
+Your PHP Fog app can handle routing for multiple subdomains for $5 per month. To enable this feature, go to the "Domain Name" tab in your app console and click on the "Enable Wildcard Domains" check-box. 
+
+Then, at your DNS host, simply set a CNAME record for each subdomain to "`cname01.phpfog.com`".
+
+Here's an example of how to handle this in your app's code:
 
 {: .prettyprint .linenums} 
     $url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));

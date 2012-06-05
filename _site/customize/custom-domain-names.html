@@ -14,7 +14,7 @@
 		<!-- css -->
 
 		<!-- modernizr -->
-		<script src="/js/libs/modernizr-2.5.3.min.js"></script>
+		<script src="http://appfog.com/js/libs/modernizr-2.5.3.min.js"></script>
 
 		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
 		
@@ -184,7 +184,7 @@
 
 <h4 id="a-redirect-your-root-domain">a. Redirect your root domain.</h4>
 
-<p>At your domain host, set up a redirect (302) from your root domain (<code>yourdomain.com</code>) to <code>www.yourdomain.com</code>. </p>
+<p>At your DNS host, set up a redirect (302) from your root domain (<code>yourdomain.com</code>) to <code>www.yourdomain.com</code>. </p>
 
 <p>This is a fairly standard tool that DNS services provide. If you don’t see an option for it at your domain host, contact their support services and they should be able to do that for you.</p>
 
@@ -222,7 +222,11 @@
 
 <h2 id="handling-subdomains-with-wildcards">Handling Subdomains with Wildcards</h2>
 
-<p>If you want to enable wildcards and host content that’s dependent on the subdomain, here’s how:</p>
+<p>Your PHP Fog app can handle routing for multiple subdomains for $5 per month. To enable this feature, go to the “Domain Name” tab in your app console and click on the “Enable Wildcard Domains” check-box. </p>
+
+<p>Then, at your DNS host, simply set a CNAME record for each subdomain to “<code>cname01.phpfog.com</code>”.</p>
+
+<p>Here’s an example of how to handle this in your app’s code:</p>
 
 <pre class="prettyprint linenums"><code>$url_parts = explode('.', str_replace('.yourdomain.com', '', $_SERVER['HTTP_HOST']));
 $subdomain = $url_parts[0];
@@ -318,6 +322,10 @@ if ($subdomain == 'www' || $subdomain == '') {
 						<li><a href="/customize/permissions.html" >Permissions</a></li>
 						
 						<li><a href="/customize/cron.html" >Cron Jobs</a></li>
+						
+						<li><a href="/customize/logs.html" >Logs</a></li>
+						
+						<li><a href="/customize/logging.html" >Logging</a></li>
 						
 						<li><a href="/customize/database.html" >Database</a></li>
 						
