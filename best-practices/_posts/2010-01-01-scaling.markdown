@@ -37,7 +37,7 @@ In order to answer that question for PHP Fog users, we've partnered with New Rel
 
 New Relic allows you to monitor your app's up-time and response times, as well as your Cloud's system performance stats like CPU load and RAM usage. 
 
-Read more about New Relic [here](/add-ons/newrelic).
+Read more about New Relic [here](/addons/newrelic).
 
 ### How do I scale? 
 
