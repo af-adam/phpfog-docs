@@ -4,7 +4,7 @@ This is the repo for the PHP Fog Documentation site at http://docs.phpfog.com.
 
 The site is generated in [Jekyll](https://github.com/mojombo/jekyll), so [install that](https://github.com/mojombo/jekyll/wiki/install) first.
 
-Then clone this repo. 
+Then clone this repo and rename the file "_config.yml.example" to "_config.yml".
 
 Jekyll is a static site generator. It converts the markdown files into a static site under the "_site" directory.
 
