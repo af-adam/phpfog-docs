@@ -8,7 +8,7 @@ Here's a walkthrough for an HTTP request from the client all the way to the data
 
 #### DNS Lookup 
 
-When a client makes an HTTP request to your PHP Fog app, the first step is to perform a DNS lookup for the IP address of your application. In our guide for [setting up custom domains](/getting-started/custom-domain-names), we recommended using a CNAME record. This is a mechanism to help with failover. While the CNAME record currently points to Amazon's Elastic Load Balancer, in the case of a failure, we can update our DNS records to reference a different service, maintaining service. This particular failover mechanism is built into a point before a request even touches any PHP Fog components. 
+When a client makes an HTTP request to your PHP Fog app, the first step is to perform a DNS lookup for the IP address of your application. In our guide for [setting up custom domains](/customize/custom-domain-names), we recommended using a CNAME record. This is a mechanism to help with failover. While the CNAME record currently points to Amazon's Elastic Load Balancer, in the case of a failure, we can update our DNS records to reference a different service, maintaining service. This particular failover mechanism is built into a point before a request even touches any PHP Fog components. 
 
 On the other hand, an A record references a static IP address, which is a single point of failure. This is why we recommend CNAME over A records.
 
