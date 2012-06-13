@@ -98,7 +98,7 @@ DirectorySlash Off
 
 # Remove .html extension
 RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
-RewriteRule ^_site/(.+)\.html$ http://%{HTTP_HOST}/$1/ [R=301,L]
+RewriteRule ^_site/(.+)\.html$ http://%{HTTP_HOST}/$1 [R=301,L]
 
 # add .html file extension (if such file does exist)
 RewriteCond %{REQUEST_FILENAME} !-f
