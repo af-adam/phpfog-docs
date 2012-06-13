@@ -18,11 +18,11 @@ After the DNS lookup is complete, the HTTP request is routed to the Amazon Elast
 
 #### Caching Server 
 
-Next, the load balancer forwards the request to one of our Varnish Cache Servers. We've set up multiple cache servers to handle requests and we've distributed them across different "availability zones". Availability zones are distinct locations that are engineered to be insulated from failures in other availability zones and provide low latency network connectivity to other availability zones. Properly configured, the Caching Servers can actually load static contents from your app, even when your app server is down.
+Next, the load balancer forwards the request to one of our Varnish Cache Servers. We've set up multiple cache servers to handle requests, and, properly configured, the Caching Servers can actually load static contents from your app, even when your app server is down.
 
 #### Second Load Balancer 
 
-After the caching server, the requests go to the second load balancer. The load balancer directs requests to the application server best able to handle the requests. If a server is unavailable, it is routed to a new server thus improves the reliability of your application.
+After the caching server, the requests go to the second load balancer. The load balancer directs requests to the application server best able to handle the requests. If a server is unavailable, it is routed to a new server thus improving the reliability of your application.
 
 #### App Servers and Code Repository 
 
