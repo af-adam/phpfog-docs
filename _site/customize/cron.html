@@ -180,34 +180,35 @@
 
 <p>Running cron jobs is dead simple. Just create a php file with the script you want to run and place it somewhere in your app. </p>
 
-<p>Then go to your PHP Fog app console and click on the “Cron Jobs” tab. </p>
+<p>Then go to your PHP Fog app console and click on the &ldquo;Cron Jobs&rdquo; tab. </p>
 
 <p><img class="screenshot" src="/img/screenshots/cron-1.jpg" alt="Cron Jobs tab" /></p>
 
-<p>Set the path to your script in the “Command Path” field and pick your schedule. </p>
+<p>Set the path to your script in the &ldquo;Command Path&rdquo; field and pick your schedule. </p>
 
 <p><img class="screenshot" src="/img/screenshots/cron-2.jpg" alt="Cron Jobs" /></p>
 
-<p>Hit “Save Changes” and you’re done!</p>
+<p>Hit &ldquo;Save Changes&rdquo; and you&rsquo;re done!</p>
 
 <h3 id="frameworks">Frameworks</h3>
 
-<p>For frameworks like Drupal, there’s one more step. Because the cron jobs run as if executed from the shell, the framework environment isn’t loaded. </p>
+<p>For frameworks like Drupal, there&rsquo;s one more step. Because the cron jobs run as if executed from the shell, the framework environment isn&rsquo;t loaded. </p>
 
-<p>To work around this, you can have your cron job simply make an external HTTP request to run the actual code. Here’s how: </p>
+<p>To work around this, you can have your cron job simply make an external HTTP request to run the actual code. Here&rsquo;s how: </p>
 
 <ol>
-<li>Create another file called <code>"/&lt;your cron job 2/&gt;.php"</code> and add the following line to it: </li>
+<li>Create another file called <code>"/<your cron="" job="" 2="" />.php"</code> and add the following line to it: </li>
 </ol>
 
 <pre class="prettyprint"><code>&lt;?php file_get_contents('http://&lt;your app url&gt;/&lt;cron script&gt;');
 </code></pre>
 
 <ol start="2">
-<li>Change the "Command Path" in your app console to "<code>&lt;your cron job 2&gt;.php</code>". </li>
-</ol>
+<li>Change the "Command Path" in your app console to "<code><your cron="" job="" 2="">.php". 
 
-<p>For more on using cron with Drupal, including how to keep your script secure, check out <a href="http://drupal.org/node/23714">this page</a>. </p>
+
+For more on using cron with Drupal, including how to keep your script secure, check out [this page](http://drupal.org/node/23714). 
+</your></code></li></ol>
 
 
 			</div>
