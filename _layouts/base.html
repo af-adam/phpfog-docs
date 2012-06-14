@@ -17,6 +17,8 @@
 		<script src="http://appfog.com/js/libs/modernizr-2.5.3.min.js"></script>
 
 		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.js"></script>
 		{% if page.url == "/search.html" %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>{% endif %}
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
@@ -185,7 +187,7 @@
 					{{ content }}
 				</div>
 
-				<div class="span3 sidebar padding">
+				<div class="span3 sidebar padding accordion" id="accordion2">
 					<div class="row border-bottom">
 						<div class="span3">
 							<form id="search-form" action="/search">
@@ -194,43 +196,50 @@
 							</form>
 						</div>
 					</div>
-					<div class="row border-bottom {% if page.url == "/index.html" %}on{% endif %}">
-						<div class="span3">
-							<a href="/"><h6>PHP Fog Docs</h6></a>
+					<div class="accordion-group">
+						<div class="row border-bottom accordion-heading">
+							<div class="span3">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><h6>Getting Started</h6></a>
+							</div>
 						</div>
+						<ul class="pages accordion-body collapse" id="collapseOne" style="height: 0;">
+							<div class="accordion-inner">
+							{% for current in site.categories.getting-started %}
+							<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
+							{% endfor %}
+							</div>
+						</ul>
 					</div>
-					<div class="row border-bottom">
-						<div class="span3">
-							<a href="/getting-started/" {% if page.url == "/getting-started/index.html" %}class="on"{% endif %}><h6>Getting Started</h6></a>
-						</div>
-					</div>
-					<ul class="pages">
-						{% for current in site.categories.getting-started %}
-						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
-						{% endfor %}
-					</ul>
 
-					<div class="row border-bottom">
-						<div class="span3">
-							<a href="/customize/" {% if page.url == "/customize/index.html" %}class="on"{% endif %}><h6>Customize Your App</h6></a>
+					<div class="accordion-group">
+						<div class="row border-bottom accordion-heading">
+							<div class="span3">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><h6>Customize Your App</h6></a>
+							</div>
 						</div>
+						<ul class="pages accordion-body collapse" id="collapseTwo" style="height: 0;">
+							<div class="accordion-inner">
+							{% for current in site.categories.customize %}
+							<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
+							{% endfor %}
+							</div>
+						</ul>
 					</div>
-					<ul class="pages">
-						{% for current in site.categories.customize %}
-						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
-						{% endfor %}
-					</ul>
 
-					<div class="row border-bottom">
-						<div class="span3">
-							<a href="/best-practices/" {% if page.url == "/best-practices/index.html" %}class="on"{% endif %}><h6>Best Practices</h6></a>
+					<div class="accordion-group">
+						<div class="row border-bottom accordion-heading">
+							<div class="span3">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><h6>Best Practices</h6></a>
+							</div>
 						</div>
+						<ul class="pages accordion-body collapse" id="collapseThree" style="height: 0;">
+							<div class="accordion-inner">
+							{% for current in site.categories.best-practices %}
+							<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
+							{% endfor %}
+							</div>
+						</ul>
 					</div>
-					<ul class="pages">
-						{% for current in site.categories.best-practices %}
-						<li><a href="{{ current.url }}" {% if current.url == page.url %}class="on"{% endif %}>{{ current.title }}</a></li>
-						{% endfor %}
-					</ul>
 
 						<div class="row border-bottom"><div class="span3"><a href="/faqs.html" {% if page.url == "/faqs.html" %}class="on"{% endif %}><h6>FAQ</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></div></div>

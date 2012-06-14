@@ -49,7 +49,7 @@ float: left;
 }
 
 #blog .sidebar {
-	min-height: 1454px;
+	min-height: 995px;
 }
 
 #blog .sidebar .row {
@@ -185,4 +185,19 @@ ol.linenums > li:before {
 
 ol.linenums:first-child {
 	counter-reset: customlistcounter;
+}
+
+.collapse {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 0.35s ease;
+	-moz-transition: height 0.35s ease;
+	-ms-transition: height 0.35s ease;
+	-o-transition: height 0.35s ease;
+	transition: height 0.35s ease;
+}
+
+.collapse.in {
+	height: auto;
 }
