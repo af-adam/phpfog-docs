@@ -196,15 +196,15 @@
 
 <h3 id="app-console">2. App Console</h3>
 
-<p>Go to your app console and click on the &ldquo;SSL&rdquo; tab on the left. </p>
+<p>Go to your app console and click on the “SSL” tab on the left. </p>
 
 <p><img class="screenshot" src="/img/screenshots/ssl-tab.png" alt="SSL Tab" /></p>
 
-<p>Open your certificate in your favorite text editor. Copy the <em>entire</em> contents of that file and paste it into the &ldquo;Signed Certificate&rdquo; field.</p>
+<p>Open your certificate in your favorite text editor. Copy the <em>entire</em> contents of that file and paste it into the “Signed Certificate” field.</p>
 
 <p><img class="screenshot" src="/img/screenshots/ssl-signed.png" alt="SSL Signed Certificate" /></p>
 
-<p>Open your private key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the &ldquo;RSA or DSA Private Key&rdquo; field.</p>
+<p>Open your private key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the “RSA or DSA Private Key” field.</p>
 
 <p><img class="screenshot" src="/img/screenshots/ssl-dsa.png" alt="RSA or DSA Private Key" /></p>
 
@@ -215,21 +215,21 @@
 	<li type="a">Open your intermediate key in your text editor. Copy the <em>entire</em> contents of that file and paste it into the "Intermediate certificate" field.</li>
 </ol>
 
-<p>Click &ldquo;Save&rdquo;. Grab a cup of coffee while your elastic load balancer configures and deploys your settings.</p>
+<p>Click “Save”. Grab a cup of coffee while your elastic load balancer configures and deploys your settings.</p>
 
-<p>On the next screen, you&rsquo;ll see a CNAME record. Update your DNS from <code>CNAME01.phpfog.com</code> to this new record.</p>
+<p>On the next screen, you’ll see a CNAME record. Update your DNS from <code>CNAME01.phpfog.com</code> to this new record.</p>
 
 <p>You now have SSL for your custom domain name!</p>
 
 <h3 id="ssl-for-root-domains">SSL for Root Domains</h3>
 
-<p>In order to enable SSL for root domains on PHP Fog, you&rsquo;ll have to move your DNS to <a href="http://aws.amazon.com/route53/">Amazon&rsquo;s Route 53</a>.</p>
+<p>In order to enable SSL for root domains on PHP Fog, you’ll have to move your DNS to <a href="http://aws.amazon.com/route53/">Amazon’s Route 53</a>.</p>
 
 <ol>
-  <li>Email <a href="mailto:support@appfog.com">support@appfog.com</a> and ask for your SSL&rsquo;s &ldquo;Alias DNS Name&rdquo;.</li>
-  <li>Create a Route 53 account, if you don&rsquo;t already have one.</li>
-  <li>In the AWS console under Route 53, click on &ldquo;create a hosted zone&rdquo; and fill out the required information. The console will return name servers to fill in at your registrar. By changing those values you allow Route 53 to take control of your DNS settings.</li>
-  <li>With your Alias Hosted Zone ID and Alias DNS Name in hand create a &ldquo;record set&rdquo; for your root domain. With the default &ldquo;A record&rdquo; click the alias radio button to &ldquo;yes&rdquo;. Paste the Hosted Zone ID and Alias DNS Name in the associated fields. </li>
+  <li>Email <a href="mailto:support@appfog.com">support@appfog.com</a> and ask for your SSL’s “Alias DNS Name”.</li>
+  <li>Create a Route 53 account, if you don’t already have one.</li>
+  <li>In the AWS console under Route 53, click on “create a hosted zone” and fill out the required information. The console will return name servers to fill in at your registrar. By changing those values you allow Route 53 to take control of your DNS settings.</li>
+  <li>With your Alias Hosted Zone ID and Alias DNS Name in hand create a “record set” for your root domain. With the default “A record” click the alias radio button to “yes”. Paste the Hosted Zone ID and Alias DNS Name in the associated fields. </li>
   <li>Save your changes.</li>
 </ol>
 
@@ -241,7 +241,7 @@
 
 <ul>
   <li>You can use a *.phpfogapp.com subdomain which falls under the PHP Fog SSL certificate automatically. </li>
-  <li>You can also use a service like <a href="http://cloudflare.com">CloudFlare</a> which uses a different method to provide an SSL certificate for your custom domain name, though it&rsquo;s shared with other custom domain names.</li>
+  <li>You can also use a service like <a href="http://cloudflare.com">CloudFlare</a> which uses a different method to provide an SSL certificate for your custom domain name, though it’s shared with other custom domain names.</li>
 </ul>
 
 
@@ -267,21 +267,23 @@
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><h6>Getting Started</h6></a>
 							</div>
 						</div>
+						
 						<ul class="pages accordion-body collapse" id="collapseOne" style="height: 0;">
+						
 							<div class="accordion-inner">
-							
-							<li><a href="/getting-started/jumpstarts.html" >Jumpstarts</a></li>
-							
-							<li><a href="/getting-started/pf-command-line-tool.html" >PF Command Line Tool</a></li>
-							
-							<li><a href="/getting-started/ssh.html" >SSH</a></li>
-							
-							<li><a href="/getting-started/git.html" >Git</a></li>
-							
-							<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
-							
-							<li><a href="/getting-started/development.html" >Development</a></li>
-							
+								
+								<li><a href="/getting-started/jumpstarts.html" >Jumpstarts</a></li>
+								
+								<li><a href="/getting-started/pf-command-line-tool.html" >PF Command Line Tool</a></li>
+								
+								<li><a href="/getting-started/ssh.html" >SSH</a></li>
+								
+								<li><a href="/getting-started/git.html" >Git</a></li>
+								
+								<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
+								
+								<li><a href="/getting-started/development.html" >Development</a></li>
+								
 							</div>
 						</ul>
 					</div>
@@ -292,7 +294,9 @@
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><h6>Customize Your App</h6></a>
 							</div>
 						</div>
-						<ul class="pages accordion-body collapse" id="collapseTwo" style="height: 0;">
+						
+						<ul class="pages accordion-body collapse in" id="collapseTwo" style="height: auto;">
+						
 							<div class="accordion-inner">
 							
 							<li><a href="/customize/add-ons.html" >Add-ons</a></li>
@@ -323,7 +327,9 @@
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><h6>Best Practices</h6></a>
 							</div>
 						</div>
+						
 						<ul class="pages accordion-body collapse" id="collapseThree" style="height: 0;">
+						
 							<div class="accordion-inner">
 							
 							<li><a href="/best-practices/caching.html" >Caching</a></li>

@@ -182,19 +182,19 @@
 
 <p>Searchify allows developers to easily add search to their applications, without having to deal with Solr or Lucene, and without the hassle of configuring and hosting your own search infrastructure.  Searchify is fast.  Most search queries will be answered in under 100 milliseconds.  Searchify offers true real-time search, so documents added are immediately searchable.  Searchify is a drop-in replacement for existing IndexTank users.</p>
 
-<p>Searchify has client libraries for <a href="http://www.searchify.com/documentation/php-client">PHP</a>, <a href="http://www.searchify.com/documentation/ruby-client">Ruby</a>, <a href="http://www.searchify.com/documentation/python-client">Python</a>, <a href="http://www.searchify.com/documentation/java-client">Java</a>, and others, all of which communicate with Searchify&rsquo;s <a href="http://www.searchify.com/documentation/api">REST API</a>.</p>
+<p>Searchify has client libraries for <a href="http://www.searchify.com/documentation/php-client">PHP</a>, <a href="http://www.searchify.com/documentation/ruby-client">Ruby</a>, <a href="http://www.searchify.com/documentation/python-client">Python</a>, <a href="http://www.searchify.com/documentation/java-client">Java</a>, and others, all of which communicate with Searchify’s <a href="http://www.searchify.com/documentation/api">REST API</a>.</p>
 
 <h3 id="install-searchify">Install Searchify</h3>
 
-<p>In the &ldquo;Add-ons&rdquo; tab in your app console click &ldquo;Install&rdquo; for the Searchify add-on. That&rsquo;s it!</p>
+<p>In the “Add-ons” tab in your app console click “Install” for the Searchify add-on. That’s it!</p>
 
-<p>Installing the Searchify add-on creates an account with Searchify associated with your PHP Fog account. By default, it will contain one empty index called &ldquo;idx&rdquo; which you can use or delete and replace. </p>
+<p>Installing the Searchify add-on creates an account with Searchify associated with your PHP Fog account. By default, it will contain one empty index called “idx” which you can use or delete and replace. </p>
 
-<p>This will also add an environment variable called <code>SEARCHIFY_API_URL</code> in the &ldquo;Env. Variables&rdquo; in your app console. This contains the private API URL used to access the newly provisioned Searchify service from your app. </p>
+<p>This will also add an environment variable called <code>SEARCHIFY_API_URL</code> in the “Env. Variables” in your app console. This contains the private API URL used to access the newly provisioned Searchify service from your app. </p>
 
 <h3 id="set-up-your-local-development-environment">Set up your local development environment</h3>
 
-<p>The <code>SEARCHIFY_API_URL</code> environment variable holds the private URL you&rsquo;ll use to access the Searchify service from within a local environment. Developers will typically create one search index for testing and one for production.</p>
+<p>The <code>SEARCHIFY_API_URL</code> environment variable holds the private URL you’ll use to access the Searchify service from within a local environment. Developers will typically create one search index for testing and one for production.</p>
 
 <p>The next step is to install the appropriate language client library to develop locally with Searchify.</p>
 
@@ -206,7 +206,7 @@
 
 <p>Full PHP client documentation and download links are available <a href="http://www.searchify.com/documentation/php-client">here</a>.</p>
 
-<p>Once you&rsquo;ve installed the client library, you can use it to add documents to your index as well as to perform searches. The following code sample demonstrates basic document indexing and searching.</p>
+<p>Once you’ve installed the client library, you can use it to add documents to your index as well as to perform searches. The following code sample demonstrates basic document indexing and searching.</p>
 
 <pre class="prettyprint linenums"><code>&lt;?php
 	include_once "indextank.php";
@@ -219,7 +219,7 @@
 </code></pre>
 
 <p>Once you have an instance of the client all you need is the content you want to index.
-The simplest way to add a document is sending that content in a single field called &ldquo;text&rdquo;:</p>
+The simplest way to add a document is sending that content in a single field called “text”:</p>
 
 <pre class="prettyprint linenums"><code>&lt;?php
 	$text = 'this is a text';
@@ -228,7 +228,7 @@ The simplest way to add a document is sending that content in a single field cal
 ?&gt;
 </code></pre>
 
-<p>That&rsquo;s it, you&rsquo;ve indexed a document! You can now search the index for any indexed document by simply providing the search query:</p>
+<p>That’s it, you’ve indexed a document! You can now search the index for any indexed document by simply providing the search query:</p>
 
 <pre class="prettyprint linenums"><code>&lt;?php
 	$query = "&lt;YOUR QUERY&gt;";
@@ -242,7 +242,7 @@ The simplest way to add a document is sending that content in a single field cal
 ?&gt;
 </code></pre>
 
-<p>An index may be deleted and re-created anytime to clean it up, either from code as shown below or from Searchify&rsquo;s <a href="http://www.searchify.com/dashboard">dashboard</a>:</p>
+<p>An index may be deleted and re-created anytime to clean it up, either from code as shown below or from Searchify’s <a href="http://www.searchify.com/dashboard">dashboard</a>:</p>
 
 <h4 id="deleting-an-index">Deleting an index</h4>
 
@@ -307,21 +307,23 @@ The simplest way to add a document is sending that content in a single field cal
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><h6>Getting Started</h6></a>
 							</div>
 						</div>
+						
 						<ul class="pages accordion-body collapse" id="collapseOne" style="height: 0;">
+						
 							<div class="accordion-inner">
-							
-							<li><a href="/getting-started/jumpstarts.html" >Jumpstarts</a></li>
-							
-							<li><a href="/getting-started/pf-command-line-tool.html" >PF Command Line Tool</a></li>
-							
-							<li><a href="/getting-started/ssh.html" >SSH</a></li>
-							
-							<li><a href="/getting-started/git.html" >Git</a></li>
-							
-							<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
-							
-							<li><a href="/getting-started/development.html" >Development</a></li>
-							
+								
+								<li><a href="/getting-started/jumpstarts.html" >Jumpstarts</a></li>
+								
+								<li><a href="/getting-started/pf-command-line-tool.html" >PF Command Line Tool</a></li>
+								
+								<li><a href="/getting-started/ssh.html" >SSH</a></li>
+								
+								<li><a href="/getting-started/git.html" >Git</a></li>
+								
+								<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
+								
+								<li><a href="/getting-started/development.html" >Development</a></li>
+								
 							</div>
 						</ul>
 					</div>
@@ -332,7 +334,9 @@ The simplest way to add a document is sending that content in a single field cal
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><h6>Customize Your App</h6></a>
 							</div>
 						</div>
+						
 						<ul class="pages accordion-body collapse" id="collapseTwo" style="height: 0;">
+						
 							<div class="accordion-inner">
 							
 							<li><a href="/customize/add-ons.html" >Add-ons</a></li>
@@ -363,7 +367,9 @@ The simplest way to add a document is sending that content in a single field cal
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><h6>Best Practices</h6></a>
 							</div>
 						</div>
+						
 						<ul class="pages accordion-body collapse" id="collapseThree" style="height: 0;">
+						
 							<div class="accordion-inner">
 							
 							<li><a href="/best-practices/caching.html" >Caching</a></li>
