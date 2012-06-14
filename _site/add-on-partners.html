@@ -179,7 +179,16 @@
 
 <p>Our add-on partners can create provisioning services that are compatible with AppFog and PHP Fog. </p>
 
-<h1 id="provisioning-workflow">Provisioning Workflow</h1>
+<ul>
+  <li><a href="#provision">Provisioning Workflow</a></li>
+  <li><a href="#callback">API Callback Spec</a></li>
+  <li><a href="#api">API Spec</a></li>
+  <li><a href="#authentication">Authentication</a></li>
+  <li><a href="#manifest">Manifest Format</a></li>
+  <li><a href="#sso">Single Sign-on</a></li>
+</ul>
+
+<h1 id="provision">Provisioning Workflow</h1>
 
 <ol>
   <li>The user installs the add-on from the PHP Fog app console. This sends a request to the add-on partner to provision the service.</li>
@@ -192,7 +201,7 @@
 
 <p><img class="screenshot" src="/img/screenshots/Slide2.jpeg" alt="Provisioning Workflow" /></p>
 
-<h1 id="api-callback-spec">API Callback Spec</h1>
+<h1 id="callback">API Callback Spec</h1>
 
 <p>This is a method implemented by the PHP Fog services. It is used to update the configuration values for a given resource as provided by the add-on partner. The configuration parameters can be specified by the partner when the provisioning call is made by PHP Fog; however, if the call takes a while to process the partner can use this method to update those parameters later.</p>
 
@@ -210,7 +219,7 @@
 <pre class="prettyprint"><code>200 OK
 </code></pre>
 
-<h1 id="api-spec">API Spec</h1>
+<h1 id="api">API Spec</h1>
 
 <h3 id="example-provisioning-request">Example Provisioning Request</h3>
 
@@ -279,7 +288,7 @@
 
 <p>The manifest file specifies the username and password to be used for all of these calls. The “<code>id</code>” in the manifest is the username, the “<code>api_password</code>” is the password.</p>
 
-<h1 id="manifest-format">Manifest Format</h1>
+<h1 id="manifest">Manifest Format</h1>
 
 <p>The manifest file is a <code>JSON</code> document that defines the information necessary for AppFog to make provisioning calls to the provider.</p>
 
@@ -322,7 +331,7 @@
   <li><code>plans/id</code> - The name of the “free” plan that will be offered to PHP Fog users and used for testing and integration purposes.</li>
 </ul>
 
-<h1 id="single-sign-on">Single Sign-on</h1>
+<h1 id="sso">Single Sign-on</h1>
 
 <p>Once a resource is fully provisioned, a “Manage” button will appear in the PHP Fog app console for the given add-on. This button will redirect the user to the management page of the particular resource on the partner’s website.</p>
 

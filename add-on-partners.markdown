@@ -11,7 +11,14 @@ PHP Fog provides your app with extra functionality by partnering with various th
 
 Our add-on partners can create provisioning services that are compatible with AppFog and PHP Fog. 
 
-# Provisioning Workflow
+* [Provisioning Workflow](#provision)
+* [API Callback Spec](#callback)
+* [API Spec](#api)
+* [Authentication](#authentication)
+* [Manifest Format](#manifest)
+* [Single Sign-on](#sso)
+
+# Provisioning Workflow {#provision}
 
 1. The user installs the add-on from the PHP Fog app console. This sends a request to the add-on partner to provision the service.
 2. PHP Fog makes a `POST` request to https://partner.com/appfog/resources. It passes in the `customer_id` (email address), plan, and the `callback_url`. 
@@ -22,7 +29,7 @@ Our add-on partners can create provisioning services that are compatible with Ap
 
 <img class="screenshot" src="/img/screenshots/Slide2.jpeg" alt="Provisioning Workflow"/>
 
-# API Callback Spec
+# API Callback Spec {#callback}
 
 This is a method implemented by the PHP Fog services. It is used to update the configuration values for a given resource as provided by the add-on partner. The configuration parameters can be specified by the partner when the provisioning call is made by PHP Fog; however, if the call takes a while to process the partner can use this method to update those parameters later.
 
@@ -41,7 +48,7 @@ Response:
 	200 OK
 
 
-# API Spec
+# API Spec {#api}
 
 ### Example Provisioning Request
 
@@ -99,7 +106,7 @@ This is a DELETE request to the particular `URL` and doesn't contain a body.
 
 Only an HTTP response status is required.
 
-# Authentication
+# Authentication {#authentication}
 
 All calls to both the provisioning API on the partners service as well as the AppFog callback service must be authenticated using `HTTP Basic Auth`.
 
@@ -107,7 +114,7 @@ All requests must be completed over `HTTPS`.
 
 The manifest file specifies the username and password to be used for all of these calls. The "`id`" in the manifest is the username, the "`api_password`" is the password.
 
-# Manifest Format
+# Manifest Format {#manifest}
 
 The manifest file is a `JSON` document that defines the information necessary for AppFog to make provisioning calls to the provider.
 
@@ -149,7 +156,7 @@ Add-on partners should provide the manifest file out-of-band by emailing it to t
 * `api/sso_salt` - Shared secret used in single sign-on between PHP Fog and the provider.
 * `plans/id` - The name of the "free" plan that will be offered to PHP Fog users and used for testing and integration purposes.
 
-# Single Sign-on
+# Single Sign-on {#sso}
 
 Once a resource is fully provisioned, a "Manage" button will appear in the PHP Fog app console for the given add-on. This button will redirect the user to the management page of the particular resource on the partner's website.
 
