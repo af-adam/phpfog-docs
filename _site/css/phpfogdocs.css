@@ -201,3 +201,7 @@ ol.linenums:first-child {
 .collapse.in {
 	height: auto;
 }
+
+i {
+	margin-left: 10px;
+}
