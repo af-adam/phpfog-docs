@@ -49,7 +49,7 @@ To prevent caching set the "Cache-Control" header to "no-cache". This is general
 
 #### Purging Cache Data
 
-We are currently working on tools to reset the cache; however, this is not yet functional. In the mean time if you need to purge the cache, please email support@appfog.com.
+Varnish is set to hold content in cache for a maximum of five minutes, so it's never necessary to manually purge Varnish cache. 
 
 #### Caching in WordPress
 
