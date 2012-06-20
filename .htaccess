@@ -92,9 +92,9 @@ RewriteEngine On
 DirectorySlash Off
 
 # Append trailing slash to directories
-# RewriteCond %{REQUEST_FILENAME} -d
-# RewriteCond %{REQUEST_URI} !(.*)/$
-# RewriteRule ^_site/(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^_site/(.*)$ http://%{HTTP_HOST}/$1/ [L,R=301]
 
 # Remove .html extension
 RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /.+\.html\ HTTP
