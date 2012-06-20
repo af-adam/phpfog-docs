@@ -179,7 +179,7 @@
 		<div class="row">
 			<div class="span8">
 				<h1>PF Command Line Tool</h1>
-				<p>PHP Fog uses git to give you access to your code and push changes to your cloud. Git is an extremely powerful and flexible tool for managing code, but it’s also pretty complex and can be intimidating for developers who haven’t used it before. SSH key management can also be pretty complicated and error-prone. That’s why we created the PF Command Line Tool: to allow developers to jump into PHP Fog as quickly and simply as possible.</p>
+				<p>PHP Fog uses git to give you access to your code and push changes to your cloud. Git is an extremely powerful and flexible tool for managing code, but it&rsquo;s also pretty complex and can be intimidating for developers who haven&rsquo;t used it before. SSH key management can also be pretty complicated and error-prone. That&rsquo;s why we created the PF Command Line Tool: to allow developers to jump into PHP Fog as quickly and simply as possible.</p>
 
 <p>PF is a command line tool for managing PHP Fog apps from the terminal. The tool allows you to list, view, and delete apps. It also does more advanced operations for you, like set up your SSH keys for multiple PHP Fog accounts and deploy apps using git submodules. </p>
 
@@ -208,12 +208,12 @@
 
 <h3 id="download-your-source-code">4. Download your source code.</h3>
 
-<p>To get the code we’ll use the “pf clone” command. You can use the “ID” or the “Name” of the app list in the previous step. </p>
+<p>To get the code we&rsquo;ll use the &ldquo;pf clone&rdquo; command. You can use the &ldquo;ID&rdquo; or the &ldquo;Name&rdquo; of the app list in the previous step. </p>
 
 <pre class="prettyprint"><code>$ pf clone 811 
 </code></pre>
 
-<p>Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in ‘yes’.</p>
+<p>Note: The first time you run this command, it will ask you to authorize the SSH address. Make sure to type in &lsquo;yes&rsquo;.</p>
 
 <p>Running into problems with this step? Check out our guide on <a href="/troubleshooting#ssh">troubleshooting ssh</a>.</p>
 
@@ -236,14 +236,14 @@
 <pre class="prettyprint"><code>$ git add . 
 </code></pre>
 
-<p>This command tells git to “stage” the file to get ready to commit to your repository. The “.” adds all the files in this directory recursively.</p>
+<p>This command tells git to &ldquo;stage&rdquo; the file to get ready to commit to your repository. The &ldquo;.&rdquo; adds all the files in this directory recursively.</p>
 
 <h3 id="commit-your-changes">7. Commit your changes.</h3>
 
 <pre class="prettyprint"><code>$ git commit -m "my first update" 
 </code></pre>
 
-<p>This commits the new file to your git repository. It’s still local, but now it’s ready to be uploaded (i.e. “pushed”). </p>
+<p>This commits the new file to your git repository. It&rsquo;s still local, but now it&rsquo;s ready to be uploaded (i.e. &ldquo;pushed&rdquo;). </p>
 
 <h3 id="push-your-changes">8. Push your changes.</h3>
 
@@ -254,7 +254,7 @@
 
 <h3 id="done">Done!</h3>
 
-<p>That’s it! Wait a couple of minutes for your code to deploy and you should be able to see your changes live!</p>
+<p>That&rsquo;s it! Wait a couple of minutes for your code to deploy and you should be able to see your changes live!</p>
 
 <p>Ready for more? Continue on to <a href="/getting-started/development">development</a>.</p>
 
@@ -264,7 +264,7 @@
 
 <p>Git Shell uses <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa973757(v=vs.85).aspx">Powershell</a> and may ask you to install <code>.NET Framework 4.0</code> during the installation process. These instructions are for <a href="http://www.wampserver.com/en/">Wamp</a>, but other Windows installations of PHP should work. </p>
 
-<p>Additionally, you might have to modify some of the paths to match the paths on your system. If things don’t work the first time, double-check that the paths are correct.</p>
+<p>Additionally, you might have to modify some of the paths to match the paths on your system. If things don&rsquo;t work the first time, double-check that the paths are correct.</p>
 
 <h3 id="references">References</h3>
 
@@ -280,7 +280,7 @@
   <li><a href="http://www.wampserver.com/en/#download">Download and install WampServer 2 32 or 64 bit</a>.</li>
 </ul>
 
-<p>Make a note of where Wamp’s <code>php.exe</code> was installed. The default path should be: <code>C:\wamp\bin\php\php5.3.13</code>. You’ll need this path later.</p>
+<p>Make a note of where Wamp’s <code>php.exe</code> was installed. The default path should be: <code>C:\wamp\bin\php\php5.3.13</code>. You&rsquo;ll need this path later.</p>
 
 <h3 id="turn-on-curl-for-php">Turn on <code>CURL</code> for PHP</h3>
 
@@ -302,7 +302,7 @@
 </code></pre>
 
 <ul>
-  <li>Add the following PF bin path to the end of Path var. Note that the path needs to have your Windows user name. This path doesn’t exist yet but we’ll create it later on in this guide.</li>
+  <li>Add the following PF bin path to the end of Path var. Note that the path needs to have your Windows user name. This path doesn&rsquo;t exist yet but we&rsquo;ll create it later on in this guide.</li>
 </ul>
 
 <pre class="prettyprint"><code>;C:\Users\&lt;username&gt;\PHPFog\pf\bin
@@ -314,12 +314,12 @@
 
 <h3 id="associate-php-files">Associate PHP Files</h3>
 
-<p>In order for the <code>pf</code> command to work PHP CLI has to be configured to execute PHP scripts without the <code>.php</code> extension. Run the following commands with <code>CMD.exe</code> as an admininstrator. From the Start Menu search for “cmd”, right-click, and select “Run as administrator.” Then run the following commands:</p>
+<p>In order for the <code>pf</code> command to work PHP CLI has to be configured to execute PHP scripts without the <code>.php</code> extension. Run the following commands with <code>CMD.exe</code> as an admininstrator. From the Start Menu search for &ldquo;cmd&rdquo;, right-click, and select “Run as administrator.” Then run the following commands:</p>
 
 <pre class="prettyprint"><code>assoc .php=phpfile
 </code></pre>
 
-<p>Edit the path in the following command to match your Wamp installation’s PHP directory.</p>
+<p>Edit the path in the following command to match your Wamp installation&rsquo;s PHP directory.</p>
 
 <pre class="prettyprint"><code>ftype phpfile="C:\wamp\bin\php\php5.3.13\php.exe" -f "%1" -- %~2
 </code></pre>
@@ -362,7 +362,7 @@
 
 <p>If you get PHP parse errors, just keep re-running the command until it completes successfully.</p>
 
-<p>If you get a warning dialog popup with the message “PHP Startup: Unable to load dynamic library” regarding <code>php_curl.dll</code>, you’ll need to download a newer version of the DLL, which you can find linked in <a href="http://www.anindya.com/php-5-4-3-and-php-5-3-13-x64-64-bit-for-windows/">this post</a>.</p>
+<p>If you get a warning dialog popup with the message “PHP Startup: Unable to load dynamic library” regarding <code>php_curl.dll</code>, you&rsquo;ll need to download a newer version of the DLL, which you can find linked in <a href="http://www.anindya.com/php-5-4-3-and-php-5-3-13-x64-64-bit-for-windows/">this post</a>.</p>
 
 <p>Replace the <code>php_curl.dll</code> found at <code>C:\wamp\bin\php\php5.3.13\ext</code> with the one you just downloaded. Retry the <code>CURL</code> command above until the installation completes.</p>
 
@@ -372,9 +372,9 @@
 
 <h3 id="restart">Restart</h3>
 
-<p>In order for all the changes to take effect, you’ll have to restart your computer, then start WampServer. Make sure that the WampServer tray icon indicates that the services are up and running.</p>
+<p>In order for all the changes to take effect, you&rsquo;ll have to restart your computer, then start WampServer. Make sure that the WampServer tray icon indicates that the services are up and running.</p>
 
-<p>Open a new Git Shell console and you’ll be able to run the <code>pf</code> command even without the <code>.php</code> extension.</p>
+<p>Open a new Git Shell console and you&rsquo;ll be able to run the <code>pf</code> command even without the <code>.php</code> extension.</p>
 
 <p>Now head back up to <a href="#credentials">Step 2</a> to set up your credentials. </p>
 

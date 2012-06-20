@@ -187,13 +187,13 @@
 
 <h4 id="default-caching">Default Caching</h4>
 
-<p>Varnish caches content automatically for 300 seconds (5 minutes). For static content, this means you don’t you have to do anything to take advantage of Varnish.</p>
+<p>Varnish caches content automatically for 300 seconds (5 minutes). For static content, this means you don&rsquo;t you have to do anything to take advantage of Varnish.</p>
 
 <p>There are two key exceptions, though. First, if there are cookies in the HTTP header on the request or response, the page will not be cached. Second, only responses to GET requests can be cached.</p>
 
 <h4 id="caching-with-cookies">Caching with Cookies</h4>
 
-<p>Requests that include cookies are not cached by default so that stale cookies don’t impact the application behavior.</p>
+<p>Requests that include cookies are not cached by default so that stale cookies don&rsquo;t impact the application behavior.</p>
 
 <p>In a few cases cookies are used client-side only, i.e. the cookies may be produced and consumed by JavaScript but are never processed by the PHP application. For example, Google Analytics uses cookies to store information about the page. In order to try to maximize default caching, Varnish will drop these special case cookies being sent in the HTTP request to the app. If those cookies are dropped and no other cookies are present, the page can follow the default caching behavior. </p>
 
@@ -202,16 +202,16 @@
 <ul>
   <li>Cookies with no values (i.e. empty).</li>
   <li>Cookies from Google Analytics.</li>
-  <li>Cookies with the name “has_js”.</li>
+  <li>Cookies with the name &ldquo;has_js&rdquo;.</li>
 </ul>
 
-<p>We can also setup a custom configuration for your application. We’re also building tools for you to manage caching, so stay tuned!</p>
+<p>We can also setup a custom configuration for your application. We&rsquo;re also building tools for you to manage caching, so stay tuned!</p>
 
 <h4 id="caching-dynamic-content">Caching Dynamic Content</h4>
 
 <p>Caching dynamic content in Varnish can greatly improve the performance of your app. You can explicitly instruct Varnish to cache the requests and for how long.</p>
 
-<p>The simplest way to cache a page is to set a header on output which cues Varnish that this page can be served unmodified to anyone visiting a given URL. The “Cache-Control” header also specifies how long the cached copy should be retained. The following is a PHP example of setting the cache to 10 minutes (600 seconds):</p>
+<p>The simplest way to cache a page is to set a header on output which cues Varnish that this page can be served unmodified to anyone visiting a given URL. The &ldquo;Cache-Control&rdquo; header also specifies how long the cached copy should be retained. The following is a PHP example of setting the cache to 10 minutes (600 seconds):</p>
 
 <pre class="prettyprint"><code>header("Cache-Control: public, max-age=600");
 </code></pre>
@@ -220,7 +220,7 @@
 
 <h4 id="preventing-caching">Preventing Caching</h4>
 
-<p>To prevent caching set the “Cache-Control” header to “no-cache”. This is generally required in applications that don’t produce or consume cookies, but serve dynamic content. This is how to set the “Cache-Control” header in PHP:</p>
+<p>To prevent caching set the &ldquo;Cache-Control&rdquo; header to &ldquo;no-cache&rdquo;. This is generally required in applications that don&rsquo;t produce or consume cookies, but serve dynamic content. This is how to set the &ldquo;Cache-Control&rdquo; header in PHP:</p>
 
 <pre class="prettyprint"><code>header("Cache-Control: no-cache");
 </code></pre>
@@ -237,13 +237,13 @@
 
 <h4 id="caching-in-drupal">Caching in Drupal</h4>
 
-<p>Drupal by default takes little advantage of caching. We recommend installing Drupal’s <a href="http://drupal.org/project/varnish">Varnish HTTP Accelerator Integration module</a> to take advantage of Varnish on your Drupal app. </p>
+<p>Drupal by default takes little advantage of caching. We recommend installing Drupal&rsquo;s <a href="http://drupal.org/project/varnish">Varnish HTTP Accelerator Integration module</a> to take advantage of Varnish on your Drupal app. </p>
 
-<p>As another alternative we recommend <a href="http://pressflow.org/">PressFlow</a>, which is a distribution of Drupal optimized for performance. We don’t have a Pressflow Jumpstart yet, but we’re working on adding that soon. You can easily install PressFlow yourself by starting with a custom application.</p>
+<p>As another alternative we recommend <a href="http://pressflow.org/">PressFlow</a>, which is a distribution of Drupal optimized for performance. We don&rsquo;t have a Pressflow Jumpstart yet, but we&rsquo;re working on adding that soon. You can easily install PressFlow yourself by starting with a custom application.</p>
 
 <h3 id="apc">APC</h3>
 
-<p>The Alternative PHP Cache, or APC, is a free and open opcode cache for PHP that can significantly boost performance in your app. It’s installed by default on all Dedicated Cloud apps.</p>
+<p>The Alternative PHP Cache, or APC, is a free and open opcode cache for PHP that can significantly boost performance in your app. It&rsquo;s installed by default on all Dedicated Cloud apps.</p>
 
 <p>Implementation of APC varies depending on your app. For example, the Cake framework has documentation <a href="http://api.cakephp.org/class/apc-engine">here</a>. Most frameworks will have similar documentation on implementation of APC.</p>
 
