@@ -49,7 +49,8 @@ float: left;
 }
 
 #blog .sidebar {
-	min-height: 951px;
+	//min-height: 951px;
+	padding-bottom: 52px;
 }
 
 #blog .sidebar .row {
@@ -138,11 +139,15 @@ img.screenshot {
 	max-width: 750px;
 }
 
-.top-link {
-	position: absolute;
+.fixed {
+	position: fixed;
 	bottom: 0;
 }
 
+.tbottom {
+	position: absolute;
+	bottom: 0;
+}
 
 /* PRETTIFY CUSTOM */
 
