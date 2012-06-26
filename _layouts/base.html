@@ -200,7 +200,7 @@
 					<div class="accordion-group">
 						<div class="row border-bottom accordion-heading">
 							<div class="span3">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><h6>Getting Started <i class="accordion-icon {% if page.categories contains 'getting-started' %}icon-chevron-down{% else %}icon-chevron-right{% endif %}"></i></h6></a>
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><h6><i class="accordion-icon {% if page.categories contains 'getting-started' %}icon-chevron-down{% else %}icon-chevron-right{% endif %}"></i> Getting Started</h6></a>
 							</div>
 						</div>
 						{% if page.categories contains 'getting-started' %}
@@ -219,7 +219,7 @@
 					<div class="accordion-group">
 						<div class="row border-bottom accordion-heading">
 						<div class="span3">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><h6>Customize Your App <i class="accordion-icon {% if page.categories contains 'customize' %}icon-chevron-down{% else %}icon-chevron-right{% endif %}"></i></h6></a>
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><h6><i class="accordion-icon {% if page.categories contains 'customize' %}icon-chevron-down{% else %}icon-chevron-right{% endif %}"></i> Customize Your App</h6></a>
 							</div>
 						</div>
 						{% if page.categories contains 'customize' %}
@@ -238,7 +238,7 @@
 					<div class="accordion-group">
 						<div class="row border-bottom accordion-heading">
 							<div class="span3">
-								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><h6>Best Practices <i class="accordion-icon {% if page.categories contains 'best-practices' %}icon-chevron-down{% else %}icon-chevron-right{% endif %}"></i></h6></a>
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><h6><i class="accordion-icon {% if page.categories contains 'best-practices' %}icon-chevron-down{% else %}icon-chevron-right{% endif %}"></i> Best Practices</h6></a>
 							</div>
 						</div>
 						{% if page.categories contains 'best-practices' %}
@@ -260,8 +260,6 @@
 						<div class="row border-bottom"><div class="span3"><a href="/reliability.html" {% if page.url == "/reliability.html" %}class="on"{% endif %}><h6>Reliability</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/security.html" {% if page.url == "/security.html" %}class="on"{% endif %}><h6>Security</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/troubleshooting.html" {% if page.url == "/troubleshooting.html" %}class="on"{% endif %}><h6>Troubleshooting</h6></div></a></div>
-
-						{% if page.url != "/index.html" %}<div class="row" id="top-link"><div class="span3"><a href="#">&uarr; top</a></div></div>{% endif %}
 
 					</div>
 				</div>

@@ -207,6 +207,21 @@ ol.linenums:first-child {
 	height: auto;
 }
 
-i {
-	margin-left: 10px;
+i.icon-chevron-right.accordion-icon {
+	margin-left: -15px;
+	padding-right: 5px;
+}
+
+i.icon-chevron-down.accordion-icon {
+	margin-left: -15px;
+	padding-right: 1px;
+}
+
+div.accordion-inner > li > a {
+	background-color: white;
+	border-left: 1px solid #E2EEF6;
+}
+
+div.accordion-inner > li > a.on {
+	background-color: #E2EEF6;
 }
