@@ -47,7 +47,9 @@ Your decision on whether to scale up or scale out (or both!) will depend on the 
 
 #### Scale Up
 
-Scaling up is extremely easy. If you're upgrading a Shared app, just go to your app console, click on the "Upgrade" tab on the left, choose the level you want to upgrade to, and hit the "Save Changes" button. If you're upgrading a Dedicated app, go to your Cloud console, click on the "Scaling" button, choose the level you want to upgrade to, and hit the "Save Changes" button. 
+Scaling up is extremely easy. If you're upgrading a Shared Cloud app, [check out our guide for upgrading from Shared to Dedicated at the bottom of this page](#shared). 
+
+If you're upgrading a Dedicated app, go to your Cloud console, click on the "Scaling" button, choose the level you want to upgrade to, and hit the "Save Changes" button. 
 
 <img class="screenshot" src="/img/screenshots/upgrade.png" alt="Scale Up"/>
 
@@ -83,3 +85,23 @@ So you'll want to:
 And optionally: 
 
 * Set up your own memcached server on Amazon's EC2 service (in the US-East region). 
+
+# Upgrading from Shared to Dedicated {#shared}
+
+Upgrading your Shared Cloud app is easy. Just go to your app console, click on the "Upgrade" tab on the left, choose the level you want to upgrade to, and hit the "Save Changes" button. 
+
+There are, however, a few things to note about Shared to Dedicated upgrades:
+
+### Limitations
+
+For security reasons, the Shared Cloud is configured slightly differently from Dedicated Clouds. You can find more information on that in our [Frequently Asked Questions](/faqs#sharedvdedicated).
+
+### Permissions
+
+Permissions also work a bit differently on Dedicated. If you haven't already, you'll want to head over to [our documentation on permissions](/customize/permissions).
+
+### File Structure
+
+Your app's path on the file system is also slightly different on Dedicated Cloud servers. This means that if you have any non-relative paths that are hard-coded into your app, you could run into problems. For this reason, we always recommend using relative paths. 
+
+Note: certain app frameworks generate hard-coded non-relative paths. We recommend checking your app's code base for any non-relative paths before upgrading.

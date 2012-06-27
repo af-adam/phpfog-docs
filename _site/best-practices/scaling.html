@@ -223,7 +223,9 @@
 
 <h4 id="scale-up">Scale Up</h4>
 
-<p>Scaling up is extremely easy. If you’re upgrading a Shared app, just go to your app console, click on the “Upgrade” tab on the left, choose the level you want to upgrade to, and hit the “Save Changes” button. If you’re upgrading a Dedicated app, go to your Cloud console, click on the “Scaling” button, choose the level you want to upgrade to, and hit the “Save Changes” button. </p>
+<p>Scaling up is extremely easy. If you’re upgrading a Shared Cloud app, <a href="#shared">check out our guide for upgrading from Shared to Dedicated at the bottom of this page</a>. </p>
+
+<p>If you’re upgrading a Dedicated app, go to your Cloud console, click on the “Scaling” button, choose the level you want to upgrade to, and hit the “Save Changes” button. </p>
 
 <p><img class="screenshot" src="/img/screenshots/upgrade.png" alt="Scale Up" /></p>
 
@@ -263,6 +265,26 @@
 <ul>
   <li>Set up your own memcached server on Amazon’s EC2 service (in the US-East region). </li>
 </ul>
+
+<h1 id="shared">Upgrading from Shared to Dedicated</h1>
+
+<p>Upgrading your Shared Cloud app is easy. Just go to your app console, click on the “Upgrade” tab on the left, choose the level you want to upgrade to, and hit the “Save Changes” button. </p>
+
+<p>There are, however, a few things to note about Shared to Dedicated upgrades:</p>
+
+<h3 id="limitations">Limitations</h3>
+
+<p>For security reasons, the Shared Cloud is configured slightly differently from Dedicated Clouds. You can find more information on that in our <a href="/faqs#sharedvdedicated">Frequently Asked Questions</a>.</p>
+
+<h3 id="permissions">Permissions</h3>
+
+<p>Permissions also work a bit differently on Dedicated. If you haven’t already, you’ll want to head over to <a href="/customize/permissions">our documentation on permissions</a>.</p>
+
+<h3 id="file-structure">File Structure</h3>
+
+<p>Your app’s path on the file system is also slightly different on Dedicated Cloud servers. This means that if you have any non-relative paths that are hard-coded into your app, you could run into problems. For this reason, we always recommend using relative paths. </p>
+
+<p>Note: certain app frameworks generate hard-coded non-relative paths. We recommend checking your app’s code base for any non-relative paths before upgrading.</p>
 
 
 			</div>
