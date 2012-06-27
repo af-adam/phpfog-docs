@@ -38,7 +38,7 @@ We take security very seriously. For a full walkthrough of our security precauti
 
 #### Does PHP Fog support SSL? {#ssl}
 
-We provide SSL for all *.phpfogapp.com subdomains and support SSL on custom subdomains, including www. Check out [this guide](/customize/ssl) for additional details.
+We provide SSL for all \*.phpfogapp.com subdomains and support SSL on custom subdomains, including www. Check out [this guide](/customize/ssl) for additional details.
 
 #### Is PHP Fog PCI compliant? {#pci}
 
@@ -74,7 +74,7 @@ Yes. PHP Fog apps have no firewalls or other network blocking mechanisms, so you
 
 * PHP version 5.3.2
 * Apache version 2.2.14
-* MySQL version 5.1.41
+* MySQL version 5.5.12
 
 #### What are the differences between Shared and Dedicated Clouds? {#sharedvdedicated}
 
