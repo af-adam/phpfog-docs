@@ -17,6 +17,9 @@
 		<script src="http://appfog.com/js/libs/modernizr-2.5.3.min.js"></script>
 
 		<script type="text/javascript" src="/js/google-code-prettify/prettify.js"></script>
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.js"></script>
+
 		
 		<link rel="icon" type="image/png" href="https://phpfog.com/favicon.ico" />
 	</head>
@@ -189,7 +192,9 @@
 <pre class="prettyprint"><code>$ curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php
 </code></pre>
 
-<h3 id="set-up-your-credentials-in-pf">2. Set up your credentials in PF.</h3>
+<p>Windows user? Skip down to <a href="#windows">the Windows section</a>.</p>
+
+<h3 id="credentials">2. Set up your credentials in PF.</h3>
 
 <pre class="prettyprint"><code>$ pf setup 
 </code></pre>
@@ -253,6 +258,126 @@
 
 <p>Ready for more? Continue on to <a href="/getting-started/development">development</a>.</p>
 
+<h1 id="windows">Windows</h1>
+
+<p>Here are some things to note while using this guide:</p>
+
+<p>Git Shell uses <a href="http://msdn.microsoft.com/en-us/library/windows/desktop/aa973757(v=vs.85).aspx">Powershell</a> and may ask you to install <code>.NET Framework 4.0</code> during the installation process. These instructions are for <a href="http://www.wampserver.com/en/">Wamp</a>, but other Windows installations of PHP should work. </p>
+
+<p>Additionally, you might have to modify some of the paths to match the paths on your system. If things don’t work the first time, double-check that the paths are correct.</p>
+
+<h3 id="references">References</h3>
+
+<ul>
+  <li><a href="https://github.com/phpfog/pf">PF Command Line Tool Github Repo</a></li>
+  <li><a href="http://php.net/manual/en/install.windows.commandline.php">Command Line PHP on Microsoft Windows</a></li>
+</ul>
+
+<h3 id="downloads">Downloads</h3>
+
+<ul>
+  <li><a href="http://windows.github.com/">Download and install Github for Windows</a>.</li>
+  <li><a href="http://www.wampserver.com/en/#download">Download and install WampServer 2 32 or 64 bit</a>.</li>
+</ul>
+
+<p>Make a note of where Wamp’s <code>php.exe</code> was installed. The default path should be: <code>C:\wamp\bin\php\php5.3.13</code>. You’ll need this path later.</p>
+
+<h3 id="turn-on-curl-for-php">Turn on <code>CURL</code> for PHP</h3>
+
+<p>Edit the <code>php.ini</code> located at <code>C:\wamp\bin\php\php5.3.13\php.ini</code> and remove the semicolon from the beginning of the extension line “<code>;extension=php_curl.dll</code>” and save. </p>
+
+<p>Note: Using the Wamp tray tool to enable <code>php_curl</code> does not work for the purposes of running PF.</p>
+
+<p>From the Wamp tray icon, “Start All Services”.</p>
+
+<h3 id="environment-variables">Environment Variables</h3>
+
+<p>Open the control panel and search for environment variables. Click on the link with the shield icon labeled “Edit the system environment variables.” In the System Properties dialog click “environment variables.”</p>
+
+<ul>
+  <li>Under system variables, add the following to the end of the Path var list (include the semicolon): </li>
+</ul>
+
+<pre class="prettyprint"><code>;C:\wamp\bin\php\php5.3.13
+</code></pre>
+
+<ul>
+  <li>Add the following PF bin path to the end of Path var. Note that the path needs to have your Windows user name. This path doesn’t exist yet but we’ll create it later on in this guide.</li>
+</ul>
+
+<pre class="prettyprint"><code>;C:\Users\&lt;username&gt;\PHPFog\pf\bin
+</code></pre>
+
+<ul>
+  <li>Add the following to the end of the <code>PATHEXT</code> var: <code>;.PHP</code></li>
+</ul>
+
+<h3 id="associate-php-files">Associate PHP Files</h3>
+
+<p>In order for the <code>pf</code> command to work PHP CLI has to be configured to execute PHP scripts without the <code>.php</code> extension. Run the following commands with <code>CMD.exe</code> as an admininstrator. From the Start Menu search for “cmd”, right-click, and select “Run as administrator.” Then run the following commands:</p>
+
+<pre class="prettyprint"><code>assoc .php=phpfile
+</code></pre>
+
+<p>Edit the path in the following command to match your Wamp installation’s PHP directory.</p>
+
+<pre class="prettyprint"><code>ftype phpfile="C:\wamp\bin\php\php5.3.13\php.exe" -f "%1" -- %~2
+</code></pre>
+
+<h3 id="registry">Registry</h3>
+
+<p>Create a registry file with the text below and run it from the desktop. You may need to show extensions for known file types in order to name the registry file correctly. Edit the paths in the file to reflect the actual path to Wamp’s php.exe file:</p>
+
+<pre class="prettyprint"><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\.php]
+@="phpfile"
+"Content Type"="application/php"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpfile]
+@="PHP Script"
+"EditFlags"=dword:00000000
+"BrowserFlags"=dword:00000008
+"AlwaysShowExt"=""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpfile\DefaultIcon]
+@="C:\\wamp\\bin\\php\\php5.3.13\\php-win.exe,0"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpfile\shell]
+@="Open"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpfile\shell\Open]
+@="&amp;Open"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\phpfile\shell\Open\command]
+@="\"C:\\wamp\\bin\\php\\php5.3.13\\php.exe\" -f \"%1\" -- %~2"
+</code></pre>
+
+<h3 id="download-and-install-pf-cli">Download and install PF CLI</h3>
+
+<p>Open up a new Git Shell and run the following command:</p>
+
+<pre class="prettyprint"><code>curl -s https://raw.github.com/phpfog/pf/master/bin/installer | php
+</code></pre>
+
+<p>If you get PHP parse errors, just keep re-running the command until it completes successfully.</p>
+
+<p>If you get a warning dialog popup with the message “PHP Startup: Unable to load dynamic library” regarding <code>php_curl.dll</code>, you’ll need to download a newer version of the DLL, which you can find linked in <a href="http://www.anindya.com/php-5-4-3-and-php-5-3-13-x64-64-bit-for-windows/">this post</a>.</p>
+
+<p>Replace the <code>php_curl.dll</code> found at <code>C:\wamp\bin\php\php5.3.13\ext</code> with the one you just downloaded. Retry the <code>CURL</code> command above until the installation completes.</p>
+
+<h3 id="rename-the-pf-executable">Rename the pf executable</h3>
+
+<p>Find the “pf” file located at <code>C:\Users\&lt;username&gt;\PHPFog\pf\bin\pf</code> and rename it to <code>pf.php</code>.</p>
+
+<h3 id="restart">Restart</h3>
+
+<p>In order for all the changes to take effect, you’ll have to restart your computer, then start WampServer. Make sure that the WampServer tray icon indicates that the services are up and running.</p>
+
+<p>Open a new Git Shell console and you’ll be able to run the <code>pf</code> command even without the <code>.php</code> extension.</p>
+
+<p>Now head back up to <a href="#credentials">Step 2</a> to set up your credentials. </p>
+
 
 			</div>
 		</div>
@@ -261,7 +386,7 @@
 
 				</div>
 
-				<div class="span3 sidebar padding">
+				<div class="span3 sidebar padding accordion" id="accordion2">
 					<div class="row border-bottom">
 						<div class="span3">
 							<form id="search-form" action="/search">
@@ -270,73 +395,86 @@
 							</form>
 						</div>
 					</div>
-					<div class="row border-bottom ">
-						<div class="span3">
-							<a href="/"><h6>PHP Fog Docs</h6></a>
+					<div class="accordion-group">
+						<div class="row border-bottom accordion-heading">
+							<div class="span3">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><h6><i class="accordion-icon icon-chevron-down"></i> Getting Started</h6></a>
+							</div>
 						</div>
+						
+						<ul class="pages accordion-body collapse in" id="collapseOne" style="height: auto;">
+						
+							<div class="accordion-inner">
+								
+								<li><a href="/getting-started/jumpstarts.html" >Jumpstarts</a></li>
+								
+								<li><a href="/getting-started/pf-command-line-tool.html" class="on">PF Command Line Tool</a></li>
+								
+								<li><a href="/getting-started/ssh.html" >SSH</a></li>
+								
+								<li><a href="/getting-started/git.html" >Git</a></li>
+								
+								<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
+								
+								<li><a href="/getting-started/development.html" >Development</a></li>
+								
+							</div>
+						</ul>
 					</div>
-					<div class="row border-bottom">
-						<div class="span3">
-							<a href="/getting-started/" ><h6>Getting Started</h6></a>
-						</div>
-					</div>
-					<ul class="pages">
-						
-						<li><a href="/getting-started/jumpstarts.html" >Jumpstarts</a></li>
-						
-						<li><a href="/getting-started/pf-command-line-tool.html" class="on">PF Command Line Tool</a></li>
-						
-						<li><a href="/getting-started/ssh.html" >SSH</a></li>
-						
-						<li><a href="/getting-started/git.html" >Git</a></li>
-						
-						<li><a href="/getting-started/env-vars.html" >Environment Variables</a></li>
-						
-						<li><a href="/getting-started/development.html" >Development</a></li>
-						
-					</ul>
 
-					<div class="row border-bottom">
+					<div class="accordion-group">
+						<div class="row border-bottom accordion-heading">
 						<div class="span3">
-							<a href="/customize/" ><h6>Customize Your App</h6></a>
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"><h6><i class="accordion-icon icon-chevron-right"></i> Customize Your App</h6></a>
+							</div>
 						</div>
+						
+						<ul class="pages accordion-body collapse" id="collapseTwo" style="height: 0;">
+						
+							<div class="accordion-inner">
+							
+							<li><a href="/customize/add-ons.html" >Add-ons</a></li>
+							
+							<li><a href="/customize/custom-domain-names.html" >Custom Domain Names</a></li>
+							
+							<li><a href="/customize/ssl.html" >SSL for Custom Domain Names</a></li>
+							
+							<li><a href="/customize/permissions.html" >Permissions</a></li>
+							
+							<li><a href="/customize/cron.html" >Cron Jobs</a></li>
+							
+							<li><a href="/customize/logs.html" >Logs</a></li>
+							
+							<li><a href="/customize/database.html" >Database</a></li>
+							
+							<li><a href="/customize/email.html" >Email</a></li>
+							
+							<li><a href="/customize/php_ini.html" >php.ini</a></li>
+							
+							</div>
+						</ul>
 					</div>
-					<ul class="pages">
-						
-						<li><a href="/customize/add-ons.html" >Add-ons</a></li>
-						
-						<li><a href="/customize/custom-domain-names.html" >Custom Domain Names</a></li>
-						
-						<li><a href="/customize/ssl.html" >SSL for Custom Domain Names</a></li>
-						
-						<li><a href="/customize/permissions.html" >Permissions</a></li>
-						
-						<li><a href="/customize/cron.html" >Cron Jobs</a></li>
-						
-						<li><a href="/customize/logs.html" >Logs</a></li>
-						
-						<li><a href="/customize/database.html" >Database</a></li>
-						
-						<li><a href="/customize/email.html" >Email</a></li>
-						
-						<li><a href="/customize/php_ini.html" >php.ini</a></li>
-						
-					</ul>
 
-					<div class="row border-bottom">
-						<div class="span3">
-							<a href="/best-practices/" ><h6>Best Practices</h6></a>
+					<div class="accordion-group">
+						<div class="row border-bottom accordion-heading">
+							<div class="span3">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"><h6><i class="accordion-icon icon-chevron-right"></i> Best Practices</h6></a>
+							</div>
 						</div>
+						
+						<ul class="pages accordion-body collapse" id="collapseThree" style="height: 0;">
+						
+							<div class="accordion-inner">
+							
+							<li><a href="/best-practices/caching.html" >Caching</a></li>
+							
+							<li><a href="/best-practices/storage.html" >Storage</a></li>
+							
+							<li><a href="/best-practices/scaling.html" >Scaling</a></li>
+							
+							</div>
+						</ul>
 					</div>
-					<ul class="pages">
-						
-						<li><a href="/best-practices/caching.html" >Caching</a></li>
-						
-						<li><a href="/best-practices/storage.html" >Storage</a></li>
-						
-						<li><a href="/best-practices/scaling.html" >Scaling</a></li>
-						
-					</ul>
 
 						<div class="row border-bottom"><div class="span3"><a href="/faqs.html" ><h6>FAQ</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="http://phpfog.com/pricing"><h6>Pricing</h6></a></div></div>
@@ -344,8 +482,6 @@
 						<div class="row border-bottom"><div class="span3"><a href="/reliability.html" ><h6>Reliability</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/security.html" ><h6>Security</h6></div></a></div>
 						<div class="row border-bottom"><div class="span3"><a href="/troubleshooting.html" ><h6>Troubleshooting</h6></div></a></div>
-
-						<div class="row top-link"><div class="span3"><a href="#">&uarr; top</a></div></div>
 
 					</div>
 				</div>
@@ -396,6 +532,7 @@
 <script>window.jQuery || document.write('<script src="http://appfog.com/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 <script src="http://appfog.com/js/plugins.js"></script>
 <script src="http://appfog.com/js/script.js"></script>
+<script type="text/javascript" src="/js/phpfogdocs.js"></script>
 
 </body>
 </html>
