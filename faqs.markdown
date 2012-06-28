@@ -42,7 +42,9 @@ We provide SSL for all \*.phpfogapp.com subdomains and support SSL on custom sub
 
 #### Is PHP Fog PCI compliant? {#pci}
 
-We're not PCI compliant as a service or as a host yet. We are in the process of getting PCI compliance certification for our service. We have no current plans for offering PCI compliance on our hosting, but if you'd like to see it, let us know by contacting [support@appfog.com](mailto:support@appfog.com).
+PHP Fog is not PCI compliant as a service, but we use the PCI compliant service Braintree for all credit card processing.
+
+While PHP Fog's infrastructure provider, Amazon Web Services (AWS), is PCI Level 1 compliant, PHP Fog does not offer PCI compliant hosting. We have no current plans for offering PCI compliance on our hosting, but if you'd like to see it, let us know by contacting [support@appfog.com](mailto:support@appfog.com).
 
 #### Do I have to modify my app to run on PHP Fog? {#modify}
 
