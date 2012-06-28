@@ -4,11 +4,11 @@ layout: doc-page
 weight: 16
 ---
 
-#### Install IronWorker
+### Install IronWorker
 
 In the "Add-ons" tab in your app console click "Install" for the IronWorker add-on. That's it!
 
-#### Integrate IronWorker
+### Integrate IronWorker
 
 Just copy [IronWorker.class.php](https://github.com/iron-io/iron_worker_php/blob/master/IronWorker.class.php) and include it in your script:
 
@@ -16,7 +16,7 @@ Just copy [IronWorker.class.php](https://github.com/iron-io/iron_worker_php/blob
 	<?php
 	require_once "IronWorker.class.php
 
-#### Create a Worker
+### Create a Worker
 
 When you install IronWorker, the installer creates two environment variables set with the necessary credentials. Create a worker and pass in those credentials like this:
 
@@ -34,7 +34,7 @@ Here's an example worker:
 
 We'll call this worker "HelloWorld.php".
 
-#### Upload Your Worker
+### Upload Your Worker
 
 Here's how to take the example above, zip it up, and upload it to IronWorker.
 
@@ -44,7 +44,7 @@ Here's how to take the example above, zip it up, and upload it to IronWorker.
 	IronWorker::createZip(dirname(__FILE__), array('HelloWorld.php'), 'worker.zip', true);
 	$res = $iw->postCode('HelloWorld.php', 'worker.zip', 'HelloWorld');
 
-####  Queue Your Worker
+###  Queue Your Worker
 
 {: .prettyprint .linenums}
 	<?php
@@ -52,7 +52,7 @@ Here's how to take the example above, zip it up, and upload it to IronWorker.
 
 Your worker should start in a few seconds.
 
-#### Schedule Your Worker
+### Schedule Your Worker
 
 If you want to run your code more than once or run it in regular intervals, you can schedule it:
 
@@ -64,7 +64,7 @@ If you want to run your code more than once or run it in regular intervals, you 
 	# Run task every 2 minutes, repeat 10 times
 	$iw->postScheduleAdvanced('HelloWorld', array(), $start_at, 2*60, null, 10);
 
-#### Check the Status of Your Worker
+### Check the Status of Your Worker
 
 Use the `getTaskDetails()` method.
 
@@ -75,7 +75,23 @@ Use the `getTaskDetails()` method.
 
 	echo $details->status; # prints 'queued', 'complete', 'error' etc.
 
-#### And More...
+### Connect Your Worker to Your PHP Fog App's Database {#database}
+
+PHP Fog doesn't allow remote connections to your app's database, but we've made a special provision for IronWorker workers. Here are the settings you'll need for that: 
+
+	Host: mysql-proxy.phpfog.com
+
+The port you should use depends on which particular database your app is connected to. You can check which database you're connected to by going to your PHP Fog app console. Click on the "Env. Variables" tab and check the value of the variable called "`MYSQL_DB_HOST`".
+
+`db01.phpfog.com`
+
+	Port: 3306
+
+`mysql-shared-02.phpfog.com`:
+	
+	Port: 3307
+
+### And More...
 
 You can also pass payloads to your tasks, set progress status, logs, etc. For more information, check out some of these resources:
 
