@@ -83,7 +83,7 @@ PHP Fog doesn't allow remote connections to your app's database, but we've made 
 
 The port you should use depends on which particular database your app is connected to. You can check which database you're connected to by going to your PHP Fog app console. Click on the "Env. Variables" tab and check the value of the variable called "`MYSQL_DB_HOST`".
 
-`db01.phpfog.com`
+`db01.phpfog.com`:
 
 	Port: 3306
 
