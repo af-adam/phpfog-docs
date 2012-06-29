@@ -192,7 +192,6 @@
 		{
 			var query = params()['q'];
 			$('div#search_results p#loading').show();
-		  
 			var index = 0;
 
 			var result = $.getJSON('http://uzehyv.api.indexden.com/v1/indexes/phpfogdocs/search?q=' + encodeURIComponent(query) + '&fetch=title&snippet=text&callback=?', function(data) {
@@ -255,7 +254,13 @@
 		<div class="span8">
 			<div class="row entries">
 				<div id="inner">
-					<p id="loading">Loading...</p>
+					<div class="span8">
+						<div class="row">
+							<div class="span8">
+								<h3 id="loading">Loading...</h3>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
