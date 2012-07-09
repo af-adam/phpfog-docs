@@ -187,6 +187,8 @@ Note: Most PHP frameworks will have single place for this.
 
 Composer uses "lazy loading", so it will only load the necessary libraries for each request.
 
+Make sure you're adding these libraries to your git repository, and you don't have the `vendor` directory in your `.gitignore` file.
+
 ### 5. Update dependencies.
 
 To fetch the latest library versions run the following command:
